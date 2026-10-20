@@ -1,0 +1,27 @@
+{
+  "name": "leaky-bank-account",
+  "version": "1.0.0",
+  "description": "Leaky bank account task",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodrigoBardalesF/leaky-bank-account.git"
+  },
+  "keywords": [],
+  "author": "Rodrigo Favela",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RodrigoBardalesF/leaky-bank-account/issues"
+  },
+  "homepage": "https://github.com/RodrigoBardalesF/leaky-bank-account#readme",
+  "devDependencies": {
+    "jest": "^30.5.2"
+  }
+}
