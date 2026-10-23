@@ -33,4 +33,4 @@ class BankAccount {
     }
 }
 
-module.exports = BankAccount;
+export default BankAccount;

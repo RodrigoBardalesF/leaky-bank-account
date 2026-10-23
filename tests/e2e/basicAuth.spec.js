@@ -1,4 +1,3 @@
-// @ts-check
 import { test, expect } from '@playwright/test';
 
 const successfulMessage = 'Congratulations! You must have the proper credentials.';

@@ -1,6 +1,6 @@
-const BankAccount = require("../service/BankAccount");
+import BankAccount from "../../service/BankAccount.js";
 
-describe("BankAccount", () => {
+describe("BankAccount.js", () => {
     let account;
 
     beforeEach(() => {
