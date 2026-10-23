@@ -2,16 +2,29 @@ import { test, expect } from '@playwright/test';
 
 const successfulMessage = 'Congratulations! You must have the proper credentials.';
 
-// Set httpCredentials
+test.describe("Handling basic auth",() => {
 
+//let httpCredentials = {"admin":"admin"}
 
-test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
   await page.goto('https://the-internet.herokuapp.com');
-});
+  });
 
-test('basic auth works', async ({ page }) => {
-  await page.getByRole('link', {name: 'Basic Auth' }).click();
-  
-  // Verify that successfulMessage is displayed
+  test('Handle username and password prompt', async({page})=>{
+  await page.getByRole('link', {name:'Basic Auth'}).click();
 
+  page.on('dialog',async dialog => {
+  expect(dialog.type()).toBe('prompt')
+  expect(dialog.message()).toBe('Username');
+  await dialog.accept('admin')
+  });
+
+  page.on('dialog',async dialog => {
+    expect(dialog.type()).toBe('prompt')
+    expect(dialog.message()).toBe('Password');
+    await dialog.accept('admin')
+  });
+
+  expect(page.getByText('Congratulations! You must have the proper credentials.')).toBeVisible
+  })
 });
