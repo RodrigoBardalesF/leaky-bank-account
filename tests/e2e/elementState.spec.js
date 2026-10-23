@@ -12,11 +12,8 @@ test('populated text should be displayed in dynamic control', async ({ page }) =
 
   await page.getByRole('button', { name: 'Enable' }).click();
 
-  const inputField = page.locator('#input-example input');
+  expect(page.getByRole('textbox').isEnabled)
+  await page.getByRole('textbox').fill(randomString);
+  expect(page.getByText(randomString).isVisible)
 
-  // expect that inputField is enabled
-
-  // input randomString into inputField
-
-  // expect that randomString is displayed
 });
