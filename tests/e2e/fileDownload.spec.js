@@ -24,11 +24,10 @@ test('file should be downloaded', async ({ page }) => {
   page.waitForEvent('download'),
   page.getByRole('link', { name: fileName, exact: true }).click()
   ]);
-  
+
   await download.saveAs(downloadedFilePath);
-  // wait until the file is fully downloaded along the specific downloadedFilePath
+
   expect(download.path() == downloadedFilePath)
-  // assert that file downloaded
   
 });
 
