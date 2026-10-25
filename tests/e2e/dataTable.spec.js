@@ -9,17 +9,23 @@ test.beforeEach(async ({ page }) => {
 
 test('sum of Due values should be correct', async ({ page }) => {
   await page.getByRole('link', {name: 'Sortable Data Tables'}).click();
-
-  // get Due column elements
-  
   let actualSum = 0;
 
-  for (let i = 0; i < await dueItems.count(); i++) {
+  // get Due column elements
+  await page.locator('tbody tr').first().waitFor();
+  const row = await page.locator('#table1 tbody tr td:nth-child(4)').allTextContents();
+  console.log(row);
+  const dueItems = row.map(str => str.replaceAll('$',''));
+  console.log(dueItems);
+
+  for (let i = 0; i < dueItems.length; i++) {
+
+    actualSum += parseInt(parseFloat(dueItems[i]))
     // get value in the column
     
     // increase actualSum with value without currencySign
     
   }
-
+  console.log(actualSum)
   expect(actualSum).toEqual(expectedSum);
 });
