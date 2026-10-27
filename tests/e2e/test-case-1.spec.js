@@ -32,7 +32,7 @@ test.describe("Chain activties on site",() => {
             return parseFloat(priceText?.replace('$', '') || '0');
         })
         );
-        console.log(prices);
+        
         const sortedPrices = [...prices].sort((a, b) => a - b);
         expect(prices).toEqual(sortedPrices);
 
