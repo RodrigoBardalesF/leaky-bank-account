@@ -3,7 +3,7 @@ import BasePage from '#framework/ui/page/BasePage.js';
 
 export default class FramesPage extends BasePage {
   constructor(page) {
-    super(new Label(page.getByRole('heading', { name: 'Frames' }), 'Frames page unique element'), 'Frames Page');
+    super(new Label(page.locator('frameset'), 'Frames page unique element'), 'Frames Page');
     this.nestedFramesButton = new Button(page.getByRole('link', { name: 'Nested Frames' }), 'Nested Frames button');
   }
 

@@ -8,20 +8,26 @@ import ConfigReader from '#framework/utils/ConfigReader.js';
 
 test('interact with New Window', async ({ customBrowser: browser }) => {
   // Implement test case
-  const data = ConfigReader.getTestData()
+  const data = ConfigReader.getTestData();
   const newWindowText = data.newWindowText;
 
-  const openNewWindow = new OpenNewWindowPage()
-  openNewWindow.waitForPageToLoad()
-  expect(await openNewWindow.isPageOpened()).toBe(true)
+  const mainPage = new MainPage(browser.page);
+  mainPage.waitForPageToLoad();
+  expect(await mainPage.isPageOpened()).toBe(true);
 
-  openNewWindow.clickForNewWindow()
+  mainPage.clickNavigationLink('Multiple Windows');
 
-  const newWindowPage = new NewWindowPage()
-  newWindowPage.waitForPageToLoad()
-  expect(await newWindowPage.isPageOpened()).toBe(true)
+  const openNewWindow = new OpenNewWindowPage(browser);
+  await openNewWindow.waitForPageToLoad();
+  expect(await openNewWindow.isPageOpened()).toBe(true);
 
-  const newWindowMessage = await newWindowPage.getNewWindowLabelText()
-  expect(newWindowMessage).toEqual(newWindowText)
+  await openNewWindow.clickForNewWindow();
+
+  const newWindowPage = new NewWindowPage(browser);
+  await newWindowPage.waitForPageToLoad();
+  expect(await newWindowPage.isPageOpened()).toBe(true);
+
+  const newWindowMessage = await newWindowPage.getNewWindowLabelText();
+  expect(newWindowMessage).toEqual(newWindowText);
 
 });

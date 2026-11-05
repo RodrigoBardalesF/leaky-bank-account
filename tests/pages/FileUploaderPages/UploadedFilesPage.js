@@ -2,13 +2,14 @@ import BasePage from '#framework/ui/page/BasePage.js';
 import { Label } from '#framework/ui/elements/index.js';
 
 export default class UploadedFilesPage extends BasePage {
-  // Implement Page Object
-  constructor(page){
-    super(new Label(page.getByRole('heading', { name: "File Uploaded" }), 'File Uploaded page unique element'), 'File Uploaded');
-    this.uploadedFile = new Label(page.locator("#uploaded-files"),"Uploaded file name")
+  constructor(browser){
+    super(new Label(browser.page.getByRole('heading', { name: 'File Uploaded' }), 'File Uploaded page'), 'File Uploaded');
+    this.browser = browser;
+    this.page = browser.page;    
+    this.uploadedFile = new Label(browser.page.locator('#uploaded-files'),'Uploaded file name');
   }
   async getText(fileName){
-    return await this.uploadedFile.getText(fileName)
+    return await this.uploadedFile.getText(fileName);
   }
 
 }

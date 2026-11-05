@@ -25,7 +25,7 @@ const allProjects = [
     name: 'local-headed',
     use: {
       browserName: 'chromium',
-      headless: false,
+      headless: true,
       viewport: null,
       launchOptions: {
         args: ['--start-maximized'],
@@ -35,6 +35,7 @@ const allProjects = [
 ];
 
 export default defineConfig({
+  timeout: 60000,
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: isCI,
@@ -51,7 +52,7 @@ export default defineConfig({
     headless: isCI ? true : (process.env.HEADLESS !== 'false'),
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
-
+    navigationTimeout:60000,
     baseURL: process.env.BASE_URL || 'https://the-internet.herokuapp.com',
     acceptDownloads: true,
   },

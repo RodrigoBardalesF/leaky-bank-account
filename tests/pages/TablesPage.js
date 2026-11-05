@@ -6,7 +6,7 @@ export default class TablesPage extends BasePage {
   
   constructor(page) {
     // Change call of super() constructor to approriate one
-    super(new Label(page.getByRole('heading', { name: "Sortable Data Tables" }), 'Unique header'), 'Sortable Data Tables');
+    super(new Label(page.getByRole('heading', { name: "Data Tables" }), 'Unique header'), 'Sortable Data Tables');
 
     this.dueCells = new ElementsList(
       page.locator('#table1 td:nth-child(4)'),

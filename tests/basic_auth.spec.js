@@ -6,13 +6,11 @@ import MainPage from './pages/MainPage.js';
 testWithAuth('should perform Basic Auth action', async ({ customBrowser: browser }) => {
   const testData = ConfigReader.getTestData();
   const mainPage = new MainPage(browser.page);
-  await mainPage.waitForPageToLoad()
-  // Navigate to 'Basic Auth'
-  await mainPage.clickNavigationLink("Basic Auth")
+  await mainPage.waitForPageToLoad();
+  await mainPage.clickNavigationLink('Basic Auth');
 
-  const basicAuth = new BasicAuthPage(browser.page);
-  // Verify that the success message is displayed
-  expect(await BasicAuthPage.getSuccessMessage()).toEqual(testData.successfulBasicAuthMessage);
+  const basicAuth = new BasicAuthPage(browser);
+  expect(await basicAuth.getSuccessMessage()).toEqual(testData.successfulBasicAuthMessage);
 
 
 });

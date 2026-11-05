@@ -6,17 +6,16 @@ import ConfigReader from '#framework/utils/ConfigReader.js';
 
 test('successful message should be displayed after alert handling', async ({ customBrowser: browser }) => {
   const testData = ConfigReader.getTestData();
+
   const mainPage = new MainPage(browser.page);
-  await mainPage.waitForPageToLoad()
-  await mainPage.clickNavigationLink("JavaScript Alerts")
-  // Navigate to 'JavaScript Alerts'
+  await mainPage.waitForPageToLoad();
+  expect(await mainPage.isPageOpened()).toBe(true);
+  await mainPage.clickNavigationLink('JavaScript Alerts');
 
-  const javaScriptAlertsPage = new JavaScriptAlertsPage(browser.page);
-
-  await javaScriptAlertsPage.waitForPageToLoad()
-
+  const javaScriptAlertsPage = new JavaScriptAlertsPage(browser);
+  await javaScriptAlertsPage.waitForPageToLoad();
   expect(await javaScriptAlertsPage.isPageOpened()).toBe(true);
 
-  await browser.acceptAlert(() => javaScriptAlertsPage.clickForJSAlertButton());
-  expect(await javaScriptAlertsPage.getResultText()).toBe(testData.successfulAlertMessage);
+  await javaScriptAlertsPage.clickForJSAlertButton();
+  expect(await javaScriptAlertsPage.getResultText()).toEqual(testData.successfulAlertMessage);
 });

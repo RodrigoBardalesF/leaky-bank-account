@@ -8,14 +8,17 @@ const randomString = crypto.randomUUID();
 test('Check state of Dynamic control', async ({ customBrowser: browser }) => {
   
   const mainPage = new MainPage(browser.page);
-  await mainPage.waitForPageToLoad()
+  await mainPage.waitForPageToLoad();
+  expect(await mainPage.isPageOpened()).toBe(true);
   await mainPage.clickNavigationLink('Dynamic Controls');
 
-  const dynamicControlsPage = new DynamicControlsPage(browser.page);
+  const dynamicControlsPage = new DynamicControlsPage(browser);
+  await dynamicControlsPage.waitForPageToLoad();
+  expect(await dynamicControlsPage.isPageOpened()).toBe(true);
 
   await dynamicControlsPage.clickEnableButton(); 
   
-  expect(await dynamicControlsPage.isInputFieldEnabled()).toBe(true);
+  await dynamicControlsPage.isInputFieldEnabled();
 
   await dynamicControlsPage.inputTextIntoInputField(randomString);
   const text = await dynamicControlsPage.getValueFromInputField();

@@ -2,14 +2,16 @@ import BasePage from '#framework/ui/page/BasePage.js';
 import { Label, Button } from '#framework/ui/elements/index.js';
 
 export default class OpenNewWindowPage extends BasePage {
-  // Implement Page Object
   constructor(browser){
-    super(new Label(page.getByRole('heading', { name: "Multiple Windows" }), 'Multiple Windows'), 'Multiple Windows');
-    this.newWindowButton = new Button(page.getByRole('button', {name:'Click Here'}), 'New Window Button')
+    super(new Label(browser.page.getByRole('heading', { name: 'Opening a new window' }), 'Multiple Windows unique header'), 'Multiple Windows');
+    this.newWindowLink = new Label(browser.page.locator('.example a'), 'New Window link');
+    this.browser = browser; 
+    this.page = browser.page;
   }
 
   async clickForNewWindow (){
-    this.newWindowButton.click()
+    return await this.browser.openLinkInNewTab(async () => {
+      await this.newWindowLink.click();
+    });
   }
-
 }

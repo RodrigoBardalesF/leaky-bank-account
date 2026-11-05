@@ -4,23 +4,25 @@ import FileDownloadPage from './pages/FileDownloadPage.js';
 import MainPage from './pages/MainPage.js';
 import ConfigReader from '#framework/utils/ConfigReader.js';
 import FileUtils from '#framework/utils/FileUtils.js';
-import {join} from "path"
 
 test('Check that file was downloaded', async ({ customBrowser: browser }) => {
   // Implement test case
   const testData = ConfigReader.getTestData();
   
-  const mainPage = new MainPage(browser.page)
-  await mainPage.waitForPageToLoad()
-  await mainPage.clickNavigationLink("File Download")
+  const mainPage = new MainPage(browser.page);
+  await mainPage.waitForPageToLoad();
+  expect(await mainPage.isPageOpened()).toBe(true);
+  await mainPage.clickNavigationLink('File Download')
 
-  const filedownloadPage = new FileDownloadPage(browser)
-  await filedownloadPage.waitForPageToLoad()
+  const fileDownloadPage = new FileDownloadPage(browser);
+  await fileDownloadPage.waitForPageToLoad();
+  expect(await fileDownloadPage.isPageOpened()).toBe(true);
 
-  await filedownloadPage.isFileLabelDisplayed(testData.downloadFileName)
-  const filePath = await filedownloadPage.clickDownloadFile(testData.downloadFileName)
 
-  await expect(FileUtils.isFileExists(filePath)).resolves.toBeTruthy()
+  await fileDownloadPage.isFileLabelDisplayed(testData.downloadFileName);
+  const filePath = await fileDownloadPage.clickDownloadFile(testData.downloadFileName);
+
+  await expect(FileUtils.isFileExists(filePath)).resolves.toBeTruthy();
   //await expect.poll(async () => await FileUtils.isFileExists(filePath)).toBeTruthy();
 
 });

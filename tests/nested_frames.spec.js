@@ -7,25 +7,21 @@ import ConfigReader from '#framework/utils/ConfigReader.js';
 
 
 test('interact with text in Nested Frame', async ({ customBrowser: browser }) => {
-  const data = ConfigReader.getTestData()
-  const leftFrameText = data.leftFrameText
-  const rightFrameText = data.rightFrameText
+  const data = ConfigReader.getTestData();
+  const leftFrameText = data.leftFrameText;
+  const rightFrameText = data.rightFrameText;
 
   const mainPage = new MainPage(browser.page);
-  await mainPage.clickNavigationLink('Frames');
-  mainPage.waitForPageToLoad()
-  expect(await mainPage.isPageOpened()).toBe(true)
-
-  const framesPage = new FramesPage(browser.page);
-  framesPage.waitForPageToLoad()
-  expect(await framesPage.isPageOpened()).toBe(true)
-
-  await framesPage.clickNestedFramesButton();
+  mainPage.waitForPageToLoad();
+  expect(await mainPage.isPageOpened()).toBe(true);
+  
+  await mainPage.clickNavigationLink('Nested Frames');
 
   const nestedFramesPage = new NestedFramesPage(browser.page);
-  expect(nestedFramesPage.leftFrameLabel).toEqual(leftFrameText)
-  expect(nestedFramesPage.rightFrameLabel).toEqual(rightFrameText)
+  nestedFramesPage.waitForPageToLoad();
+  expect(await nestedFramesPage.isPageOpened()).toBe(true);
 
-  // Implement checks for left and right frame text
+  expect(nestedFramesPage.leftFrameLabel).toEqual(leftFrameText);
+  expect(nestedFramesPage.rightFrameLabel).toEqual(rightFrameText);
 
 });

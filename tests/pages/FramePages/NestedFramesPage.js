@@ -4,14 +4,14 @@ import FrameUtils from '#framework/utils/FrameUtils.js';
 
 export default class NestedFramesPage extends BasePage {
   constructor(page) {
-    super(new Label(page.locator('frame[name="frame-top"]'), 'unique element of Nested Frames Page'), 'Nested Frames Page');
+    super(new Label(page.locator('frame[name="frame-top"]'), 'MIDDLE'), 'Nested Frames Page');
     this.frameUtils = new FrameUtils(page);
     this.leftFrameLabel = new Label(
       this.frameUtils.locatorInFrames(['[name="frame-top"]', '[name="frame-left"]'], 'body'),
       'Left Frame label'
     );
-    // Implement right frame
-    this.rightFrameLabel = new Label(
+    
+    this.rightFrameLabel = new Label( 
       this.frameUtils.locatorInFrames(['[name="frame-top"]', '[name="frame-right"]'], 'body'),
       'Right Frame label'
     );
@@ -25,6 +25,5 @@ export default class NestedFramesPage extends BasePage {
     async readRightFrame(){
         this.rightFrameLabel.getText()
     }
-  // Implement methods
 
 }
