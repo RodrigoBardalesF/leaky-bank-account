@@ -11,9 +11,20 @@ export default class NestedFramesPage extends BasePage {
       'Left Frame label'
     );
     // Implement right frame
+    this.rightFrameLabel = new Label(
+      this.frameUtils.locatorInFrames(['[name="frame-top"]', '[name="frame-right"]'], 'body'),
+      'Right Frame label'
+    );
 
   }
 
+    async readLeftFrame(){
+        this.leftFrameLabel.getText()
+    }
+
+    async readRightFrame(){
+        this.rightFrameLabel.getText()
+    }
   // Implement methods
 
 }

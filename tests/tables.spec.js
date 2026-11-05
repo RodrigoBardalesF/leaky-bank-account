@@ -14,9 +14,15 @@ test('Sum of Due values should be correct', async ({ customBrowser: browser }) =
   await tablesPage.waitForPageToLoad();
   const dueValues = await tablesPage.getDueColumnValues();
 
-  // Calculate sum of elements (actualSum) from dueValues
+  const cleanDueValues = dueValues.map(item => parseInt(item.replaceAll('$','')));
+
   let actualSum = 0;
 
+  for (const sum of cleanDueValues) {
+    actualSum += sum
+  }
 
+  // Calculate sum of elements (actualSum) from dueValues
+  
   expect(actualSum).toBe(expectedSum);
 });
