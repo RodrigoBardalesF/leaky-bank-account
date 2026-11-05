@@ -5,8 +5,7 @@ import { ElementsList } from '#framework/ui/elements/helpers/ElementsList.js';
 export default class TablesPage extends BasePage {
   
   constructor(page) {
-    // Change call of super() constructor to approriate one
-    super(new Label(page.getByRole('heading', { name: "Data Tables" }), 'Unique header'), 'Sortable Data Tables');
+    super(new Label(page.getByRole('heading', { name: 'Data Tables' }), 'Unique header'), 'Sortable Data Tables');
 
     this.dueCells = new ElementsList(
       page.locator('#table1 td:nth-child(4)'),

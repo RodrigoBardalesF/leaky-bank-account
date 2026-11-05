@@ -1,6 +1,5 @@
 import BasePage from '#framework/ui/page/BasePage.js';
 import { Label } from '#framework/ui/elements/index.js';
-import Browser from '#framework/ui/browser/Browser.js';
 
 export default class FileDownloadPage extends BasePage {
   constructor(browser) {
@@ -16,7 +15,7 @@ export default class FileDownloadPage extends BasePage {
 
   async clickDownloadFile(fileName) {
     return await this.browser.downloadAndSave(async ()=> {
-      await this.fileLabel(fileName).click()}, 
+      await this.fileLabel(fileName).click();}, 
     fileName
     );
   }

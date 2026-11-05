@@ -10,7 +10,7 @@ testWithAuth('should perform Basic Auth action', async ({ customBrowser: browser
   await mainPage.clickNavigationLink('Basic Auth');
 
   const basicAuth = new BasicAuthPage(browser);
+  await basicAuth.waitForPageToLoad();
+
   expect(await basicAuth.getSuccessMessage()).toEqual(testData.successfulBasicAuthMessage);
-
-
 });

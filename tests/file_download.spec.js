@@ -12,7 +12,7 @@ test('Check that file was downloaded', async ({ customBrowser: browser }) => {
   const mainPage = new MainPage(browser.page);
   await mainPage.waitForPageToLoad();
   expect(await mainPage.isPageOpened()).toBe(true);
-  await mainPage.clickNavigationLink('File Download')
+  await mainPage.clickNavigationLink('File Download');
 
   const fileDownloadPage = new FileDownloadPage(browser);
   await fileDownloadPage.waitForPageToLoad();

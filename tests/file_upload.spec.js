@@ -4,13 +4,12 @@ import MainPage from './pages/MainPage.js';
 import FileUploaderPage from './pages/FileUploaderPages/FileUploaderPage.js';
 import ConfigReader from '#framework/utils/ConfigReader.js';
 import UploadedFilesPage from './pages/FileUploaderPages/UploadedFilesPage.js';
-import Browser from '#framework/ui/browser/Browser.js';
 
 test('Upload file and check its correct',async ({customBrowser: browser})=>{
 
   const testData = ConfigReader.getTestData();
 
-  const fileName = testData.submitFileName;
+  const fileName = testData.fileForUpload;
   const submittedFileName = testData.submittedFileName;
     
   const mainPage = new MainPage(browser.page);
@@ -23,7 +22,7 @@ test('Upload file and check its correct',async ({customBrowser: browser})=>{
   await uploadFile.waitForPageToLoad();
   expect(await uploadFile.isPageOpened()).toBe(true);
 
-  await uploadFile.uploadFile(testData.fileForUpload);
+  await uploadFile.uploadFile(fileName);
 
   const uploadedFile = new UploadedFilesPage(browser);
   await uploadedFile.waitForPageToLoad();
