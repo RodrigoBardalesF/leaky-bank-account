@@ -15,13 +15,19 @@ test('interact with text in Nested Frame', async ({ customBrowser: browser }) =>
   mainPage.waitForPageToLoad();
   expect(await mainPage.isPageOpened()).toBe(true);
   
-  await mainPage.clickNavigationLink('Nested Frames');
+  await mainPage.clickNavigationLink('Frames');
 
-  const nestedFramesPage = new NestedFramesPage(browser.page);
+  const framesPage = new FramesPage(browser);
+  framesPage.waitForPageToLoad();
+  expect(await framesPage.isPageOpened()).toBe(true);
+
+  framesPage.clickNestedFramesButton();
+
+  const nestedFramesPage = new NestedFramesPage(browser);
   nestedFramesPage.waitForPageToLoad();
   expect(await nestedFramesPage.isPageOpened()).toBe(true);
 
-  expect(nestedFramesPage.leftFrameLabel).toEqual(leftFrameText);
-  expect(nestedFramesPage.rightFrameLabel).toEqual(rightFrameText);
+  expect(await nestedFramesPage.readLeftFrame()).toContain(leftFrameText);
+  expect(await nestedFramesPage.readRightFrame()).toContain(rightFrameText);
 
 });

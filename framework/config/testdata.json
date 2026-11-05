@@ -5,6 +5,7 @@
   "fileForUpload": "tests/resources/test.txt",
   "downloadFileName": "test.txt",
   "submitFileName": "tests/resources/test.txt",
+  "submittedFileName": "test.txt",
   "newWindowText": "New Window",
   "leftFrameText":"LEFT",
   "rightFrameText":"RIGHT"

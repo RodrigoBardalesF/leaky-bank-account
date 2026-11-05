@@ -8,8 +8,8 @@ export default class UploadedFilesPage extends BasePage {
     this.page = browser.page;    
     this.uploadedFile = new Label(browser.page.locator('#uploaded-files'),'Uploaded file name');
   }
-  async getText(fileName){
-    return await this.uploadedFile.getText(fileName);
+  async getText(){
+    return await this.uploadedFile.getText();
   }
 
 }
