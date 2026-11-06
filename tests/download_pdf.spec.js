@@ -24,8 +24,10 @@ test('Download PDF', async ({customBrowser: browser}) => {
 
   const downloadAsPdfPage = new DownloadAsPdfPage(browser);
   await downloadAsPdfPage.waitForPageToLoad();
+
   expect(await downloadAsPdfPage.isPageOpened()).toBe(true);
   const getFileName = await downloadAsPdfPage.getFileName();
+  
   const filePath = await downloadAsPdfPage.downloadFile(getFileName);
   
   expect( await FileUtils.isFileExists(filePath)).toBe(true);
