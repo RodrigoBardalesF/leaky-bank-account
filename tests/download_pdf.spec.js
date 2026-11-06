@@ -4,11 +4,8 @@ import FileUtils from '#framework/utils/FileUtils.js';
 import ArticlePage from './pages/ArticlePage';
 import DownloadAsPdfPage from './pages/DownloadAsPdfPage';
 import WikipediaMainPage from './pages/WikipediaMainPage';
-import ConfigReader from '#framework/utils/ConfigReader.js';
 
 test('Download PDF', async ({customBrowser: browser}) => {
-  const data = ConfigReader.getTestData();
-  const expectedFileName = data.downloadFileName;
 
   const mainPage = new WikipediaMainPage(browser.page);
   mainPage.waitForPageToLoad();
@@ -28,8 +25,8 @@ test('Download PDF', async ({customBrowser: browser}) => {
   const downloadAsPdfPage = new DownloadAsPdfPage(browser);
   await downloadAsPdfPage.waitForPageToLoad();
   expect(await downloadAsPdfPage.isPageOpened()).toBe(true);
-  await downloadAsPdfPage.getFileName();
-  const filePath = await downloadAsPdfPage.downloadFile(expectedFileName);
+  const getFileName = await downloadAsPdfPage.getFileName();
+  const filePath = await downloadAsPdfPage.downloadFile(getFileName);
   
   expect( await FileUtils.isFileExists(filePath)).toBe(true);
 });
