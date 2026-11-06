@@ -25,8 +25,8 @@ test('Download PDF', async ({customBrowser: browser}) => {
   await articlePage.clickToolsMenuButton();
   await articlePage.clickDownloadAsPdfButton();
 
-  const downloadAsPdfPage = new DownloadAsPdfPage(browser.page);
-  downloadAsPdfPage.waitForPageToLoad();
+  const downloadAsPdfPage = new DownloadAsPdfPage(browser);
+  await downloadAsPdfPage.waitForPageToLoad();
   expect(await downloadAsPdfPage.isPageOpened()).toBe(true);
   await downloadAsPdfPage.getFileName();
   const filePath = await downloadAsPdfPage.downloadFile(expectedFileName);
