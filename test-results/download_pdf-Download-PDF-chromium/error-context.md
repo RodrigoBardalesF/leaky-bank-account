@@ -1,0 +1,12261 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: download_pdf.spec.js >> Download PDF
+- Location: tests/download_pdf.spec.js:9:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('input', { name: 'vector-page-tools-dropdown-checkbox' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f1e1]:
+  - link "Jump to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#bodyContent"
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - navigation "Site" [ref=f1e6]:
+        - generic "Main menu" [ref=f1e7]:
+          - button "Main menu" [ref=f1e8] [cursor=pointer]
+          - generic [ref=f1e11]: Main menu
+      - link [ref=f1e12] [cursor=pointer]:
+        - /url: /wiki/Main_Page
+        - generic [ref=f1e13]:
+          - img "Wikipedia" [ref=f1e14]
+          - img "The Free Encyclopedia" [ref=f1e15]
+    - generic [ref=f1e16]:
+      - search [ref=f1e17]:
+        - generic [ref=f1e20]:
+          - searchbox "Search Wikipedia" [ref=f1e23]
+          - button "Search" [ref=f1e25]
+      - navigation "Personal tools" [ref=f1e26]:
+        - list [ref=f1e30]:
+          - listitem [ref=f1e31]:
+            - link "Donate" [ref=f1e32] [cursor=pointer]:
+              - /url: https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=en.wikipedia.org&uselang=en
+          - listitem [ref=f1e33]:
+            - link "Create account" [ref=f1e34] [cursor=pointer]:
+              - /url: /w/index.php?title=Special:CreateAccount&returnto=Albert+Einstein
+          - listitem [ref=f1e35]:
+            - link "Log in" [ref=f1e36] [cursor=pointer]:
+              - /url: /w/index.php?title=Special:UserLogin&returnto=Albert+Einstein
+  - generic [ref=f1e38]:
+    - navigation "Contents" [ref=f1e42]:
+      - generic [ref=f1e44]:
+        - generic [ref=f1e45]:
+          - heading "Contents" [level=2] [ref=f1e46]
+          - button "Hide Contents" [ref=f1e47] [cursor=pointer]: hide
+        - list [ref=f1e48]:
+          - listitem [ref=f1e49]:
+            - link "(Top)" [ref=f1e50] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f1e52]:
+            - link "Life and career" [ref=f1e53] [cursor=pointer]:
+              - /url: "#Life_and_career"
+            - button "Toggle Life and career subsection" [ref=f1e55]
+            - list
+          - listitem [ref=f1e58]:
+            - link "Scientific career" [ref=f1e59] [cursor=pointer]:
+              - /url: "#Scientific_career"
+            - button "Toggle Scientific career subsection" [ref=f1e61]
+            - list
+          - listitem [ref=f1e64]:
+            - link "Legacy" [ref=f1e65] [cursor=pointer]:
+              - /url: "#Legacy"
+            - button "Toggle Legacy subsection" [ref=f1e67]
+            - list
+          - listitem [ref=f1e70]:
+            - link "In popular culture" [ref=f1e71] [cursor=pointer]:
+              - /url: "#In_popular_culture"
+            - list
+          - listitem [ref=f1e73]:
+            - link "Awards and honors" [ref=f1e74] [cursor=pointer]:
+              - /url: "#Awards_and_honors"
+            - list
+          - listitem [ref=f1e76]:
+            - link "Publications" [ref=f1e77] [cursor=pointer]:
+              - /url: "#Publications"
+            - button "Toggle Publications subsection" [ref=f1e79]
+            - list
+          - listitem [ref=f1e82]:
+            - link "See also" [ref=f1e83] [cursor=pointer]:
+              - /url: "#See_also"
+            - list
+          - listitem [ref=f1e85]:
+            - link "Footnotes" [ref=f1e86] [cursor=pointer]:
+              - /url: "#Footnotes"
+            - list
+          - listitem [ref=f1e88]:
+            - link "Notes" [ref=f1e89] [cursor=pointer]:
+              - /url: "#Notes"
+            - list
+          - listitem [ref=f1e91]:
+            - link "References" [ref=f1e92] [cursor=pointer]:
+              - /url: "#References"
+            - button "Toggle References subsection" [ref=f1e94]
+            - list
+          - listitem [ref=f1e97]:
+            - link "Further reading" [ref=f1e98] [cursor=pointer]:
+              - /url: "#Further_reading"
+            - list
+          - listitem [ref=f1e100]:
+            - link "External links" [ref=f1e101] [cursor=pointer]:
+              - /url: "#External_links"
+            - list
+    - main [ref=f1e104]:
+      - generic [ref=f1e105]:
+        - heading "Albert Einstein" [level=1] [ref=f1e106]
+        - generic [ref=f1e108]:
+          - button "235 languages" [ref=f1e109] [cursor=pointer]
+          - generic [ref=f1e112]: 235 languages
+      - generic [ref=f1e114]:
+        - navigation "Namespaces" [ref=f1e116]:
+          - list [ref=f1e119]:
+            - listitem [ref=f1e120]:
+              - link "Article" [ref=f1e121] [cursor=pointer]:
+                - /url: /wiki/Albert_Einstein
+            - listitem [ref=f1e123]:
+              - link "Talk" [ref=f1e124] [cursor=pointer]:
+                - /url: /wiki/Talk:Albert_Einstein
+        - generic [ref=f1e126]:
+          - navigation "Views" [ref=f1e127]:
+            - list [ref=f1e130]:
+              - listitem [ref=f1e131]:
+                - link "Read" [ref=f1e132] [cursor=pointer]:
+                  - /url: /wiki/Albert_Einstein
+              - listitem [ref=f1e134]:
+                - link "View source" [ref=f1e135] [cursor=pointer]:
+                  - /url: /w/index.php?title=Albert_Einstein&action=edit
+              - listitem [ref=f1e137]:
+                - link "View history" [ref=f1e138] [cursor=pointer]:
+                  - /url: /w/index.php?title=Albert_Einstein&action=history
+              - listitem [ref=f1e140]:
+                - link "Save" [ref=f1e141] [cursor=pointer]:
+                  - /url: "#"
+          - navigation "Page tools" [ref=f1e144]:
+            - generic [ref=f1e145]:
+              - button "Tools" [ref=f1e146] [cursor=pointer]
+              - generic [ref=f1e149]: Tools
+      - navigation "Appearance" [ref=f1e152]:
+        - generic [ref=f1e154]:
+          - generic [ref=f1e155]:
+            - generic [ref=f1e156]: Appearance
+            - button "Hide Appearance" [ref=f1e157] [cursor=pointer]: hide
+          - generic [ref=f1e158]:
+            - generic [ref=f1e159]: Text
+            - list [ref=f1e161]:
+              - listitem [ref=f1e162]:
+                - generic [ref=f1e164]:
+                  - generic [ref=f1e165]:
+                    - radio "Small" [ref=f1e166]
+                    - generic [ref=f1e168]: Small
+                  - generic [ref=f1e170]:
+                    - radio "Standard" [checked] [ref=f1e171]
+                    - generic [ref=f1e173]: Standard
+                  - generic [ref=f1e175]:
+                    - radio "Large" [ref=f1e176]
+                    - generic [ref=f1e178]: Large
+          - generic [ref=f1e180]:
+            - generic [ref=f1e181]: Width
+            - list [ref=f1e183]:
+              - listitem [ref=f1e184]:
+                - generic [ref=f1e186]:
+                  - generic [ref=f1e187]:
+                    - radio "Standard" [checked] [ref=f1e188]
+                    - generic [ref=f1e190]: Standard
+                  - generic [ref=f1e192]:
+                    - radio "Wide" [ref=f1e193]
+                    - generic [ref=f1e195]: Wide
+          - generic [ref=f1e197]:
+            - generic [ref=f1e198]: Color
+            - list [ref=f1e200]:
+              - listitem [ref=f1e201]:
+                - generic [ref=f1e203]:
+                  - generic [ref=f1e204]:
+                    - radio "Automatic" [ref=f1e205]
+                    - generic [ref=f1e207]: Automatic
+                  - generic [ref=f1e209]:
+                    - radio "Light" [checked] [ref=f1e210]
+                    - generic [ref=f1e212]: Light
+                  - generic [ref=f1e214]:
+                    - radio "Dark" [ref=f1e215]
+                    - generic [ref=f1e217]: Dark
+      - generic "Albert Einstein" [ref=f1e219]:
+        - generic [ref=f1e220]:
+          - generic [ref=f1e221]:
+            - link [ref=f1e225] [cursor=pointer]:
+              - /url: https://en.wikipedia.org/wiki/Wikipedia:Good_articles*
+              - img "This is a good article. Click here for more information." [ref=f1e226]
+            - link [ref=f1e230] [cursor=pointer]:
+              - /url: https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#semi
+              - img "Page semi-protected" [ref=f1e231]
+          - generic [ref=f1e232]: From Wikipedia, the free encyclopedia
+        - generic [ref=f1e234]:
+          - generic [ref=f1e235]:
+            - note [ref=f1e236]:
+              - text: "\"Einstein\" redirects here. For other uses, see"
+              - link "Einstein (disambiguation)" [ref=f1e237] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Einstein_(disambiguation)
+              - text: and
+              - link "Albert Einstein (disambiguation)" [ref=f1e238] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Albert_Einstein_(disambiguation)
+              - text: .
+            - table [ref=f1e239]:
+              - rowgroup [ref=f1e240]:
+                - row [ref=f1e241]:
+                  - columnheader "Albert Einstein" [ref=f1e242]
+                - row [ref=f1e244]:
+                  - cell "Einstein in 1947" [ref=f1e245]:
+                    - link [ref=f1e247] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_Head_cleaned.jpg
+                - row [ref=f1e250]:
+                  - rowheader "Born" [ref=f1e251]
+                  - cell [ref=f1e252]:
+                    - text: 14 March 1879
+                    - generic [ref=f1e253]:
+                      - link "Ulm" [ref=f1e254] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Ulm
+                      - text: ", Kingdom of Württemberg, German Empire"
+                - row [ref=f1e255]:
+                  - rowheader "Died" [ref=f1e256]
+                  - cell [ref=f1e257]:
+                    - text: 18 April 1955 (aged 76)
+                    - generic [ref=f1e258]:
+                      - link "Princeton, New Jersey" [ref=f1e259] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Princeton,_New_Jersey
+                      - text: ", U.S."
+                - row [ref=f1e260]:
+                  - rowheader "Citizenship" [ref=f1e261]
+                  - cell "[show] See list" [ref=f1e262]:
+                    - generic [ref=f1e263]:
+                      - button "[show]" [ref=f1e264] [cursor=pointer]
+                      - generic [ref=f1e265]: See list
+                      - list
+                - row [ref=f1e268]:
+                  - rowheader "Education" [ref=f1e269]
+                  - cell [ref=f1e270]:
+                    - list [ref=f1e272]:
+                      - listitem [ref=f1e273]:
+                        - link "Swiss federal polytechnic school" [ref=f1e274] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/ETH_Zurich
+                        - text: (teaching diploma, 1900)
+                      - listitem [ref=f1e275]:
+                        - link "University of Zurich" [ref=f1e276] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/University_of_Zurich
+                        - text: (
+                        - link "PhD" [ref=f1e277] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/PhD
+                        - text: ", 1905)"
+                - row [ref=f1e278]:
+                  - rowheader "Known for" [ref=f1e279]
+                  - cell [ref=f1e280]:
+                    - list [ref=f1e282]:
+                      - listitem [ref=f1e283]:
+                        - link "General relativity" [ref=f1e284] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/General_relativity
+                      - listitem [ref=f1e285]:
+                        - link "Special relativity" [ref=f1e286] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Special_relativity
+                      - listitem [ref=f1e287]:
+                        - link "Photoelectric effect" [ref=f1e288] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Photoelectric_effect
+                      - listitem [ref=f1e289]:
+                        - link [ref=f1e290] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Mass–energy_equivalence
+                          - text: E=mc
+                          - superscript [ref=f1e291]: "2"
+                          - text: (mass–energy equivalence)
+                      - listitem [ref=f1e292]:
+                        - link "E=hf (Planck–Einstein relation)" [ref=f1e293] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Planck–Einstein_relation
+                      - listitem [ref=f1e294]:
+                        - link "Theory of Brownian motion" [ref=f1e295] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Brownian_motion
+                      - listitem [ref=f1e296]:
+                        - link "Einstein field equations" [ref=f1e297] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Einstein_field_equations
+                      - listitem [ref=f1e298]:
+                        - link "Bose–Einstein statistics" [ref=f1e299] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Bose–Einstein_statistics
+                      - listitem [ref=f1e300]:
+                        - link "Bose–Einstein condensate" [ref=f1e301] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Bose–Einstein_condensate
+                      - listitem [ref=f1e302]:
+                        - link "Gravitational wave" [ref=f1e303] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Gravitational_wave
+                      - listitem [ref=f1e304]:
+                        - link "Cosmological constant" [ref=f1e305] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Cosmological_constant
+                      - listitem [ref=f1e306]:
+                        - link "Unified field theory" [ref=f1e307] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Unified_field_theory
+                      - listitem [ref=f1e308]:
+                        - link "EPR paradox" [ref=f1e309] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/EPR_paradox
+                      - listitem [ref=f1e310]:
+                        - link "Ensemble interpretation" [ref=f1e311] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Ensemble_interpretation
+                      - listitem [ref=f1e312]:
+                        - link "List of other concepts" [ref=f1e313] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/List_of_things_named_after_Albert_Einstein
+                - row [ref=f1e314]:
+                  - rowheader "Spouses" [ref=f1e315]
+                  - cell [ref=f1e316]:
+                    - generic [ref=f1e317]:
+                      - list:
+                        - listitem
+                      - generic [ref=f1e318]:
+                        - link "Mileva Marić" [ref=f1e320] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Mileva_Marić
+                        - text: (m. 1903; div. 1919)
+                      - list:
+                        - listitem
+                      - generic [ref=f1e321]:
+                        - link "Elsa Löwenthal" [ref=f1e323] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Elsa_Löwenthal
+                        - text: (m. 1919; died 1936)
+                - row [ref=f1e324]:
+                  - rowheader "Children" [ref=f1e325]
+                  - cell [ref=f1e326]:
+                    - text: 3, including
+                    - link "Hans Albert" [ref=f1e327] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Hans_Albert_Einstein
+                - row [ref=f1e328]:
+                  - rowheader "Family" [ref=f1e329]
+                  - cell [ref=f1e330]:
+                    - link "Einstein family" [ref=f1e331] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Einstein_family
+                - row [ref=f1e332]:
+                  - rowheader "Awards" [ref=f1e333]
+                  - cell "[show] See list" [ref=f1e334]:
+                    - generic [ref=f1e335]:
+                      - button "[show]" [ref=f1e336] [cursor=pointer]
+                      - generic [ref=f1e337]: See list
+                      - list
+                - row [ref=f1e340]:
+                  - cell "Scientific career" [ref=f1e341]
+                - row [ref=f1e342]:
+                  - rowheader "Fields" [ref=f1e343]
+                  - cell [ref=f1e344]:
+                    - link "Physics" [ref=f1e345] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Physics
+                - row [ref=f1e346]:
+                  - rowheader "Workplaces" [ref=f1e347]
+                  - cell "[show] See list" [ref=f1e348]:
+                    - generic [ref=f1e349]:
+                      - button "[show]" [ref=f1e350] [cursor=pointer]
+                      - generic [ref=f1e351]: See list
+                      - list
+                - row [ref=f1e354]:
+                  - rowheader "Thesis" [ref=f1e355]:
+                    - link "Thesis" [ref=f1e356] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Thesis
+                  - cell [ref=f1e357]:
+                    - link "Eine neue Bestimmung der Moleküldimensionen (A New Determination of Molecular Dimensions)" [ref=f1e359] [cursor=pointer]:
+                      - /url: https://www.research-collection.ethz.ch/bitstream/20.500.11850/139872/1/eth-30378-01.pdf
+                      - generic "German-language text" [ref=f1e360]: Eine neue Bestimmung der Moleküldimensionen
+                      - text: (A New Determination of Molecular Dimensions)
+                    - text: (1905)
+                - row [ref=f1e361]:
+                  - rowheader "Doctoral advisor" [ref=f1e362]:
+                    - link "Doctoral advisor" [ref=f1e364] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doctoral_advisor
+                  - cell [ref=f1e365]:
+                    - link "Alfred Kleiner" [ref=f1e366] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Alfred_Kleiner
+                - row [ref=f1e367]:
+                  - rowheader "Other academic advisors" [ref=f1e368]
+                  - cell [ref=f1e370]:
+                    - link "Heinrich Friedrich Weber" [ref=f1e371] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Heinrich_Friedrich_Weber
+                - row [ref=f1e372]:
+                  - 'cell "Einstein''s voice Duration: 1 minute and 31 seconds. Speech for the United Jewish Appeal Recorded 11 April 1943" [ref=f1e373]':
+                    - generic [ref=f1e377]:
+                      - link "Einstein's voice" [ref=f1e379] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/File:03_ALBERT_EINSTEIN.ogg
+                      - generic [ref=f1e383]:
+                        - button "Play audio" [ref=f1e384] [cursor=pointer]
+                        - generic [ref=f1e386] [cursor=pointer]:
+                          - generic [ref=f1e387]: "Duration: 1 minute and 31 seconds."
+                          - text: 1:31
+                      - generic [ref=f1e388]:
+                        - text: Speech for the
+                        - link "United Jewish Appeal" [ref=f1e389] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/United_Jewish_Appeal
+                        - text: Recorded 11 April 1943
+                - row [ref=f1e390]:
+                  - rowheader "Website" [ref=f1e391]
+                  - cell [ref=f1e392]:
+                    - link "alberteinstein.com" [ref=f1e395] [cursor=pointer]:
+                      - /url: https://alberteinstein.com
+                    - link [ref=f1e397] [cursor=pointer]:
+                      - /url: https://www.wikidata.org/wiki/Q937#P856
+                      - img "Edit this at Wikidata" [ref=f1e398]
+                - row [ref=f1e399]:
+                  - columnheader "Signature" [ref=f1e400]
+                - row [ref=f1e401]:
+                  - cell [ref=f1e402]:
+                    - link [ref=f1e404] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_signature_1934.svg
+            - navigation [ref=f1e406]:
+              - rowgroup [ref=f1e407]:
+                - row [ref=f1e408]:
+                  - columnheader "This article is part of a series about Albert Einstein" [ref=f1e409]:
+                    - table [ref=f1e410]:
+                      - rowgroup [ref=f1e411]:
+                        - row [ref=f1e412]:
+                          - cell [ref=f1e413]:
+                            - link [ref=f1e415] [cursor=pointer]:
+                              - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_1921_by_F_Schmutzer_(3x4_close_cropped).jpg
+                          - cell [ref=f1e417]:
+                            - generic [ref=f1e418]: This article is part ofa series about
+                            - link "Albert Einstein" [ref=f1e421] [cursor=pointer]:
+                              - /url: https://en.wikipedia.org/wiki/Albert_Einstein
+                - row [ref=f1e422]:
+                  - cell "[show] Personal [show] Physics [show] Works [show] Legacy" [ref=f1e423]:
+                    - separator [ref=f1e424]
+                    - generic [ref=f1e425]:
+                      - button "[show]" [ref=f1e426] [cursor=pointer]
+                      - generic [ref=f1e427]: Personal
+                      - generic: · · · · · · ·
+                    - separator [ref=f1e428]
+                    - generic [ref=f1e429]:
+                      - button "[show]" [ref=f1e430] [cursor=pointer]
+                      - generic [ref=f1e431]: Physics
+                      - generic: · · ·
+                    - separator [ref=f1e432]
+                    - generic [ref=f1e433]:
+                      - button "[show]" [ref=f1e434] [cursor=pointer]
+                      - generic [ref=f1e435]: Works
+                      - generic: · · · · · · ·
+                    - separator [ref=f1e436]
+                    - generic [ref=f1e437]:
+                      - button "[show]" [ref=f1e438] [cursor=pointer]
+                      - generic [ref=f1e439]: Legacy
+                      - generic: · · · · ·
+                    - separator [ref=f1e440]
+                - row [ref=f1e441]:
+                  - cell [ref=f1e442]:
+                    - list [ref=f1e444]:
+                      - listitem [ref=f1e445]:
+                        - link "v" [ref=f1e446] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Template:Albert_Einstein_series
+                        - text: ·
+                      - listitem [ref=f1e447]:
+                        - link "t" [ref=f1e448] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Template_talk:Albert_Einstein_series?action=edit&redlink=1
+                        - text: ·
+                      - listitem [ref=f1e449]:
+                        - link "e" [ref=f1e450] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Special:EditPage/Template:Albert_Einstein_series
+            - paragraph [ref=f1e451]:
+              - text: Albert Einstein
+              - superscript [ref=f1e452]:
+                - link "[a]" [ref=f1e453] [cursor=pointer]:
+                  - /url: "#cite_note-6"
+              - text: (14 March 1879 – 18 April 1955) was a German-born
+              - link "theoretical physicist" [ref=f1e454] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Theoretical_physicist
+              - text: best known for developing the
+              - link "theory of relativity" [ref=f1e455] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Theory_of_relativity
+              - text: . Einstein also made important contributions to
+              - link "quantum theory" [ref=f1e456] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Old_quantum_theory
+              - text: .
+              - superscript [ref=f1e457]:
+                - link "[1]" [ref=f1e458] [cursor=pointer]:
+                  - /url: "#cite_note-frs-2"
+              - superscript [ref=f1e459]:
+                - link "[5]" [ref=f1e460] [cursor=pointer]:
+                  - /url: "#cite_note-YangHamilton2010-7"
+              - text: His
+              - link "mass–energy equivalence" [ref=f1e461] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Mass–energy_equivalence
+              - text: formula
+              - link [ref=f1e463] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Mass–energy_equivalence#Mass–velocity_relationship
+                - text: E = mc
+                - superscript [ref=f1e464]: "2"
+              - text: ", which arises from"
+              - link "special relativity" [ref=f1e465] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Special_relativity
+              - text: ", has been called \"the world's most famous equation\"."
+              - superscript [ref=f1e466]:
+                - link "[6]" [ref=f1e467] [cursor=pointer]:
+                  - /url: "#cite_note-LnLVo-8"
+              - text: He received the 1921
+              - link "Nobel Prize in Physics" [ref=f1e468] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Nobel_Prize_in_Physics
+              - text: for "his services to theoretical physics, and especially for his discovery of the law of the
+              - link "photoelectric effect" [ref=f1e469] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Photoelectric_effect
+              - text: "\"."
+              - superscript [ref=f1e470]:
+                - link "[7]" [ref=f1e471] [cursor=pointer]:
+                  - /url: "#cite_note-Nobel_Prize-9"
+            - paragraph [ref=f1e472]:
+              - text: Born as a subject to the
+              - link "Kingdom of Württemberg" [ref=f1e473] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Kingdom_of_Württemberg
+              - text: ", part of the"
+              - link "German Empire" [ref=f1e474] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/German_Empire
+              - superscript [ref=f1e475]:
+                - link "[note 1]" [ref=f1e476] [cursor=pointer]:
+                  - /url: "#cite_note-GEcitizen-1"
+              - text: which he later renounced on 28 January 1896, just 6 weeks before he turned 17, avoiding
+              - link "conscription into military service" [ref=f1e477] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Conscription_in_Germany
+              - text: .
+              - superscript [ref=f1e478]:
+                - link "[8]" [ref=f1e479] [cursor=pointer]:
+                  - /url: "#cite_note-10"
+              - text: In 1895, he moved to
+              - link "Pavia" [ref=f1e480] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Pavia
+              - text: to stay with his family which moved there an year earlier and then to Swiss canton of
+              - link "Aarau" [ref=f1e481] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Aarau
+              - text: ", to attend an year of cantonal school ("
+              - link "German" [ref=f1e482] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/German_language
+              - text: ": Kantonsschule). In 1896, at the age of seventeen, he enrolled in the mathematics and physics teaching diploma program at the Swiss"
+              - link "federal polytechnic school" [ref=f1e483] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/ETH_Zurich
+              - text: in Zurich, graduating in 1900. He acquired Swiss citizenship a year later, which he kept for the rest of his life, and afterwards secured a permanent position at the
+              - link "Swiss Patent Office" [ref=f1e484] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Swiss_Patent_Office
+              - text: in
+              - link "Bern" [ref=f1e485] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Bern
+              - text: . In 1905, he submitted a successful
+              - link "PhD" [ref=f1e486] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/PhD
+              - text: dissertation to the
+              - link "University of Zurich" [ref=f1e487] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/University_of_Zurich
+              - text: . In 1914, he moved to Berlin to join the
+              - link "Prussian Academy of Sciences" [ref=f1e488] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Prussian_Academy_of_Sciences
+              - text: and the
+              - link "Humboldt University of Berlin" [ref=f1e489] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Humboldt_University_of_Berlin
+              - text: ", becoming director of the"
+              - link "Kaiser Wilhelm Institute for Physics" [ref=f1e490] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Kaiser_Wilhelm_Institute_for_Physics
+              - text: in 1917; he also became a
+              - link "Prussian" [ref=f1e491] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Prussia
+              - text: and consequently also German citizen again. In 1933, while Einstein was visiting the United States,
+              - link "Adolf Hitler came to power" [ref=f1e492] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Adolf_Hitler's_rise_to_power
+              - text: in Germany. Horrified by the
+              - link "Nazi" [ref=f1e493] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Nazi_Germany
+              - text: persecution of his fellow Jews,
+              - superscript [ref=f1e494]:
+                - link "[9]" [ref=f1e495] [cursor=pointer]:
+                  - /url: "#cite_note-zE9Bz-11"
+              - text: he decided to remain in the US, and was granted American citizenship in 1940.
+              - superscript [ref=f1e496]:
+                - link "[10]" [ref=f1e497] [cursor=pointer]:
+                  - /url: "#cite_note-BoyerDubofsky2001-12"
+              - text: On the eve of
+              - link "World War II" [ref=f1e498] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/World_War_II
+              - text: ", he endorsed"
+              - link "a letter" [ref=f1e499] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Einstein–Szilard_letter
+              - text: to President
+              - link "Franklin D. Roosevelt" [ref=f1e500] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Franklin_D._Roosevelt
+              - text: alerting him to the potential
+              - link "German nuclear weapons program" [ref=f1e501] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/German_nuclear_weapons_program
+              - text: and recommending that the US begin similar research, later carried out as the
+              - link "Manhattan Project" [ref=f1e502] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Manhattan_Project
+              - text: .
+            - paragraph [ref=f1e503]:
+              - text: In 1905, sometimes described as his
+              - link "annus mirabilis" [ref=f1e505] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Annus_mirabilis
+              - text: (miracle year), he published
+              - link "four groundbreaking papers" [ref=f1e506] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Annus_mirabilis_papers
+              - text: .
+              - superscript [ref=f1e507]:
+                - link "[11]" [ref=f1e508] [cursor=pointer]:
+                  - /url: "#cite_note-FOOTNOTEGalison2000377-13"
+              - text: In them, he outlined a theory of the photoelectric effect, explained
+              - link "Brownian motion" [ref=f1e509] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Brownian_motion
+              - text: ", introduced his special theory of relativity, and demonstrated that if the special theory is correct, mass and energy are equivalent to each other. In 1915, he proposed a"
+              - link "general theory of relativity" [ref=f1e510] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/General_theory_of_relativity
+              - text: that extended his system of mechanics to incorporate
+              - link "gravitation" [ref=f1e511] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Gravitation
+              - text: . A paper that he published the following year laid out the implications of general relativity for the modeling of the structure and evolution of the
+              - link "universe" [ref=f1e512] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Universe
+              - text: as a whole.
+              - superscript [ref=f1e513]:
+                - link "[12]" [ref=f1e514] [cursor=pointer]:
+                  - /url: "#cite_note-Nobel-14"
+              - superscript [ref=f1e515]:
+                - link "[13]" [ref=f1e516] [cursor=pointer]:
+                  - /url: "#cite_note-NYT-20151124-15"
+              - text: It introduced the
+              - link "cosmological constant" [ref=f1e517] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Cosmological_constant
+              - text: and is further regarded as the first step in the field of modern theoretical
+              - link "cosmology" [ref=f1e518] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Cosmology
+              - text: . In 1917, Einstein wrote a paper which introduced the concepts of
+              - link "spontaneous emission" [ref=f1e519] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Spontaneous_emission
+              - text: and
+              - link "stimulated emission" [ref=f1e520] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Stimulated_emission
+              - text: ", the latter of which is the core mechanism behind the"
+              - link "laser" [ref=f1e521] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Laser
+              - text: and
+              - link "maser" [ref=f1e522] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Maser
+              - text: ", and which contained a trove of information that would be beneficial to developments in physics later on, such as"
+              - link "quantum electrodynamics" [ref=f1e523] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Quantum_electrodynamics
+              - text: and
+              - link "quantum optics" [ref=f1e524] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Quantum_optics
+              - text: .
+              - superscript [ref=f1e525]:
+                - link "[14]" [ref=f1e526] [cursor=pointer]:
+                  - /url: "#cite_note-16"
+            - paragraph [ref=f1e527]:
+              - text: In the middle part of his career, Einstein made important contributions to
+              - link "statistical mechanics" [ref=f1e528] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Statistical_mechanics
+              - text: and quantum theory. Especially notable was his work on the quantum physics of
+              - link "radiation" [ref=f1e529] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Radiation
+              - text: ", in which light consists of particles, subsequently called"
+              - link "photons" [ref=f1e530] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Photon
+              - text: . With physicist
+              - link "Satyendra Nath Bose" [ref=f1e531] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Satyendra_Nath_Bose
+              - text: ", he laid the groundwork for"
+              - link "Bose–Einstein statistics" [ref=f1e532] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Bose–Einstein_statistics
+              - text: . For much of the last phase of his academic life, Einstein worked on two endeavors that ultimately proved unsuccessful. First, he advocated against quantum theory's introduction of fundamental randomness into science's picture of the world, objecting that "God does not play dice".
+              - superscript [ref=f1e533]:
+                - link "[15]" [ref=f1e534] [cursor=pointer]:
+                  - /url: "#cite_note-17"
+              - text: Second, he attempted to devise a
+              - link "unified field theory" [ref=f1e535] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Unified_field_theory
+              - text: by generalizing his geometric theory of gravitation to include
+              - link "electromagnetism" [ref=f1e536] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Electromagnetism
+              - text: . As a result, he became increasingly isolated from mainstream
+              - link "modern physics" [ref=f1e537] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Modern_physics
+              - text: . Many
+              - link "things are named after him" [ref=f1e538] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/List_of_things_named_after_Albert_Einstein
+              - text: ", including the element"
+              - link "Einsteinium" [ref=f1e539] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Einsteinium
+              - text: . In 1999, he was named
+              - link "Time" [ref=f1e540] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Time_(magazine)
+              - text: "'s"
+              - link "Person of the Century" [ref=f1e541] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Time_100:_The_Most_Important_People_of_the_Century
+              - text: .
+              - superscript [ref=f1e542]:
+                - link "[16]" [ref=f1e543] [cursor=pointer]:
+                  - /url: "#cite_note-TIME-18"
+          - region "Life and career" [ref=f1e544]:
+            - heading "Life and career" [level=2] [ref=f1e546]
+            - region "Childhood, youth and education" [ref=f1e547]:
+              - heading "Childhood, youth and education" [level=3] [ref=f1e549]
+              - note [ref=f1e550]:
+                - text: "See also:"
+                - link "Einstein family" [ref=f1e551] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Einstein_family
+              - figure "Einstein in 1882, age 3" [ref=f1e552]:
+                - link [ref=f1e553] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_age_3.jpg
+                  - img "A young boy with short hair and a round face, wearing a white collar and large bow, with vest, coat, skirt, and high boots. He is leaning against an ornate chair." [ref=f1e554]
+                - generic [ref=f1e555]: Einstein in 1882, age3
+              - paragraph [ref=f1e557]:
+                - text: Einstein was born in
+                - link "Ulm" [ref=f1e558] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ulm
+                - text: as a subject to the
+                - link "Kingdom of Württemberg" [ref=f1e559] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Kingdom_of_Württemberg
+                - text: in the
+                - link "German Empire" [ref=f1e560] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/German_Empire
+                - superscript [ref=f1e561]:
+                  - link "[note 1]" [ref=f1e562] [cursor=pointer]:
+                    - /url: "#cite_note-GEcitizen-1"
+                - text: on 14 March 1879.
+                - superscript [ref=f1e563]:
+                  - link "[17]" [ref=f1e564] [cursor=pointer]:
+                    - /url: "#cite_note-Bio-19"
+                - text: His parents, secular
+                - link "Ashkenazi Jews" [ref=f1e565] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ashkenazi_Jews
+                - text: ", were"
+                - link "Hermann Einstein" [ref=f1e566] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hermann_Einstein
+                - text: ", a salesman and engineer, and"
+                - link "Pauline Koch" [ref=f1e567] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Pauline_Koch
+                - text: . In 1880, the family moved to
+                - link "Munich" [ref=f1e568] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Munich
+                - text: "'s borough of"
+                - link "Ludwigsvorstadt-Isarvorstadt" [ref=f1e569] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ludwigsvorstadt-Isarvorstadt
+                - text: ", where Einstein's father and his uncle Jakob founded Elektrotechnische Fabrik J. Einstein & Cie, a company that manufactured electrical equipment based on"
+                - link "direct current" [ref=f1e570] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Direct_current
+                - text: .
+                - superscript [ref=f1e571]:
+                  - link "[17]" [ref=f1e572] [cursor=pointer]:
+                    - /url: "#cite_note-Bio-19"
+              - paragraph [ref=f1e573]:
+                - text: When he was very young, his parents worried that he had a learning disability because he was very slow to learn to talk.
+                - superscript [ref=f1e574]:
+                  - link "[18]" [ref=f1e575] [cursor=pointer]:
+                    - /url: "#cite_note-20"
+                - text: When he was five and sick in bed, his father brought him a compass. This sparked his lifelong fascination with
+                - link "electromagnetism" [ref=f1e576] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Electromagnetism
+                - text: . He realized that "Something deeply hidden had to be behind things."
+                - superscript [ref=f1e577]:
+                  - link "[19]" [ref=f1e578] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson200713-21"
+              - paragraph [ref=f1e579]:
+                - text: Einstein attended St. Peter's
+                - link "Catholic elementary school" [ref=f1e580] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Catholic_school
+                - text: in Munich from the age of five. When he was eight, he was transferred to the
+                - link "Luitpold Gymnasium" [ref=f1e581] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Luitpold_Gymnasium
+                - text: ", where he received advanced primary and then secondary school education."
+                - superscript [ref=f1e582]:
+                  - link "[20]" [ref=f1e583] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEStachel2002[httpsbooksgooglecombooksidOAsQ_hFjhrACpgPA59_59–61]-22"
+              - generic [ref=f1e585]:
+                - generic [ref=f1e586]:
+                  - link [ref=f1e590] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Hermann_einstein.jpg
+                  - link [ref=f1e595] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Pauline_Koch_edit.jpg
+                - generic [ref=f1e598]:
+                  - text: Einstein's parents,
+                  - link "Hermann" [ref=f1e599] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Hermann_Einstein
+                  - text: and
+                  - link "Pauline" [ref=f1e600] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Pauline_Einstein
+              - paragraph [ref=f1e601]:
+                - text: In 1894, Hermann and Jakob's company tendered for a contract to install electric lighting in Munich, but without success—they lacked the capital that would have been required to update their technology from direct current to the more efficient,
+                - link "alternating current" [ref=f1e602] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Alternating_current
+                - text: alternative.
+                - superscript [ref=f1e603]:
+                  - link "[21]" [ref=f1e604] [cursor=pointer]:
+                    - /url: "#cite_note-EQyag-23"
+                - text: The failure of their bid forced them to sell their Munich factory and search for new opportunities elsewhere. The Einstein family moved to
+                - link "Italy" [ref=f1e605] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Kingdom_of_Italy
+                - text: ", first to"
+                - link "Milan" [ref=f1e606] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Milan
+                - text: and a few months later to
+                - link "Pavia" [ref=f1e607] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Pavia
+                - text: ", where his father Hermann and his uncle"
+                - link "Jakob Einstein" [ref=f1e608] [cursor=pointer]:
+                  - /url: https://de.wikipedia.org/wiki/Jakob_Einstein
+                - text: ran "Einstein-Garrone National Electrotechnical Workshop" (
+                - link "Italian" [ref=f1e609] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Italian_language
+                - text: ": Officine Elettrotecniche Nazionali Einstein-Garrone) ."
+                - superscript [ref=f1e610]:
+                  - link "[22]" [ref=f1e611] [cursor=pointer]:
+                    - /url: "#cite_note-24"
+                - text: Einstein, then fifteen, stayed behind in Munich in order to finish his schooling. His father wanted him to study
+                - link "electrical engineering" [ref=f1e612] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Electrical_engineering
+                - text: ", but he was a fractious pupil who found the Gymnasium's regimen and teaching methods far from congenial. He later wrote that the school's policy of strict"
+                - link "rote learning" [ref=f1e613] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Rote_learning
+                - text: was harmful to creativity. At the end of December 1894, a letter from a doctor persuaded the Luitpold's authorities to release him from its care, and he joined his family in Pavia.
+                - superscript [ref=f1e614]:
+                  - link "[23]" [ref=f1e615] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEFölsing199730–31-25"
+                - text: While in Italy as a teenager, he wrote an essay titled "On the Investigation of the State of the
+                - link "Ether" [ref=f1e616] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Aether_(classical_element)
+                - text: in a Magnetic Field".
+                - superscript [ref=f1e617]:
+                  - link "[24]" [ref=f1e618] [cursor=pointer]:
+                    - /url: "#cite_note-Stachel2008-26"
+                - superscript [ref=f1e619]:
+                  - link "[25]" [ref=f1e620] [cursor=pointer]:
+                    - /url: "#cite_note-1RgTv-27"
+              - figure "Einstein family's residence from 1894-96, Palazzo Cornazzani, Pavia." [ref=f1e621]:
+                - link [ref=f1e622] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Casa_foscolo.jpg
+                - generic [ref=f1e624]:
+                  - text: Einstein family's residence from 1894-96,
+                  - link "Palazzo Cornazzani" [ref=f1e625] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Palazzo_Cornazzani
+                  - text: ", Pavia."
+              - paragraph [ref=f1e626]:
+                - text: Einstein excelled at physics and mathematics from an early age, and soon acquired the mathematical expertise normally only found in a child several years his senior. He began teaching himself
+                - link "algebra" [ref=f1e627] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Algebra
+                - text: ","
+                - link "calculus" [ref=f1e628] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Calculus
+                - text: and
+                - link "Euclidean geometry" [ref=f1e629] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Euclidean_geometry
+                - text: when he was twelve; he made such rapid progress that he discovered an original proof of the
+                - link "Pythagorean theorem" [ref=f1e630] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Pythagorean_theorem
+                - text: before his thirteenth birthday.
+                - superscript [ref=f1e631]:
+                  - link "[26]" [ref=f1e632] [cursor=pointer]:
+                    - /url: "#cite_note-FVfDU-28"
+                - superscript [ref=f1e633]:
+                  - link "[27]" [ref=f1e634] [cursor=pointer]:
+                    - /url: "#cite_note-29"
+                - text: A family tutor,
+                - link "Max Talmud" [ref=f1e635] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Max_Talmud
+                - text: ", said that only a short time after he had given the twelve year old Einstein a geometry textbook, the boy \"had worked through the whole book. He thereupon devoted himself to higher mathematics... Soon the flight of his mathematical genius was so high I could not follow.\""
+                - superscript [ref=f1e637]:
+                  - link "[28]" [ref=f1e638] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson200717-30"
+                - text: Einstein recorded that he had "mastered
+                - link "integral" [ref=f1e639] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Integral
+                - text: and
+                - link "differential calculus" [ref=f1e640] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Differential_calculus
+                - text: "\" while still just fourteen."
+                - superscript [ref=f1e641]:
+                  - link "[29]" [ref=f1e642] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson200716-31"
+                - text: His love of algebra and geometry was so great that at twelve, he was already confident that nature could be understood as a "mathematical structure".
+                - superscript [ref=f1e643]:
+                  - link "[30]" [ref=f1e644] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson200717–18-32"
+              - figure "Einstein in 1893, age 14" [ref=f1e645]:
+                - link [ref=f1e646] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_age_14.jpg
+                  - img "Studio photo of a boy seated in a relaxed posture and wearing a suit, posed in front of a backdrop of scenery." [ref=f1e647]
+                - generic [ref=f1e648]: Einstein in 1893, age14
+              - paragraph [ref=f1e650]:
+                - text: At thirteen, when his range of enthusiasms had broadened to include music and philosophy,
+                - superscript [ref=f1e651]:
+                  - link "[31]" [ref=f1e652] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTECalapriceLipscombe20058-33"
+                - text: Talmud introduced Einstein to
+                - link "Kant" [ref=f1e653] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Kant
+                - text: "'s"
+                - link "Critique of Pure Reason" [ref=f1e655] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Critique_of_Pure_Reason
+                - text: . Kant became his favorite philosopher; according to Talmud, "At the time he was still a child, only thirteen years old, yet Kant's works, incomprehensible to ordinary mortals, seemed to be clear to him."
+                - superscript [ref=f1e656]:
+                  - link "[28]" [ref=f1e657] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson200717-30"
+              - paragraph [ref=f1e658]:
+                - text: In 1895, at the age of sixteen, Einstein sat the entrance examination for the
+                - link "federal polytechnic school" [ref=f1e659] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/ETH_Zurich
+                - text: (later the Eidgenössische Technische Hochschule, ETH) in
+                - link "Zurich" [ref=f1e660] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Zurich
+                - text: ", Switzerland. He failed to reach the required standard in the general part of the test,"
+                - superscript [ref=f1e661]:
+                  - link "[32]" [ref=f1e662] [cursor=pointer]:
+                    - /url: "#cite_note-Stachel2008a-34"
+                - text: but performed with distinction in physics and mathematics.
+                - superscript [ref=f1e663]:
+                  - link "[33]" [ref=f1e664] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEFölsing199736–37-35"
+                - text: On the advice of the polytechnic's principal,
+                - link "Albin Herzog" [ref=f1e665] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Albin_Herzog
+                - text: ", he completed his secondary education at the"
+                - link "Argovian cantonal school" [ref=f1e666] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Old_Cantonal_School_Aarau
+                - text: (a
+                - link "gymnasium" [ref=f1e667] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Gymnasium_(school)
+                - text: ) in
+                - link "Aarau" [ref=f1e668] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Aarau
+                - text: ", Switzerland, graduating in 1896."
+                - superscript [ref=f1e669]:
+                  - link "[34]" [ref=f1e670] [cursor=pointer]:
+                    - /url: "#cite_note-b250-36"
+                - text: While lodging in Aarau with the family of
+                - link "Jost Winteler" [ref=f1e671] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Jost_Winteler
+                - text: ", he fell in love with Winteler's daughter, Marie. (His sister,"
+                - link "Maja" [ref=f1e672] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Maja_Einstein
+                - text: ", later married Winteler's son Paul."
+                - superscript [ref=f1e673]:
+                  - link "[35]" [ref=f1e674] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEHighfieldCarter199321,_31,_56–57-37"
+                - text: )
+              - figure "Einstein's Matura certificate from canton of Aargau, 1896[note 2]" [ref=f1e675]:
+                - link [ref=f1e676] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein's_exam_of_maturity_grades_(color2).jpg
+                  - img "Einstein's matriculation certificate at the age of 17. The heading translates as \"The Education Committee of the Canton of Aargau\". His scores were German 5, French 3, Italian 5, History 6, Geography 4, Algebra 6, Geometry 6, Descriptive Geometry 6, Physics 6, Chemistry 5, Natural History 5, Art Drawing 4, Technical Drawing 4. 6 = very good, 5 = good, 4 = sufficient, 3 = insufficient, 2 = poor, 1 = very poor." [ref=f1e677]
+                - generic [ref=f1e678]:
+                  - text: Einstein's
+                  - link "Matura" [ref=f1e680] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Matura
+                  - text: certificate from
+                  - link "canton of Aargau" [ref=f1e681] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Canton_of_Aargau
+                  - text: ", 1896"
+                  - superscript [ref=f1e682]:
+                    - link "[note 2]" [ref=f1e683] [cursor=pointer]:
+                      - /url: "#cite_note-MaturaScore-38"
+              - paragraph [ref=f1e684]:
+                - text: The
+                - link "Matura" [ref=f1e686] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Matura
+                - text: (graduation for the successful completion of higher secondary schooling), awarded to him in September 1896, acknowledged him to have performed well across most of the curriculum, allotting him a
+                - link "top grade of 6" [ref=f1e687] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Grading_systems_by_country#Switzerland
+                - text: for history, physics, algebra, geometry, and descriptive geometry.
+                - superscript [ref=f1e688]:
+                  - link "[36]" [ref=f1e689] [cursor=pointer]:
+                    - /url: "#cite_note-Stachel2008b-39"
+                - text: At seventeen, he enrolled in the four-year mathematics and physics teaching diploma program at the federal polytechnic school. He befriended fellow student
+                - link "Marcel Grossmann" [ref=f1e690] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Marcel_Grossmann
+                - text: ", who would help him there to get by despite his loose study habits, and later to mathematically underpin his revolutionary insights into physics. Marie Winteler, a year older than him, took up a teaching post in"
+                - link "Olsberg" [ref=f1e691] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Olsberg,_Aargau
+                - text: ", Switzerland."
+                - superscript [ref=f1e692]:
+                  - link "[35]" [ref=f1e693] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEHighfieldCarter199321,_31,_56–57-37"
+              - figure "\"Petition by the merchant Hermann Einstein in Pavia for the release of his son Albert Einstein from Württemberg citizenship...\", 1896[note 1]" [ref=f1e694]:
+                - link [ref=f1e695] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein's_Württemberg_nationality_renunciation.jpg
+                - generic [ref=f1e697]:
+                  - text: "\"Petition by the merchant Hermann Einstein in Pavia for the release of his son Albert Einstein from"
+                  - link "Württemberg citizenship" [ref=f1e698] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Kingdom_of_Württemberg
+                  - text: ...", 1896
+                  - superscript [ref=f1e699]:
+                    - link "[note 1]" [ref=f1e700] [cursor=pointer]:
+                      - /url: "#cite_note-GEcitizen-1"
+              - paragraph [ref=f1e701]:
+                - text: The five other polytechnic school freshmen following the same course as Einstein included just one woman, a twenty year old
+                - link "Serbian" [ref=f1e702] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Serbs
+                - text: ","
+                - link "Mileva Marić" [ref=f1e703] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mileva_Marić
+                - text: . Over the next few years, the pair spent many hours discussing their shared interests and learning about topics in physics that the polytechnic school's lectures did not cover. In his letters to Marić, Einstein confessed that exploring science with her by his side was much more enjoyable than reading a textbook in solitude. Eventually the two students became not only friends, but also lovers.
+                - superscript [ref=f1e704]:
+                  - link "[37]" [ref=f1e705] [cursor=pointer]:
+                    - /url: "#cite_note-mileva-40"
+              - paragraph [ref=f1e706]:
+                - text: Historians of physics are divided on the question of the extent to which Marić contributed to the insights of Einstein's annus mirabilis publications. There is at least some evidence that he was influenced by her scientific ideas,
+                - superscript [ref=f1e707]:
+                  - link "[37]" [ref=f1e708] [cursor=pointer]:
+                    - /url: "#cite_note-mileva-40"
+                - superscript [ref=f1e709]:
+                  - link "[38]" [ref=f1e710] [cursor=pointer]:
+                    - /url: "#cite_note-7HA7H-41"
+                - superscript [ref=f1e711]:
+                  - link "[39]" [ref=f1e712] [cursor=pointer]:
+                    - /url: "#cite_note-1zJdH-42"
+                - text: but there are scholars who doubt whether her impact on his thought was of any great significance at all.
+                - superscript [ref=f1e713]:
+                  - link "[40]" [ref=f1e714] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEPais19941–29-43"
+                - superscript [ref=f1e715]:
+                  - link "[41]" [ref=f1e716] [cursor=pointer]:
+                    - /url: "#cite_note-xKrMG-44"
+                - superscript [ref=f1e717]:
+                  - link "[42]" [ref=f1e718] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEStachel2002[httpsbooksgooglecombooksidOAsQ_hFjhrACpgPA49_49–56]-45"
+                - superscript [ref=f1e719]:
+                  - link "[43]" [ref=f1e720] [cursor=pointer]:
+                    - /url: "#cite_note-dUxMl-46"
+            - region "Marriages, relationships and children" [ref=f1e721]:
+              - heading "Marriages, relationships and children" [level=3] [ref=f1e723]
+              - figure "Albert Einstein and Mileva Marić Einstein, 1912" [ref=f1e724]:
+                - link [ref=f1e725] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_and_his_wife_Mileva_Maric.jpg
+                - generic [ref=f1e727]:
+                  - text: Albert Einstein and
+                  - link "Mileva Marić" [ref=f1e728] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Mileva_Marić
+                  - text: Einstein, 1912
+              - paragraph [ref=f1e729]:
+                - text: Correspondence between Einstein and Marić, discovered and published in 1987, revealed that the couple had a daughter named
+                - link "Lieserl" [ref=f1e730] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Lieserl_Einstein
+                - text: . She was born in early 1902 while Marić was visiting her parents in
+                - link "Novi Sad" [ref=f1e731] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Novi_Sad
+                - text: . When Marić returned to Switzerland the child was no longer with her. What happened to Lieserl is uncertain. In a letter written in September 1903, Einstein suggested that the girl was either given up for adoption or died of
+                - link "scarlet fever" [ref=f1e732] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Scarlet_fever
+                - text: in infancy.
+                - superscript [ref=f1e733]:
+                  - link "[44]" [ref=f1e734] [cursor=pointer]:
+                    - /url: "#cite_note-HBMes-47"
+                - superscript [ref=f1e735]:
+                  - link "[45]" [ref=f1e736] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTECalapriceLipscombe200522–23-48"
+              - paragraph [ref=f1e737]:
+                - text: Einstein and Marić married in January 1903. In May 1904, their son
+                - link "Hans Albert" [ref=f1e738] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hans_Albert_Einstein
+                - text: was born in
+                - link "Bern" [ref=f1e739] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bern
+                - text: ", Switzerland. Their son"
+                - link "Eduard" [ref=f1e740] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Einstein_family#Eduard_"Tete"_Einstein_(Albert's_second_son)
+                - text: was born in Zurich in July 1910. In letters that Einstein wrote to
+                - link "Marie Winteler" [ref=f1e741] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Marie_Winteler?action=edit&redlink=1
+                - text: "in the months before Eduard's arrival, he described his love for his wife as \"misguided\" and mourned the \"missed life\" that he imagined he would have enjoyed if he had married Winteler instead: \"I think of you in heartfelt love every spare minute and am so unhappy as only a man can be.\""
+                - superscript [ref=f1e742]:
+                  - link "[46]" [ref=f1e743] [cursor=pointer]:
+                    - /url: "#cite_note-MlQLY-49"
+              - paragraph [ref=f1e744]:
+                - text: In 1912, Einstein entered into a relationship with
+                - link "Elsa Löwenthal" [ref=f1e745] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Elsa_Löwenthal
+                - text: ", who was both his first cousin on his mother's side and his second cousin on his father's."
+                - superscript [ref=f1e746]:
+                  - link "[47]" [ref=f1e747] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTECalapriceLipscombe2005[httpsbooksgooglecombooksid5eWh2O_3OAQCpgPA50_50]-50"
+                - superscript [ref=f1e748]:
+                  - link "[48]" [ref=f1e749] [cursor=pointer]:
+                    - /url: "#cite_note-dh-51"
+                - superscript [ref=f1e750]:
+                  - link "[49]" [ref=f1e751] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEStachel1996212-52"
+                - text: When Marić learned of his infidelity soon after moving to Berlin with him in April 1914, she returned to Zurich, taking Hans Albert and Eduard with her.
+                - superscript [ref=f1e752]:
+                  - link "[37]" [ref=f1e753] [cursor=pointer]:
+                    - /url: "#cite_note-mileva-40"
+                - text: Einstein and Marić were granted a divorce on 14 February 1919 on the grounds of having lived apart for five years.
+                - superscript [ref=f1e754]:
+                  - link "[50]" [ref=f1e755] [cursor=pointer]:
+                    - /url: "#cite_note-53"
+                - superscript [ref=f1e756]:
+                  - link "[51]" [ref=f1e757] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEStachel1996219-54"
+                - text: As part of the divorce settlement, Einstein agreed that if he were to win a Nobel Prize, he would give the money that he received to Marić; he won the prize two years later.
+                - superscript [ref=f1e758]:
+                  - link "[52]" [ref=f1e759] [cursor=pointer]:
+                    - /url: "#cite_note-55"
+              - figure "Albert and Elsa Einstein arriving in New York, 1921" [ref=f1e760]:
+                - link [ref=f1e761] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Einstein_Albert_Elsa_LOC_32096u.jpg
+                  - img "Einstein, looking relaxed and holding a pipe, stands next to a smiling, well-dressed Elsa who is wearing a fancy hat and fur wrap. She is looking at him." [ref=f1e762]
+                - generic [ref=f1e763]:
+                  - text: Albert and
+                  - link "Elsa Einstein" [ref=f1e764] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Elsa_Einstein
+                  - text: arriving in New York, 1921
+              - paragraph [ref=f1e765]:
+                - text: Einstein married Löwenthal in 1919.
+                - superscript [ref=f1e766]:
+                  - link "[53]" [ref=f1e767] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007xix-56"
+                - superscript [ref=f1e768]:
+                  - link "[54]" [ref=f1e769] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTECalapriceKennefickSchulmann201562-57"
+                - text: In 1923, he began a relationship with a secretary named Betty Neumann, the niece of his close friend Hans Mühsam.
+                - superscript [ref=f1e770]:
+                  - link "[55]" [ref=f1e771] [cursor=pointer]:
+                    - /url: "#cite_note-58"
+                - superscript [ref=f1e772]:
+                  - link "[56]" [ref=f1e773] [cursor=pointer]:
+                    - /url: "#cite_note-59"
+                - superscript [ref=f1e774]:
+                  - link "[57]" [ref=f1e775] [cursor=pointer]:
+                    - /url: "#cite_note-60"
+                - superscript [ref=f1e776]:
+                  - link "[58]" [ref=f1e777] [cursor=pointer]:
+                    - /url: "#cite_note-61"
+                - text: Löwenthal nevertheless remained loyal to him, accompanying him when he emigrated to the United States in 1933. In 1935, she was diagnosed with heart and kidney problems. She died in December 1936.
+                - superscript [ref=f1e778]:
+                  - link "[59]" [ref=f1e779] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEHighfieldCarter1993216-62"
+              - paragraph [ref=f1e780]:
+                - text: A volume of Einstein's letters released by the
+                - link "Hebrew University of Jerusalem" [ref=f1e781] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hebrew_University_of_Jerusalem
+                - text: in 2006
+                - superscript [ref=f1e782]:
+                  - link "[60]" [ref=f1e783] [cursor=pointer]:
+                    - /url: "#cite_note-63"
+                - text: added some other women with whom he was romantically involved. They included Margarete Lebach (a married Austrian),
+                - superscript [ref=f1e784]:
+                  - link "[61]" [ref=f1e785] [cursor=pointer]:
+                    - /url: "#cite_note-64"
+                - text: Estella Katzenellenbogen (the rich owner of a florist business), Toni Mendel (a wealthy Jewish widow) and Ethel Michanowski (a Berlin socialite), with whom he spent time and from whom he accepted gifts while married to Löwenthal.
+                - superscript [ref=f1e786]:
+                  - link "[62]" [ref=f1e787] [cursor=pointer]:
+                    - /url: "#cite_note-65"
+                - superscript [ref=f1e788]:
+                  - link "[63]" [ref=f1e789] [cursor=pointer]:
+                    - /url: "#cite_note-66"
+                - text: After being widowed, Einstein was briefly in a relationship with
+                - link "Margarita Konenkova" [ref=f1e790] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Margarita_Konenkova?action=edit&redlink=1
+                - generic [ref=f1e791]:
+                  - text: "["
+                  - link "ru" [ref=f1e792] [cursor=pointer]:
+                    - /url: https://ru.wikipedia.org/wiki/Конёнкова,%20Маргарита%20Ивановна
+                  - text: "]"
+                - text: ", thought by some to be a Russian spy;"
+                - superscript [ref=f1e793]:
+                  - link "[note 3]" [ref=f1e794] [cursor=pointer]:
+                    - /url: "#cite_note-68"
+                - text: her husband, the Russian sculptor
+                - link "Sergei Konenkov" [ref=f1e795] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sergei_Konenkov
+                - text: ", created the bronze bust of Einstein at the"
+                - link "Institute for Advanced Study" [ref=f1e796] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Institute_for_Advanced_Study
+                - text: at Princeton.
+                - superscript [ref=f1e797]:
+                  - link "[65]" [ref=f1e798] [cursor=pointer]:
+                    - /url: "#cite_note-69"
+                - superscript [ref=f1e799]:
+                  - link "[66]" [ref=f1e800] [cursor=pointer]:
+                    - /url: "#cite_note-70"
+              - paragraph [ref=f1e801]:
+                - text: Following an episode of acute mental illness at about the age of twenty, Einstein's son Eduard was diagnosed with
+                - link "schizophrenia" [ref=f1e802] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Schizophrenia
+                - text: .
+                - superscript [ref=f1e803]:
+                  - link "[67]" [ref=f1e804] [cursor=pointer]:
+                    - /url: "#cite_note-Robinson2015a-71"
+                - text: He spent the remainder of his life either in the care of his mother or in temporary confinement in an asylum. After her death, he was committed permanently to
+                - link "Burghölzli" [ref=f1e805] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Burghölzli
+                - text: ", the Psychiatric University Hospital in Zurich."
+                - superscript [ref=f1e806]:
+                  - link "[68]" [ref=f1e807] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTENeffe2007[httpsarchiveorgdetailseinsteinbiograph00neffpage203_203]-72"
+            - region "Assistant at the Swiss Patent Office (1902–1909)" [ref=f1e808]:
+              - heading "Assistant at the Swiss Patent Office (1902–1909)" [level=3] [ref=f1e810]
+              - figure "Einstein at the Swiss Patent Office, 1904" [ref=f1e811]:
+                - link [ref=f1e812] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Einstein_patentoffice_full_(cropped).jpg
+                  - img "Head and shoulders shot of a young, mustached man with dark, curly hair wearing a plaid suit and vest, striped shirt, and a dark tie." [ref=f1e813]
+                - generic [ref=f1e814]:
+                  - text: Einstein at the
+                  - link "Swiss Patent Office" [ref=f1e815] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Swiss_Patent_Office
+                  - text: ", 1904"
+              - paragraph [ref=f1e816]:
+                - text: Einstein graduated from the federal polytechnic school in 1900, duly certified as competent to teach mathematics and physics.
+                - superscript [ref=f1e817]:
+                  - link "[69]" [ref=f1e818] [cursor=pointer]:
+                    - /url: "#cite_note-73"
+                - text: His successful acquisition of Swiss citizenship in February 1901
+                - superscript [ref=f1e819]:
+                  - link "[70]" [ref=f1e820] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEFölsing199782-74"
+                - text: was not followed by the usual sequel of
+                - link "conscription" [ref=f1e821] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Conscription_in_Switzerland
+                - text: ; the Swiss authorities deemed him medically unfit for military service. He found that Swiss schools too appeared to have no use for him, failing to offer him a teaching position despite the almost two years that he spent applying for one. Eventually it was with the help of
+                - link "Marcel Grossmann" [ref=f1e822] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Marcel_Grossmann
+                - text: "'s father that he secured a post in"
+                - link "Bern" [ref=f1e823] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bern
+                - text: at the
+                - link "Swiss Patent Office" [ref=f1e824] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Swiss_Patent_Office
+                - text: ","
+                - superscript [ref=f1e825]:
+                  - link "[71]" [ref=f1e826] [cursor=pointer]:
+                    - /url: "#cite_note-ODY5p-75"
+                - superscript [ref=f1e827]:
+                  - link "[72]" [ref=f1e828] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson200763-76"
+                - text: as an
+                - link "assistant examiner – level III" [ref=f1e829] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Patent_examiner
+                - text: .
+                - superscript [ref=f1e830]:
+                  - link "[73]" [ref=f1e831] [cursor=pointer]:
+                    - /url: "#cite_note-MeZPN-77"
+                - superscript [ref=f1e832]:
+                  - link "[74]" [ref=f1e833] [cursor=pointer]:
+                    - /url: "#cite_note-IGEFAQ-78"
+              - paragraph [ref=f1e834]:
+                - link "Patent applications" [ref=f1e835] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Patent_application
+                - text: that landed on Einstein's desk for his evaluation included ideas for a gravel sorter and an electric typewriter.
+                - superscript [ref=f1e836]:
+                  - link "[74]" [ref=f1e837] [cursor=pointer]:
+                    - /url: "#cite_note-IGEFAQ-78"
+                - text: His employers were pleased enough with his work to make his position permanent in 1903, although they did not think that he should be promoted until he had "fully mastered machine technology".
+                - superscript [ref=f1e838]:
+                  - link "[75]" [ref=f1e839] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEGalison2000370-79"
+                - text: It is conceivable that his labors at the patent office had a bearing on his development of his special theory of relativity. He arrived at his revolutionary ideas about space, time and light through thought experiments about the transmission of signals and the synchronization of clocks, matters which also figured in some of the inventions submitted to him for assessment.
+                - superscript [ref=f1e840]:
+                  - link "[11]" [ref=f1e841] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEGalison2000377-13"
+              - paragraph [ref=f1e842]:
+                - text: In 1902, Einstein and his friends
+                - link "Conrad Habicht" [ref=f1e843] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Conrad_Habicht
+                - text: and
+                - link "Maurice Solovine" [ref=f1e844] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Maurice_Solovine
+                - text: ", whom he had met in Bern, formed a group that held regular meetings to discuss science and philosophy. Their choice of a name for their club, the"
+                - link "Olympia Academy" [ref=f1e845] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Olympia_Academy
+                - text: ", was an ironic comment upon its far from Olympian status. Sometimes they were joined by Marić, who limited her participation in their proceedings to careful listening."
+                - superscript [ref=f1e846]:
+                  - link "[76]" [ref=f1e847] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEHighfieldCarter199396–98-80"
+                - text: The thinkers whose works they reflected upon included
+                - link "Henri Poincaré" [ref=f1e848] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Henri_Poincaré
+                - text: ","
+                - link "Ernst Mach" [ref=f1e849] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ernst_Mach
+                - text: and
+                - link "David Hume" [ref=f1e850] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/David_Hume
+                - text: ", all of whom significantly influenced Einstein's own subsequent ideas and beliefs."
+                - superscript [ref=f1e851]:
+                  - link "[77]" [ref=f1e852] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson200779–84-81"
+            - region "First scientific papers (1900–1905)" [ref=f1e853]:
+              - heading "First scientific papers (1900–1905)" [level=3] [ref=f1e855]
+              - figure "Einstein's 1905 dissertation, Eine neue Bestimmung der Moleküldimensionen (\"A new determination of molecular dimensions\")" [ref=f1e856]:
+                - link [ref=f1e857] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Einstein_thesis.png
+                  - img "Cover image of the PhD dissertation of Albert Einstein" [ref=f1e858]
+                - generic [ref=f1e859]:
+                  - text: Einstein's 1905 dissertation,
+                  - generic [ref=f1e860]: Eine neue Bestimmung der Moleküldimensionen
+                  - text: ("A new determination of molecular dimensions")
+              - paragraph [ref=f1e861]:
+                - text: Einstein's first paper,
+                - link "\"Folgerungen aus den Capillaritätserscheinungen\"" [ref=f1e862] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_scientific_publications_by_Albert_Einstein#Journal_articles
+                - text: ("Conclusions drawn from the phenomena of capillarity"), in which he proposed a model of intermolecular attraction that he afterwards disavowed as worthless, was published in the journal
+                - link "Annalen der Physik" [ref=f1e864] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Annalen_der_Physik
+                - text: in 1901.
+                - superscript [ref=f1e865]:
+                  - link "[78]" [ref=f1e866] [cursor=pointer]:
+                    - /url: "#cite_note-Einstein_1901-82"
+                - superscript [ref=f1e867]:
+                  - link "[79]" [ref=f1e868] [cursor=pointer]:
+                    - /url: "#cite_note-83"
+                - text: His 24-page doctoral dissertation also addressed a topic in molecular physics. Titled "Eine neue Bestimmung der Moleküldimensionen" ("A New Determination of Molecular Dimensions") and dedicated "Meinem Freunde Herr Dr. Marcel Grossmann gewidmet" (to his friend Marcel Grossman), it was completed on 30 April 1905
+                - superscript [ref=f1e869]:
+                  - link "[80]" [ref=f1e870] [cursor=pointer]:
+                    - /url: "#cite_note-1905b-84"
+                - text: and approved by
+                - link "Alfred Kleiner" [ref=f1e871] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Alfred_Kleiner
+                - text: of the University of Zurich three months later. (Einstein was formally awarded his PhD on 15 January 1906.)
+                - superscript [ref=f1e872]:
+                  - link "[80]" [ref=f1e873] [cursor=pointer]:
+                    - /url: "#cite_note-1905b-84"
+                - superscript [ref=f1e874]:
+                  - link "[81]" [ref=f1e875] [cursor=pointer]:
+                    - /url: "#cite_note-85"
+                - superscript [ref=f1e876]:
+                  - link "[82]" [ref=f1e877] [cursor=pointer]:
+                    - /url: "#cite_note-86"
+                - text: Four other pieces of work that Einstein completed in 1905—
+                - link "his famous papers" [ref=f1e878] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Annus_mirabilis_papers
+                - text: on the
+                - link "photoelectric effect" [ref=f1e879] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Photoelectric_effect
+                - text: ","
+                - link "Brownian motion" [ref=f1e880] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Brownian_motion
+                - text: ", his"
+                - link "special theory of relativity" [ref=f1e881] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Special_theory_of_relativity
+                - text: and the
+                - link "equivalence of mass and energy" [ref=f1e882] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Equivalence_of_mass_and_energy
+                - text: —have led to the year being celebrated as an annus mirabilis for physics akin to the miracle year of 1666 when
+                - link "Isaac Newton" [ref=f1e883] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Isaac_Newton
+                - text: experienced his greatest epiphanies. The publications deeply impressed Einstein's contemporaries.
+                - superscript [ref=f1e884]:
+                  - link "[83]" [ref=f1e885] [cursor=pointer]:
+                    - /url: "#cite_note-87"
+            - region "Academic career in Europe (1908–1933)" [ref=f1e886]:
+              - heading "Academic career in Europe (1908–1933)" [level=3] [ref=f1e888]
+              - paragraph [ref=f1e889]:
+                - text: Einstein's sabbatical as a civil servant approached its end in 1908, when he secured a junior teaching position at the
+                - link "University of Bern" [ref=f1e890] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/University_of_Bern
+                - text: . In 1909, a lecture on relativistic
+                - link "electrodynamics" [ref=f1e891] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Electrodynamics
+                - text: that he gave at the University of Zurich, much admired by
+                - link "Alfred Kleiner" [ref=f1e892] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Alfred_Kleiner
+                - text: ", led to Zurich's luring him away from Bern with a newly created associate professorship."
+                - superscript [ref=f1e893]:
+                  - link "[84]" [ref=f1e894] [cursor=pointer]:
+                    - /url: "#cite_note-bG2yp-88"
+                - text: Promotion to a full professorship followed in April 1911, when he took up a chair at the German
+                - link "Charles-Ferdinand University" [ref=f1e895] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Charles-Ferdinand_University
+                - text: in
+                - link "Prague" [ref=f1e896] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Prague
+                - text: ","
+                - superscript [ref=f1e897]:
+                  - link "[85]" [ref=f1e898] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEGordin2020[httpsbooksgooglecombooksidoJ27DwAAQBAJpgPA45_45]-89"
+                - text: a move which required him to become an
+                - link "Austrian" [ref=f1e899] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Cisleithania
+                - text: citizen of the
+                - link "Austro-Hungarian Empire" [ref=f1e900] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Austro-Hungarian_Empire
+                - text: ", which was not completed."
+                - superscript [ref=f1e901]:
+                  - link "[86]" [ref=f1e902] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEGordin2020[httpsbooksgooglecombooksidoJ27DwAAQBAJpgPA14_20]-90"
+                - text: His time in Prague saw him producing eleven research papers.
+                - superscript [ref=f1e903]:
+                  - link "[87]" [ref=f1e904] [cursor=pointer]:
+                    - /url: "#cite_note-91"
+              - figure "Einstein with colleagues at the ETH Zurich, 1913[b]" [ref=f1e905]:
+                - link [ref=f1e906] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:ETH-BIB-Einstein,_Albert_und_Kollegen_am_Physik-Labor_ETH-Portrait-Portr_10750.tif
+                - generic [ref=f1e908]:
+                  - text: Einstein with colleagues at the
+                  - link "ETH Zurich" [ref=f1e909] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ETH_Zurich
+                  - text: ", 1913"
+                  - superscript [ref=f1e910]:
+                    - link "[b]" [ref=f1e911] [cursor=pointer]:
+                      - /url: "#cite_note-92"
+              - paragraph [ref=f1e912]:
+                - text: From 30 October to 3 November 1911, Einstein attended the first
+                - link "Solvay Conference on Physics" [ref=f1e913] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Solvay_Conference#First_conference
+                - text: .
+                - superscript [ref=f1e914]:
+                  - link "[88]" [ref=f1e915] [cursor=pointer]:
+                    - /url: "#cite_note-93"
+              - paragraph [ref=f1e916]:
+                - text: In July 1912, he returned to his alma mater, the
+                - link "ETH Zurich" [ref=f1e917] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/ETH_Zurich
+                - text: ", to take up a chair in theoretical physics. His teaching activities there centered on"
+                - link "thermodynamics" [ref=f1e918] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Thermodynamics
+                - text: and analytical mechanics, and his research interests included the molecular theory of heat,
+                - link "continuum mechanics" [ref=f1e919] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Continuum_mechanics
+                - text: and the development of a relativistic theory of gravitation. In his work on the latter topic, he was assisted by his friend Marcel Grossmann, whose knowledge of the kind of mathematics required was greater than his own.
+                - superscript [ref=f1e920]:
+                  - link "[89]" [ref=f1e921] [cursor=pointer]:
+                    - /url: "#cite_note-hXQin-94"
+              - paragraph [ref=f1e922]:
+                - text: In the spring of 1913, two German visitors,
+                - link "Max Planck" [ref=f1e923] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Max_Planck
+                - text: and
+                - link "Walther Nernst" [ref=f1e924] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Walther_Nernst
+                - text: ", called upon Einstein in Zurich in the hope of persuading him to relocate to Berlin."
+                - superscript [ref=f1e925]:
+                  - link "[90]" [ref=f1e926] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEStachel2002534-95"
+                - text: They offered him membership of the
+                - link "Prussian Academy of Sciences" [ref=f1e927] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Prussian_Academy_of_Sciences
+                - text: ", the directorship of the planned"
+                - link "Kaiser Wilhelm Institute for Physics" [ref=f1e928] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Kaiser_Wilhelm_Institute_for_Physics
+                - text: and a chair at the
+                - link "Humboldt University of Berlin" [ref=f1e929] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Humboldt_University_of_Berlin
+                - text: that would allow him to pursue his research supported by a professorial salary but with no teaching duties to burden him.
+                - superscript [ref=f1e930]:
+                  - link "[48]" [ref=f1e931] [cursor=pointer]:
+                    - /url: "#cite_note-dh-51"
+                - text: Their invitation was all the more appealing to him because Berlin happened to be the home of his latest girlfriend, Elsa Löwenthal.
+                - superscript [ref=f1e932]:
+                  - link "[90]" [ref=f1e933] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEStachel2002534-95"
+                - text: He duly joined the Academy on 24 July 1913,
+                - superscript [ref=f1e934]:
+                  - link "[91]" [ref=f1e935] [cursor=pointer]:
+                    - /url: "#cite_note-jstor.org-96"
+                - text: and moved into an apartment in the Berlin district of
+                - link "Dahlem" [ref=f1e936] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Dahlem_(Berlin)
+                - text: on 1 April 1914.
+                - superscript [ref=f1e937]:
+                  - link "[48]" [ref=f1e938] [cursor=pointer]:
+                    - /url: "#cite_note-dh-51"
+                - text: He was installed in his Humboldt University position shortly thereafter.
+                - superscript [ref=f1e939]:
+                  - link "[91]" [ref=f1e940] [cursor=pointer]:
+                    - /url: "#cite_note-jstor.org-96"
+              - figure "Einstein with other physicists and chemists at the Kaiser Wilhelm Institute, Berlin, 1920[c]" [ref=f1e941]:
+                - link [ref=f1e942] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Berliner_Physiker_u_Chemiker_1920.jpg
+                - generic [ref=f1e944]:
+                  - text: Einstein with other physicists and chemists at the
+                  - link "Kaiser Wilhelm Institute" [ref=f1e945] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Kaiser_Wilhelm_Society
+                  - text: ", Berlin, 1920"
+                  - superscript [ref=f1e946]:
+                    - link "[c]" [ref=f1e947] [cursor=pointer]:
+                      - /url: "#cite_note-97"
+              - paragraph [ref=f1e948]:
+                - text: The outbreak of the
+                - link "First World War" [ref=f1e949] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/First_World_War
+                - text: in July 1914 marked the beginning of Einstein's gradual estrangement from the nation of his birth. When the "
+                - link "Manifesto of the Ninety-Three" [ref=f1e950] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Manifesto_of_the_Ninety-Three
+                - text: "\" was published in October 1914—a document signed by a host of prominent German thinkers that justified Germany's belligerence—Einstein was one of the few German intellectuals to distance himself from it and sign the alternative, irenic \""
+                - link "Manifesto to the Europeans" [ref=f1e951] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Manifesto_to_the_Europeans
+                - text: "\" instead."
+                - superscript [ref=f1e952]:
+                  - link "[92]" [ref=f1e953] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEScheideler2002333-98"
+                - text: However, this expression of his doubts about German policy did not prevent him from being elected to a two-year term as president of the
+                - link "German Physical Society" [ref=f1e954] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/German_Physical_Society
+                - text: in 1916.
+                - superscript [ref=f1e955]:
+                  - link "[93]" [ref=f1e956] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTECalapriceLipscombe2005[httpsbooksgooglecombooksid5eWh2O_3OAQCpgPR19_\"Timeline\",_p._xix]-99"
+                - text: When the Kaiser Wilhelm Institute for Physics opened its doors the following year—its foundation delayed because of the war—Einstein was appointed its first director, just as Planck and Nernst had promised.
+                - superscript [ref=f1e957]:
+                  - link "[94]" [ref=f1e958] [cursor=pointer]:
+                    - /url: "#cite_note-EXcH6-100"
+              - paragraph [ref=f1e959]:
+                - text: Einstein was elected a Foreign Member of the
+                - link "Royal Netherlands Academy of Arts and Sciences" [ref=f1e960] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Royal_Netherlands_Academy_of_Arts_and_Sciences
+                - text: in 1920,
+                - superscript [ref=f1e961]:
+                  - link "[95]" [ref=f1e962] [cursor=pointer]:
+                    - /url: "#cite_note-3gcYy-101"
+                - text: and a
+                - link "Foreign Member of the Royal Society in 1921" [ref=f1e963] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_Fellows_of_the_Royal_Society_elected_in_1921
+                - text: . In 1922, he was awarded the 1921
+                - link "Nobel Prize in Physics" [ref=f1e964] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Nobel_Prize_in_Physics
+                - text: "\"for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect\"."
+                - superscript [ref=f1e965]:
+                  - link "[7]" [ref=f1e966] [cursor=pointer]:
+                    - /url: "#cite_note-Nobel_Prize-9"
+                - text: "At this point some physicists still regarded the general theory of relativity skeptically, and the Nobel citation displayed a degree of doubt even about the work on photoelectricity that it acknowledged: it did not assent to Einstein's notion of the particulate nature of light, which only won over the entire scientific community when"
+                - link "S. N. Bose" [ref=f1e967] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/S._N._Bose
+                - text: derived the
+                - link "Planck spectrum" [ref=f1e968] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Planck_spectrum
+                - text: in 1924. That same year, Einstein was elected an International Honorary Member of the
+                - link "American Academy of Arts and Sciences" [ref=f1e969] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/American_Academy_of_Arts_and_Sciences
+                - text: .
+                - superscript [ref=f1e970]:
+                  - link "[96]" [ref=f1e971] [cursor=pointer]:
+                    - /url: "#cite_note-102"
+                - text: Britain's closest equivalent of the Nobel award, the
+                - link "Royal Society" [ref=f1e972] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Royal_Society
+                - text: "'s"
+                - link "Copley Medal" [ref=f1e973] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Copley_Medal
+                - text: ", was not hung around Einstein's neck until 1925."
+                - superscript [ref=f1e974]:
+                  - link "[1]" [ref=f1e975] [cursor=pointer]:
+                    - /url: "#cite_note-frs-2"
+                - text: He was elected an International Member of the
+                - link "American Philosophical Society" [ref=f1e976] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/American_Philosophical_Society
+                - text: in 1930.
+                - superscript [ref=f1e977]:
+                  - link "[97]" [ref=f1e978] [cursor=pointer]:
+                    - /url: "#cite_note-103"
+              - paragraph [ref=f1e979]:
+                - text: Einstein resigned from the Prussian Academy in March 1933. His accomplishments in Berlin had included the completion of the general theory of relativity, proving the
+                - link "Einstein–de Haas effect" [ref=f1e980] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Einstein–de_Haas_effect
+                - text: ", contributing to the quantum theory of radiation, and the development of"
+                - link "Bose–Einstein statistics" [ref=f1e981] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bose–Einstein_statistics
+                - text: .
+                - superscript [ref=f1e982]:
+                  - link "[48]" [ref=f1e983] [cursor=pointer]:
+                    - /url: "#cite_note-dh-51"
+            - region "Putting general relativity to the test (1919)" [ref=f1e984]:
+              - heading "Putting general relativity to the test (1919)" [level=3] [ref=f1e986]
+              - figure "The New York Times reported confirmation of the bending of light by gravitation after observations (made in Príncipe and Sobral) of the 29 May 1919 eclipse were presented to a joint meeting in London of the Royal Society and the Royal Astronomical Society on 6 November 1919.[98]" [ref=f1e987]:
+                - link [ref=f1e988] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:19191125_A_New_Physics_Based_on_Einstein_-_The_New_York_Times.png
+                - generic [ref=f1e990]:
+                  - link "The New York Times" [ref=f1e992] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/The_New_York_Times
+                  - text: reported confirmation of the bending of light by gravitation after observations (made in
+                  - link "Príncipe" [ref=f1e993] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Príncipe
+                  - text: and
+                  - link "Sobral" [ref=f1e994] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Sobral,_Ceará
+                  - text: ) of the 29 May 1919 eclipse were presented to a joint meeting in London of the
+                  - link "Royal Society" [ref=f1e995] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Royal_Society
+                  - text: and the
+                  - link "Royal Astronomical Society" [ref=f1e996] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Royal_Astronomical_Society
+                  - text: on 6 November 1919.
+                  - superscript [ref=f1e997]:
+                    - link "[98]" [ref=f1e998] [cursor=pointer]:
+                      - /url: "#cite_note-NYTimes_19191125-104"
+              - paragraph [ref=f1e999]:
+                - text: In 1907, Einstein reached a milestone on his long journey from his special theory of relativity to a new idea of gravitation with the formulation of his
+                - link "equivalence principle" [ref=f1e1000] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Equivalence_principle
+                - text: ", which asserts that an observer in a box falling freely in a gravitational field would be unable to find any evidence that the field exists. In 1911, he first calculated the"
+                - link "gravitational deflection of light" [ref=f1e1001] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Gravitational_lens
+                - text: passing close to the Sun, a prediction later adjusted upon completion of the
+                - link "general theory of relativity" [ref=f1e1002] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/General_relativity
+                - text: . He reworked his calculation in 1913, having now found a way to model gravitation with the
+                - link "Riemann curvature tensor" [ref=f1e1003] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Riemann_curvature_tensor
+                - text: of a non-Euclidean four-dimensional
+                - link "spacetime" [ref=f1e1004] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Spacetime
+                - text: . By the fall of 1915, his reimagining of the mathematics of gravitation in terms of Riemannian geometry was complete, and he applied his new theory not just to the behavior of the Sun as a gravitational lens but also to another astronomical phenomenon, the
+                - link "precession of the perihelion of Mercury" [ref=f1e1005] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Precession_of_the_perihelion_of_Mercury
+                - text: (a slow drift in the point in Mercury's elliptical orbit at which it approaches the Sun most closely).
+                - superscript [ref=f1e1006]:
+                  - link "[48]" [ref=f1e1007] [cursor=pointer]:
+                    - /url: "#cite_note-dh-51"
+                - superscript [ref=f1e1008]:
+                  - link "[99]" [ref=f1e1009] [cursor=pointer]:
+                    - /url: "#cite_note-105"
+                - text: A
+                - link "total eclipse of the Sun that took place on 29 May 1919" [ref=f1e1010] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Solar_eclipse_of_May_29,_1919
+                - text: provided an opportunity to put his theory of gravitational lensing to the test, and observations performed by Sir
+                - link "Arthur Eddington" [ref=f1e1011] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Arthur_Eddington
+                - text: yielded results that were consistent with his calculations. Eddington's work was reported at length in newspapers around the world. On 7 November 1919, for example, the leading British newspaper,
+                - link "The Times" [ref=f1e1013] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/The_Times
+                - text: ", printed a banner headline that read: \"Revolution in Science– New Theory of the Universe– Newtonian Ideas Overthrown\"."
+                - superscript [ref=f1e1016]:
+                  - link "[100]" [ref=f1e1017] [cursor=pointer]:
+                    - /url: "#cite_note-Eddington-106"
+            - region "Coming to terms with fame (1921–1923)" [ref=f1e1018]:
+              - heading "Coming to terms with fame (1921–1923)" [level=3] [ref=f1e1020]
+              - figure "Einstein's official portrait after receiving the 1921 Nobel Prize for Physics" [ref=f1e1021]:
+                - link [ref=f1e1022] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_(Nobel).png
+                - generic [ref=f1e1024]:
+                  - text: Einstein's official portrait after receiving the 1921
+                  - link "Nobel Prize" [ref=f1e1025] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Nobel_Prize
+                  - text: for Physics
+              - paragraph [ref=f1e1026]:
+                - text: With Eddington's eclipse observations widely reported not just in academic journals but by the popular press as well, Einstein became "perhaps the world's first celebrity scientist", a genius who had shattered a paradigm that had been basic to physicists' understanding of the universe since the seventeenth century.
+                - superscript [ref=f1e1027]:
+                  - link "[101]" [ref=f1e1028] [cursor=pointer]:
+                    - /url: "#cite_note-107"
+              - paragraph [ref=f1e1029]:
+                - text: Einstein began his new life as an intellectual icon in America, where he arrived on 2 April 1921. He was welcomed to New York City by Mayor
+                - link "John Francis Hylan" [ref=f1e1030] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/John_Francis_Hylan
+                - text: ", and then spent three weeks giving lectures and attending receptions."
+                - superscript [ref=f1e1031]:
+                  - link "[102]" [ref=f1e1032] [cursor=pointer]:
+                    - /url: "#cite_note-108"
+                - text: He spoke several times at
+                - link "Columbia University" [ref=f1e1033] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Columbia_University
+                - text: and
+                - link "Princeton" [ref=f1e1034] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Princeton
+                - text: ", and in Washington, he visited the"
+                - link "White House" [ref=f1e1035] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/White_House
+                - text: with representatives of the
+                - link "National Academy of Sciences" [ref=f1e1036] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/National_Academy_of_Sciences
+                - text: . He returned to Europe via London, where he was the guest of the philosopher and statesman
+                - link "Viscount Haldane" [ref=f1e1037] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Viscount_Haldane
+                - text: . He used his time in the British capital to meet several people prominent in British scientific, political or intellectual life, and to deliver a lecture at
+                - link "King's College" [ref=f1e1038] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/King's_College_London
+                - text: .
+                - superscript [ref=f1e1039]:
+                  - link "[103]" [ref=f1e1040] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEHoffmannDukas1972145–148-109"
+                - superscript [ref=f1e1041]:
+                  - link "[104]" [ref=f1e1042] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEFölsing1997499–508-110"
+                - text: In July 1921, he published an essay, "My First Impression of the U.S.A.", in which he sought to sketch the American character.
+                - superscript [ref=f1e1043]:
+                  - link "[105]" [ref=f1e1044] [cursor=pointer]:
+                    - /url: "#cite_note-7gwHd-111"
+                - text: "He wrote of his transatlantic hosts in highly approving terms: \"What strikes a visitor is the joyous, positive attitude to life ... The American is friendly, self-confident, optimistic, and without envy.\""
+                - superscript [ref=f1e1045]:
+                  - link "[106]" [ref=f1e1046] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEHolton198420-112"
+              - paragraph [ref=f1e1047]:
+                - text: In 1922, Einstein's travels were to the old world rather than the new. He devoted six months to a tour of Asia that saw him speaking in Japan, Singapore and Sri Lanka (then known as
+                - link "Ceylon" [ref=f1e1048] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Ceylon
+                - text: ). After his first public lecture in Tokyo, he met
+                - link "Emperor Yoshihito" [ref=f1e1049] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Emperor_Yoshihito
+                - text: and his wife at the
+                - link "Imperial Palace" [ref=f1e1050] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Tokyo_Imperial_Palace
+                - text: ", with thousands of spectators thronging the streets in the hope of catching a glimpse of him. (In a letter to his sons, he wrote that Japanese people seemed to him to be generally modest, intelligent and considerate, and to have a true appreciation of art."
+                - superscript [ref=f1e1051]:
+                  - link "[107]" [ref=f1e1052] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007307–308-113"
+                - text: "But his picture of them in his diary was less flattering: \"[the] intellectual needs of this nation seem to be weaker than their artistic ones – natural disposition?\" His journal also contains views of China and India which were uncomplimentary. Of Chinese people, he wrote that \"even the children are spiritless and look obtuse... It would be a pity if these Chinese supplant all other races. For the likes of us the mere thought is unspeakably dreary\"."
+                - superscript [ref=f1e1053]:
+                  - link "[108]" [ref=f1e1054] [cursor=pointer]:
+                    - /url: "#cite_note-38YkY-114"
+                - superscript [ref=f1e1055]:
+                  - link "[109]" [ref=f1e1056] [cursor=pointer]:
+                    - /url: "#cite_note-115"
+                - text: ) He was greeted with even greater enthusiasm on the last leg of his tour, in which he spent twelve days in
+                - link "Mandatory Palestine" [ref=f1e1057] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mandatory_Palestine
+                - text: ", newly entrusted to British rule by the"
+                - link "League of Nations" [ref=f1e1058] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/League_of_Nations
+                - text: in the aftermath of the First World War.
+                - link "Sir Herbert Samuel" [ref=f1e1059] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sir_Herbert_Samuel
+                - text: ", the British High Commissioner, welcomed him with a degree of ceremony normally only accorded to a visiting head of state, including a cannon salute. One reception held in his honor was stormed by people determined to hear him speak: he told them that he was happy that Jews were beginning to be recognized as a force in the world."
+                - superscript [ref=f1e1060]:
+                  - link "[107]" [ref=f1e1061] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007307–308-113"
+              - paragraph [ref=f1e1062]:
+                - text: On 6 April 1922, during a visit to Paris, Einstein
+                - link "engaged in a debate on relativity" [ref=f1e1063] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Einstein–Bergson_debate
+                - text: with the philosopher
+                - link "Henri Bergson" [ref=f1e1064] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Henri_Bergson
+                - text: . This dispute has had widespread ramifications for the humanities and was an academic
+                - link "cause célèbre" [ref=f1e1066] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Cause_célèbre
+                - text: at the time.
+                - superscript [ref=f1e1067]:
+                  - link "[110]" [ref=f1e1068] [cursor=pointer]:
+                    - /url: "#cite_note-116"
+              - paragraph [ref=f1e1069]:
+                - text: Einstein's decision to tour the eastern hemisphere in 1922 meant that he was unable to go to
+                - link "Stockholm" [ref=f1e1070] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Stockholm
+                - text: in the December of that year to participate in the Nobel prize ceremony. His place at the traditional Nobel banquet was taken by a German diplomat, who gave a speech praising him not only as a physicist but also as a campaigner for peace.
+                - superscript [ref=f1e1071]:
+                  - link "[111]" [ref=f1e1072] [cursor=pointer]:
+                    - /url: "#cite_note-oxak7-117"
+                - text: A two-week visit to Spain that he undertook in 1923 saw him collecting another award, a membership of the Spanish Academy of Sciences signified by a diploma handed to him by King
+                - link "Alfonso XIII" [ref=f1e1073] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Alfonso_XIII
+                - text: . (His Spanish trip also gave him a chance to meet a fellow Nobel laureate, the neuroanatomist
+                - link "Santiago Ramón y Cajal" [ref=f1e1074] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Santiago_Ramón_y_Cajal
+                - text: .)
+                - superscript [ref=f1e1075]:
+                  - link "[112]" [ref=f1e1076] [cursor=pointer]:
+                    - /url: "#cite_note-w74nv-118"
+            - region "Serving the League of Nations (1922–1932)" [ref=f1e1077]:
+              - heading "Serving the League of Nations (1922–1932)" [level=3] [ref=f1e1079]
+              - figure "Einstein at a session of the International Committee on Intellectual Cooperation (League of Nations) of which he was a member from 1922 to 1932" [ref=f1e1080]:
+                - link [ref=f1e1081] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:League_of_Nations_Commission_067.tif
+                - generic [ref=f1e1083]:
+                  - text: Einstein at a session of the
+                  - link "International Committee on Intellectual Cooperation" [ref=f1e1084] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/International_Committee_on_Intellectual_Cooperation
+                  - text: (
+                  - link "League of Nations" [ref=f1e1085] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/League_of_Nations
+                  - text: ) of which he was a member from 1922 to 1932
+              - paragraph [ref=f1e1086]:
+                - text: From 1922 until 1932, with the exception of a few months in 1923 and 1924, Einstein was a member of the Geneva-based
+                - link "International Committee on Intellectual Cooperation" [ref=f1e1087] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/International_Committee_on_Intellectual_Cooperation
+                - text: of the
+                - link "League of Nations" [ref=f1e1088] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/League_of_Nations
+                - text: ", a group set up by the League to encourage scientists, artists, scholars, teachers and other people engaged in the life of the mind to work more closely with their counterparts in other countries."
+                - superscript [ref=f1e1089]:
+                  - link "[113]" [ref=f1e1090] [cursor=pointer]:
+                    - /url: "#cite_note-Q5hgx-119"
+                - superscript [ref=f1e1091]:
+                  - link "[114]" [ref=f1e1092] [cursor=pointer]:
+                    - /url: "#cite_note-vNNnX-120"
+                - text: He was appointed as a German delegate rather than as a representative of Switzerland because of the machinations of two Catholic activists,
+                - link "Oskar Halecki" [ref=f1e1093] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Oskar_Halecki
+                - text: and
+                - link "Giuseppe Motta" [ref=f1e1094] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Giuseppe_Motta
+                - text: . By persuading Secretary General
+                - link "Eric Drummond" [ref=f1e1095] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Eric_Drummond
+                - text: to deny Einstein the place on the committee reserved for a Swiss thinker, they created an opening for
+                - link "Gonzague de Reynold" [ref=f1e1096] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Gonzague_de_Reynold
+                - text: ", who used his League of Nations position as a platform from which to promote traditional Catholic doctrine."
+                - superscript [ref=f1e1097]:
+                  - link "[115]" [ref=f1e1098] [cursor=pointer]:
+                    - /url: "#cite_note-e9Xyh-121"
+                - text: Einstein's former physics professor
+                - link "Hendrik Lorentz" [ref=f1e1099] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+                - text: and the Polish chemist
+                - link "Marie Curie" [ref=f1e1100] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Marie_Curie
+                - text: were also members of the committee.
+                - superscript [ref=f1e1101]:
+                  - link "[116]" [ref=f1e1102] [cursor=pointer]:
+                    - /url: "#cite_note-122"
+            - region "Touring South America (1925)" [ref=f1e1103]:
+              - heading "Touring South America (1925)" [level=3] [ref=f1e1105]
+              - paragraph [ref=f1e1106]:
+                - text: In March and April 1925, Einstein and his wife visited South America, where they spent about a week in Brazil, a week in Uruguay and a month in Argentina.
+                - superscript [ref=f1e1107]:
+                  - link "[117]" [ref=f1e1108] [cursor=pointer]:
+                    - /url: "#cite_note-123"
+                - text: Their tour was suggested by Jorge Duclout (1856–1927) and Mauricio Nirenstein (1877–1935)
+                - superscript [ref=f1e1109]:
+                  - link "[118]" [ref=f1e1110] [cursor=pointer]:
+                    - /url: "#cite_note-124"
+                - text: with the support of several Argentine scholars, including
+                - link "Julio Rey Pastor" [ref=f1e1111] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Julio_Rey_Pastor
+                - text: ","
+                - link "Jakob Laub" [ref=f1e1112] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Jakob_Laub
+                - text: ", and"
+                - link "Leopoldo Lugones" [ref=f1e1113] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Leopoldo_Lugones
+                - text: and was financed primarily by the Council of the
+                - link "University of Buenos Aires" [ref=f1e1114] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/University_of_Buenos_Aires
+                - text: and the Asociación Hebraica Argentina (Argentine Hebraic Association) with a smaller contribution from the Argentine-Germanic Cultural Institution.
+                - superscript [ref=f1e1115]:
+                  - link "[119]" [ref=f1e1116] [cursor=pointer]:
+                    - /url: "#cite_note-125"
+            - region "Touring the US (1930–1931)" [ref=f1e1117]:
+              - heading "Touring the US (1930–1931)" [level=3] [ref=f1e1119]
+              - figure "Einstein in Pasadena, California, 1931" [ref=f1e1120]:
+                - link [ref=f1e1121] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_writing_on_a_blackboard_in_Pasadena_(1931).jpg
+                - generic [ref=f1e1123]:
+                  - text: Einstein in
+                  - link "Pasadena, California" [ref=f1e1124] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Pasadena,_California
+                  - text: ", 1931"
+              - paragraph [ref=f1e1125]:
+                - text: In December 1930, Einstein began another significant sojourn in the United States, drawn back to the US by the offer of a two month research fellowship at the
+                - link "California Institute of Technology" [ref=f1e1126] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/California_Institute_of_Technology
+                - text: . Caltech supported him in his wish that he should not be exposed to quite as much attention from the media as he had experienced when visiting the US in 1921, and he therefore declined all the invitations to receive prizes or make speeches that his admirers poured down upon him. But he remained willing to allow his fans at least some of the time with him that they requested.
+                - superscript [ref=f1e1127]:
+                  - link "[120]" [ref=f1e1128] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007368-126"
+              - paragraph [ref=f1e1129]:
+                - text: After arriving in New York City, Einstein was taken to various places and events, including
+                - link "Chinatown" [ref=f1e1130] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Chinatown,_Manhattan
+                - text: ", a lunch with the editors of The New York Times, and a performance of"
+                - link "Carmen" [ref=f1e1132] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Carmen
+                - text: at the
+                - link "Metropolitan Opera" [ref=f1e1133] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Metropolitan_Opera
+                - text: ", where he was cheered by the audience on his arrival. During the days following, he was given the keys to the city by Mayor"
+                - link "Jimmy Walker" [ref=f1e1134] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Jimmy_Walker
+                - text: and met
+                - link "Nicholas Murray Butler" [ref=f1e1135] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Nicholas_Murray_Butler
+                - text: ", the president of"
+                - link "Columbia University" [ref=f1e1136] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Columbia_University
+                - text: ", who described Einstein as \"the ruling monarch of the mind\"."
+                - superscript [ref=f1e1137]:
+                  - link "[121]" [ref=f1e1138] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007370-127"
+                - link "Harry Emerson Fosdick" [ref=f1e1139] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Harry_Emerson_Fosdick
+                - text: ", pastor at New York's"
+                - link "Riverside Church" [ref=f1e1140] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Riverside_Church
+                - text: ", gave Einstein a tour of the church and showed him a full-size statue that the church made of Einstein, standing at the entrance."
+                - superscript [ref=f1e1141]:
+                  - link "[121]" [ref=f1e1142] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007370-127"
+                - text: Also during his stay in New York, he joined a crowd of 15,000 people at
+                - link "Madison Square Garden" [ref=f1e1143] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Madison_Square_Garden_(1925)
+                - text: during a
+                - link "Hanukkah" [ref=f1e1144] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hanukkah
+                - text: celebration.
+                - superscript [ref=f1e1145]:
+                  - link "[121]" [ref=f1e1146] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007370-127"
+              - figure "Einstein with Charlie Chaplin at the Hollywood premiere of Chaplin's City Lights, January 1931" [ref=f1e1147]:
+                - link [ref=f1e1148] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_and_Charlie_Chaplin_City_Lights_premiere_1931.jpg
+                - generic [ref=f1e1150]:
+                  - text: Einstein with
+                  - link "Charlie Chaplin" [ref=f1e1151] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Charlie_Chaplin
+                  - text: at the
+                  - link "Hollywood" [ref=f1e1152] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Hollywood,_Los_Angeles
+                  - text: premiere of Chaplin's
+                  - link "City Lights" [ref=f1e1154] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/City_Lights
+                  - text: ", January 1931"
+              - paragraph [ref=f1e1155]:
+                - text: Einstein next traveled to California, where he met
+                - link "Caltech" [ref=f1e1156] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Caltech
+                - text: president and Nobel laureate
+                - link "Robert A. Millikan" [ref=f1e1157] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Robert_A._Millikan
+                - text: . His friendship with Millikan was "awkward", as Millikan "had a penchant for patriotic militarism", where Einstein was a pronounced
+                - link "pacifist" [ref=f1e1158] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Pacifist
+                - text: .
+                - superscript [ref=f1e1159]:
+                  - link "[122]" [ref=f1e1160] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007373-128"
+                - text: During an address to Caltech's students, Einstein noted that science was often inclined to do more harm than good.
+                - superscript [ref=f1e1161]:
+                  - link "[123]" [ref=f1e1162] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007374-129"
+              - paragraph [ref=f1e1163]:
+                - text: This aversion to war also led Einstein to befriend author
+                - link "Upton Sinclair" [ref=f1e1164] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Upton_Sinclair
+                - text: and film star
+                - link "Charlie Chaplin" [ref=f1e1165] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Charlie_Chaplin
+                - text: ", both noted for their pacifism."
+                - link "Carl Laemmle" [ref=f1e1166] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Carl_Laemmle
+                - text: ", head of"
+                - link "Universal Studios" [ref=f1e1167] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Universal_Pictures
+                - text: ", gave Einstein a tour of his studio and introduced him to Chaplin. They had an instant rapport, with Chaplin inviting Einstein and his wife, Elsa, to his home for dinner. Chaplin said Einstein's outward persona, calm and gentle, seemed to conceal a \"highly emotional temperament\", from which came his \"extraordinary intellectual energy\"."
+                - superscript [ref=f1e1168]:
+                  - link "[124]" [ref=f1e1169] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEChaplin1964320-130"
+              - paragraph [ref=f1e1170]:
+                - text: Chaplin's film
+                - link "City Lights" [ref=f1e1172] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/City_Lights
+                - text: was to premiere a few days later in Hollywood, and Chaplin invited Einstein and Elsa to join him as his special guests.
+                - link "Walter Isaacson" [ref=f1e1173] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Walter_Isaacson
+                - text: ", Einstein's biographer, described this as \"one of the most memorable scenes in the new era of celebrity\"."
+                - superscript [ref=f1e1174]:
+                  - link "[123]" [ref=f1e1175] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007374-129"
+                - text: Chaplin visited Einstein at his home on a later trip to Berlin and recalled his "modest little flat" and the piano at which he had begun writing his theory. Chaplin speculated that it was "possibly used as kindling wood by the Nazis".
+                - superscript [ref=f1e1176]:
+                  - link "[125]" [ref=f1e1177] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEChaplin1964322-131"
+                - text: Einstein and Chaplin were cheered at the premiere of the film. Chaplin said to Einstein, "They cheer me because they understand me, and they cheer you because no one understands you."
+                - superscript [ref=f1e1178]:
+                  - link "[123]" [ref=f1e1179] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007374-129"
+            - region "Immigration to the US (1933)" [ref=f1e1180]:
+              - heading "Immigration to the US (1933)" [level=3] [ref=f1e1182]
+              - figure "Cartoon of Einstein after shedding his \"pacifism\" wings (Charles R. Macauley, c. 1933)" [ref=f1e1183]:
+                - link [ref=f1e1184] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:C._R._Macauley_-_Einstein_takes_up_the_sword,_circa_1933.jpg
+                  - img "Cartoon of Einstein, who has shed his \"Pacifism\" wings, standing next to a pillar labeled \"World Peace\". He is rolling up his sleeves and holding a sword labeled \"Preparedness\"." [ref=f1e1185]
+                - generic [ref=f1e1186]:
+                  - text: Cartoon of Einstein after shedding his "pacifism" wings (
+                  - link "Charles R. Macauley" [ref=f1e1187] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Charles_R._Macauley
+                  - text: ", c."
+                  - generic [ref=f1e1188]: "1933"
+                  - text: )
+              - paragraph [ref=f1e1189]:
+                - text: In February 1933, while on a visit to the United States, Einstein knew he could not return to Germany with the rise to power of the
+                - link "Nazis" [ref=f1e1190] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Nazi_Party
+                - text: under Germany's new chancellor,
+                - link "Adolf Hitler" [ref=f1e1191] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Adolf_Hitler
+                - text: .
+                - superscript [ref=f1e1192]:
+                  - link "[126]" [ref=f1e1193] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEFölsing1997659-132"
+                - superscript [ref=f1e1194]:
+                  - link "[127]" [ref=f1e1195] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007404-133"
+              - paragraph [ref=f1e1196]:
+                - text: While at American universities in early 1933, he undertook his third two-month visiting professorship at the
+                - link "California Institute of Technology" [ref=f1e1197] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/California_Institute_of_Technology
+                - text: in Pasadena. In February and March 1933, the
+                - link "Gestapo" [ref=f1e1198] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Gestapo
+                - text: repeatedly raided his family's apartment in Berlin.
+                - superscript [ref=f1e1199]:
+                  - link "[128]" [ref=f1e1200] [cursor=pointer]:
+                    - /url: "#cite_note-134"
+                - text: He and his wife Elsa returned to Europe in March, and during the trip, they learned that the German Reichstag had passed the
+                - link "Enabling Act" [ref=f1e1201] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Enabling_Act_of_1933
+                - text: on 23 March, transforming Hitler's government into a de facto legal dictatorship, and that they would not be able to proceed to Berlin. Later on, they heard that their cottage had been raided by the Nazis and Einstein's personal sailboat confiscated. Upon landing in
+                - link "Antwerp" [ref=f1e1202] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Antwerp
+                - text: ", Belgium on 28 March, Einstein immediately went to the German consulate and surrendered his passport, formally renouncing his German citizenship."
+                - superscript [ref=f1e1203]:
+                  - link "[129]" [ref=f1e1204] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEIsaacson2007405-135"
+                - text: The renunciation was at first refused, but the Nazi government finally revoked his citizenship on 24 March 1934.
+                - superscript [ref=f1e1205]:
+                  - link "[130]" [ref=f1e1206] [cursor=pointer]:
+                    - /url: "#cite_note-136"
+                - text: The Nazis later sold his boat and converted his cottage into a
+                - link "Hitler Youth" [ref=f1e1207] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hitler_Youth
+                - text: camp.
+                - superscript [ref=f1e1208]:
+                  - link "[131]" [ref=f1e1209] [cursor=pointer]:
+                    - /url: "#cite_note-el4GB-137"
+              - region "Refugee status" [ref=f1e1210]:
+                - heading "Refugee status" [level=4] [ref=f1e1212]
+                - figure "Landing card for Einstein's 26 May 1933 arrival in Dover, England from Ostend, Belgium,[132] enroute to Oxford[133]" [ref=f1e1213]:
+                  - link [ref=f1e1214] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Einstein's_landing_card_(5706142737).jpg
+                  - generic [ref=f1e1216]:
+                    - text: Landing card for Einstein's 26 May 1933 arrival in
+                    - link "Dover" [ref=f1e1217] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Dover
+                    - text: ", England from"
+                    - link "Ostend" [ref=f1e1218] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Ostend
+                    - text: ", Belgium,"
+                    - superscript [ref=f1e1219]:
+                      - link "[132]" [ref=f1e1220] [cursor=pointer]:
+                        - /url: "#cite_note-robinson19-138"
+                    - text: enroute to
+                    - link "Oxford" [ref=f1e1221] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Oxford
+                    - superscript [ref=f1e1222]:
+                      - link "[133]" [ref=f1e1223] [cursor=pointer]:
+                        - /url: "#cite_note-robinson24-139"
+                - paragraph [ref=f1e1224]:
+                  - text: In April 1933, Einstein discovered that the new German government had passed
+                  - link "laws barring Jews from holding any official positions" [ref=f1e1225] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Law_for_the_Restoration_of_the_Professional_Civil_Service
+                  - text: ", including teaching at universities."
+                  - superscript [ref=f1e1226]:
+                    - link "[134]" [ref=f1e1227] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007407–410-140"
+                  - text: Historian
+                  - link "Gerald Holton" [ref=f1e1228] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Gerald_Holton
+                  - text: describes how, with "virtually no audible protest being raised by their colleagues", thousands of Jewish scientists were suddenly forced to give up their university positions and their names were removed from the rolls of institutions where they were employed.
+                  - superscript [ref=f1e1229]:
+                    - link "[135]" [ref=f1e1230] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEHolton198418-141"
+                - paragraph [ref=f1e1231]:
+                  - text: A month later, Einstein's works were among those targeted by the
+                  - link "German Student Union" [ref=f1e1232] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/German_Student_Union
+                  - text: in the
+                  - link "Nazi book burnings" [ref=f1e1233] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Nazi_book_burnings
+                  - text: ", with Nazi propaganda minister"
+                  - link "Joseph Goebbels" [ref=f1e1234] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Joseph_Goebbels
+                  - text: proclaiming, "Jewish intellectualism is dead." One German magazine included him in a list of enemies of the German regime with the phrase, "not yet hanged", offering a $5,000 bounty on his head.
+                  - superscript [ref=f1e1235]:
+                    - link "[134]" [ref=f1e1236] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007407–410-140"
+                  - superscript [ref=f1e1237]:
+                    - link "[136]" [ref=f1e1238] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEJeromeTaylor20067-142"
+                  - text: In a subsequent letter to physicist and friend
+                  - link "Max Born" [ref=f1e1239] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Max_Born
+                  - text: ", who had already emigrated from Germany to England, Einstein wrote, \"...I must confess that the degree of their brutality and cowardice came as something of a surprise.\""
+                  - superscript [ref=f1e1241]:
+                    - link "[134]" [ref=f1e1242] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007407–410-140"
+                  - text: After moving to the US, he described the book burnings as a "spontaneous emotional outburst" by those who "shun popular enlightenment", and "more than anything else in the world, fear the influence of men of intellectual independence".
+                  - superscript [ref=f1e1243]:
+                    - link "[137]" [ref=f1e1244] [cursor=pointer]:
+                      - /url: "#cite_note-143"
+                - paragraph [ref=f1e1245]:
+                  - text: Einstein was now without a permanent home, unsure where he would live and work, and equally worried about the fate of countless other scientists still in Germany. Aided by the
+                  - link "Academic Assistance Council" [ref=f1e1246] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Academic_Assistance_Council
+                  - text: ", founded in April 1933 by British Liberal politician"
+                  - link "William Beveridge" [ref=f1e1247] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/William_Beveridge
+                  - text: to help academics escape Nazi persecution, Einstein was able to leave Germany.
+                  - superscript [ref=f1e1248]:
+                    - link "[138]" [ref=f1e1249] [cursor=pointer]:
+                      - /url: "#cite_note-Albert_Hall-144"
+                  - text: He rented a house in De Haan, Belgium, where he lived for a few months. In late July 1933, he visited England for about six weeks at the invitation of the British Member of Parliament Commander
+                  - link "Oliver Locker-Lampson" [ref=f1e1250] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Oliver_Locker-Lampson
+                  - text: ", who had become friends with him in the preceding years."
+                  - superscript [ref=f1e1251]:
+                    - link "[132]" [ref=f1e1252] [cursor=pointer]:
+                      - /url: "#cite_note-robinson19-138"
+                  - text: Locker-Lampson invited him to stay near his
+                  - link "Cromer" [ref=f1e1253] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Cromer
+                  - text: home in a secluded wooden cabin on Roughton Heath in the Parish of
+                  - link "Roughton, Norfolk" [ref=f1e1254] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Roughton,_Norfolk
+                  - text: . To protect Einstein, Locker-Lampson had two bodyguards watch over him; a photo of them carrying shotguns and guarding Einstein was published in the Daily Herald on 24 July 1933.
+                  - superscript [ref=f1e1255]:
+                    - link "[139]" [ref=f1e1256] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007422-145"
+                  - superscript [ref=f1e1257]:
+                    - link "[140]" [ref=f1e1258] [cursor=pointer]:
+                      - /url: "#cite_note-3zIp7-146"
+                - figure "Winston Churchill and Einstein at Chartwell House, 31 May 1933" [ref=f1e1259]:
+                  - link [ref=f1e1260] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Churchill_and_Einstein_in_1933.jpg
+                  - generic [ref=f1e1262]:
+                    - link "Winston Churchill" [ref=f1e1263] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Winston_Churchill
+                    - text: and Einstein at
+                    - link "Chartwell" [ref=f1e1264] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Chartwell
+                    - text: House, 31 May 1933
+                - paragraph [ref=f1e1265]:
+                  - text: Locker-Lampson took Einstein to meet
+                  - link "Winston Churchill" [ref=f1e1266] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Winston_Churchill
+                  - text: at his home, and later,
+                  - link "Austen Chamberlain" [ref=f1e1267] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Austen_Chamberlain
+                  - text: and former Prime Minister
+                  - link "Lloyd George" [ref=f1e1268] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Lloyd_George
+                  - text: .
+                  - superscript [ref=f1e1269]:
+                    - link "[141]" [ref=f1e1270] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007419–420-147"
+                  - text: Einstein asked them to help bring Jewish scientists out of Germany. British historian
+                  - link "Martin Gilbert" [ref=f1e1271] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Martin_Gilbert
+                  - text: notes that Churchill responded immediately, and sent his friend physicist
+                  - link "Frederick Lindemann" [ref=f1e1272] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Frederick_Lindemann
+                  - text: to Germany to seek out Jewish scientists and place them in British universities.
+                  - superscript [ref=f1e1273]:
+                    - link "[142]" [ref=f1e1274] [cursor=pointer]:
+                      - /url: "#cite_note-Gilbert-148"
+                  - text: Churchill later observed that as a result of Germany having driven the Jews out, they had lowered their "technical standards" and put
+                  - link "the Allies" [ref=f1e1275] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Allies_of_World_War_II
+                  - text: "' technology ahead of theirs."
+                  - superscript [ref=f1e1276]:
+                    - link "[142]" [ref=f1e1277] [cursor=pointer]:
+                      - /url: "#cite_note-Gilbert-148"
+                - paragraph [ref=f1e1278]:
+                  - text: Einstein later contacted leaders of other nations, including Turkey's Prime Minister,
+                  - link "İsmet İnönü" [ref=f1e1279] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/İsmet_İnönü
+                  - text: ", to whom he wrote in September 1933, requesting placement of unemployed German-Jewish scientists. As a result of Einstein's letter, Jewish invitees to Turkey eventually totaled over \"1,000 saved individuals\"."
+                  - superscript [ref=f1e1280]:
+                    - link "[143]" [ref=f1e1281] [cursor=pointer]:
+                      - /url: "#cite_note-aDu8s-149"
+                - paragraph [ref=f1e1282]:
+                  - text: Locker-Lampson also submitted a bill to parliament to extend British citizenship to Einstein, during which period Einstein made a number of public appearances describing the crisis brewing in Europe.
+                  - superscript [ref=f1e1283]:
+                    - link "[144]" [ref=f1e1284] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEClark1971-150"
+                  - text: In one of his speeches he denounced Germany's treatment of Jews, while at the same time he introduced a bill promoting Jewish citizenship in Palestine, as they were being denied citizenship elsewhere.
+                  - superscript [ref=f1e1285]:
+                    - link "[145]" [ref=f1e1286] [cursor=pointer]:
+                      - /url: "#cite_note-AP-151"
+                  - text: In his speech he described Einstein as a "citizen of the world" who should be offered a temporary shelter in the UK.
+                  - superscript [ref=f1e1287]:
+                    - link "[note 4]" [ref=f1e1288] [cursor=pointer]:
+                      - /url: "#cite_note-gnriE-152"
+                  - superscript [ref=f1e1289]:
+                    - link "[146]" [ref=f1e1290] [cursor=pointer]:
+                      - /url: "#cite_note-Guardian-153"
+                  - text: Both bills failed, however, and Einstein then accepted an earlier offer from the
+                  - link "Institute for Advanced Study" [ref=f1e1291] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Institute_for_Advanced_Study
+                  - text: ", in"
+                  - link "Princeton, New Jersey" [ref=f1e1292] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Princeton,_New_Jersey
+                  - text: ", US, to become a resident scholar."
+                  - superscript [ref=f1e1293]:
+                    - link "[144]" [ref=f1e1294] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEClark1971-150"
+              - region "Resident scholar at the Institute for Advanced Study" [ref=f1e1295]:
+                - heading "Resident scholar at the Institute for Advanced Study" [level=4] [ref=f1e1297]
+                - figure "Portrait of Einstein taken in 1935 at Princeton" [ref=f1e1298]:
+                  - link [ref=f1e1299] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Einstein-formal_portrait-35_(cropped).jpg
+                  - generic [ref=f1e1301]:
+                    - text: Portrait of Einstein taken in 1935 at
+                    - link "Princeton" [ref=f1e1302] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Princeton_University
+                - paragraph [ref=f1e1303]:
+                  - text: On 3 October 1933, Einstein delivered a speech on the importance of academic freedom before a packed audience at the
+                  - link "Royal Albert Hall" [ref=f1e1304] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Royal_Albert_Hall
+                  - text: in London, with
+                  - link "The Times" [ref=f1e1306] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/The_Times
+                  - text: reporting he was wildly cheered throughout.
+                  - superscript [ref=f1e1307]:
+                    - link "[138]" [ref=f1e1308] [cursor=pointer]:
+                      - /url: "#cite_note-Albert_Hall-144"
+                  - text: Four days later he returned to the US and took up a position at the
+                  - link "Institute for Advanced Study" [ref=f1e1309] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Institute_for_Advanced_Study
+                  - text: ","
+                  - superscript [ref=f1e1310]:
+                    - link "[144]" [ref=f1e1311] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEClark1971-150"
+                  - superscript [ref=f1e1312]:
+                    - link "[147]" [ref=f1e1313] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEFölsing1997649,_678-154"
+                  - text: noted for having become a refuge for scientists fleeing
+                  - link "Nazi Germany" [ref=f1e1314] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Nazi_Germany
+                  - text: .
+                  - superscript [ref=f1e1315]:
+                    - link "[148]" [ref=f1e1316] [cursor=pointer]:
+                      - /url: "#cite_note-Arntzenius2011-155"
+                  - text: At the time, most American universities, including Harvard, Princeton and Yale, had minimal or no Jewish faculty or students, as a result of their
+                  - link "Jewish quotas" [ref=f1e1317] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Jewish_quota
+                  - text: ", which lasted until the late 1940s."
+                  - superscript [ref=f1e1318]:
+                    - link "[148]" [ref=f1e1319] [cursor=pointer]:
+                      - /url: "#cite_note-Arntzenius2011-155"
+                - paragraph [ref=f1e1320]:
+                  - text: Einstein was still undecided about his future. He had offers from several European universities, including
+                  - link "Christ Church, Oxford" [ref=f1e1321] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Christ_Church,_Oxford
+                  - text: ", where he stayed for three short periods between May 1931 and June 1933"
+                  - superscript [ref=f1e1322]:
+                    - link "[133]" [ref=f1e1323] [cursor=pointer]:
+                      - /url: "#cite_note-robinson24-139"
+                  - text: and was offered a five-year research
+                  - link "fellowship" [ref=f1e1324] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Fellowship
+                  - text: (called a "
+                  - link "studentship" [ref=f1e1325] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Studentship
+                  - text: "\" at Christ Church),"
+                  - superscript [ref=f1e1326]:
+                    - link "[149]" [ref=f1e1327] [cursor=pointer]:
+                      - /url: "#cite_note-FFt5E-156"
+                  - superscript [ref=f1e1328]:
+                    - link "[150]" [ref=f1e1329] [cursor=pointer]:
+                      - /url: "#cite_note-v8v06-157"
+                  - text: but in 1935, he arrived at the decision to remain permanently in the United States and apply for citizenship.
+                  - superscript [ref=f1e1330]:
+                    - link "[144]" [ref=f1e1331] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEClark1971-150"
+                  - superscript [ref=f1e1332]:
+                    - link "[151]" [ref=f1e1333] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEFölsing1997686–687-158"
+                - paragraph [ref=f1e1334]:
+                  - text: Einstein's affiliation with the Institute for Advanced Study would last until his death in 1955.
+                  - superscript [ref=f1e1335]:
+                    - link "[152]" [ref=f1e1336] [cursor=pointer]:
+                      - /url: "#cite_note-mzNc5-159"
+                  - text: He was one of the four first selected (along with
+                  - link "John von Neumann" [ref=f1e1337] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/John_von_Neumann
+                  - text: ","
+                  - link "Kurt Gödel" [ref=f1e1338] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Kurt_Gödel
+                  - text: and
+                  - link "Hermann Weyl" [ref=f1e1339] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Hermann_Weyl
+                  - superscript [ref=f1e1340]:
+                    - link "[153]" [ref=f1e1341] [cursor=pointer]:
+                      - /url: "#cite_note-160"
+                  - text: ) at the new Institute. He soon developed a close friendship with Gödel; the two would take long walks together discussing their work.
+                  - link "Bruria Kaufman" [ref=f1e1342] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Bruria_Kaufman
+                  - text: ", his assistant, later became a physicist. During this period, Einstein tried to develop a"
+                  - link "unified field theory" [ref=f1e1343] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Unified_field_theory
+                  - text: and to refute the
+                  - link "accepted interpretation" [ref=f1e1344] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Copenhagen_interpretation
+                  - text: of
+                  - link "quantum physics" [ref=f1e1345] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Quantum_physics
+                  - text: ", both unsuccessfully. He lived in Princeton at his home from 1935 onwards. The"
+                  - link "Albert Einstein House" [ref=f1e1346] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Albert_Einstein_House
+                  - text: was made a
+                  - link "National Historic Landmark" [ref=f1e1347] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/National_Historic_Landmark
+                  - text: in 1976.
+              - region "World War II and the Manhattan Project" [ref=f1e1348]:
+                - heading "World War II and the Manhattan Project" [level=4] [ref=f1e1350]
+                - note [ref=f1e1351]:
+                  - text: "See also:"
+                  - link "Einstein–Szilárd letter" [ref=f1e1352] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein–Szilárd_letter
+                - figure "Facsimile of the Einstein–Szilard letter" [ref=f1e1353]:
+                  - link [ref=f1e1354] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Einstein-Roosevelt-letter.png
+                  - generic [ref=f1e1356]:
+                    - text: Facsimile of the
+                    - link "Einstein–Szilard letter" [ref=f1e1357] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Einstein–Szilard_letter
+                - paragraph [ref=f1e1358]:
+                  - text: In 1939, a group of Hungarian scientists that included émigré physicist
+                  - link "Leó Szilárd" [ref=f1e1359] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Leó_Szilárd
+                  - text: attempted to alert
+                  - link "Washington, D.C." [ref=f1e1360] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Washington,_D.C.
+                  - text: to ongoing Nazi atomic bomb research. The group's warnings were discounted. Einstein and Szilárd, along with other refugees such as
+                  - link "Edward Teller" [ref=f1e1361] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Edward_Teller
+                  - text: and
+                  - link "Eugene Wigner" [ref=f1e1362] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Eugene_Wigner
+                  - text: ", \"regarded it as their responsibility to alert Americans to the possibility that German scientists might win the"
+                  - link "race to build an atomic bomb" [ref=f1e1363] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/German_nuclear_energy_project
+                  - text: ", and to warn that Hitler would be more than willing to resort to such a weapon.\""
+                  - superscript [ref=f1e1364]:
+                    - link "[154]" [ref=f1e1365] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007630-161"
+                  - superscript [ref=f1e1366]:
+                    - link "[155]" [ref=f1e1367] [cursor=pointer]:
+                      - /url: "#cite_note-o4fkQ-162"
+                  - text: To make certain the US was aware of the danger, in July 1939, a few months before the beginning of World War II in Europe, Szilárd and Wigner visited Einstein to explain the possibility of atomic bombs, which Einstein, a pacifist, said he had never considered.
+                  - superscript [ref=f1e1368]:
+                    - link "[156]" [ref=f1e1369] [cursor=pointer]:
+                      - /url: "#cite_note-pRqWK-163"
+                  - text: He was asked to lend his support by writing
+                  - link "a letter" [ref=f1e1370] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein–Szilard_letter
+                  - text: ", with Szilárd, to President"
+                  - link "Franklin D. Roosevelt" [ref=f1e1371] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Franklin_D._Roosevelt
+                  - text: ", recommending the US pay attention and engage in its own nuclear weapons research."
+                - paragraph [ref=f1e1372]:
+                  - text: The letter is believed to be "arguably the key stimulus for the U.S. adoption of serious investigations into nuclear weapons on the eve of the U.S. entry into World War II".
+                  - superscript [ref=f1e1373]:
+                    - link "[157]" [ref=f1e1374] [cursor=pointer]:
+                      - /url: "#cite_note-4Z68g-164"
+                  - text: In addition to the letter, Einstein used his connections with the
+                  - link "Belgian royal family" [ref=f1e1375] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Belgian_royal_family
+                  - superscript [ref=f1e1376]:
+                    - link "[158]" [ref=f1e1377] [cursor=pointer]:
+                      - /url: "#cite_note-eZym8-165"
+                  - text: and the Belgian queen mother to get access with a personal envoy to the White House's Oval Office. Some say that as a result of Einstein's letter and his meetings with Roosevelt, the US entered the "race" to develop the bomb, drawing on its "immense material, financial, and scientific resources" to initiate the
+                  - link "Manhattan Project" [ref=f1e1378] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Manhattan_Project
+                  - text: .
+                - paragraph [ref=f1e1379]:
+                  - text: For Einstein, "war was a disease... [and] he called for resistance to war." By signing the letter to Roosevelt, some argue he went against his pacifist principles.
+                  - superscript [ref=f1e1381]:
+                    - link "[159]" [ref=f1e1382] [cursor=pointer]:
+                      - /url: "#cite_note-z73PK-166"
+                  - text: In 1954, a year before his death, Einstein said to his old friend,
+                  - link "Linus Pauling" [ref=f1e1383] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Linus_Pauling
+                  - text: ", \"I made one great mistake in my life—when I signed the letter to President Roosevelt recommending that atom bombs be made; but there was some justification—the danger that the Germans would make them...\""
+                  - superscript [ref=f1e1385]:
+                    - link "[160]" [ref=f1e1386] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEClark1971752-167"
+                  - text: In 1955, Einstein and ten other intellectuals and scientists, including British philosopher
+                  - link "Bertrand Russell" [ref=f1e1387] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Bertrand_Russell
+                  - text: ", signed"
+                  - link "a manifesto" [ref=f1e1388] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Russell–Einstein_Manifesto
+                  - text: highlighting the danger of nuclear weapons.
+                  - superscript [ref=f1e1389]:
+                    - link "[161]" [ref=f1e1390] [cursor=pointer]:
+                      - /url: "#cite_note-168"
+                  - text: In 1960 Einstein was included posthumously as a charter member of the
+                  - link "World Academy of Art and Science" [ref=f1e1391] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/World_Academy_of_Art_and_Science
+                  - text: (WAAS),
+                  - superscript [ref=f1e1392]:
+                    - link "[162]" [ref=f1e1393] [cursor=pointer]:
+                      - /url: "#cite_note-169"
+                  - text: an organization founded by distinguished scientists and intellectuals who committed themselves to the responsible and ethical advances of science, particularly in light of the development of nuclear weapons.
+              - region "US citizenship" [ref=f1e1394]:
+                - heading "US citizenship" [level=4] [ref=f1e1396]
+                - figure "Einstein accepting a US citizenship certificate from judge Phillip Forman in 1940" [ref=f1e1397]:
+                  - link [ref=f1e1398] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Citizen-Einstein.jpg
+                  - generic [ref=f1e1400]:
+                    - text: Einstein accepting a
+                    - link "US citizenship" [ref=f1e1401] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Citizenship_of_the_United_States
+                    - text: certificate from judge
+                    - link "Phillip Forman" [ref=f1e1402] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Phillip_Forman
+                    - text: in 1940
+                - paragraph [ref=f1e1403]:
+                  - text: Einstein became an American citizen in 1940. Not long after settling into his career at the Institute for Advanced Study in Princeton,
+                  - link "New Jersey" [ref=f1e1404] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/New_Jersey
+                  - text: ", he expressed his appreciation of the"
+                  - link "meritocracy" [ref=f1e1405] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Meritocracy
+                  - text: in American culture compared to Europe. He recognized the "right of individuals to say and think what they pleased" without social barriers. As a result, individuals were encouraged, he said, to be more creative, a trait he valued from his early education.
+                  - superscript [ref=f1e1406]:
+                    - link "[163]" [ref=f1e1407] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007432-170"
+                - paragraph [ref=f1e1408]:
+                  - text: Einstein joined the
+                  - link "National Association for the Advancement of Colored People" [ref=f1e1409] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/NAACP
+                  - text: (NAACP) in Princeton, where he campaigned for the
+                  - link "civil rights" [ref=f1e1410] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Civil_rights_movement_(1896–1954)
+                  - text: of African Americans. He considered racism America's "worst disease",
+                  - superscript [ref=f1e1411]:
+                    - link "[164]" [ref=f1e1412] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEJeromeTaylor2006x-171"
+                  - superscript [ref=f1e1413]:
+                    - link "[165]" [ref=f1e1414] [cursor=pointer]:
+                      - /url: "#cite_note-smithsonianmag-172"
+                  - text: seeing it as "handed down from one generation to the next".
+                  - superscript [ref=f1e1415]:
+                    - link "[166]" [ref=f1e1416] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTECalaprice2005148–149-173"
+                  - text: As part of his involvement, he corresponded with civil rights activist
+                  - link "W. E. B. Du Bois" [ref=f1e1417] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/W._E._B._Du_Bois
+                  - text: and was prepared to testify on his behalf during his trial as an alleged foreign agent in 1951.
+                  - superscript [ref=f1e1418]:
+                    - link "[167]" [ref=f1e1419] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTERobeson2002565-174"
+                  - text: When Einstein offered to be a character witness for Du Bois, the judge decided to drop the case.
+                  - superscript [ref=f1e1420]:
+                    - link "[168]" [ref=f1e1421] [cursor=pointer]:
+                      - /url: "#cite_note-civil-175"
+                - paragraph [ref=f1e1422]:
+                  - text: In 1946, Einstein visited
+                  - link "Lincoln University" [ref=f1e1423] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Lincoln_University_(Pennsylvania)
+                  - text: in Pennsylvania, a
+                  - link "historically black college" [ref=f1e1424] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Historically_black_college
+                  - text: ", where he was awarded an honorary degree. Lincoln was the first university in the United States to grant college degrees to African Americans; alumni include"
+                  - link "Langston Hughes" [ref=f1e1425] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Langston_Hughes
+                  - text: and
+                  - link "Thurgood Marshall" [ref=f1e1426] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Thurgood_Marshall
+                  - text: . Einstein gave a speech about racism in America, adding, "I do not intend to be quiet about it."
+                  - superscript [ref=f1e1427]:
+                    - link "[169]" [ref=f1e1428] [cursor=pointer]:
+                      - /url: "#cite_note-Jerome_Isis-176"
+                  - text: A resident of Princeton recalls that Einstein had once paid the college tuition for a black student.
+                  - superscript [ref=f1e1429]:
+                    - link "[168]" [ref=f1e1430] [cursor=pointer]:
+                      - /url: "#cite_note-civil-175"
+                  - text: Einstein has said, "Being a Jew myself, perhaps I can understand and empathize with how black people feel as victims of discrimination".
+                  - superscript [ref=f1e1431]:
+                    - link "[165]" [ref=f1e1432] [cursor=pointer]:
+                      - /url: "#cite_note-smithsonianmag-172"
+                  - text: Isaacson writes that "When
+                  - link "Marian Anderson" [ref=f1e1433] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Marian_Anderson
+                  - text: ", the black contralto, came to Princeton for a concert in 1937, the Nassau Inn refused her a room. So Einstein invited her to stay at his house on Main Street, in what was a deeply personal as well as symbolic gesture ... Whenever she returned to Princeton, she stayed with Einstein, her last visit coming just two months before he died.\""
+                  - superscript [ref=f1e1434]:
+                    - link "[170]" [ref=f1e1435] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007445-177"
+            - region "Personal views" [ref=f1e1436]:
+              - heading "Personal views" [level=3] [ref=f1e1438]
+              - region "Political views" [ref=f1e1439]:
+                - heading "Political views" [level=4] [ref=f1e1441]
+                - note [ref=f1e1442]:
+                  - text: "Main article:"
+                  - link "Political views of Albert Einstein" [ref=f1e1443] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Political_views_of_Albert_Einstein
+                - figure "Albert Einstein and Elsa Einstein arriving in New York in 1921. Accompanying them are Zionist leaders Chaim Weizmann (future president of Israel), Weizmann's wife Vera Weizmann, Menahem Ussishkin, and Ben-Zion Mossinson." [ref=f1e1444]:
+                  - link [ref=f1e1445] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Einstein_Apr.1921_SS_Rotterdam_32099.jpg
+                    - img "Casual group shot of four men and two women standing on a brick pavement." [ref=f1e1446]
+                  - generic [ref=f1e1447]:
+                    - text: Albert Einstein and
+                    - link "Elsa Einstein" [ref=f1e1448] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Elsa_Einstein
+                    - text: arriving in New York in 1921. Accompanying them are Zionist leaders
+                    - link "Chaim Weizmann" [ref=f1e1449] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Chaim_Weizmann
+                    - text: (future president of Israel), Weizmann's wife
+                    - link "Vera Weizmann" [ref=f1e1450] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Vera_Weizmann
+                    - text: ","
+                    - link "Menahem Ussishkin" [ref=f1e1451] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Menahem_Ussishkin
+                    - text: ", and Ben-Zion Mossinson."
+                - paragraph [ref=f1e1452]:
+                  - text: In 1918, Einstein was one of the signatories of the founding proclamation of the
+                  - link "German Democratic Party" [ref=f1e1453] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/German_Democratic_Party
+                  - text: ", a liberal party."
+                  - superscript [ref=f1e1454]:
+                    - link "[171]" [ref=f1e1455] [cursor=pointer]:
+                      - /url: "#cite_note-178"
+                  - superscript [ref=f1e1456]:
+                    - link "[172]" [ref=f1e1457] [cursor=pointer]:
+                      - /url: "#cite_note-179"
+                  - text: Later in his life, Einstein's political view was in favor of
+                  - link "socialism" [ref=f1e1458] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Socialism
+                  - text: and critical of capitalism, which he detailed in his essays such as "
+                  - link "Why Socialism?" [ref=f1e1459] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Why_Socialism%3F
+                  - text: "\"."
+                  - superscript [ref=f1e1460]:
+                    - link "[173]" [ref=f1e1461] [cursor=pointer]:
+                      - /url: "#cite_note-180"
+                  - superscript [ref=f1e1462]:
+                    - link "[174]" [ref=f1e1463] [cursor=pointer]:
+                      - /url: "#cite_note-LXsUJ-181"
+                  - text: His opinions on the
+                  - link "Bolsheviks" [ref=f1e1464] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Bolsheviks
+                  - text: also changed with time. In 1925, he criticized them for not having a "well-regulated system of government" and called their rule a "regime of terror and a tragedy in human history". He later adopted a more moderated view, criticizing their methods but praising them, which is shown by his 1929 remark on
+                  - link "Vladimir Lenin" [ref=f1e1465] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Vladimir_Lenin
+                  - text: ":"
+                - blockquote [ref=f1e1466]:
+                  - paragraph [ref=f1e1467]:
+                    - text: "In Lenin I honor a man, who in total sacrifice of his own person has committed his entire energy to realizing social justice. I do not find his methods advisable. One thing is certain, however: men like him are the guardians and renewers of mankind's conscience."
+                    - superscript [ref=f1e1468]:
+                      - link "[175]" [ref=f1e1469] [cursor=pointer]:
+                        - /url: "#cite_note-FOOTNOTERoweSchulmann2013[httpsbooksgooglecombooksid_X1dAAAAQBAJpg413_412,_413]-182"
+                - paragraph [ref=f1e1470]:
+                  - text: Einstein offered and was called on to give judgments and opinions on matters often unrelated to theoretical physics or mathematics.
+                  - superscript [ref=f1e1471]:
+                    - link "[144]" [ref=f1e1472] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEClark1971-150"
+                  - text: He strongly advocated the idea of a democratic
+                  - link "global government" [ref=f1e1473] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Global_government
+                  - text: that would check the power of nation-states in the framework of a world federation.
+                  - superscript [ref=f1e1474]:
+                    - link "[176]" [ref=f1e1475] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007487,_494,_550-183"
+                  - text: He wrote "I advocate world government because I am convinced that there is no other possible way of eliminating the most terrible danger in which man has ever found himself."
+                  - superscript [ref=f1e1476]:
+                    - link "[177]" [ref=f1e1477] [cursor=pointer]:
+                      - /url: "#cite_note-184"
+                  - text: The FBI created a secret dossier on Einstein in 1932; by the time of his death, it was 1,427 pages long.
+                  - superscript [ref=f1e1478]:
+                    - link "[178]" [ref=f1e1479] [cursor=pointer]:
+                      - /url: "#cite_note-ixWWZ-185"
+                - paragraph [ref=f1e1480]:
+                  - text: Einstein was deeply impressed by
+                  - link "Mahatma Gandhi" [ref=f1e1481] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Mahatma_Gandhi
+                  - text: ", with whom he corresponded. He described Gandhi as \"a role model for the generations to come\"."
+                  - superscript [ref=f1e1482]:
+                    - link "[179]" [ref=f1e1483] [cursor=pointer]:
+                      - /url: "#cite_note-EinsteinGandhi_2023-186"
+                  - text: The initial connection was established on 27 September 1931, when
+                  - link "Wilfrid Israel" [ref=f1e1484] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wilfrid_Israel
+                  - text: took his Indian guest
+                  - link "V. A. Sundaram" [ref=f1e1485] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/V._A._Sundaram
+                  - text: to his friend Einstein's summer home in the town of
+                  - link "Caputh" [ref=f1e1486] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Caputh,_Brandenburg
+                  - text: to meet him. Sundaram was Gandhi's disciple and special envoy, whom Wilfrid Israel met while visiting India and visiting the Indian leader's home in 1925. During the visit, Einstein wrote a short letter to Gandhi that was delivered to him through Sundaram, and Gandhi responded quickly with his own letter. Although in the end Einstein and Gandhi were unable to meet as they had hoped, the direct connection between them was established through Wilfrid Israel.
+                  - superscript [ref=f1e1487]:
+                    - link "[180]" [ref=f1e1488] [cursor=pointer]:
+                      - /url: "#cite_note-Gandhiserve.org-187"
+                - paragraph [ref=f1e1489]:
+                  - text: In 1929, at a meeting of the Council of
+                  - link "War Resisters" [ref=f1e1490] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/War_Resisters'_International
+                  - text: "in Zurich, when asked what his attitude would be in the event of another war, Einstein declared:"
+                - blockquote [ref=f1e1491]:
+                  - paragraph [ref=f1e1492]:
+                    - text: I should unconditionally refuse every direct or indirect war service and try to induce my friends to adopt the same attitude, irrespective of the general opinion of the causes of war.
+                    - superscript [ref=f1e1493]:
+                      - link "[181]" [ref=f1e1494] [cursor=pointer]:
+                        - /url: "#cite_note-188"
+              - region "Relationship with Zionism" [ref=f1e1495]:
+                - heading "Relationship with Zionism" [level=4] [ref=f1e1497]
+                - note [ref=f1e1498]:
+                  - text: "Main article:"
+                  - link "Political views of Albert Einstein § Zionism" [ref=f1e1499] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Political_views_of_Albert_Einstein#Zionism
+                - paragraph [ref=f1e1500]:
+                  - text: Einstein, a Jew, was a figurehead leader in the establishment of the
+                  - link "Hebrew University of Jerusalem" [ref=f1e1501] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Hebrew_University_of_Jerusalem
+                  - text: ","
+                  - superscript [ref=f1e1502]:
+                    - link "[182]" [ref=f1e1503] [cursor=pointer]:
+                      - /url: "#cite_note-189"
+                  - text: which opened in 1925.
+                  - superscript [ref=f1e1504]:
+                    - link "[183]" [ref=f1e1505] [cursor=pointer]:
+                      - /url: "#cite_note-190"
+                  - text: Earlier, in 1921, he was asked by the biochemist and president of the
+                  - link "World Zionist Organization" [ref=f1e1506] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/World_Zionist_Organization
+                  - text: ","
+                  - link "Chaim Weizmann" [ref=f1e1507] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Chaim_Weizmann
+                  - text: ", to help raise funds for the planned university."
+                  - superscript [ref=f1e1508]:
+                    - link "[184]" [ref=f1e1509] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007290-191"
+                  - text: He made suggestions for the creation of an Institute of Agriculture, a Chemical Institute and an Institute of Microbiology in order to fight the various ongoing epidemics such as
+                  - link "malaria" [ref=f1e1510] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Malaria
+                  - text: ", which he called an \"evil\" that was undermining a third of the country's development."
+                  - superscript [ref=f1e1511]:
+                    - link "[185]" [ref=f1e1512] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTERoweSchulmann2007161-192"
+                  - text: He also promoted the establishment of an Oriental Studies Institute, to include language courses given in both
+                  - link "Hebrew" [ref=f1e1513] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Hebrew
+                  - text: and
+                  - link "Arabic" [ref=f1e1514] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Arabic
+                  - text: .
+                  - superscript [ref=f1e1515]:
+                    - link "[186]" [ref=f1e1516] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTERoweSchulmann2007158-193"
+                - paragraph [ref=f1e1517]:
+                  - text: Einstein was not a
+                  - link "nationalist" [ref=f1e1518] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Nationalist
+                  - text: and opposed the creation of an independent Jewish state.
+                  - superscript [ref=f1e1519]:
+                    - link "[187]" [ref=f1e1520] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTERoweSchulmann200733-194"
+                  - text: He felt that the waves of arriving Jews of the
+                  - link "Aliyah" [ref=f1e1521] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Aliyah
+                  - text: could live alongside existing Arabs in
+                  - link "Palestine" [ref=f1e1522] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Palestine_(region)
+                  - text: . The state of
+                  - link "Israel" [ref=f1e1523] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Israel
+                  - text: was established without his help in 1948; Einstein was limited to a marginal role in the
+                  - link "Zionist movement" [ref=f1e1524] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Zionism
+                  - text: .
+                  - superscript [ref=f1e1525]:
+                    - link "[188]" [ref=f1e1526] [cursor=pointer]:
+                      - /url: "#cite_note-195"
+                  - text: However, by 1947 Einstein became convinced that binationalism, which had limited support from Jews and almost none from Arabs, was impractical and he came to support the creation of a Jewish state in part of the land, lobbying
+                  - link "Nehru" [ref=f1e1527] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Nehru
+                  - text: in June 1947 to have India support the
+                  - link "United Nations Partition Plan for Palestine" [ref=f1e1528] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/United_Nations_Partition_Plan_for_Palestine
+                  - text: .
+                  - superscript [ref=f1e1529]:
+                    - link "[189]" [ref=f1e1530] [cursor=pointer]:
+                      - /url: "#cite_note-196"
+                  - superscript [ref=f1e1531]:
+                    - link "[190]" [ref=f1e1532] [cursor=pointer]:
+                      - /url: "#cite_note-197"
+                - paragraph [ref=f1e1533]:
+                  - text: Afterward, Einstein adopted a practical attitude, understanding that "there is no going back", and the new state must be supported.
+                  - superscript [ref=f1e1534]:
+                    - link "[191]" [ref=f1e1535] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007520-198"
+                  - text: Upon the death of Israeli president Weizmann in November 1952, Prime Minister
+                  - link "David Ben-Gurion" [ref=f1e1536] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/David_Ben-Gurion
+                  - text: offered Einstein the largely ceremonial position of
+                  - link "President of Israel" [ref=f1e1537] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/President_of_Israel
+                  - text: at the urging of
+                  - link "Ezriel Carlebach" [ref=f1e1538] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Ezriel_Carlebach
+                  - text: .
+                  - superscript [ref=f1e1539]:
+                    - link "[192]" [ref=f1e1540] [cursor=pointer]:
+                      - /url: "#cite_note-Time-199"
+                  - superscript [ref=f1e1541]:
+                    - link "[193]" [ref=f1e1542] [cursor=pointer]:
+                      - /url: "#cite_note-Msb2q-200"
+                  - text: The offer was presented by Israel's ambassador in Washington,
+                  - link "Abba Eban" [ref=f1e1543] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Abba_Eban
+                  - text: ", who explained that the offer \"embodies the deepest respect which the Jewish people can repose in any of its sons\". Einstein wrote that he was \"deeply moved\", but \"at once saddened and ashamed\" that he could not accept it."
+                  - superscript [ref=f1e1544]:
+                    - link "[194]" [ref=f1e1545] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007522-201"
+                  - text: Einstein did not want the office, and the Israeli government did not want him to accept, but felt obliged to make the offer.
+                  - link "Yitzhak Navon" [ref=f1e1546] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Yitzhak_Navon
+                  - text: ", Ben-Gurion's political secretary, and later president, reports Ben-Gurion as saying \"Tell me what to do if he says yes! I've had to offer the post to him because it's impossible not to. But if he accepts, we are in for trouble.\""
+                  - superscript [ref=f1e1547]:
+                    - link "[195]" [ref=f1e1548] [cursor=pointer]:
+                      - /url: "#cite_note-202"
+                - paragraph [ref=f1e1549]:
+                  - text: Einstein was working with Israeli diplomats and preparing a major address supporting Israel to be timed for the state's seventh anniversary in 1955, but died shortly before he could give it.
+                  - superscript [ref=f1e1550]:
+                    - link "[196]" [ref=f1e1551] [cursor=pointer]:
+                      - /url: "#cite_note-203"
+                - paragraph [ref=f1e1552]:
+                  - text: Einstein left his papers and literary estate to Hebrew University in Jerusalem, which he had help establish.
+                  - superscript [ref=f1e1553]:
+                    - link "[197]" [ref=f1e1554] [cursor=pointer]:
+                      - /url: "#cite_note-204"
+              - region "Religious and philosophical views" [ref=f1e1555]:
+                - heading "Religious and philosophical views" [level=4] [ref=f1e1557]
+                - note [ref=f1e1558]:
+                  - text: "Main article:"
+                  - link "Religious and philosophical views of Albert Einstein" [ref=f1e1559] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Religious_and_philosophical_views_of_Albert_Einstein
+                - figure "Opening of Einstein's speech (11 April 1943) for the United Jewish Appeal (recording by Radio Universidad Nacional de La Plata, Argentina) \"Ladies (coughs) and gentlemen, our age is proud of the progress it has made in man's intellectual development. The search and striving for truth and knowledge is one of the highest of man's qualities ...\"" [ref=f1e1560]:
+                  - generic [ref=f1e1562]:
+                    - button "Play audio" [ref=f1e1563] [cursor=pointer]
+                    - generic [ref=f1e1565] [cursor=pointer]:
+                      - generic [ref=f1e1566]: "Duration: 1 minute and 31 seconds."
+                      - text: 1:31
+                  - link:
+                    - /url: https://en.wikipedia.org/wiki/File:03_ALBERT_EINSTEIN.ogg
+                  - generic [ref=f1e1567]:
+                    - text: Opening of Einstein's speech (11 April 1943) for the United Jewish Appeal (recording by Radio Universidad Nacional de La Plata, Argentina)
+                    - separator [ref=f1e1568]
+                    - text: "\"Ladies (coughs) and gentlemen, our age is proud of the progress it has made in man's intellectual development. The search and striving for truth and knowledge is one of the highest of man's qualities...\""
+                - paragraph [ref=f1e1570]:
+                  - text: Per
+                  - link "Lee Smolin" [ref=f1e1571] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Lee_Smolin
+                  - text: ", \"I believe what allowed Einstein to achieve so much was primarily a moral quality. He simply cared far more than most of his colleagues that the laws of physics have to explain everything in nature coherently and consistently.\""
+                  - superscript [ref=f1e1572]:
+                    - link "[198]" [ref=f1e1573] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007549–550-205"
+                  - text: Einstein expounded his spiritual outlook in a wide array of writings and interviews.
+                  - superscript [ref=f1e1574]:
+                    - link "[199]" [ref=f1e1575] [cursor=pointer]:
+                      - /url: "#cite_note-018QJ-206"
+                  - text: He said he had sympathy for the impersonal
+                  - link "pantheistic" [ref=f1e1576] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Pantheistic
+                  - text: God of
+                  - link "Baruch Spinoza's philosophy" [ref=f1e1577] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Spinozism
+                  - text: .
+                  - superscript [ref=f1e1578]:
+                    - link "[200]" [ref=f1e1579] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007[httpsbooksgooglecombooksidG_iziBAPXtECpgPA325_325]-207"
+                  - text: He did not believe in a
+                  - link "personal god" [ref=f1e1580] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Personal_god
+                  - text: who concerns himself with fates and actions of human beings, a view which he described as naïve.
+                  - superscript [ref=f1e1581]:
+                    - link "[201]" [ref=f1e1582] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTECalaprice2000218-208"
+                  - text: He clarified, however, that "I am not an
+                  - link "atheist" [ref=f1e1583] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Atheism
+                  - text: "\","
+                  - superscript [ref=f1e1584]:
+                    - link "[202]" [ref=f1e1585] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007390-209"
+                  - text: preferring to call himself an
+                  - link "agnostic" [ref=f1e1586] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Agnosticism
+                  - text: ","
+                  - superscript [ref=f1e1587]:
+                    - link "[203]" [ref=f1e1588] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTECalaprice2010[httpsbooksgooglecombooksidG_iziBAPXtECpgPA340_340]-210"
+                  - superscript [ref=f1e1589]:
+                    - link "[204]" [ref=f1e1590] [cursor=pointer]:
+                      - /url: "#cite_note-flickr2687-211"
+                  - text: or a "deeply religious nonbeliever".
+                  - superscript [ref=f1e1591]:
+                    - link "[201]" [ref=f1e1592] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTECalaprice2000218-208"
+                  - text: He wrote that "A spirit is manifest in the laws of the universe—a spirit vastly superior to that of man, and one in the face of which we with our modest powers must feel humble. In this way the pursuit of science leads to a religious feeling of a special sort."
+                  - superscript [ref=f1e1593]:
+                    - link "[205]" [ref=f1e1594] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007550–551-212"
+                - paragraph [ref=f1e1595]:
+                  - text: Einstein was primarily affiliated with non-religious
+                  - link "humanist" [ref=f1e1596] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Secular_humanist
+                  - text: and
+                  - link "Ethical Culture" [ref=f1e1597] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Ethical_Culture
+                  - text: groups in both the UK and US. He served on the advisory board of the
+                  - link "First Humanist Society of New York" [ref=f1e1598] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/First_Humanist_Society_of_New_York
+                  - text: ","
+                  - superscript [ref=f1e1599]:
+                    - link "[206]" [ref=f1e1600] [cursor=pointer]:
+                      - /url: "#cite_note-mKToJ-213"
+                  - text: and was an honorary associate of the
+                  - link "Rationalist Association" [ref=f1e1601] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Rationalist_Association
+                  - text: ", which publishes"
+                  - link "New Humanist" [ref=f1e1603] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/New_Humanist
+                  - text: in Britain. For the 75th anniversary of the
+                  - link "New York Society for Ethical Culture" [ref=f1e1604] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/New_York_Society_for_Ethical_Culture
+                  - text: ", he stated that the idea of Ethical Culture embodied his personal conception of what is most valuable and enduring in religious idealism. He observed, \"Without 'ethical culture' there is no salvation for humanity.\""
+                  - superscript [ref=f1e1605]:
+                    - link "[207]" [ref=f1e1606] [cursor=pointer]:
+                      - /url: "#cite_note-214"
+                - paragraph [ref=f1e1607]:
+                  - text: In a German-language letter to philosopher
+                  - link "Eric Gutkind" [ref=f1e1608] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Eric_Gutkind
+                  - text: ", dated 3 January 1954, Einstein wrote:"
+                - blockquote [ref=f1e1609]:
+                  - paragraph [ref=f1e1610]:
+                    - link "The word God" [ref=f1e1611] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/God_(word)
+                    - text: is for me nothing more than the expression and product of human weaknesses, the Bible a collection of honorable, but still primitive legends which are nevertheless pretty childish. No interpretation no matter how subtle can (for me) change this. ... For me the
+                    - link "Jewish religion" [ref=f1e1612] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Jewish_religion
+                    - text: like all other religions is an incarnation of the most childish superstitions. And the
+                    - link "Jewish people" [ref=f1e1613] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Jewish_people
+                    - text: to whom I gladly belong and with whose mentality I have a deep affinity have no different quality for me than all other people. ... I cannot see anything '
+                    - link "chosen" [ref=f1e1614] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Jews_as_the_chosen_people
+                    - text: "' about them."
+                    - superscript [ref=f1e1615]:
+                      - link "[208]" [ref=f1e1616] [cursor=pointer]:
+                        - /url: "#cite_note-xI99y-215"
+                - paragraph [ref=f1e1617]:
+                  - text: Einstein had been sympathetic toward
+                  - link "vegetarianism" [ref=f1e1618] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Vegetarianism
+                  - text: for a long time. In a letter in 1930 to Hermann Huth, vice-president of the
+                  - link "German Vegetarian Federation (Deutsche Vegetarier-Bund)" [ref=f1e1619] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ProVeg_Deutschland#History
+                  - text: ", he wrote:"
+                - blockquote [ref=f1e1620]:
+                  - paragraph [ref=f1e1621]:
+                    - text: Although I have been prevented by outward circumstances from observing a strictly vegetarian diet, I have long been an adherent to the cause in principle. Besides agreeing with the aims of vegetarianism for aesthetic and moral reasons, it is my view that a vegetarian manner of living by its purely physical effect on the human temperament would most beneficially influence the lot of mankind.
+                    - superscript [ref=f1e1622]:
+                      - link "[209]" [ref=f1e1623] [cursor=pointer]:
+                        - /url: "#cite_note-216"
+                - paragraph [ref=f1e1624]:
+                  - text: "He became a vegetarian himself only during the last part of his life. In March 1954 he wrote in a letter: \"So I am living without fats, without meat, without fish, but am feeling quite well this way. It almost seems to me that man was not born to be a carnivore.\""
+                  - superscript [ref=f1e1625]:
+                    - link "[210]" [ref=f1e1626] [cursor=pointer]:
+                      - /url: "#cite_note-217"
+              - region "Love of music" [ref=f1e1627]:
+                - heading "Love of music" [level=4] [ref=f1e1629]
+                - figure "Einstein playing the violin, 1927" [ref=f1e1630]:
+                  - link [ref=f1e1631] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Wanda_von_Debschitz-Kunowski_Albert_Einstein_beim_Geigenspiel_1927.jpg
+                - paragraph [ref=f1e1634]: "Einstein developed an appreciation for music at an early age. In his late journals he wrote:"
+                - blockquote [ref=f1e1635]:
+                  - paragraph [ref=f1e1636]:
+                    - text: If I were not a physicist, I would probably be a musician. I often think in music. I live my daydreams in music. I see my life in terms of music... I get most joy in life out of music.
+                    - superscript [ref=f1e1638]:
+                      - link "[211]" [ref=f1e1639] [cursor=pointer]:
+                        - /url: "#cite_note-BQH5A-218"
+                    - superscript [ref=f1e1640]:
+                      - link "[212]" [ref=f1e1641] [cursor=pointer]:
+                        - /url: "#cite_note-aBOjz-219"
+                - paragraph [ref=f1e1642]:
+                  - text: His mother played the piano reasonably well and wanted her son to learn the violin, not only to instill in him a love of music but also to help him assimilate into
+                  - link "German culture" [ref=f1e1643] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/German_culture
+                  - text: . According to conductor
+                  - link "Leon Botstein" [ref=f1e1644] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Leon_Botstein
+                  - text: ", Einstein began playing when he was 5. However, he did not enjoy it at that age."
+                  - superscript [ref=f1e1645]:
+                    - link "[213]" [ref=f1e1646] [cursor=pointer]:
+                      - /url: "#cite_note-Botstein-220"
+                - paragraph [ref=f1e1647]:
+                  - text: When he turned 13, he discovered
+                  - link "Mozart" [ref=f1e1648] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Mozart
+                  - text: "'s"
+                  - link "violin sonatas" [ref=f1e1649] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Mozart_violin_sonatas
+                  - text: ", whereupon he became enamored of Mozart's compositions and studied music more willingly. Einstein taught himself to play without \"ever practicing systematically\". He said that \"love is a better teacher than a sense of duty\"."
+                  - superscript [ref=f1e1650]:
+                    - link "[213]" [ref=f1e1651] [cursor=pointer]:
+                      - /url: "#cite_note-Botstein-220"
+                  - text: Einstein actively participated in local music sessions, playing the violin alongside Ernestina Marangoni playing the pianoforte in Pavia and
+                  - link "Casteggio" [ref=f1e1652] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Casteggio
+                  - text: ", a period from 1895 to 1900 when he visited the Marangoni family. At the age of 17, he was heard by a school examiner in Aarau while playing"
+                  - link "Beethoven" [ref=f1e1653] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Beethoven
+                  - text: "'s"
+                  - link "violin sonatas" [ref=f1e1654] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Beethoven's_violin_sonatas_(disambiguation)
+                  - text: . The examiner stated afterward that his playing was "remarkable and revealing of 'great insight'". What struck the examiner, writes Botstein, was that Einstein "displayed a deep love of the music, a quality that was and remains in short supply. Music possessed an unusual meaning for this student."
+                  - superscript [ref=f1e1655]:
+                    - link "[213]" [ref=f1e1656] [cursor=pointer]:
+                      - /url: "#cite_note-Botstein-220"
+                - paragraph [ref=f1e1657]:
+                  - text: Music took on a pivotal and permanent role in Einstein's life from that period on. Although the idea of becoming a professional musician himself was not on his mind at any time, among those with whom Einstein played
+                  - link "chamber music" [ref=f1e1658] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Chamber_music
+                  - text: were a few professionals, including Kurt Appelbaum, and he performed for private audiences and friends. Chamber music had also become a regular part of his social life while living in Bern, Zurich, and Berlin, where he played with Max Planck and his son, among others. He is sometimes erroneously credited as the editor of the 1937 edition of the
+                  - link "Köchel catalog" [ref=f1e1659] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Köchel_catalog
+                  - text: of Mozart's work; that edition was prepared by
+                  - link "Alfred Einstein" [ref=f1e1660] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Alfred_Einstein
+                  - text: ", who may have been a distant relation."
+                  - superscript [ref=f1e1661]:
+                    - link "[214]" [ref=f1e1662] [cursor=pointer]:
+                      - /url: "#cite_note-kGuWC-221"
+                  - superscript [ref=f1e1663]:
+                    - link "[215]" [ref=f1e1664] [cursor=pointer]:
+                      - /url: "#cite_note-OIn6p-222"
+                  - text: Mozart was a special favorite; he said that "Mozart's music is so pure it seems to have been ever-present in the universe." However, he preferred
+                  - link "Bach" [ref=f1e1665] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Bach
+                  - text: "to Beethoven, once saying: \"Give me Bach, rather, and then more Bach.\""
+                  - superscript [ref=f1e1666]:
+                    - link "[216]" [ref=f1e1667] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson200738-223"
+                - paragraph [ref=f1e1668]:
+                  - text: In 1931, while engaged in research at the California Institute of Technology, he visited the Zoellner family conservatory in Los Angeles, where he played some of Beethoven and Mozart's works with members of the
+                  - link "Zoellner Quartet" [ref=f1e1669] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Zoellner_Quartet
+                  - text: .
+                  - superscript [ref=f1e1670]:
+                    - link "[217]" [ref=f1e1671] [cursor=pointer]:
+                      - /url: "#cite_note-Times-224"
+                  - superscript [ref=f1e1672]:
+                    - link "[218]" [ref=f1e1673] [cursor=pointer]:
+                      - /url: "#cite_note-RR-225"
+                  - text: Near the end of his life, when the young
+                  - link "Juilliard Quartet" [ref=f1e1674] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Juilliard_Quartet
+                  - text: visited him in Princeton, he played his violin with them, and the quartet was "impressed by Einstein's level of coordination and intonation".
+                  - superscript [ref=f1e1675]:
+                    - link "[213]" [ref=f1e1676] [cursor=pointer]:
+                      - /url: "#cite_note-Botstein-220"
+            - region "Death" [ref=f1e1677]:
+              - heading "Death" [level=3] [ref=f1e1679]
+              - paragraph [ref=f1e1680]:
+                - text: On 17 April 1955, Einstein experienced
+                - link "internal bleeding" [ref=f1e1681] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Internal_bleeding
+                - text: caused by the rupture of an
+                - link "abdominal aortic aneurysm" [ref=f1e1682] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Abdominal_aortic_aneurysm
+                - text: ", which had previously been reinforced surgically by"
+                - link "Rudolph Nissen" [ref=f1e1683] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Rudolph_Nissen
+                - text: in 1948.
+                - superscript [ref=f1e1684]:
+                  - link "[219]" [ref=f1e1685] [cursor=pointer]:
+                    - /url: "#cite_note-BXLfp-226"
+                - text: He took the draft of a speech he was preparing for a television appearance commemorating the state of Israel's seventh anniversary with him to the hospital, but he did not live to complete it.
+                - superscript [ref=f1e1686]:
+                  - link "[220]" [ref=f1e1687] [cursor=pointer]:
+                    - /url: "#cite_note-QN45b-227"
+              - paragraph [ref=f1e1688]:
+                - text: Einstein refused surgery, saying, "I want to go when I want. It is tasteless to prolong life artificially. I have done my share; it is time to go. I will do it elegantly."
+                - superscript [ref=f1e1689]:
+                  - link "[221]" [ref=f1e1690] [cursor=pointer]:
+                    - /url: "#cite_note-BhiNM-228"
+                - text: He died in the
+                - link "Princeton Hospital" [ref=f1e1691] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Princeton_Hospital
+                - text: early the next morning at the age of 76, having continued to work until near the end.
+                - superscript [ref=f1e1692]:
+                  - link "[222]" [ref=f1e1693] [cursor=pointer]:
+                    - /url: "#cite_note-YUhsl-229"
+              - paragraph [ref=f1e1694]:
+                - text: During the autopsy, the pathologist
+                - link "Thomas Stoltz Harvey" [ref=f1e1695] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Thomas_Stoltz_Harvey
+                - text: removed
+                - link "Einstein's brain" [ref=f1e1696] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Einstein's_brain
+                - text: for preservation without the permission of his family, in the hope that the
+                - link "neuroscience" [ref=f1e1697] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Neuroscience
+                - text: of the future would be able to discover what made Einstein so intelligent.
+                - superscript [ref=f1e1698]:
+                  - link "[223]" [ref=f1e1699] [cursor=pointer]:
+                    - /url: "#cite_note-MqyYW-230"
+                - text: Einstein's remains were cremated in
+                - link "Trenton, New Jersey" [ref=f1e1700] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Trenton,_New_Jersey
+                - text: ","
+                - superscript [ref=f1e1701]:
+                  - link "[224]" [ref=f1e1702] [cursor=pointer]:
+                    - /url: "#cite_note-231"
+                - text: and his ashes were scattered at an undisclosed location.
+                - superscript [ref=f1e1703]:
+                  - link "[225]" [ref=f1e1704] [cursor=pointer]:
+                    - /url: "#cite_note-GQrBZ-232"
+                - superscript [ref=f1e1705]:
+                  - link "[226]" [ref=f1e1706] [cursor=pointer]:
+                    - /url: "#cite_note-Obit-233"
+              - paragraph [ref=f1e1707]:
+                - text: In a memorial lecture delivered on 13 December 1965 at
+                - link "UNESCO" [ref=f1e1708] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/UNESCO
+                - text: headquarters, nuclear physicist
+                - link "J. Robert Oppenheimer" [ref=f1e1709] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/J._Robert_Oppenheimer
+                - text: summarized his
+                - link "impression of Einstein" [ref=f1e1710] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Einstein–Oppenheimer_relationship
+                - text: "as a person: \"He was almost wholly without sophistication and wholly without worldliness... There was always with him a wonderful purity at once childlike and profoundly stubborn.\""
+                - superscript [ref=f1e1712]:
+                  - link "[227]" [ref=f1e1713] [cursor=pointer]:
+                    - /url: "#cite_note-aJHxn-234"
+              - paragraph [ref=f1e1714]:
+                - text: Einstein bequeathed his personal archives, library, and intellectual assets to the
+                - link "Hebrew University of Jerusalem" [ref=f1e1715] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hebrew_University_of_Jerusalem
+                - text: in Israel.
+                - superscript [ref=f1e1716]:
+                  - link "[228]" [ref=f1e1717] [cursor=pointer]:
+                    - /url: "#cite_note-235"
+          - region "Scientific career" [ref=f1e1718]:
+            - heading "Scientific career" [level=2] [ref=f1e1720]
+            - paragraph [ref=f1e1721]:
+              - text: Throughout his life, Einstein published hundreds of books and articles.
+              - superscript [ref=f1e1722]:
+                - link "[17]" [ref=f1e1723] [cursor=pointer]:
+                  - /url: "#cite_note-Bio-19"
+              - superscript [ref=f1e1724]:
+                - link "[229]" [ref=f1e1725] [cursor=pointer]:
+                  - /url: "#cite_note-Paul_Arthur_Schilpp,_editor_1951_730–746-236"
+              - text: He published more than 300 scientific papers and 150 non-scientific ones.
+              - superscript [ref=f1e1726]:
+                - link "[12]" [ref=f1e1727] [cursor=pointer]:
+                  - /url: "#cite_note-Nobel-14"
+              - superscript [ref=f1e1728]:
+                - link "[229]" [ref=f1e1729] [cursor=pointer]:
+                  - /url: "#cite_note-Paul_Arthur_Schilpp,_editor_1951_730–746-236"
+              - text: On 5 December 2014, universities and archives announced the release of Einstein's papers, comprising more than 30,000 unique documents.
+              - superscript [ref=f1e1730]:
+                - link "[230]" [ref=f1e1731] [cursor=pointer]:
+                  - /url: "#cite_note-237"
+              - superscript [ref=f1e1732]:
+                - link "[231]" [ref=f1e1733] [cursor=pointer]:
+                  - /url: "#cite_note-NYT-20141204-DB-238"
+              - text: In addition to the work he did by himself, he also collaborated with other scientists on additional projects, including the
+              - link "Bose–Einstein statistics" [ref=f1e1734] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Bose–Einstein_statistics
+              - text: ", the"
+              - link "Einstein refrigerator" [ref=f1e1735] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Einstein_refrigerator
+              - text: and others.
+              - superscript [ref=f1e1736]:
+                - link "[232]" [ref=f1e1737] [cursor=pointer]:
+                  - /url: "#cite_note-Instituut-Lorentz-239"
+              - superscript [ref=f1e1738]:
+                - link "[233]" [ref=f1e1739] [cursor=pointer]:
+                  - /url: "#cite_note-e5xd8-240"
+            - region "Statistical mechanics" [ref=f1e1740]:
+              - heading "Statistical mechanics" [level=3] [ref=f1e1742]
+              - region "Thermodynamic fluctuations and statistical physics" [ref=f1e1743]:
+                - heading "Thermodynamic fluctuations and statistical physics" [level=4] [ref=f1e1745]
+                - note [ref=f1e1746]:
+                  - text: "Main articles:"
+                  - link "Statistical mechanics" [ref=f1e1747] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Statistical_mechanics
+                  - text: ","
+                  - link "thermal fluctuations" [ref=f1e1748] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Thermal_fluctuations
+                  - text: ", and"
+                  - link "statistical physics" [ref=f1e1749] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Statistical_physics
+                - paragraph [ref=f1e1750]:
+                  - text: Einstein's first paper,
+                  - superscript [ref=f1e1751]:
+                    - link "[78]" [ref=f1e1752] [cursor=pointer]:
+                      - /url: "#cite_note-Einstein_1901-82"
+                  - superscript [ref=f1e1753]:
+                    - link "[234]" [ref=f1e1754] [cursor=pointer]:
+                      - /url: "#cite_note-PubList-241"
+                  - text: submitted in 1900 to
+                  - link "Annalen der Physik" [ref=f1e1756] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Annalen_der_Physik
+                  - text: ", was on"
+                  - link "capillary attraction" [ref=f1e1757] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Capillary_attraction
+                  - text: . It was published in 1901 with the title "Folgerungen aus den Capillaritätserscheinungen", which translates as "Conclusions from the capillarity phenomena". Two papers he published in 1902–1903 (thermodynamics) attempted to interpret
+                  - link "atomic" [ref=f1e1758] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Atom
+                  - text: phenomena from a statistical point of view. These papers were the foundation for the 1905 paper on Brownian motion, which showed that Brownian movement can be construed as firm evidence that molecules exist. His research in 1903 and 1904 was mainly concerned with the effect of finite atomic size on diffusion phenomena.
+                  - superscript [ref=f1e1759]:
+                    - link "[234]" [ref=f1e1760] [cursor=pointer]:
+                      - /url: "#cite_note-PubList-241"
+              - region "Theory of critical opalescence" [ref=f1e1761]:
+                - heading "Theory of critical opalescence" [level=4] [ref=f1e1763]
+                - note [ref=f1e1764]:
+                  - text: "Main article:"
+                  - link "Critical opalescence" [ref=f1e1765] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Critical_opalescence
+                - paragraph [ref=f1e1766]:
+                  - text: Einstein returned to the problem of thermodynamic fluctuations, giving a treatment of the density variations in a fluid at its critical point. Ordinarily, the density fluctuations are controlled by the second derivative of the free energy with respect to the density. At the critical point, this derivative is zero, leading to large fluctuations. The effect of density fluctuations is that light of all wavelengths is scattered, making the fluid look milky white. Einstein relates this to
+                  - link "Rayleigh scattering" [ref=f1e1767] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Rayleigh_scattering
+                  - text: ", which is what happens when the fluctuation size is much smaller than the wavelength, and which explains why the sky is blue."
+                  - superscript [ref=f1e1768]:
+                    - link "[235]" [ref=f1e1769] [cursor=pointer]:
+                      - /url: "#cite_note-L2N73-242"
+                  - text: Einstein quantitatively derived critical opalescence from a treatment of density fluctuations, and demonstrated how both the effect and Rayleigh scattering originate from the atomistic constitution of matter.
+            - region "1905 – Annus Mirabilis papers" [ref=f1e1770]:
+              - heading "1905 – Annus Mirabilis papers" [level=3] [ref=f1e1772]
+              - paragraph [ref=f1e1773]:
+                - text: The
+                - link "Annus Mirabilis papers" [ref=f1e1774] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Annus_mirabilis_papers
+                - text: are four articles pertaining to the photoelectric effect (which gave rise to
+                - link "quantum theory" [ref=f1e1775] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Quantum_mechanics
+                - text: ),
+                - link "Brownian motion" [ref=f1e1776] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Brownian_motion
+                - text: ", the"
+                - link "special theory of relativity" [ref=f1e1777] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Special_theory_of_relativity
+                - text: ", and"
+                - link [ref=f1e1778] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mass–energy_equivalence
+                  - text: E=mc
+                  - superscript [ref=f1e1781]: "2"
+                - text: that Einstein published in the Annalen der Physik scientific journal in 1905. These four works contributed substantially to the foundation of
+                - link "modern physics" [ref=f1e1782] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Modern_physics
+                - text: and changed views on
+                - link "space" [ref=f1e1783] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Space
+                - text: ", time, and"
+                - link "matter" [ref=f1e1784] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Matter
+                - text: ". The four papers are:"
+              - table [ref=f1e1785]:
+                - rowgroup [ref=f1e1786]:
+                  - row [ref=f1e1787]:
+                    - columnheader "Title (translated)" [ref=f1e1788]
+                    - columnheader "Area of focus" [ref=f1e1789]
+                    - columnheader "Received" [ref=f1e1790]
+                    - columnheader "Published" [ref=f1e1791]
+                    - columnheader "Significance" [ref=f1e1792]
+                  - row [ref=f1e1793]:
+                    - cell [ref=f1e1794]:
+                      - text: "\"On a Heuristic Viewpoint Concerning the Production and Transformation of Light\""
+                      - superscript [ref=f1e1795]:
+                        - link "[236]" [ref=f1e1796] [cursor=pointer]:
+                          - /url: "#cite_note-1905a-243"
+                    - cell "Photoelectric effect" [ref=f1e1797]
+                    - cell "18 March" [ref=f1e1798]
+                    - cell "9 June" [ref=f1e1799]
+                    - cell [ref=f1e1800]:
+                      - text: Resolved an unsolved puzzle by suggesting that energy is exchanged only in discrete amounts (
+                      - link "quanta" [ref=f1e1801] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Quantum
+                      - text: ).
+                      - superscript [ref=f1e1802]:
+                        - link "[237]" [ref=f1e1803] [cursor=pointer]:
+                          - /url: "#cite_note-1Jhcb-244"
+                      - text: This idea was pivotal to the early development of quantum theory.
+                      - superscript [ref=f1e1804]:
+                        - link "[238]" [ref=f1e1805] [cursor=pointer]:
+                          - /url: "#cite_note-oJBvd-245"
+                  - row [ref=f1e1806]:
+                    - cell [ref=f1e1807]:
+                      - text: "\"On the Motion of Small Particles Suspended in a Stationary Liquid, as Required by the Molecular Kinetic Theory of Heat\""
+                      - superscript [ref=f1e1808]:
+                        - link "[239]" [ref=f1e1809] [cursor=pointer]:
+                          - /url: "#cite_note-246"
+                    - cell [ref=f1e1810]:
+                      - link "Brownian motion" [ref=f1e1811] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Brownian_motion
+                    - cell "11 May" [ref=f1e1812]
+                    - cell "18 July" [ref=f1e1813]
+                    - cell [ref=f1e1814]:
+                      - text: Explained empirical evidence for the
+                      - link "atomic theory" [ref=f1e1815] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Atomic_theory
+                      - text: ", supporting the application of"
+                      - link "statistical physics" [ref=f1e1816] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Statistical_physics
+                      - text: .
+                  - row [ref=f1e1817]:
+                    - cell [ref=f1e1818]:
+                      - text: "\"On the Electrodynamics of Moving Bodies\""
+                      - superscript [ref=f1e1819]:
+                        - link "[240]" [ref=f1e1820] [cursor=pointer]:
+                          - /url: "#cite_note-1905d-247"
+                    - cell [ref=f1e1821]:
+                      - link "Special relativity" [ref=f1e1822] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Special_relativity
+                    - cell "30 June" [ref=f1e1823]
+                    - cell "26 September" [ref=f1e1824]: 26September
+                    - cell [ref=f1e1826]:
+                      - text: Reconciled
+                      - link "Maxwell" [ref=f1e1827] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/James_Clerk_Maxwell
+                      - text: "'s equations for electricity and magnetism with the laws of mechanics by introducing changes to mechanics, resulting from analysis based on the independence of the speed of light from the motion of the observer."
+                      - superscript [ref=f1e1828]:
+                        - link "[241]" [ref=f1e1829] [cursor=pointer]:
+                          - /url: "#cite_note-RhZ8x-248"
+                      - text: Discredited the concept of a "
+                      - link "luminiferous ether" [ref=f1e1830] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Luminiferous_ether
+                      - text: "\"."
+                      - superscript [ref=f1e1831]:
+                        - link "[242]" [ref=f1e1832] [cursor=pointer]:
+                          - /url: "#cite_note-lhfJ9-249"
+                  - row [ref=f1e1833]:
+                    - cell [ref=f1e1834]:
+                      - text: "\"Does the Inertia of a Body Depend Upon Its Energy Content?\""
+                      - superscript [ref=f1e1835]:
+                        - link "[243]" [ref=f1e1836] [cursor=pointer]:
+                          - /url: "#cite_note-250"
+                    - cell [ref=f1e1837]:
+                      - link "Matter–energy equivalence" [ref=f1e1838] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Mass–energy_equivalence
+                    - cell "27 September" [ref=f1e1839]: 27September
+                    - cell "21 November" [ref=f1e1841]
+                    - cell [ref=f1e1842]:
+                      - text: Equivalence of matter and energy, E=mc
+                      - superscript [ref=f1e1845]: "2"
+                      - text: ", the existence of \""
+                      - link "rest energy" [ref=f1e1846] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Rest_energy
+                      - text: "\", and the basis of nuclear energy."
+            - region "Special relativity" [ref=f1e1847]:
+              - heading "Special relativity" [level=3] [ref=f1e1849]
+              - note [ref=f1e1850]:
+                - text: "Main article:"
+                - link "History of special relativity" [ref=f1e1851] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/History_of_special_relativity
+              - paragraph [ref=f1e1852]:
+                - text: Einstein's "
+                - generic "German-language text" [ref=f1e1853]: Zur Elektrodynamik bewegter Körper
+                - text: "\""
+                - superscript [ref=f1e1854]:
+                  - link "[240]" [ref=f1e1855] [cursor=pointer]:
+                    - /url: "#cite_note-1905d-247"
+                - text: ("On the Electrodynamics of Moving Bodies") was received on 30 June 1905 and published 26 September of that same year. It reconciled conflicts between
+                - link "Maxwell's equations" [ref=f1e1856] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Maxwell's_equations
+                - text: (the laws of electricity and magnetism) and the laws of Newtonian mechanics by introducing changes to the laws of mechanics.
+                - superscript [ref=f1e1857]:
+                  - link "[244]" [ref=f1e1858] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEFölsing1997178–198-251"
+                - text: Observationally, the effects of these changes are most apparent at high speeds (where objects are moving at speeds close to the
+                - link "speed of light" [ref=f1e1859] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Speed_of_light
+                - text: ). The theory developed in this paper later became known as Einstein's special theory of relativity.
+              - paragraph [ref=f1e1860]:
+                - text: This paper predicted that, when measured in the frame of a relatively moving observer, a clock carried by a moving body would appear to
+                - link "slow down" [ref=f1e1861] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Time_dilation
+                - text: ", and the body itself would"
+                - link "contract" [ref=f1e1862] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Length_contraction
+                - text: in its direction of motion. This paper also argued that the idea of a
+                - link "luminiferous aether" [ref=f1e1863] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Luminiferous_aether
+                - text: —one of the leading theoretical entities in physics at the time—was superfluous.
+                - superscript [ref=f1e1864]:
+                  - link "[note 5]" [ref=f1e1865] [cursor=pointer]:
+                    - /url: "#cite_note-aBfxO-252"
+              - paragraph [ref=f1e1866]:
+                - text: In his paper on
+                - link "mass–energy equivalence" [ref=f1e1867] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mass–energy_equivalence
+                - text: ", Einstein produced E=mc"
+                - superscript [ref=f1e1870]: "2"
+                - text: as a consequence of his special relativity equations.
+                - superscript [ref=f1e1871]:
+                  - link "[245]" [ref=f1e1872] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEStachel2002vi,_15,_90,_131,_[httpsbooksgooglecombooksidOAsQ_hFjhrACpgPA215_215]-253"
+                - text: Einstein's 1905 work on relativity remained controversial for many years, but was accepted by leading physicists, starting with
+                - link "Max Planck" [ref=f1e1873] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Max_Planck
+                - text: .
+                - superscript [ref=f1e1874]:
+                  - link "[note 6]" [ref=f1e1875] [cursor=pointer]:
+                    - /url: "#cite_note-sBl2q-254"
+                - superscript [ref=f1e1876]:
+                  - link "[246]" [ref=f1e1877] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEPais1982382–386-255"
+              - paragraph [ref=f1e1878]:
+                - text: Einstein originally framed special relativity in terms of
+                - link "kinematics" [ref=f1e1879] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Kinematics
+                - text: (the study of moving bodies). In 1908,
+                - link "Hermann Minkowski" [ref=f1e1880] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hermann_Minkowski
+                - text: reinterpreted special relativity in geometric terms as a theory of
+                - link "spacetime" [ref=f1e1881] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Spacetime
+                - text: . Einstein adopted Minkowski's formalism in his 1915
+                - link "general theory of relativity" [ref=f1e1882] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/General_theory_of_relativity
+                - text: .
+                - superscript [ref=f1e1883]:
+                  - link "[247]" [ref=f1e1884] [cursor=pointer]:
+                    - /url: "#cite_note-FOOTNOTEPais1982151–152-256"
+            - region "General relativity" [ref=f1e1885]:
+              - heading "General relativity" [level=3] [ref=f1e1887]
+              - region "General relativity and the equivalence principle" [ref=f1e1888]:
+                - heading "General relativity and the equivalence principle" [level=4] [ref=f1e1890]
+                - note [ref=f1e1891]:
+                  - text: "Main article:"
+                  - link "History of general relativity" [ref=f1e1892] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/History_of_general_relativity
+                - note [ref=f1e1893]:
+                  - text: "See also:"
+                  - link "Theory of relativity" [ref=f1e1894] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Theory_of_relativity
+                  - text: and
+                  - link "Einstein field equations" [ref=f1e1895] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein_field_equations
+                - figure "Eddington's photo of a solar eclipse" [ref=f1e1896]:
+                  - link [ref=f1e1897] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:1919_eclipse_positive.jpg
+                    - img "Black circle covering the sun, rays visible around it, in a dark sky." [ref=f1e1898]
+                  - generic [ref=f1e1899]:
+                    - link "Eddington" [ref=f1e1900] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Arthur_Stanley_Eddington
+                    - text: "'s photo of a"
+                    - link "solar eclipse" [ref=f1e1901] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Solar_eclipse
+                - paragraph [ref=f1e1902]:
+                  - link "General relativity" [ref=f1e1903] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/General_relativity
+                  - text: (GR) is a
+                  - link "theory of gravitation" [ref=f1e1904] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Theory_of_gravitation
+                  - text: that was developed by Einstein between 1907 and 1915. According to it, the observed gravitational attraction between masses results from the warping of
+                  - link "spacetime" [ref=f1e1905] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Spacetime
+                  - text: by those masses. General relativity has developed into an essential tool in modern
+                  - link "astrophysics" [ref=f1e1906] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Astrophysics
+                  - text: ; it provides the foundation for the current understanding of
+                  - link "black holes" [ref=f1e1907] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Black_holes
+                  - text: ", regions of space where gravitational attraction is so strong that not even light can escape."
+                  - superscript [ref=f1e1908]:
+                    - link "[248]" [ref=f1e1909] [cursor=pointer]:
+                      - /url: "#cite_note-257"
+                - paragraph [ref=f1e1910]:
+                  - text: As Einstein later said, the reason for the development of general relativity was that the preference of inertial motions within
+                  - link "special relativity" [ref=f1e1911] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special_relativity
+                  - text: was unsatisfactory, while a theory which from the outset prefers no state of motion (even accelerated ones) should appear more satisfactory.
+                  - superscript [ref=f1e1912]:
+                    - link "[249]" [ref=f1e1913] [cursor=pointer]:
+                      - /url: "#cite_note-258"
+                  - text: Consequently, in 1907 he published an article on acceleration under special relativity. In that article titled "On the Relativity Principle and the Conclusions Drawn from It", he argued that
+                  - link "free fall" [ref=f1e1914] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Free_fall
+                  - text: is really inertial motion, and that for a free-falling observer the rules of special relativity must apply. This argument is called the
+                  - link "equivalence principle" [ref=f1e1915] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Equivalence_principle
+                  - text: . In the same article, Einstein also predicted the phenomena of
+                  - link "gravitational time dilation" [ref=f1e1916] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Gravitational_time_dilation
+                  - text: ","
+                  - link "gravitational redshift" [ref=f1e1917] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Gravitational_redshift
+                  - text: and
+                  - link "gravitational lensing" [ref=f1e1918] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Gravitational_lensing
+                  - text: .
+                  - superscript [ref=f1e1919]:
+                    - link "[250]" [ref=f1e1920] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEPais1982179–183-259"
+                  - superscript [ref=f1e1921]:
+                    - link "[251]" [ref=f1e1922] [cursor=pointer]:
+                      - /url: "#cite_note-260"
+                - paragraph [ref=f1e1923]:
+                  - text: In 1911, Einstein published another article "On the Influence of Gravitation on the Propagation of Light" expanding on the 1907 article, in which he estimated the amount of deflection of light by massive bodies. Thus, the theoretical prediction of general relativity could for the first time be tested experimentally.
+                  - superscript [ref=f1e1924]:
+                    - link "[252]" [ref=f1e1925] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEPais1982194–195-261"
+              - region "Gravitational waves" [ref=f1e1926]:
+                - heading "Gravitational waves" [level=4] [ref=f1e1928]
+                - paragraph [ref=f1e1929]:
+                  - text: In 1916, Einstein predicted
+                  - link "gravitational waves" [ref=f1e1930] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Gravitational_wave
+                  - text: ","
+                  - superscript [ref=f1e1931]:
+                    - link "[253]" [ref=f1e1932] [cursor=pointer]:
+                      - /url: "#cite_note-262"
+                  - superscript [ref=f1e1933]:
+                    - link "[254]" [ref=f1e1934] [cursor=pointer]:
+                      - /url: "#cite_note-263"
+                  - text: ripples in the
+                  - link "curvature" [ref=f1e1935] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Curvature
+                  - text: of spacetime which propagate as
+                  - link "waves" [ref=f1e1936] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wave
+                  - text: ", traveling outward from the source, transporting energy as gravitational radiation. The existence of gravitational waves is possible under general relativity due to its"
+                  - link "Lorentz invariance" [ref=f1e1937] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Lorentz_invariance
+                  - text: which brings the concept of a finite speed of propagation of the physical interactions of gravity with it. By contrast, gravitational waves cannot exist in the
+                  - link "Newtonian theory of gravitation" [ref=f1e1938] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Newton's_law_of_universal_gravitation
+                  - text: ", which postulates that the physical interactions of gravity propagate at infinite speed."
+                - paragraph [ref=f1e1939]:
+                  - text: The first, indirect, detection of gravitational waves came in the 1970s through observation of a pair of closely orbiting
+                  - link "neutron stars" [ref=f1e1940] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Neutron_stars
+                  - text: ","
+                  - link "PSR B1913+16" [ref=f1e1941] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/PSR_B1913+16
+                  - text: .
+                  - superscript [ref=f1e1942]:
+                    - link "[255]" [ref=f1e1943] [cursor=pointer]:
+                      - /url: "#cite_note-natgeo-264"
+                  - text: The explanation for the decay in their orbital period was that they were emitting gravitational waves.
+                  - superscript [ref=f1e1944]:
+                    - link "[255]" [ref=f1e1945] [cursor=pointer]:
+                      - /url: "#cite_note-natgeo-264"
+                  - superscript [ref=f1e1946]:
+                    - link "[256]" [ref=f1e1947] [cursor=pointer]:
+                      - /url: "#cite_note-Tf1T0-265"
+                  - text: Einstein's prediction was confirmed on 11 February 2016, when researchers at
+                  - link "LIGO" [ref=f1e1948] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/LIGO
+                  - text: published the
+                  - link "first observation of gravitational waves" [ref=f1e1949] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/First_observation_of_gravitational_waves
+                  - text: ","
+                  - superscript [ref=f1e1950]:
+                    - link "[257]" [ref=f1e1951] [cursor=pointer]:
+                      - /url: "#cite_note-PRL-20160211-266"
+                  - text: detected on Earth on 14 September 2015, nearly one hundred years after the prediction.
+                  - superscript [ref=f1e1952]:
+                    - link "[255]" [ref=f1e1953] [cursor=pointer]:
+                      - /url: "#cite_note-natgeo-264"
+                  - superscript [ref=f1e1954]:
+                    - link "[258]" [ref=f1e1955] [cursor=pointer]:
+                      - /url: "#cite_note-CO6kH-267"
+                  - superscript [ref=f1e1956]:
+                    - link "[259]" [ref=f1e1957] [cursor=pointer]:
+                      - /url: "#cite_note-oSmHb-268"
+                  - superscript [ref=f1e1958]:
+                    - link "[260]" [ref=f1e1959] [cursor=pointer]:
+                      - /url: "#cite_note-hkKSp-269"
+                  - superscript [ref=f1e1960]:
+                    - link "[261]" [ref=f1e1961] [cursor=pointer]:
+                      - /url: "#cite_note-38Msx-270"
+              - region "Hole argument and Entwurf theory" [ref=f1e1962]:
+                - heading "Hole argument and Entwurf theory" [level=4] [ref=f1e1964]
+                - paragraph [ref=f1e1965]:
+                  - text: While developing general relativity, Einstein became confused about the
+                  - link "gauge invariance" [ref=f1e1966] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Gauge_invariance
+                  - text: in the theory. He formulated an argument that led him to conclude that a general relativistic field theory is impossible. He gave up looking for fully generally covariant tensor equations and searched for equations that would be invariant under general linear transformations only.
+                  - superscript [ref=f1e1967]:
+                    - link "[262]" [ref=f1e1968] [cursor=pointer]:
+                      - /url: "#cite_note-271"
+                - paragraph [ref=f1e1969]:
+                  - text: In June 1913, the Entwurf ('draft') theory was the result of these investigations. As its name suggests, it was a sketch of a theory, less elegant and more difficult than general relativity, with the equations of motion supplemented by additional gauge fixing conditions. After more than two years of intensive work, Einstein realized that the
+                  - link "hole argument" [ref=f1e1970] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Hole_argument
+                  - text: was mistaken
+                  - superscript [ref=f1e1971]:
+                    - link "[263]" [ref=f1e1972] [cursor=pointer]:
+                      - /url: "#cite_note-sOA9t-272"
+                  - text: and abandoned the theory in November 1915.
+              - region "Physical cosmology" [ref=f1e1973]:
+                - heading "Physical cosmology" [level=4] [ref=f1e1975]
+                - note [ref=f1e1976]:
+                  - text: "Main article:"
+                  - link "Physical cosmology" [ref=f1e1977] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Physical_cosmology
+                - figure "Robert A. Millikan, Georges Lemaître and Einstein at the California Institute of Technology in January 1933" [ref=f1e1978]:
+                  - link [ref=f1e1979] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:MillikanLemaitreEinstein.jpg
+                  - generic [ref=f1e1981]:
+                    - link "Robert A. Millikan" [ref=f1e1982] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Robert_Andrews_Millikan
+                    - text: ","
+                    - link "Georges Lemaître" [ref=f1e1983] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Georges_Lemaître
+                    - text: and Einstein at the
+                    - link "California Institute of Technology" [ref=f1e1984] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/California_Institute_of_Technology
+                    - text: in January 1933
+                - paragraph [ref=f1e1985]:
+                  - text: In 1917, Einstein applied the general theory of relativity to the structure of the universe as a whole.
+                  - superscript [ref=f1e1986]:
+                    - link "[264]" [ref=f1e1987] [cursor=pointer]:
+                      - /url: "#cite_note-273"
+                  - superscript [ref=f1e1988]:
+                    - link "[13]" [ref=f1e1989] [cursor=pointer]:
+                      - /url: "#cite_note-NYT-20151124-15"
+                  - text: He discovered that the general field equations predicted a universe that was dynamic, either contracting or expanding. As observational evidence for a dynamic universe was lacking at the time, Einstein introduced a new term, the
+                  - link "cosmological constant" [ref=f1e1990] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Cosmological_constant
+                  - text: ", into the field equations, in order to allow the theory to predict a static universe. The modified field equations predicted a static universe of closed curvature, in accordance with Einstein's understanding of"
+                  - link "Mach's principle" [ref=f1e1991] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Mach's_principle
+                  - text: in these years. This model became known as the Einstein World or
+                  - link "Einstein's static universe" [ref=f1e1992] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein's_static_universe
+                  - text: .
+                  - superscript [ref=f1e1993]:
+                    - link "[265]" [ref=f1e1994] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEPais1994285–286-274"
+                  - superscript [ref=f1e1995]:
+                    - link "[266]" [ref=f1e1996] [cursor=pointer]:
+                      - /url: "#cite_note-iJwuX-275"
+                  - text: This paper is widely regarded as marking the emergence of modern theoretical cosmology.
+                  - superscript [ref=f1e1997]:
+                    - link "[267]" [ref=f1e1998] [cursor=pointer]:
+                      - /url: "#cite_note-276"
+                - paragraph [ref=f1e1999]:
+                  - text: Following the discovery of the recession of the galaxies by
+                  - link "Edwin Hubble" [ref=f1e2000] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Edwin_Hubble
+                  - text: in 1929, Einstein abandoned his static model of the universe, and proposed two dynamic models of the cosmos, the
+                  - link "Friedmann–Einstein universe" [ref=f1e2001] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Friedmann–Einstein_universe
+                  - text: of 1931
+                  - superscript [ref=f1e2002]:
+                    - link "[268]" [ref=f1e2003] [cursor=pointer]:
+                      - /url: "#cite_note-E1931-277"
+                  - superscript [ref=f1e2004]:
+                    - link "[269]" [ref=f1e2005] [cursor=pointer]:
+                      - /url: "#cite_note-cor-2013-278"
+                  - text: and the
+                  - link "Einstein–de Sitter universe" [ref=f1e2006] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein–de_Sitter_universe
+                  - text: of 1932.
+                  - superscript [ref=f1e2007]:
+                    - link "[270]" [ref=f1e2008] [cursor=pointer]:
+                      - /url: "#cite_note-279"
+                  - superscript [ref=f1e2009]:
+                    - link "[271]" [ref=f1e2010] [cursor=pointer]:
+                      - /url: "#cite_note-J9Tqu-280"
+                  - text: In each of these models, Einstein discarded the cosmological constant, claiming that it was "in any case theoretically unsatisfactory".
+                  - superscript [ref=f1e2011]:
+                    - link "[268]" [ref=f1e2012] [cursor=pointer]:
+                      - /url: "#cite_note-E1931-277"
+                  - superscript [ref=f1e2013]:
+                    - link "[269]" [ref=f1e2014] [cursor=pointer]:
+                      - /url: "#cite_note-cor-2013-278"
+                  - superscript [ref=f1e2015]:
+                    - link "[272]" [ref=f1e2016] [cursor=pointer]:
+                      - /url: "#cite_note-sxfvo-281"
+                - paragraph [ref=f1e2017]:
+                  - text: In many Einstein biographies, it is claimed that Einstein referred to the cosmological constant in later years as his "biggest blunder", based on a letter
+                  - link "George Gamow" [ref=f1e2018] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/George_Gamow
+                  - text: claimed to have received from him. The astrophysicist
+                  - link "Mario Livio" [ref=f1e2019] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Mario_Livio
+                  - text: has cast doubt on this claim.
+                  - superscript [ref=f1e2020]:
+                    - link "[273]" [ref=f1e2021] [cursor=pointer]:
+                      - /url: "#cite_note-qmmVf-282"
+                - paragraph [ref=f1e2022]:
+                  - text: In late 2013, a team led by the Irish physicist
+                  - link "Cormac O'Raifeartaigh" [ref=f1e2023] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Cormac_O'Raifeartaigh
+                  - text: discovered evidence that, shortly after learning of Hubble's observations of the recession of the galaxies, Einstein considered a
+                  - link "steady-state model" [ref=f1e2024] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Steady-state_model
+                  - text: of the universe.
+                  - superscript [ref=f1e2025]:
+                    - link "[274]" [ref=f1e2026] [cursor=pointer]:
+                      - /url: "#cite_note-Tq53z-283"
+                  - superscript [ref=f1e2027]:
+                    - link "[275]" [ref=f1e2028] [cursor=pointer]:
+                      - /url: "#cite_note-8pfEk-284"
+                  - text: In a hitherto overlooked manuscript, apparently written in early 1931, Einstein explored a model of the expanding universe in which the density of matter remains constant due to a continuous creation of matter, a process that he associated with the cosmological constant.
+                  - superscript [ref=f1e2029]:
+                    - link "[276]" [ref=f1e2030] [cursor=pointer]:
+                      - /url: "#cite_note-cor-steady-state-285"
+                  - superscript [ref=f1e2031]:
+                    - link "[277]" [ref=f1e2032] [cursor=pointer]:
+                      - /url: "#cite_note-Einstein's_aborted_model-286"
+                  - text: As he stated in the paper, "In what follows, I would like to draw attention to a solution to equation (1) that can account for Hubbel's [
+                  - link "sic" [ref=f1e2034] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Sic
+                  - text: "] facts, and in which the density is constant over time [...] If one considers a physically bounded volume, particles of matter will be continually leaving it. For the density to remain constant, new particles of matter must be continually formed in the volume from space.\""
+                - paragraph [ref=f1e2035]:
+                  - text: It thus appears that Einstein considered a
+                  - link "steady-state model" [ref=f1e2036] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Steady-state_model
+                  - text: of the expanding universe many years before Hoyle, Bondi and Gold.
+                  - superscript [ref=f1e2037]:
+                    - link "[278]" [ref=f1e2038] [cursor=pointer]:
+                      - /url: "#cite_note-ILjYQ-287"
+                  - superscript [ref=f1e2039]:
+                    - link "[279]" [ref=f1e2040] [cursor=pointer]:
+                      - /url: "#cite_note-ThZb0-288"
+                  - text: However, Einstein's steady-state model contained a fundamental flaw and he quickly abandoned the idea.
+                  - superscript [ref=f1e2041]:
+                    - link "[276]" [ref=f1e2042] [cursor=pointer]:
+                      - /url: "#cite_note-cor-steady-state-285"
+                  - superscript [ref=f1e2043]:
+                    - link "[277]" [ref=f1e2044] [cursor=pointer]:
+                      - /url: "#cite_note-Einstein's_aborted_model-286"
+                  - superscript [ref=f1e2045]:
+                    - link "[280]" [ref=f1e2046] [cursor=pointer]:
+                      - /url: "#cite_note-7ShC9-289"
+              - region "Energy momentum pseudotensor" [ref=f1e2047]:
+                - heading "Energy momentum pseudotensor" [level=4] [ref=f1e2049]
+                - note [ref=f1e2050]:
+                  - text: "Main article:"
+                  - link "Stress–energy–momentum pseudotensor" [ref=f1e2051] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Stress–energy–momentum_pseudotensor
+                - paragraph [ref=f1e2052]:
+                  - text: General relativity includes a dynamical spacetime, so it is difficult to see how to identify the conserved energy and momentum.
+                  - link "Noether's theorem" [ref=f1e2053] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Noether's_theorem
+                  - text: allows these quantities to be determined from a
+                  - link "Lagrangian" [ref=f1e2054] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Lagrangian_(field_theory)
+                  - text: with
+                  - link "translation invariance" [ref=f1e2055] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Translation_invariance
+                  - text: ", but"
+                  - link "general covariance" [ref=f1e2056] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/General_covariance
+                  - text: makes translation invariance into something of a
+                  - link "gauge symmetry" [ref=f1e2057] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Gauge_symmetry
+                  - text: . The energy and momentum derived within general relativity by
+                  - link "Noether" [ref=f1e2058] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Emmy_Noether
+                  - text: "'s prescriptions do not make a real tensor for this reason."
+                  - superscript [ref=f1e2059]:
+                    - link "[281]" [ref=f1e2060] [cursor=pointer]:
+                      - /url: "#cite_note-290"
+                - paragraph [ref=f1e2061]:
+                  - text: "Einstein argued that this is true for a fundamental reason: the gravitational field could be made to vanish by a choice of coordinates. He maintained that the non-covariant energy momentum pseudotensor was, in fact, the best description of the energy momentum distribution in a gravitational field. While the use of non-covariant objects like pseudotensors was criticized by"
+                  - link "Erwin Schrödinger" [ref=f1e2062] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Erwin_Schrödinger
+                  - text: and others, Einstein's approach has been echoed by physicists including
+                  - link "Lev Landau" [ref=f1e2063] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Lev_Landau
+                  - text: and
+                  - link "Evgeny Lifshitz" [ref=f1e2064] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Evgeny_Lifshitz
+                  - text: .
+                  - superscript [ref=f1e2065]:
+                    - link "[282]" [ref=f1e2066] [cursor=pointer]:
+                      - /url: "#cite_note-291"
+              - region "Wormholes" [ref=f1e2067]:
+                - heading "Wormholes" [level=4] [ref=f1e2069]
+                - paragraph [ref=f1e2070]:
+                  - text: In 1935, Einstein collaborated with
+                  - link "Nathan Rosen" [ref=f1e2071] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Nathan_Rosen
+                  - text: to produce a model of a
+                  - link "wormhole" [ref=f1e2072] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wormhole
+                  - text: ", often called"
+                  - link "Einstein–Rosen bridges" [ref=f1e2073] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein–Rosen_bridges
+                  - text: .
+                  - superscript [ref=f1e2074]:
+                    - link "[283]" [ref=f1e2075] [cursor=pointer]:
+                      - /url: "#cite_note-292"
+                  - superscript [ref=f1e2076]:
+                    - link "[284]" [ref=f1e2077] [cursor=pointer]:
+                      - /url: "#cite_note-QNjpt-293"
+                  - text: His motivation was to model elementary particles with charge as a solution of gravitational field equations, in line with the program outlined in the paper "Do Gravitational Fields play an Important Role in the Constitution of the Elementary Particles?". These solutions cut and pasted
+                  - link "Schwarzschild black holes" [ref=f1e2078] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Schwarzschild_black_hole
+                  - text: to make a bridge between two patches. Because these solutions included spacetime curvature without the presence of a physical body, Einstein and Rosen suggested that they could provide the beginnings of a theory that avoided the notion of point particles. However, it was later found that Einstein–Rosen bridges are not stable.
+                  - superscript [ref=f1e2079]:
+                    - link "[285]" [ref=f1e2080] [cursor=pointer]:
+                      - /url: "#cite_note-ja7FY-294"
+              - region "Einstein–Cartan theory" [ref=f1e2081]:
+                - heading "Einstein–Cartan theory" [level=4] [ref=f1e2083]
+                - note [ref=f1e2084]:
+                  - text: "Main article:"
+                  - link "Einstein–Cartan theory" [ref=f1e2085] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein–Cartan_theory
+                - figure "Einstein at his office, University of Berlin, 1920" [ref=f1e2086]:
+                  - link [ref=f1e2087] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_photo_1920.jpg
+                    - img "Einstein, sitting at a table, looks up from the papers he is reading and into the camera." [ref=f1e2088]
+                  - generic [ref=f1e2089]:
+                    - text: Einstein at his office,
+                    - link "University of Berlin" [ref=f1e2090] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/University_of_Berlin
+                    - text: ", 1920"
+                - paragraph [ref=f1e2091]:
+                  - text: In order to incorporate spinning point particles into general relativity, the affine connection needed to be generalized to include an antisymmetric part, called the
+                  - link "torsion" [ref=f1e2092] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Torsion_tensor
+                  - text: . This modification was made by Einstein and Cartan in the 1920s.
+              - region "Equations of motion" [ref=f1e2093]:
+                - heading "Equations of motion" [level=4] [ref=f1e2095]
+                - note [ref=f1e2096]:
+                  - text: "Main article:"
+                  - link "Einstein–Infeld–Hoffmann equations" [ref=f1e2097] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein–Infeld–Hoffmann_equations
+                - paragraph [ref=f1e2098]:
+                  - text: In general relativity, gravitational force is reimagined as curvature of
+                  - link "spacetime" [ref=f1e2099] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Spacetime
+                  - text: . A curved path like an orbit is not the result of a force deflecting a body from an ideal straight-line path, but rather the body's attempt to fall freely through a background that is itself curved by the presence of other masses. A remark by
+                  - link "John Archibald Wheeler" [ref=f1e2100] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/John_Archibald_Wheeler
+                  - text: "that has become proverbial among physicists summarizes the theory: \"Spacetime tells matter how to move; matter tells spacetime how to curve.\""
+                  - superscript [ref=f1e2101]:
+                    - link "[286]" [ref=f1e2102] [cursor=pointer]:
+                      - /url: "#cite_note-Wheeler-295"
+                  - superscript [ref=f1e2103]:
+                    - link "[287]" [ref=f1e2104] [cursor=pointer]:
+                      - /url: "#cite_note-296"
+                  - text: The
+                  - link "Einstein field equations" [ref=f1e2105] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein_field_equations
+                  - text: cover the latter aspect of the theory, relating the curvature of spacetime to the distribution of matter and energy. The
+                  - link "geodesic equation" [ref=f1e2106] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Geodesic_equation
+                  - text: covers the former aspect, stating that freely falling bodies follow
+                  - link "lines that are as straight as possible in a curved spacetime" [ref=f1e2107] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Geodesics_in_general_relativity
+                  - text: . Einstein regarded this as an "independent fundamental assumption" that had to be postulated in addition to the field equations in order to complete the theory. Believing this to be a shortcoming in how general relativity was originally presented, he wished to derive it from the field equations themselves. Since the equations of general relativity are non-linear, a lump of energy made out of pure gravitational fields, like a black hole, would move on a trajectory which is determined by the Einstein field equations themselves, not by a new law. Accordingly, Einstein proposed that the field equations would determine the path of a singular solution, like a black hole, to be a geodesic. Both physicists and philosophers have often repeated the assertion that the geodesic equation can be obtained from applying the field equations to the motion of a
+                  - link "gravitational singularity" [ref=f1e2108] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Gravitational_singularity
+                  - text: ", but this claim remains disputed."
+                  - superscript [ref=f1e2109]:
+                    - link "[288]" [ref=f1e2110] [cursor=pointer]:
+                      - /url: "#cite_note-297"
+                  - superscript [ref=f1e2111]:
+                    - link "[289]" [ref=f1e2112] [cursor=pointer]:
+                      - /url: "#cite_note-298"
+            - region "Old quantum theory" [ref=f1e2113]:
+              - heading "Old quantum theory" [level=3] [ref=f1e2115]
+              - note [ref=f1e2116]:
+                - text: "Main article:"
+                - link "Old quantum theory" [ref=f1e2117] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Old_quantum_theory
+              - region "Photons and energy quanta" [ref=f1e2118]:
+                - heading "Photons and energy quanta" [level=4] [ref=f1e2120]
+                - figure "The photoelectric effect. Incoming photons on the left strike a metal plate (bottom), and eject electrons, depicted as flying off to the right." [ref=f1e2121]:
+                  - link [ref=f1e2122] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Photoelectric_effect_in_a_solid_-_diagram.svg
+                - paragraph [ref=f1e2124]:
+                  - text: In a 1905 paper,
+                  - superscript [ref=f1e2125]:
+                    - link "[236]" [ref=f1e2126] [cursor=pointer]:
+                      - /url: "#cite_note-1905a-243"
+                  - text: Einstein postulated that light itself consists of localized particles (
+                  - link "quanta" [ref=f1e2128] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Quantum
+                  - text: ). Einstein's light quanta were nearly universally rejected by all physicists, including Max Planck and Niels Bohr. This idea only became universally accepted in 1919, with
+                  - link "Robert Millikan" [ref=f1e2129] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Robert_Millikan
+                  - text: "'s detailed experiments on the photoelectric effect, and with the measurement of"
+                  - link "Compton scattering" [ref=f1e2130] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Compton_scattering
+                  - text: .
+                - paragraph [ref=f1e2131]:
+                  - text: Einstein concluded that each wave of frequency f is associated with a collection of photons with energy hf each, where h is the
+                  - link "Planck constant" [ref=f1e2132] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Planck_constant
+                  - text: . He did not say much more, because he was not sure how the particles were related to the wave. But he did suggest that this idea would explain certain experimental results, notably the
+                  - link "photoelectric effect" [ref=f1e2133] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Photoelectric_effect
+                  - text: .
+                  - superscript [ref=f1e2134]:
+                    - link "[236]" [ref=f1e2135] [cursor=pointer]:
+                      - /url: "#cite_note-1905a-243"
+                  - text: Light quanta were dubbed
+                  - link "photons" [ref=f1e2137] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Photons
+                  - text: by
+                  - link "Gilbert N. Lewis" [ref=f1e2138] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Gilbert_N._Lewis
+                  - text: in 1926.
+                  - superscript [ref=f1e2139]:
+                    - link "[290]" [ref=f1e2140] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEIsaacson2007576-299"
+              - region "Quantized atomic vibrations" [ref=f1e2141]:
+                - heading "Quantized atomic vibrations" [level=4] [ref=f1e2143]
+                - note [ref=f1e2144]:
+                  - text: "Main article:"
+                  - link "Einstein solid" [ref=f1e2145] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein_solid
+                - paragraph [ref=f1e2146]:
+                  - text: In 1907, Einstein proposed a model of matter where each atom in a lattice structure is an independent harmonic oscillator. In the Einstein model, each atom oscillates independently—a series of equally spaced quantized states for each oscillator. Einstein was aware that getting the frequency of the actual oscillations would be difficult, but he nevertheless proposed this theory because it was a particularly clear demonstration that quantum mechanics could solve the specific heat problem in classical mechanics.
+                  - link "Peter Debye" [ref=f1e2147] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Peter_Debye
+                  - text: refined this model.
+                  - superscript [ref=f1e2148]:
+                    - link "[291]" [ref=f1e2149] [cursor=pointer]:
+                      - /url: "#cite_note-ixm32-300"
+              - region "Bose–Einstein statistics" [ref=f1e2150]:
+                - heading "Bose–Einstein statistics" [level=4] [ref=f1e2152]
+                - note [ref=f1e2153]:
+                  - text: "Main article:"
+                  - link "Bose–Einstein statistics" [ref=f1e2154] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Bose–Einstein_statistics
+                - paragraph [ref=f1e2155]:
+                  - text: In 1924, Einstein received a description of a
+                  - link "statistical" [ref=f1e2156] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Statistical_mechanics
+                  - text: model from Indian physicist
+                  - link "Satyendra Nath Bose" [ref=f1e2157] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Satyendra_Nath_Bose
+                  - text: ", based on a counting method that assumed that light could be understood as a gas of indistinguishable particles. Einstein noted that Bose's statistics applied to some atoms as well as to the proposed light particles, and submitted his translation of Bose's paper to the"
+                  - link "Zeitschrift für Physik" [ref=f1e2159] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Zeitschrift_für_Physik
+                  - text: . Einstein also published his own articles describing the model and its implications, among them the
+                  - link "Bose–Einstein condensate" [ref=f1e2160] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Bose–Einstein_condensate
+                  - text: phenomenon that some particulates should appear at very low temperatures.
+                  - superscript [ref=f1e2161]:
+                    - link "[292]" [ref=f1e2162] [cursor=pointer]:
+                      - /url: "#cite_note-301"
+                  - text: It was not until 1995 that the first such condensate was produced experimentally by
+                  - link "Eric Allin Cornell" [ref=f1e2163] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Eric_Allin_Cornell
+                  - text: and
+                  - link "Carl Wieman" [ref=f1e2164] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Carl_Wieman
+                  - text: using
+                  - link "ultra-cooling" [ref=f1e2165] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Ultracold_atom
+                  - text: equipment built at the
+                  - link "NIST" [ref=f1e2166] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/NIST
+                  - text: –
+                  - link "JILA" [ref=f1e2167] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/JILA
+                  - text: laboratory at the
+                  - link "University of Colorado at Boulder" [ref=f1e2168] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/University_of_Colorado_at_Boulder
+                  - text: .
+                  - superscript [ref=f1e2169]:
+                    - link "[293]" [ref=f1e2170] [cursor=pointer]:
+                      - /url: "#cite_note-nlagl-302"
+                  - text: Bose–Einstein statistics are now used to describe the behaviors of any assembly of
+                  - link "bosons" [ref=f1e2171] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Boson
+                  - text: . Einstein's sketches for this project may be seen in the Einstein Archive in the library of the Leiden University.
+                  - superscript [ref=f1e2172]:
+                    - link "[232]" [ref=f1e2173] [cursor=pointer]:
+                      - /url: "#cite_note-Instituut-Lorentz-239"
+              - region "Wave–particle duality" [ref=f1e2174]:
+                - heading "Wave–particle duality" [level=4] [ref=f1e2176]
+                - figure "Einstein in 1921, by Harris & Ewing studio" [ref=f1e2177]:
+                  - link [ref=f1e2178] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_1921_(re-cropped).jpg
+                  - generic [ref=f1e2180]:
+                    - text: Einstein in 1921, by
+                    - link "Harris & Ewing" [ref=f1e2181] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Harris_&_Ewing
+                    - text: studio
+                - paragraph [ref=f1e2182]:
+                  - text: Although the patent office promoted Einstein to Technical Examiner Second Class in 1906, he had not given up on academia. In 1908, he became a
+                  - link "Privatdozent" [ref=f1e2184] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Privatdozent
+                  - text: at the University of Bern.
+                  - superscript [ref=f1e2185]:
+                    - link "[294]" [ref=f1e2186] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEPais1982522-303"
+                  - text: In "Über die Entwicklung unserer Anschauungen über das Wesen und die Konstitution der Strahlung" ("
+                  - link "The Development of our Views on the Composition and Essence of Radiation" [ref=f1e2187] [cursor=pointer]:
+                    - /url: https://en.wikisource.org/wiki/Translation:The%20Development%20of%20Our%20Views%20on%20the%20Composition%20and%20Essence%20of%20Radiation
+                  - text: "\"), on the"
+                  - link "quantization" [ref=f1e2188] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Quantization_(physics)
+                  - text: of light, and in an earlier 1909 paper, Einstein showed that Max Planck's energy quanta must have well-defined
+                  - link "momenta" [ref=f1e2189] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Momentum
+                  - text: and act in some respects as independent,
+                  - link "point-like particles" [ref=f1e2190] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Point_particle
+                  - text: . This paper introduced the photon concept and inspired the notion of
+                  - link "wave–particle duality" [ref=f1e2191] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wave–particle_duality
+                  - text: in quantum mechanics. Einstein saw this wave–particle duality in radiation as concrete evidence for his conviction that physics needed a new, unified foundation.
+              - region "Zero-point energy" [ref=f1e2192]:
+                - heading "Zero-point energy" [level=4] [ref=f1e2194]
+                - paragraph [ref=f1e2195]:
+                  - text: In a series of works completed from 1911 to 1913, Planck reformulated his 1900 quantum theory and introduced the idea of
+                  - link "zero-point energy" [ref=f1e2196] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Zero-point_energy
+                  - text: in his "second quantum theory". Soon, this idea attracted the attention of Einstein and his assistant
+                  - link "Otto Stern" [ref=f1e2197] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Otto_Stern
+                  - text: . Assuming the energy of rotating diatomic molecules contains zero-point energy, they then compared the theoretical specific heat of hydrogen gas with the experimental data. The numbers matched nicely. However, after publishing the findings, they promptly withdrew their support, because they no longer had confidence in the correctness of the idea of zero-point energy.
+                  - superscript [ref=f1e2198]:
+                    - link "[295]" [ref=f1e2199] [cursor=pointer]:
+                      - /url: "#cite_note-304"
+              - region "Stimulated emission" [ref=f1e2200]:
+                - heading "Stimulated emission" [level=4] [ref=f1e2202]
+                - paragraph [ref=f1e2203]:
+                  - text: In 1917, at the height of his work on relativity, Einstein published an article in Physikalische Zeitschrift that proposed the possibility of
+                  - link "stimulated emission" [ref=f1e2204] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Stimulated_emission
+                  - text: ", the physical process that makes possible the"
+                  - link "maser" [ref=f1e2205] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Maser
+                  - text: and the
+                  - link "laser" [ref=f1e2206] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Laser
+                  - text: .
+                  - superscript [ref=f1e2207]:
+                    - link "[296]" [ref=f1e2208] [cursor=pointer]:
+                      - /url: "#cite_note-305"
+                  - text: This article showed that the statistics of absorption and emission of light would only be consistent with Planck's distribution law if the emission of light into a mode with n photons would be enhanced statistically compared to the emission of light into an empty mode. This paper was enormously influential in the later development of quantum mechanics, because it was the first paper to show that the statistics of atomic transitions had simple laws.
+                  - superscript [ref=f1e2209]:
+                    - link "[297]" [ref=f1e2210] [cursor=pointer]:
+                      - /url: "#cite_note-306"
+              - region "Matter waves" [ref=f1e2211]:
+                - heading "Matter waves" [level=4] [ref=f1e2213]
+                - paragraph [ref=f1e2214]:
+                  - text: Einstein discovered
+                  - link "Louis de Broglie" [ref=f1e2215] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Louis_de_Broglie
+                  - text: "'s work and supported his ideas, which were received skeptically at first. In another major paper from this era, Einstein observed that"
+                  - link "de Broglie waves" [ref=f1e2216] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/De_Broglie_waves
+                  - text: could explain the
+                  - link "quantization rules of Bohr and Sommerfeld" [ref=f1e2217] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Bohr-Sommerfeld_quantization
+                  - text: . This paper would inspire Schrödinger's work of 1926.
+                  - superscript [ref=f1e2218]:
+                    - link "[298]" [ref=f1e2219] [cursor=pointer]:
+                      - /url: "#cite_note-307"
+                  - superscript [ref=f1e2220]:
+                    - link "[299]" [ref=f1e2221] [cursor=pointer]:
+                      - /url: "#cite_note-308"
+            - region "Quantum mechanics" [ref=f1e2222]:
+              - heading "Quantum mechanics" [level=3] [ref=f1e2224]
+              - region "Einstein's objections to quantum mechanics" [ref=f1e2225]:
+                - heading "Einstein's objections to quantum mechanics" [level=4] [ref=f1e2227]
+                - figure "Newspaper headline on 4 May 1935" [ref=f1e2228]:
+                  - link [ref=f1e2229] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:NYT_May_4,_1935.jpg
+                - paragraph [ref=f1e2232]:
+                  - text: Einstein played a major role in developing quantum theory, beginning with his 1905 paper on the photoelectric effect. However, he became displeased with modern quantum mechanics as it had evolved after 1925, despite its acceptance by other physicists. He was skeptical that the randomness of quantum mechanics was fundamental rather than the result of determinism, stating that God "is not playing at dice".
+                  - superscript [ref=f1e2233]:
+                    - link "[300]" [ref=f1e2234] [cursor=pointer]:
+                      - /url: "#cite_note-zZ2hS-309"
+                  - text: Until the end of his life, he continued to maintain that quantum mechanics was incomplete.
+                  - superscript [ref=f1e2235]:
+                    - link "[301]" [ref=f1e2236] [cursor=pointer]:
+                      - /url: "#cite_note-yzZtL-310"
+              - region "Bohr versus Einstein" [ref=f1e2237]:
+                - heading "Bohr versus Einstein" [level=4] [ref=f1e2239]
+                - note [ref=f1e2240]:
+                  - text: "Main article:"
+                  - link "Bohr–Einstein debates" [ref=f1e2241] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Bohr–Einstein_debates
+                - figure "Einstein and Niels Bohr, 1925" [ref=f1e2242]:
+                  - link [ref=f1e2243] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Niels_Bohr_Albert_Einstein4_by_Ehrenfest_cr.jpg
+                    - img "Two men sitting, looking relaxed. A dark-haired Bohr is talking while Einstein looks skeptical." [ref=f1e2244]
+                  - generic [ref=f1e2245]:
+                    - text: Einstein and
+                    - link "Niels Bohr" [ref=f1e2246] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Niels_Bohr
+                    - text: ", 1925"
+                - paragraph [ref=f1e2247]:
+                  - text: The Bohr–Einstein debates were a series of public disputes about quantum mechanics between Einstein and
+                  - link "Niels Bohr" [ref=f1e2248] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Niels_Bohr
+                  - text: ", who were two of its founders. Their debates are remembered because of their importance to the"
+                  - link "philosophy of science" [ref=f1e2249] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Philosophy_of_science
+                  - text: .
+                  - superscript [ref=f1e2250]:
+                    - link "[302]" [ref=f1e2251] [cursor=pointer]:
+                      - /url: "#cite_note-Bohr1949-311"
+                  - superscript [ref=f1e2252]:
+                    - link "[303]" [ref=f1e2253] [cursor=pointer]:
+                      - /url: "#cite_note-312"
+                  - superscript [ref=f1e2254]:
+                    - link "[304]" [ref=f1e2255] [cursor=pointer]:
+                      - /url: "#cite_note-313"
+                  - text: Their debates would influence later
+                  - link "interpretations of quantum mechanics" [ref=f1e2256] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics
+                  - text: .
+              - region "Einstein–Podolsky–Rosen paradox" [ref=f1e2257]:
+                - heading "Einstein–Podolsky–Rosen paradox" [level=4] [ref=f1e2259]
+                - note [ref=f1e2260]:
+                  - text: "Main article:"
+                  - link "EPR paradox" [ref=f1e2261] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/EPR_paradox
+                - paragraph [ref=f1e2262]:
+                  - text: Einstein never fully accepted quantum mechanics. While he recognized that it made correct predictions, he believed a more fundamental description of nature must be possible. Over the years he presented multiple arguments to this effect, but the one he preferred most dated to a debate with Bohr in 1930. Einstein suggested a
+                  - link "thought experiment" [ref=f1e2263] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein's_thought_experiments
+                  - text: in which two objects are allowed to interact and then moved apart a great distance from each other. The quantum-mechanical description of the two objects is a mathematical entity known as a
+                  - link "wavefunction" [ref=f1e2264] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wavefunction
+                  - text: . If the wavefunction that describes the two objects before their interaction is given, then the
+                  - link "Schrödinger equation" [ref=f1e2265] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Schrödinger_equation
+                  - text: provides the wavefunction that describes them after their interaction. But because of what would later be called
+                  - link "quantum entanglement" [ref=f1e2266] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Quantum_entanglement
+                  - text: ", measuring one object would lead to an instantaneous change of the wavefunction describing the other object, no matter how far away it is. Moreover, the choice of which measurement to perform upon the first object would affect what wavefunction could result for the second object. Einstein reasoned that no influence could propagate from the first object to the second instantaneously fast. Indeed, he argued, physics depends on being able to tell one thing apart from another, and such instantaneous influences would call that into question. Because the true \"physical condition\" of the second object could not be immediately altered by an action done to the first, Einstein concluded, the wavefunction could not be that true physical condition, only an incomplete description of it."
+                  - superscript [ref=f1e2267]:
+                    - link "[305]" [ref=f1e2268] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEHoward1990-314"
+                  - superscript [ref=f1e2269]:
+                    - link "[306]" [ref=f1e2270] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEHarriganSpekkens2010-315"
+                - paragraph [ref=f1e2271]:
+                  - text: A more famous version of this argument came in 1935, when Einstein published a paper with
+                  - link "Boris Podolsky" [ref=f1e2272] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Boris_Podolsky
+                  - text: and
+                  - link "Nathan Rosen" [ref=f1e2273] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Nathan_Rosen
+                  - text: that laid out what would become known as the
+                  - link "EPR paradox" [ref=f1e2274] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/EPR_paradox
+                  - text: .
+                  - superscript [ref=f1e2275]:
+                    - link "[307]" [ref=f1e2276] [cursor=pointer]:
+                      - /url: "#cite_note-316"
+                  - text: In this thought experiment, two particles interact in such a way that the wavefunction describing them is entangled. Then, no matter how far the two particles were separated, a precise position measurement on one particle would imply the ability to predict, perfectly, the result of measuring the position of the other particle. Likewise, a precise momentum measurement of one particle would result in an equally precise prediction for the momentum of the other particle, without needing to disturb the other particle in any way. They argued that no action taken on the first particle could instantaneously affect the other, since this would involve information being transmitted faster than light, which is forbidden by the
+                  - link "theory of relativity" [ref=f1e2277] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Theory_of_relativity
+                  - text: ". They invoked a principle, later known as the \"EPR criterion of reality\", positing that: \"If, without in any way disturbing a system, we can predict with certainty (i.e., with"
+                  - link "probability" [ref=f1e2278] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Probability
+                  - text: equal to unity) the value of a physical quantity, then there exists an element of reality corresponding to that quantity." From this, they inferred that the second particle must have a definite value of both position and of momentum prior to either quantity being measured. But quantum mechanics considers these two observables
+                  - link "incompatible" [ref=f1e2279] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Observable#Incompatibility_of_observables_in_quantum_mechanics
+                  - text: and thus does not associate simultaneous values for both to any system. Einstein, Podolsky, and Rosen therefore concluded that quantum theory does not provide a complete description of reality.
+                  - superscript [ref=f1e2280]:
+                    - link "[308]" [ref=f1e2281] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEPeres2002-317"
+                - paragraph [ref=f1e2282]:
+                  - text: In 1964,
+                  - link "John Stewart Bell" [ref=f1e2283] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/John_Stewart_Bell
+                  - text: carried the analysis of quantum entanglement much further. He deduced that if measurements are performed independently on the two separated particles of an entangled pair, then the assumption that the outcomes depend upon hidden variables within each half implies a mathematical constraint on how the outcomes on the two measurements are correlated. This constraint would later be called a
+                  - link "Bell inequality" [ref=f1e2284] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Bell_inequality
+                  - text: . Bell then showed that quantum physics predicts correlations that violate this inequality. Consequently, the only way that hidden variables could explain the predictions of quantum physics is if they are "nonlocal", which is to say that somehow the two particles are able to interact instantaneously no matter how widely they ever become separated.
+                  - superscript [ref=f1e2285]:
+                    - link "[309]" [ref=f1e2286] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEMermin1993-318"
+                  - superscript [ref=f1e2287]:
+                    - link "[310]" [ref=f1e2288] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEPenrose2007-319"
+                  - text: Bell argued that because an explanation of quantum phenomena in terms of hidden variables would require nonlocality, the EPR paradox "is resolved in the way which Einstein would have liked least".
+                  - superscript [ref=f1e2289]:
+                    - link "[311]" [ref=f1e2290] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEBell1966-320"
+                - paragraph [ref=f1e2291]:
+                  - text: Despite this, and although Einstein personally found the argument in the EPR paper overly complicated,
+                  - superscript [ref=f1e2292]:
+                    - link "[305]" [ref=f1e2293] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEHoward1990-314"
+                  - superscript [ref=f1e2294]:
+                    - link "[306]" [ref=f1e2295] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEHarriganSpekkens2010-315"
+                  - text: that paper became among the most influential papers published in
+                  - link "Physical Review" [ref=f1e2297] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Physical_Review
+                  - text: . It is considered a centerpiece of the development of
+                  - link "quantum information theory" [ref=f1e2298] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Quantum_information_theory
+                  - text: .
+                  - superscript [ref=f1e2299]:
+                    - link "[312]" [ref=f1e2300] [cursor=pointer]:
+                      - /url: "#cite_note-FOOTNOTEFine2017-321"
+            - region "Unified field theory" [ref=f1e2301]:
+              - heading "Unified field theory" [level=3] [ref=f1e2303]
+              - note [ref=f1e2304]:
+                - text: "Main article:"
+                - link "Classical unified field theories" [ref=f1e2305] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Classical_unified_field_theories
+              - paragraph [ref=f1e2306]:
+                - text: Encouraged by his success with general relativity, Einstein sought an even more ambitious geometrical theory that would treat gravitation and electromagnetism as aspects of a single entity. In 1950, he described his
+                - link "unified field theory" [ref=f1e2307] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Unified_field_theory
+                - text: in a
+                - link "Scientific American" [ref=f1e2309] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Scientific_American
+                - text: article titled "On the Generalized Theory of Gravitation".
+                - superscript [ref=f1e2310]:
+                  - link "[313]" [ref=f1e2311] [cursor=pointer]:
+                    - /url: "#cite_note-322"
+                - text: "His attempt to find the most fundamental laws of nature won him praise but not success: a particularly conspicuous blemish of his model was that it did not accommodate the"
+                - link "strong" [ref=f1e2312] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Strong_nuclear_force
+                - text: and
+                - link "weak nuclear forces" [ref=f1e2313] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Weak_nuclear_force
+                - text: ", neither of which was well understood until many years after his death. Although most researchers now believe that Einstein's approach to unifying physics was mistaken, his goal of a"
+                - link "theory of everything" [ref=f1e2314] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Theory_of_everything
+                - text: is one to which his successors still aspire.
+                - superscript [ref=f1e2315]:
+                  - link "[314]" [ref=f1e2316] [cursor=pointer]:
+                    - /url: "#cite_note-323"
+            - region "Other investigations" [ref=f1e2317]:
+              - heading "Other investigations" [level=3] [ref=f1e2319]
+              - note [ref=f1e2320]:
+                - text: "Main article:"
+                - link "Einstein's unsuccessful investigations" [ref=f1e2321] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Einstein's_unsuccessful_investigations
+              - paragraph [ref=f1e2322]:
+                - text: Einstein conducted other investigations that were unsuccessful and abandoned. These pertain to
+                - link "force" [ref=f1e2323] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Force
+                - text: ","
+                - link "superconductivity" [ref=f1e2324] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Superconductivity
+                - text: ", and other research."
+            - region "Collaboration with other scientists" [ref=f1e2325]:
+              - heading "Collaboration with other scientists" [level=3] [ref=f1e2327]
+              - figure "The 1927 Solvay Conference in Brussels, a gathering of the world's top physicists. Einstein is in the center." [ref=f1e2328]:
+                - link [ref=f1e2329] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Solvay_conference_1927.jpg
+                - generic [ref=f1e2331]:
+                  - text: The 1927
+                  - link "Solvay Conference" [ref=f1e2332] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Solvay_Conference
+                  - text: in Brussels, a gathering of the world's top physicists. Einstein is in the center.
+              - paragraph [ref=f1e2333]:
+                - text: In addition to longtime collaborators
+                - link "Leopold Infeld" [ref=f1e2334] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Leopold_Infeld
+                - text: ","
+                - link "Nathan Rosen" [ref=f1e2335] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Nathan_Rosen
+                - text: ","
+                - link "Peter Bergmann" [ref=f1e2336] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Peter_Bergmann
+                - text: and others, Einstein also had some one-shot collaborations with various scientists.
+              - region "Einstein–de Haas experiment" [ref=f1e2337]:
+                - heading "Einstein–de Haas experiment" [level=4] [ref=f1e2339]
+                - note [ref=f1e2340]:
+                  - text: "Main article:"
+                  - link "Einstein–de Haas effect" [ref=f1e2341] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein–de_Haas_effect
+                - paragraph [ref=f1e2342]:
+                  - text: In 1908,
+                  - link "Owen Willans Richardson" [ref=f1e2343] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Owen_Willans_Richardson
+                  - text: predicted that a change in the
+                  - link "magnetic moment" [ref=f1e2344] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Magnetic_moment
+                  - text: of a free body will cause this body to rotate. This effect is a consequence of the
+                  - link "conservation of angular momentum" [ref=f1e2345] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Conservation_of_angular_momentum
+                  - text: and is strong enough to be observable in
+                  - link "ferromagnetic materials" [ref=f1e2346] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Ferromagnetic_materials
+                  - text: .
+                  - superscript [ref=f1e2347]:
+                    - link "[315]" [ref=f1e2348] [cursor=pointer]:
+                      - /url: "#cite_note-Richardson-1908-324"
+                  - text: Einstein and
+                  - link "Wander Johannes de Haas" [ref=f1e2349] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Wander_Johannes_de_Haas
+                  - text: published two papers in 1915 claiming the first experimental observation of the effect.
+                  - superscript [ref=f1e2350]:
+                    - link "[316]" [ref=f1e2351] [cursor=pointer]:
+                      - /url: "#cite_note-EdH-1-1915-325"
+                  - superscript [ref=f1e2352]:
+                    - link "[317]" [ref=f1e2353] [cursor=pointer]:
+                      - /url: "#cite_note-EdH-2-1915-326"
+                  - text: Measurements of this kind demonstrate that the phenomenon of
+                  - link "magnetization" [ref=f1e2354] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Magnetization
+                  - text: is caused by the alignment (
+                  - link "polarization" [ref=f1e2355] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Spin_polarization
+                  - text: ) of the
+                  - link "angular momenta" [ref=f1e2356] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Angular_momenta
+                  - text: of the
+                  - link "electrons" [ref=f1e2357] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Electron
+                  - text: "in the material along the axis of magnetization. These measurements also allow the separation of the two contributions to the magnetization: that which is associated with the"
+                  - link "spin" [ref=f1e2358] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Spin_(physics)
+                  - text: and with the orbital motion of the electrons. The Einstein-de Haas experiment is the only experiment conceived, realized and published by Albert Einstein himself.
+                - paragraph [ref=f1e2359]:
+                  - text: A complete original version of the Einstein-de Haas experimental equipment was donated by
+                  - link "Geertruida de Haas-Lorentz" [ref=f1e2360] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Geertruida_de_Haas-Lorentz
+                  - text: ", wife of de Haas and daughter of Lorentz, to the"
+                  - link "Ampère Museum" [ref=f1e2361] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Ampère_Museum
+                  - text: in Lyon France in 1961 where it is currently on display. It was lost among the museum's holdings and was rediscovered in 2023.
+                  - superscript [ref=f1e2362]:
+                    - link "[318]" [ref=f1e2363] [cursor=pointer]:
+                      - /url: "#cite_note-327"
+                  - superscript [ref=f1e2364]:
+                    - link "[319]" [ref=f1e2365] [cursor=pointer]:
+                      - /url: "#cite_note-328"
+              - region "Einstein as an inventor" [ref=f1e2366]:
+                - heading "Einstein as an inventor" [level=4] [ref=f1e2368]
+                - paragraph [ref=f1e2369]:
+                  - text: In 1926, Einstein and his former student
+                  - link "Leó Szilárd" [ref=f1e2370] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Leó_Szilárd
+                  - text: co-invented (and in 1930, patented) the
+                  - link "Einstein refrigerator" [ref=f1e2371] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Einstein_refrigerator
+                  - text: . This
+                  - link "absorption refrigerator" [ref=f1e2372] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Absorption_refrigerator
+                  - text: was then revolutionary for having no moving parts and using only heat as an input.
+                  - superscript [ref=f1e2373]:
+                    - link "[320]" [ref=f1e2374] [cursor=pointer]:
+                      - /url: "#cite_note-Goettling-329"
+                  - text: On 11 November 1930, U.S. patent 1,781,541 was awarded to Einstein and Leó Szilárd for the refrigerator. Their invention was not immediately put into commercial production, but the most promising of their patents were acquired by the Swedish company
+                  - link "Electrolux" [ref=f1e2375] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Electrolux
+                  - text: .
+                  - superscript [ref=f1e2376]:
+                    - link "[note 7]" [ref=f1e2377] [cursor=pointer]:
+                      - /url: "#cite_note-331"
+                - paragraph [ref=f1e2378]:
+                  - text: Einstein also invented an electromagnetic pump,
+                  - superscript [ref=f1e2379]:
+                    - link "[322]" [ref=f1e2380] [cursor=pointer]:
+                      - /url: "#cite_note-patents.google.com-332"
+                  - text: sound reproduction device,
+                  - superscript [ref=f1e2381]:
+                    - link "[323]" [ref=f1e2382] [cursor=pointer]:
+                      - /url: "#cite_note-333"
+                  - text: and several other household devices.
+                  - superscript [ref=f1e2383]:
+                    - link "[324]" [ref=f1e2384] [cursor=pointer]:
+                      - /url: "#cite_note-334"
+          - region "Legacy" [ref=f1e2385]:
+            - heading "Legacy" [level=2] [ref=f1e2387]
+            - region "Non-scientific" [ref=f1e2388]:
+              - heading "Non-scientific" [level=3] [ref=f1e2390]
+              - 'figure "Left-right: Heinrich Goldschmidt, Einstein, Ole Colbjørnsen, Jørgen Vogt, and Ilse Einstein at a picnic in Oslo in 1920." [ref=f1e2391]':
+                - link [ref=f1e2392] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/File:Einstein-Oslofjord_(cropped).jpg
+                - generic [ref=f1e2394]:
+                  - text: "Left-right:"
+                  - link "Heinrich Goldschmidt" [ref=f1e2395] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Heinrich_Jacob_Goldschmidt
+                  - text: ", Einstein,"
+                  - link "Ole Colbjørnsen" [ref=f1e2396] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Ole_Colbjørnsen
+                  - text: ","
+                  - link "Jørgen Vogt" [ref=f1e2397] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Jørgen_Vogt
+                  - text: ", and Ilse Einstein at a picnic in Oslo in 1920."
+              - paragraph [ref=f1e2398]:
+                - text: While traveling, Einstein wrote daily to his wife Elsa and adopted stepdaughters Margot and Ilse. The letters were included in the papers bequeathed to the
+                - link "Hebrew University of Jerusalem" [ref=f1e2399] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Hebrew_University_of_Jerusalem
+                - text: . Margot Einstein permitted the personal letters to be made available to the public, but requested that it not be done until twenty years after her death (she died in 1986
+                - superscript [ref=f1e2400]:
+                  - link "[325]" [ref=f1e2401] [cursor=pointer]:
+                    - /url: "#cite_note-margot-obituary-335"
+                - text: ). Barbara Wolff, of the Hebrew University's
+                - link "Albert Einstein Archives" [ref=f1e2402] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Albert_Einstein_Archives
+                - text: ", told the"
+                - link "BBC" [ref=f1e2403] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/BBC
+                - text: that there are about 3,500 pages of private correspondence written between 1912 and 1955.
+                - superscript [ref=f1e2404]:
+                  - link "[326]" [ref=f1e2405] [cursor=pointer]:
+                    - /url: "#cite_note-letters-love-336"
+              - paragraph [ref=f1e2406]:
+                - text: In his final four years, Einstein was involved with the establishment of the
+                - link "Albert Einstein College of Medicine" [ref=f1e2407] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Albert_Einstein_College_of_Medicine
+                - text: in New York City.
+                - superscript [ref=f1e2408]:
+                  - link "[327]" [ref=f1e2409] [cursor=pointer]:
+                    - /url: "#cite_note-337"
+              - paragraph [ref=f1e2410]:
+                - text: In 1979, the
+                - link "Albert Einstein Memorial" [ref=f1e2411] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Albert_Einstein_Memorial
+                - text: was unveiled outside the
+                - link "National Academy of Sciences" [ref=f1e2412] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/National_Academy_of_Sciences
+                - text: building in
+                - link "Washington, D.C." [ref=f1e2413] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Washington,_D.C.
+                - text: for the Einstein centenary. It was sculpted by
+                - link "Robert Berks" [ref=f1e2414] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Robert_Berks
+                - text: ". Einstein can be seen holding a paper with three of his most important equations: for the"
+                - link "photoelectric effect" [ref=f1e2415] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Photoelectric_effect
+                - text: ","
+                - link "general relativity" [ref=f1e2416] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/General_relativity
+                - text: and
+                - link "mass-energy equivalence" [ref=f1e2417] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mass-energy_equivalence
+                - text: .
+                - superscript [ref=f1e2418]:
+                  - link "[328]" [ref=f1e2419] [cursor=pointer]:
+                    - /url: "#cite_note-338"
+              - paragraph [ref=f1e2420]:
+                - text: Einstein's
+                - link "right of publicity" [ref=f1e2421] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Right_of_publicity
+                - text: was litigated in 2015 in a federal district court in California. Although the court initially held that the right had expired,
+                - superscript [ref=f1e2422]:
+                  - link "[329]" [ref=f1e2423] [cursor=pointer]:
+                    - /url: "#cite_note-casetext-hebrew-university-339"
+                - text: that ruling was immediately appealed, and the decision was later vacated in its entirety. The underlying claims between the parties in that lawsuit were ultimately settled. The right is enforceable, and the Hebrew University of Jerusalem is the exclusive representative of that right.
+                - superscript [ref=f1e2424]:
+                  - link "[330]" [ref=f1e2425] [cursor=pointer]:
+                    - /url: "#cite_note-pacermonitor-hebrew-university-340"
+                - link "Corbis" [ref=f1e2426] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Branded_Entertainment_Network
+                - text: ", successor to The Roger Richman Agency, licenses the"
+                - link "use of his name and associated imagery" [ref=f1e2427] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Trademark
+                - text: ", as agent for the university."
+                - superscript [ref=f1e2428]:
+                  - link "[331]" [ref=f1e2429] [cursor=pointer]:
+                    - /url: "#cite_note-einstein.biz-341"
+              - paragraph [ref=f1e2430]:
+                - link "Mount Einstein" [ref=f1e2431] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Mount_Einstein
+                - text: in the
+                - link "Chugach Mountains" [ref=f1e2432] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Chugach_Mountains
+                - text: of
+                - link "Alaska" [ref=f1e2433] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Alaska
+                - text: was named in 1955. Mount Einstein in New Zealand's
+                - link "Paparoa Range" [ref=f1e2434] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Paparoa_Range
+                - text: was named after him in 1970 by the
+                - link "Department of Scientific and Industrial Research" [ref=f1e2435] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Department_of_Scientific_and_Industrial_Research_(New_Zealand)
+                - text: .
+                - superscript [ref=f1e2436]:
+                  - link "[332]" [ref=f1e2437] [cursor=pointer]:
+                    - /url: "#cite_note-342"
+              - paragraph [ref=f1e2438]:
+                - text: In 1999, Einstein was named
+                - link "Time" [ref=f1e2439] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Time_(magazine)
+                - text: "'s"
+                - link "Person of the Century" [ref=f1e2440] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Time_100:_The_Most_Important_People_of_the_Century
+                - text: .
+                - superscript [ref=f1e2441]:
+                  - link "[16]" [ref=f1e2442] [cursor=pointer]:
+                    - /url: "#cite_note-TIME-18"
+            - region "Scientific recognition" [ref=f1e2443]:
+              - heading "Scientific recognition" [level=3] [ref=f1e2445]
+              - paragraph [ref=f1e2446]:
+                - text: In 1999, a survey of the top 100 physicists voted for Einstein as the "greatest physicist ever", while a parallel survey of rank-and-file physicists gave the top spot to
+                - link "Isaac Newton" [ref=f1e2447] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Isaac_Newton
+                - text: ", with Einstein second."
+                - superscript [ref=f1e2448]:
+                  - link "[333]" [ref=f1e2449] [cursor=pointer]:
+                    - /url: "#cite_note-343"
+                - superscript [ref=f1e2450]:
+                  - link "[334]" [ref=f1e2451] [cursor=pointer]:
+                    - /url: "#cite_note-344"
+              - paragraph [ref=f1e2452]:
+                - text: The physicist
+                - link "Lev Landau" [ref=f1e2453] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Lev_Landau
+                - text: ranked physicists from 0 to 5 on a
+                - link "logarithmic scale" [ref=f1e2454] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Lev_Landau#Landau's_ranking_of_physicists
+                - text: of productivity and genius, with Newton receiving the highest ranking of 0, followed by Einstein with 0.5, while fathers of quantum mechanics such as
+                - link "Paul Dirac" [ref=f1e2455] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Paul_Dirac
+                - text: ","
+                - link "Niels Bohr" [ref=f1e2456] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Niels_Bohr
+                - text: ", and"
+                - link "Werner Heisenberg" [ref=f1e2457] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Werner_Heisenberg
+                - text: were ranked 1, with Landau himself a 2.
+                - superscript [ref=f1e2458]:
+                  - link "[335]" [ref=f1e2459] [cursor=pointer]:
+                    - /url: "#cite_note-345"
+                - superscript [ref=f1e2460]:
+                  - link "[336]" [ref=f1e2461] [cursor=pointer]:
+                    - /url: "#cite_note-346"
+              - paragraph [ref=f1e2462]:
+                - text: Science writer John G. Simmons ranked Einstein second after Newton in The Scientific 100, based on a qualitative assessment in which he ordered the scientists according to overall influence, and noted that the work of Einstein "forms the source of twentieth-century physics".
+                - superscript [ref=f1e2463]:
+                  - link "[337]" [ref=f1e2464] [cursor=pointer]:
+                    - /url: "#cite_note-347"
+              - paragraph [ref=f1e2465]:
+                - text: Physicist
+                - link "Eugene Wigner" [ref=f1e2466] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Eugene_Wigner
+                - text: noted that while
+                - link "John von Neumann" [ref=f1e2467] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/John_von_Neumann
+                - text: "had the quickest and most acute mind he ever knew, it was Einstein who had the more penetrating and original mind of the two, stating that:"
+                - superscript [ref=f1e2468]:
+                  - link "[338]" [ref=f1e2469] [cursor=pointer]:
+                    - /url: "#cite_note-348"
+              - blockquote [ref=f1e2470]:
+                - paragraph [ref=f1e2471]: But Einstein's understanding was deeper than even Jancsi von Neumann's. His mind was both more penetrating and more original than von Neumann's. And that is a very remarkable statement. Einstein took an extraordinary pleasure in invention. Two of his greatest inventions are the Special and General Theories of Relativity; and for all of Jancsi's brilliance, he never produced anything so original. No modern physicist has.
+              - paragraph [ref=f1e2472]:
+                - text: The
+                - link "International Union of Pure and Applied Physics" [ref=f1e2473] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Physics
+                - text: declared 2005 the "
+                - link "World Year of Physics" [ref=f1e2474] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/World_Year_of_Physics_2005
+                - text: "\", also known as \"Einstein Year\", in recognition of Einstein's \""
+                - link "miracle year" [ref=f1e2475] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Annus_mirabilis#1905_–_Albert_Einstein
+                - text: "\" in 1905."
+                - superscript [ref=f1e2476]:
+                  - link "[339]" [ref=f1e2477] [cursor=pointer]:
+                    - /url: "#cite_note-349"
+                - text: It was also declared the "International Year of Physics" by the
+                - link "United Nations" [ref=f1e2478] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/United_Nations
+                - text: .
+                - superscript [ref=f1e2479]:
+                  - link "[340]" [ref=f1e2480] [cursor=pointer]:
+                    - /url: "#cite_note-350"
+          - region "In popular culture" [ref=f1e2481]:
+            - heading "In popular culture" [level=2] [ref=f1e2483]
+            - note [ref=f1e2484]:
+              - text: "Main article:"
+              - link "Albert Einstein in popular culture" [ref=f1e2485] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Albert_Einstein_in_popular_culture
+            - figure "The famous image of Einstein taken by Arthur Sasse in 1951, sitting in a car on his 72nd birthday, having been asked to smile for the camera once again." [ref=f1e2486]:
+              - link [ref=f1e2487] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:Albert_Einstein_sticks_his_tongue.jpg
+              - generic [ref=f1e2489]:
+                - text: The famous image of Einstein taken by
+                - link "Arthur Sasse" [ref=f1e2490] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Arthur_Sasse
+                - text: in 1951, sitting in a car on his 72nd birthday, having been asked to smile for the camera once again.
+            - paragraph [ref=f1e2491]:
+              - text: Einstein became one of the most famous
+              - link "scientific celebrities" [ref=f1e2492] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Scientific_celebrity
+              - text: after the confirmation of his general theory of relativity in 1919.
+              - superscript [ref=f1e2493]:
+                - link "[341]" [ref=f1e2494] [cursor=pointer]:
+                  - /url: "#cite_note-351"
+              - superscript [ref=f1e2495]:
+                - link "[342]" [ref=f1e2496] [cursor=pointer]:
+                  - /url: "#cite_note-352"
+              - superscript [ref=f1e2497]:
+                - link "[343]" [ref=f1e2498] [cursor=pointer]:
+                  - /url: "#cite_note-353"
+              - text: Although most of the public had little understanding of his work, he was widely recognized and admired. In the period before World War II,
+              - link "The New Yorker" [ref=f1e2500] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/The_New_Yorker
+              - text: "published a vignette in their \"The Talk of the Town\" feature saying that Einstein was so well known in America that he would be stopped on the street by people wanting him to explain \"that theory\". Eventually he came to cope with unwanted enquirers by pretending to be someone else: \"Pardon me, sorry! Always I am mistaken for Professor Einstein.\""
+              - superscript [ref=f1e2501]:
+                - link "[344]" [ref=f1e2502] [cursor=pointer]:
+                  - /url: "#cite_note-disguise-354"
+            - paragraph [ref=f1e2503]:
+              - text: Einstein has been the subject of or inspiration for many novels, films, plays, and works of music.
+              - superscript [ref=f1e2504]:
+                - link "[345]" [ref=f1e2505] [cursor=pointer]:
+                  - /url: "#cite_note-orchestra-355"
+              - text: He is a favorite model for depictions of
+              - link "absent-minded professors" [ref=f1e2506] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Absent-minded_professor
+              - text: ; his expressive face and distinctive hairstyle have been widely copied and exaggerated.
+              - link "Time" [ref=f1e2508] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Time_(magazine)
+              - text: magazine's Frederic Golden wrote that Einstein was "a cartoonist's dream come true".
+              - superscript [ref=f1e2509]:
+                - link "[346]" [ref=f1e2510] [cursor=pointer]:
+                  - /url: "#cite_note-slqbwn-356"
+              - text: His intellectual achievements and originality made Einstein broadly synonymous with genius.
+              - superscript [ref=f1e2511]:
+                - link "[347]" [ref=f1e2512] [cursor=pointer]:
+                  - /url: "#cite_note-wordnetweb.princeton.edu-357"
+              - text: A variety of commemorative coins have been issued worldwide by various countries to honor Albert Einstein's scientific contributions and legacy.
+            - paragraph [ref=f1e2513]:
+              - text: Many popular
+              - link "quotations" [ref=f1e2514] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Quotations
+              - text: are often
+              - link "misattributed" [ref=f1e2515] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/False_attribution
+              - text: to him.
+              - superscript [ref=f1e2516]:
+                - link "[348]" [ref=f1e2517] [cursor=pointer]:
+                  - /url: "#cite_note-fake-quotes-358"
+              - superscript [ref=f1e2518]:
+                - link "[349]" [ref=f1e2519] [cursor=pointer]:
+                  - /url: "#cite_note-humiliate-atheist-359"
+          - region "Awards and honors" [ref=f1e2520]:
+            - heading "Awards and honors" [level=2] [ref=f1e2522]
+            - note [ref=f1e2523]:
+              - text: For a more comprehensive list, see
+              - link "List of awards and honors received by Albert Einstein" [ref=f1e2524] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/List_of_awards_and_honors_received_by_Albert_Einstein
+              - text: .
+            - paragraph [ref=f1e2525]:
+              - text: Einstein received numerous awards and honors, and in 1922, he was awarded the 1921
+              - link "Nobel Prize in Physics" [ref=f1e2526] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Nobel_Prize_in_Physics
+              - text: "\"for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect\". The Nobel committee decided that none of the nominations in 1921 met the criteria set by"
+              - link "Alfred Nobel" [ref=f1e2527] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Alfred_Nobel
+              - text: ", so the 1921 prize was carried forward and awarded to Einstein in 1922."
+              - superscript [ref=f1e2528]:
+                - link "[7]" [ref=f1e2529] [cursor=pointer]:
+                  - /url: "#cite_note-Nobel_Prize-9"
+              - text: He was awarded the
+              - link "Prix Jules Janssen" [ref=f1e2530] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Prix_Jules_Janssen
+              - text: by the
+              - link "Société astronomique de France" [ref=f1e2531] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Société_astronomique_de_France
+              - text: in 1931.
+            - paragraph [ref=f1e2532]:
+              - link "Einsteinium" [ref=f1e2533] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Einsteinium
+              - text: ", a synthetic chemical element, was named in his honor in 1955, a few months after his death."
+              - superscript [ref=f1e2534]:
+                - link "[350]" [ref=f1e2535] [cursor=pointer]:
+                  - /url: "#cite_note-360"
+          - region "Publications" [ref=f1e2536]:
+            - heading "Publications" [level=2] [ref=f1e2538]
+            - region "Scientific" [ref=f1e2539]:
+              - heading "Scientific" [level=3] [ref=f1e2541]
+              - note [ref=f1e2542]:
+                - text: "Further information:"
+                - link "List of scientific publications by Albert Einstein" [ref=f1e2543] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_scientific_publications_by_Albert_Einstein
+              - list [ref=f1e2545]:
+                - listitem [ref=f1e2546]:
+                  - generic [ref=f1e2547]:
+                    - text: Einstein, Albert (1901) [Completed 13 December 1900 and manuscript received 16 December 1900]. Written at Zurich, Switzerland.
+                    - link "Paul Karl Ludwig Drude" [ref=f1e2548] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Paul_Karl_Ludwig_Drude
+                    - text: (ed.).
+                    - link "\"Folgerungen aus den Capillaritätserscheinungen\"" [ref=f1e2549] [cursor=pointer]:
+                      - /url: https://zenodo.org/record/1423995
+                    - text: "[Conclusions Drawn from the Phenomena of Capillarity]."
+                    - link "Annalen der Physik" [ref=f1e2551] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Annalen_der_Physik
+                    - text: ". Vierte Folge (in German). 4 (all series: 309) (3). Leipzig, Germany: Verlag von Johann Ambrosius Barth (published 1 March 1901): 513–523."
+                    - link "Bibcode" [ref=f1e2552] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1901AnP...309..513E" [ref=f1e2553] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1901AnP...309..513E
+                    - text: .
+                    - link "doi" [ref=f1e2554] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1002/andp.19013090306" [ref=f1e2555] [cursor=pointer]:
+                      - /url: https://doi.org/10.1002%2Fandp.19013090306
+                    - text: – via Wiley Online Library, Hoboken, New Jersey, US (March 2006).
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Annalen+der+Physik&rft.atitle=Folgerungen+aus+den+Capillarit%C3%A4tserscheinungen&rft.volume=4+%28all+series%3A+309%29&rft.issue=3&rft.pages=513-523&rft.date=1901&rft_id=info%3Adoi%2F10.1002%2Fandp.19013090306&rft_id=info%3Abibcode%2F1901AnP...309..513E&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=https%3A%2F%2Fzenodo.org%2Frecord%2F1423995&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2556]:
+                  - generic [ref=f1e2557]:
+                    - text: Einstein, Albert (1905a) [Completed 17 March 1905 and submitted 18 March 1905]. Written at Berne, Switzerland.
+                    - link "Paul Karl Ludwig Drude" [ref=f1e2558] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Paul_Karl_Ludwig_Drude
+                    - text: (ed.).
+                    - link "\"Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt\"" [ref=f1e2559] [cursor=pointer]:
+                      - /url: http://www.physik.uni-augsburg.de/annalen/history/einstein-papers/1905_17_132-148.pdf
+                    - text: "[On a Heuristic Viewpoint Concerning the Production and Transformation of Light] (PDF)."
+                    - link "Annalen der Physik" [ref=f1e2561] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Annalen_der_Physik
+                    - text: ". Vierte Folge (in German). 17 (all series: 322) (6). Leipzig, Germany: Verlag von Johann Ambrosius Barth (published 9 June 1905): 132–148."
+                    - link "Bibcode" [ref=f1e2562] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1905AnP...322..132E" [ref=f1e2563] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1905AnP...322..132E
+                    - text: .
+                    - link "doi" [ref=f1e2564] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1002/andp.19053220607" [ref=f1e2565] [cursor=pointer]:
+                      - /url: https://doi.org/10.1002%2Fandp.19053220607
+                    - text: – via Wiley Online Library, Hoboken, New Jersey, US (10 March 2006).
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Annalen+der+Physik&rft.atitle=%C3%9Cber+einen+die+Erzeugung+und+Verwandlung+des+Lichtes+betreffenden+heuristischen+Gesichtspunkt&rft.volume=17+%28all+series%3A+322%29&rft.issue=6&rft.pages=132-148&rft.date=1905&rft_id=info%3Adoi%2F10.1002%2Fandp.19053220607&rft_id=info%3Abibcode%2F1905AnP...322..132E&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=http%3A%2F%2Fwww.physik.uni-augsburg.de%2Fannalen%2Fhistory%2Feinstein-papers%2F1905_17_132-148.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2566]:
+                  - generic [ref=f1e2567]:
+                    - text: Einstein, Albert (1905b) [Completed 30 April 1905].
+                    - link "Eine neue Bestimmung der Moleküldimensionen" [ref=f1e2568] [cursor=pointer]:
+                      - /url: https://www.research-collection.ethz.ch/bitstream/20.500.11850/139872/1/eth-30378-01.pdf
+                    - text: "[A new determination of molecular dimensions] (PDF)."
+                    - generic [ref=f1e2569]:
+                      - text: Dissertationen
+                      - link "Universität Zürich" [ref=f1e2570] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Universität_Zürich
+                    - text: "(PhD Thesis) (in German). Berne, Switzerland: Wyss Buchdruckerei (published 20 July 1905)."
+                    - link "doi" [ref=f1e2571] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.3929/ethz-a-000565688" [ref=f1e2572] [cursor=pointer]:
+                      - /url: https://doi.org/10.3929%2Fethz-a-000565688
+                    - text: .
+                    - link "hdl" [ref=f1e2573] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Hdl_(identifier)
+                    - text: ":"
+                    - link "20.500.11850/139872" [ref=f1e2574] [cursor=pointer]:
+                      - /url: https://hdl.handle.net/20.500.11850%2F139872
+                    - text: – via
+                    - link "ETH" [ref=f1e2575] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ETH
+                    - text: Bibliothek, Zürich (2008).
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&rft.title=Eine+neue+Bestimmung+der+Molek%C3%BCldimensionen&rft.inst=Wyss+Buchdruckerei&rft.date=1905&rft_id=info%3Ahdl%2F20.500.11850%2F139872&rft_id=info%3Adoi%2F10.3929%2Fethz-a-000565688&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=https%3A%2F%2Fwww.research-collection.ethz.ch%2Fbitstream%2F20.500.11850%2F139872%2F1%2Feth-30378-01.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2576]:
+                  - generic [ref=f1e2577]:
+                    - text: "Einstein, Albert (1905c) [Manuscript received: 11 May 1905]. Written at Berne, Switzerland."
+                    - link "Paul Karl Ludwig Drude" [ref=f1e2578] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Paul_Karl_Ludwig_Drude
+                    - text: (ed.).
+                    - link "\"Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen\"" [ref=f1e2579] [cursor=pointer]:
+                      - /url: http://sedici.unlp.edu.ar/handle/10915/2785
+                    - text: "[On the Motion– Required by the Molecular Kinetic Theory of Heat– of Small Particles Suspended in a Stationary Liquid]."
+                    - link "Annalen der Physik" [ref=f1e2583] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Annalen_der_Physik
+                    - text: ". Vierte Folge (in German). 17 (all series: 322) (8). Leipzig, Germany: Verlag von Johann Ambrosius Barth (published 18 July 1905): 549–560."
+                    - link "Bibcode" [ref=f1e2584] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1905AnP...322..549E" [ref=f1e2585] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1905AnP...322..549E
+                    - text: .
+                    - link "doi" [ref=f1e2586] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2587]:
+                      - link "10.1002/andp.19053220806" [ref=f1e2588] [cursor=pointer]:
+                        - /url: https://doi.org/10.1002%2Fandp.19053220806
+                    - text: .
+                    - link "hdl" [ref=f1e2589] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Hdl_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2590]:
+                      - link "10915/2785" [ref=f1e2591] [cursor=pointer]:
+                        - /url: https://hdl.handle.net/10915%2F2785
+                    - text: – via Wiley Online Library, Hoboken, New Jersey, US (10 March 2006).
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Annalen+der+Physik&rft.atitle=%C3%9Cber+die+von+der+molekularkinetischen+Theorie+der+W%C3%A4rme+geforderte+Bewegung+von+in+ruhenden+Fl%C3%BCssigkeiten+suspendierten+Teilchen&rft.volume=17+%28all+series%3A+322%29&rft.issue=8&rft.pages=549-560&rft.date=1905&rft_id=info%3Ahdl%2F10915%2F2785&rft_id=info%3Adoi%2F10.1002%2Fandp.19053220806&rft_id=info%3Abibcode%2F1905AnP...322..549E&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=http%3A%2F%2Fsedici.unlp.edu.ar%2Fhandle%2F10915%2F2785&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2592]:
+                  - generic [ref=f1e2593]:
+                    - text: Einstein, Albert (1905d) [Manuscript received 30 June 1905]. Written at Berne, Switzerland.
+                    - link "Paul Karl Ludwig Drude" [ref=f1e2594] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Paul_Karl_Ludwig_Drude
+                    - text: (ed.).
+                    - generic "s:de:Zur Elektrodynamik bewegter Körper" [ref=f1e2595]:
+                      - link "\"Zur Elektrodynamik bewegter Körper\"" [ref=f1e2596] [cursor=pointer]:
+                        - /url: https://en.wikisource.org/wiki/de:Zur_Elektrodynamik_bewegter_K%C3%B6rper
+                    - text: "[On the Electrodynamics of Moving Bodies]."
+                    - link "Annalen der Physik" [ref=f1e2598] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Annalen_der_Physik
+                    - text: "(Submitted manuscript). Vierte Folge (in German). 17 (all series: 322) (10). Leipzig, Germany: Verlag von Johann Ambrosius Barth (published 26 September 1905): 891–921."
+                    - link "Bibcode" [ref=f1e2599] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1905AnP...322..891E" [ref=f1e2600] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1905AnP...322..891E
+                    - text: .
+                    - link "doi" [ref=f1e2601] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2602]:
+                      - link "10.1002/andp.19053221004" [ref=f1e2603] [cursor=pointer]:
+                        - /url: https://doi.org/10.1002%2Fandp.19053221004
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Annalen+der+Physik&rft.atitle=Zur+Elektrodynamik+bewegter+K%C3%B6rper&rft.volume=17+%28all+series%3A+322%29&rft.issue=10&rft.pages=891-921&rft.date=1905&rft_id=info%3Adoi%2F10.1002%2Fandp.19053221004&rft_id=info%3Abibcode%2F1905AnP...322..891E&rft.aulast=Einstein&rft.aufirst=Albert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2604]:
+                  - generic [ref=f1e2605]:
+                    - text: Einstein, Albert (1905e) [Manuscript received 27 September 1905]. Written at Berne, Switzerland.
+                    - link "Paul Karl Ludwig Drude" [ref=f1e2606] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Paul_Karl_Ludwig_Drude
+                    - text: (ed.).
+                    - generic "s:de:Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?" [ref=f1e2607]:
+                      - link "\"Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?\"" [ref=f1e2608] [cursor=pointer]:
+                        - /url: https://en.wikisource.org/wiki/de:Ist_die_Tr%C3%A4gheit_eines_K%C3%B6rpers_von_seinem_Energieinhalt_abh%C3%A4ngig%3F
+                    - text: "[Does the Inertia of a Body Depend Upon Its Energy Content?]."
+                    - link "Annalen der Physik" [ref=f1e2610] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Annalen_der_Physik
+                    - text: ". Vierte Folge (in German). 18 (all series: 323) (13). Leipzig, Germany: Verlag von Johann Ambrosius Barth (published 21 November 1905): 639–641."
+                    - link "Bibcode" [ref=f1e2611] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1905AnP...323..639E" [ref=f1e2612] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1905AnP...323..639E
+                    - text: .
+                    - link "doi" [ref=f1e2613] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2614]:
+                      - link "10.1002/andp.19053231314" [ref=f1e2615] [cursor=pointer]:
+                        - /url: https://doi.org/10.1002%2Fandp.19053231314
+                    - text: – via Wiley Online Library, Hoboken, New Jersey, US (10 March 2006).
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Annalen+der+Physik&rft.atitle=Ist+die+Tr%C3%A4gheit+eines+K%C3%B6rpers+von+seinem+Energieinhalt+abh%C3%A4ngig%3F&rft.volume=18+%28all+series%3A+323%29&rft.issue=13&rft.pages=639-641&rft.date=1905&rft_id=info%3Adoi%2F10.1002%2Fandp.19053231314&rft_id=info%3Abibcode%2F1905AnP...323..639E&rft.aulast=Einstein&rft.aufirst=Albert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2616]:
+                  - generic [ref=f1e2617]:
+                    - text: Einstein, Albert (1915) [Completed 25 November 1915].
+                    - generic "s:de:Die Feldgleichungen der Gravitation" [ref=f1e2618]:
+                      - link "\"Die Feldgleichungen der Gravitation\"" [ref=f1e2619] [cursor=pointer]:
+                        - /url: https://en.wikisource.org/wiki/de:Die_Feldgleichungen_der_Gravitation
+                    - text: "[The Field Equations of Gravitation]. Sitzungsberichte 1915 (in German). Berlin, Germany:"
+                    - link "Königlich Preussische Akademie der Wissenschaften" [ref=f1e2620] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Prussian_Academy_of_Sciences
+                    - text: "(published 2 December 1915): 844–847."
+                    - link "Bibcode" [ref=f1e2621] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1915SPAW.......844E" [ref=f1e2622] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1915SPAW.......844E
+                    - text: .
+                    - link "doi" [ref=f1e2623] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2624]:
+                      - link "10.48644/1800481667" [ref=f1e2625] [cursor=pointer]:
+                        - /url: https://doi.org/10.48644%2F1800481667
+                    - text: – via Collections
+                    - link "Max Planck Institute" [ref=f1e2626] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Max_Planck_Institute
+                    - text: for the History of Science.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Sitzungsberichte+1915&rft.atitle=Die+Feldgleichungen+der+Gravitation&rft.pages=844-847&rft.date=1915&rft_id=info%3Adoi%2F10.48644%2F1800481667&rft_id=info%3Abibcode%2F1915SPAW.......844E&rft.aulast=Einstein&rft.aufirst=Albert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2627]:
+                  - generic [ref=f1e2628]:
+                    - text: Einstein, Albert (1916) [Issued 29 June 1916].
+                    - link "\"Näherungsweise Integration der Feldgleichungen der Gravitation\"" [ref=f1e2629] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1916SPAW.......688E
+                    - text: "[Approximate integration of the field equations of gravitation] (Online page images). Sitzungsberichte 1916. Berlin, Germany:"
+                    - link "Königlich Preussische Akademie der Wissenschaften" [ref=f1e2630] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Prussian_Academy_of_Sciences
+                    - text: ": 688–696."
+                    - link "Bibcode" [ref=f1e2631] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1916SPAW.......688E" [ref=f1e2632] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1916SPAW.......688E
+                    - generic [ref=f1e2633]: . Retrieved 24 January 2022
+                    - text: – via SAO/NASA Astrophysics Data System (ADS).
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Sitzungsberichte+1916&rft.atitle=N%C3%A4herungsweise+Integration+der+Feldgleichungen+der+Gravitation&rft.pages=688-696&rft.date=1916&rft_id=info%3Abibcode%2F1916SPAW.......688E&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=https%3A%2F%2Fui.adsabs.harvard.edu%2Fabs%2F1916SPAW.......688E&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2634]:
+                  - generic [ref=f1e2635]:
+                    - text: Einstein, Albert (1917a).
+                    - link "\"Kosmologische Betrachtungen zur allgemeinen Relativitätstheorie\"" [ref=f1e2636] [cursor=pointer]:
+                      - /url: http://echo.mpiwg-berlin.mpg.de/MPIWG:H428RSAN
+                    - text: "[Cosmological Considerations in the General Theory of Relativity] (Online page images). Sitzungsberichte 1917 (in German)."
+                    - link "Königlich Preussische Akademie der Wissenschaften" [ref=f1e2637] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Prussian_Academy_of_Sciences
+                    - text: ", Berlin: 142."
+                    - link "Bibcode" [ref=f1e2638] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1917SPAW.......142E" [ref=f1e2639] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1917SPAW.......142E
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Sitzungsberichte+1917&rft.atitle=Kosmologische+Betrachtungen+zur+allgemeinen+Relativit%C3%A4tstheorie&rft.pages=142&rft.date=1917&rft_id=info%3Abibcode%2F1917SPAW.......142E&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=http%3A%2F%2Fecho.mpiwg-berlin.mpg.de%2FMPIWG%3AH428RSAN&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2640]:
+                  - generic [ref=f1e2641]:
+                    - text: "Einstein, Albert (1917b). \"Zur Quantentheorie der Strahlung\" [On the Quantum Mechanics of Radiation]. Physikalische Zeitschrift (in German). 18: 121–128."
+                    - link "Bibcode" [ref=f1e2642] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1917PhyZ...18..121E" [ref=f1e2643] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1917PhyZ...18..121E
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physikalische+Zeitschrift&rft.atitle=Zur+Quantentheorie+der+Strahlung&rft.volume=18&rft.pages=121-128&rft.date=1917&rft_id=info%3Abibcode%2F1917PhyZ...18..121E&rft.aulast=Einstein&rft.aufirst=Albert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2644]:
+                  - generic [ref=f1e2645]:
+                    - text: Einstein, Albert (31 January 1918).
+                    - link "\"Über Gravitationswellen\"" [ref=f1e2646] [cursor=pointer]:
+                      - /url: https://echo.mpiwg-berlin.mpg.de/ECHOdocuView?url=/permanent/echo/einstein/sitzungsberichte/W7ZU8V1E/index.meta
+                    - text: "[About gravitational waves]. Sitzungsberichte der Königlich Preussischen Akademie der Wissenschaften Berlin: 154–167."
+                    - link "Bibcode" [ref=f1e2647] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1918SPAW.......154E" [ref=f1e2648] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1918SPAW.......154E
+                    - generic [ref=f1e2649]: . Retrieved 14 November 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Sitzungsberichte+der+K%C3%B6niglich+Preussischen+Akademie+der+Wissenschaften+Berlin&rft.atitle=%C3%9Cber+Gravitationswellen&rft.pages=154-167&rft.date=1918-01-31&rft_id=info%3Abibcode%2F1918SPAW.......154E&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=https%3A%2F%2Fecho.mpiwg-berlin.mpg.de%2FECHOdocuView%3Furl%3D%2Fpermanent%2Fecho%2Feinstein%2Fsitzungsberichte%2FW7ZU8V1E%2Findex.meta&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2650]:
+                  - generic [ref=f1e2651]:
+                    - text: Einstein, Albert (1923) [First published 1923, in English 1967]. Written at Gothenburg.
+                    - link "Grundgedanken und Probleme der Relativitätstheorie" [ref=f1e2652] [cursor=pointer]:
+                      - /url: https://www.nobelprize.org/nobel_prizes/physics/laureates/1921/einstein-lecture.html
+                    - text: "[Fundamental Ideas and Problems of the Theory of Relativity] (Speech). Lecture delivered to the Nordic Assembly of Naturalists at Gothenburg, 11 July 1923. Nobel Lectures, Physics 1901–1921 (in German and English). Stockholm: Nobelprice.org (published 3 February 2015) – via Nobel Media AB 2014."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Grundgedanken+und+Probleme+der+Relativit%C3%A4tstheorie&rft.place=Stockholm&rft.pub=Nobelprice.org&rft.date=1923&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=https%3A%2F%2Fwww.nobelprize.org%2Fnobel_prizes%2Fphysics%2Flaureates%2F1921%2Feinstein-lecture.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2653]:
+                  - generic [ref=f1e2654]:
+                    - text: Einstein, Albert (1924) [Published 10 July 1924].
+                    - link "\"Quantentheorie des einatomigen idealen Gases\"" [ref=f1e2655] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20161014072015/http://echo.mpiwg-berlin.mpg.de/ECHOdocuView?url=%2Fpermanent%2Fecho%2Feinstein%2Fsitzungsberichte%2FPG8B073X%2Findex.meta
+                    - text: "[Quantum theory of monatomic ideal gases]. Sitzungsberichte der Preussischen Akademie der Wissenschaften, Physikalisch-Mathematische Klasse (in German): 261–267. Archived from"
+                    - link "the original" [ref=f1e2656] [cursor=pointer]:
+                      - /url: http://echo.mpiwg-berlin.mpg.de/MPIWG:DRQK5WYB
+                    - text: (Online page images) on 14 October 2016
+                    - generic [ref=f1e2657]: . Retrieved 26 February 2015
+                    - text: – via ECHO, Cultural Heritage Online,
+                    - link "Max Planck Institute" [ref=f1e2658] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Max_Planck_Institute
+                    - text: for the History of Science.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Sitzungsberichte+der+Preussischen+Akademie+der+Wissenschaften%2C+Physikalisch-Mathematische+Klasse&rft.atitle=Quantentheorie+des+einatomigen+idealen+Gases&rft.pages=261-267&rft.date=1924&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=http%3A%2F%2Fecho.mpiwg-berlin.mpg.de%2FMPIWG%3ADRQK5WYB&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: First of a series of papers on this topic.
+                - listitem [ref=f1e2659]:
+                  - generic [ref=f1e2660]:
+                    - text: Einstein, Albert (12 March 1926) [Cover Date 1 March 1926]. Written at Berlin. "Die Ursache der Mäanderbildung der Flußläufe und des sogenannten Baerschen Gesetzes" [On
+                    - link "Baer's law" [ref=f1e2661] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Baer's_law
+                    - text: and
+                    - link "meanders" [ref=f1e2662] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Meander
+                    - text: "in the courses of rivers]. Die Naturwissenschaften (in German). 14 (11). Heidelberg, Germany: 223–224."
+                    - link "Bibcode" [ref=f1e2663] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1926NW.....14..223E" [ref=f1e2664] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1926NW.....14..223E
+                    - text: .
+                    - link "doi" [ref=f1e2665] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1007/BF01510300" [ref=f1e2666] [cursor=pointer]:
+                      - /url: https://doi.org/10.1007%2FBF01510300
+                    - text: .
+                    - link "ISSN" [ref=f1e2667] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "1432-1904" [ref=f1e2668] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/1432-1904
+                    - text: .
+                    - link "S2CID" [ref=f1e2669] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "39899416" [ref=f1e2670] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:39899416
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Die+Naturwissenschaften&rft.atitle=Die+Ursache+der+M%C3%A4anderbildung+der+Flu%C3%9Fl%C3%A4ufe+und+des+sogenannten+Baerschen+Gesetzes&rft.volume=14&rft.issue=11&rft.pages=223-224&rft.date=1926-03-12&rft_id=info%3Adoi%2F10.1007%2FBF01510300&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A39899416%23id-name%3DS2CID&rft.issn=1432-1904&rft_id=info%3Abibcode%2F1926NW.....14..223E&rft.aulast=Einstein&rft.aufirst=Albert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2671]:
+                  - generic [ref=f1e2672]:
+                    - text: Einstein, Albert (1926b). Written at Berne, Switzerland. Fürth, R. (ed.).
+                    - link "Investigations on the Theory of the Brownian Movement" [ref=f1e2673] [cursor=pointer]:
+                      - /url: http://www.pitt.edu/~jdnorton/lectures/Rotman_Summer_School_2013/Einstein_1905_docs/Einstein_Dissertation_English.pdf
+                    - text: "(PDF). Translated by Cowper, A. D. US: Dover Publications (published 1956)"
+                    - generic [ref=f1e2674]: . Retrieved 4 January 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Investigations+on+the+Theory+of+the+Brownian+Movement&rft.place=US&rft.pub=Dover+Publications&rft.date=1926&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=http%3A%2F%2Fwww.pitt.edu%2F~jdnorton%2Flectures%2FRotman_Summer_School_2013%2FEinstein_1905_docs%2FEinstein_Dissertation_English.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2675]:
+                  - generic [ref=f1e2676]: "Einstein, Albert (1931). \"Zum kosmologischen Problem der allgemeinen Relativitätstheorie\" [On the cosmological problem of the general theory of relativity]. Sonderasugabe aus den Sitzungsb. König. Preuss. Akad.: 235–237."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Sonderasugabe+aus+den+Sitzungsb.+K%C3%B6nig.+Preuss.+Akad.&rft.atitle=Zum+kosmologischen+Problem+der+allgemeinen+Relativit%C3%A4tstheorie&rft.pages=235-237&rft.date=1931&rft.aulast=Einstein&rft.aufirst=Albert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2677]:
+                  - generic [ref=f1e2678]:
+                    - text: Einstein, A.; de Sitter, W. (1932).
+                    - link "\"On the relation between the expansion and the mean density of the universe\"" [ref=f1e2679] [cursor=pointer]:
+                      - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1076193
+                    - text: ". Proceedings of the National Academy of Sciences. 18 (3): 213–214."
+                    - link "Bibcode" [ref=f1e2680] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1932PNAS...18..213E" [ref=f1e2681] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1932PNAS...18..213E
+                    - text: .
+                    - link "doi" [ref=f1e2682] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2683]:
+                      - link "10.1073/pnas.18.3.213" [ref=f1e2684] [cursor=pointer]:
+                        - /url: https://doi.org/10.1073%2Fpnas.18.3.213
+                    - text: .
+                    - link "PMC" [ref=f1e2685] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMC_(identifier)
+                    - generic "Freely accessible" [ref=f1e2686]:
+                      - link "1076193" [ref=f1e2687] [cursor=pointer]:
+                        - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1076193
+                    - text: .
+                    - link "PMID" [ref=f1e2688] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "16587663" [ref=f1e2689] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/16587663
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Proceedings+of+the+National+Academy+of+Sciences&rft.atitle=On+the+relation+between+the+expansion+and+the+mean+density+of+the+universe&rft.volume=18&rft.issue=3&rft.pages=213-214&rft.date=1932&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC1076193%23id-name%3DPMC&rft_id=info%3Apmid%2F16587663&rft_id=info%3Adoi%2F10.1073%2Fpnas.18.3.213&rft_id=info%3Abibcode%2F1932PNAS...18..213E&rft.aulast=Einstein&rft.aufirst=A.&rft.au=de+Sitter%2C+W.&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC1076193&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2690]:
+                  - generic [ref=f1e2691]:
+                    - text: Einstein, Albert; Rosen, Nathan (1935).
+                    - link "\"The Particle Problem in the General Theory of Relativity\"" [ref=f1e2692] [cursor=pointer]:
+                      - /url: https://doi.org/10.1103%2FPhysRev.48.73
+                    - text: .
+                    - link "Physical Review" [ref=f1e2694] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Physical_Review
+                    - text: ". 48 (1): 73."
+                    - link "Bibcode" [ref=f1e2695] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1935PhRv...48...73E" [ref=f1e2696] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1935PhRv...48...73E
+                    - text: .
+                    - link "doi" [ref=f1e2697] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2698]:
+                      - link "10.1103/PhysRev.48.73" [ref=f1e2699] [cursor=pointer]:
+                        - /url: https://doi.org/10.1103%2FPhysRev.48.73
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physical+Review&rft.atitle=The+Particle+Problem+in+the+General+Theory+of+Relativity&rft.volume=48&rft.issue=1&rft.pages=73&rft.date=1935&rft_id=info%3Adoi%2F10.1103%2FPhysRev.48.73&rft_id=info%3Abibcode%2F1935PhRv...48...73E&rft.aulast=Einstein&rft.aufirst=Albert&rft.au=Rosen%2C+Nathan&rft_id=https%3A%2F%2Fdoi.org%2F10.1103%252FPhysRev.48.73&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2700]:
+                  - generic [ref=f1e2701]:
+                    - text: Einstein, Albert; Podolsky, Boris; Rosen, Nathan (15 May 1935) [Received 25 March 1935].
+                    - link "\"Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?\"" [ref=f1e2702] [cursor=pointer]:
+                      - /url: https://cds.cern.ch/record/405662
+                    - text: ". Physical Review (Submitted manuscript). 47 (10): 777–780."
+                    - link "Bibcode" [ref=f1e2703] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1935PhRv...47..777E" [ref=f1e2704] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1935PhRv...47..777E
+                    - text: .
+                    - link "doi" [ref=f1e2705] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2706]:
+                      - link "10.1103/PhysRev.47.777" [ref=f1e2707] [cursor=pointer]:
+                        - /url: https://doi.org/10.1103%2FPhysRev.47.777
+                    - text: – via APS Journals.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physical+Review&rft.atitle=Can+Quantum-Mechanical+Description+of+Physical+Reality+Be+Considered+Complete%3F&rft.volume=47&rft.issue=10&rft.pages=777-780&rft.date=1935-05-15&rft_id=info%3Adoi%2F10.1103%2FPhysRev.47.777&rft_id=info%3Abibcode%2F1935PhRv...47..777E&rft.aulast=Einstein&rft.aufirst=Albert&rft.au=Podolsky%2C+Boris&rft.au=Rosen%2C+Nathan&rft_id=https%3A%2F%2Fcds.cern.ch%2Frecord%2F405662&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2708]:
+                  - generic [ref=f1e2709]:
+                    - text: "Einstein, Albert (1950). \"On the Generalized Theory of Gravitation\". Scientific American. CLXXXII (4): 13–17."
+                    - link "Bibcode" [ref=f1e2710] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1950SciAm.182d..13E" [ref=f1e2711] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1950SciAm.182d..13E
+                    - text: .
+                    - link "doi" [ref=f1e2712] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1038/scientificamerican0450-13" [ref=f1e2713] [cursor=pointer]:
+                      - /url: https://doi.org/10.1038%2Fscientificamerican0450-13
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Scientific+American&rft.atitle=On+the+Generalized+Theory+of+Gravitation&rft.volume=CLXXXII&rft.issue=4&rft.pages=13-17&rft.date=1950&rft_id=info%3Adoi%2F10.1038%2Fscientificamerican0450-13&rft_id=info%3Abibcode%2F1950SciAm.182d..13E&rft.aulast=Einstein&rft.aufirst=Albert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2714]:
+                  - generic [ref=f1e2715]:
+                    - text: "Einstein, Albert (1969). Albert Einstein, Hedwig und Max Born: Briefwechsel 1916–1955 (in German). Commented by Max Born; Preface by Bertrand Russell; Foreword by Werner Heisenberg. Munich: Nymphenburger Verlagshandlung."
+                    - link "ISBN" [ref=f1e2716] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-3-88682-005-4" [ref=f1e2717] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-3-88682-005-4
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Albert+Einstein%2C+Hedwig+und+Max+Born%3A+Briefwechsel+1916%E2%80%931955&rft.place=Munich&rft.pub=Nymphenburger+Verlagshandlung&rft.date=1969&rft.isbn=978-3-88682-005-4&rft.aulast=Einstein&rft.aufirst=Albert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: A reprint of this book was published by Edition Erbrich in 1982,
+                  - link "ISBN" [ref=f1e2718] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-3-88682-005-4" [ref=f1e2719] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-3-88682-005-4
+                  - text: .
+                - listitem [ref=f1e2720]:
+                  - generic [ref=f1e2721]:
+                    - link "Stachel, John" [ref=f1e2722] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/John_Stachel
+                    - text: ; Martin J. Klein; A. J. Kox; Michel Janssen; R. Schulmann; Diana Komos Buchwald; et al., eds. (21 July 2008) [Published between 1987 and 2006].
+                    - link "The Collected Papers of Albert Einstein" [ref=f1e2723] [cursor=pointer]:
+                      - /url: https://einsteinpapers.press.princeton.edu/
+                    - text: . Vol. 1–10.
+                    - link "Princeton University Press" [ref=f1e2724] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Princeton_University_Press
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Collected+Papers+of+Albert+Einstein&rft.pub=Princeton+University+Press&rft.date=2008-07-21&rft_id=https%3A%2F%2Feinsteinpapers.press.princeton.edu%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: Further information about the volumes published so far can be found on the webpages of the Einstein Papers Project
+                  - superscript [ref=f1e2725]:
+                    - link "[351]" [ref=f1e2726] [cursor=pointer]:
+                      - /url: "#cite_note-361"
+                  - text: and on the Princeton University Press Einstein Page.
+                  - superscript [ref=f1e2727]:
+                    - link "[352]" [ref=f1e2728] [cursor=pointer]:
+                      - /url: "#cite_note-362"
+            - region "Popular" [ref=f1e2729]:
+              - heading "Popular" [level=3] [ref=f1e2731]
+              - list [ref=f1e2733]:
+                - listitem [ref=f1e2734]:
+                  - generic [ref=f1e2735]:
+                    - text: Einstein, Albert (1916).
+                    - 'link "Relativity: The Special and the General Theory" [ref=f1e2737] [cursor=pointer]':
+                      - /url: https://en.wikipedia.org/wiki/Relativity:_The_Special_and_the_General_Theory
+                    - text: . Princeton University Press.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Relativity%3A+The+Special+and+the+General+Theory&rft.pub=Princeton+University+Press&rft.date=1916&rft.aulast=Einstein&rft.aufirst=Albert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2738]:
+                  - generic [ref=f1e2739]:
+                    - text: Einstein, Albert;
+                    - link "Infeld, Leopold" [ref=f1e2740] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Leopold_Infeld
+                    - text: (1938).
+                    - link "The Evolution of Physics" [ref=f1e2741] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_Evolution_of_Physics
+                    - text: . Simon and Schuster.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Evolution+of+Physics&rft.pub=Simon+and+Schuster&rft.date=1938&rft.aulast=Einstein&rft.aufirst=Albert&rft.au=Infeld%2C+Leopold&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2742]:
+                  - img "Public Domain" [ref=f1e2745]
+                  - generic [ref=f1e2746]:
+                    - text: Einstein, Albert (1926).
+                    - link "\"Space-time\"" [ref=f1e2747] [cursor=pointer]:
+                      - /url: https://archive.org/details/encyclopaedia-britannica-encyclopaedia-britannica.-3-encyclopaedia-britannica-inc.-1926/Encyclopaedia%20Britannica%20-%20Encyclopaedia%20Britannica.%203-Encyclopaedia%20Britannica%2C%20Inc.%20%281926%29/page/607/mode/2up
+                    - text: . In Garvin, James Louis (ed.).
+                    - link "Encyclopædia Britannica" [ref=f1e2749] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Encyclopædia_Britannica
+                    - text: ". Vol. 3 (13th ed.). London & New York: The Encyclopædia Britannica Company. pp. 608–611."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Space-time&rft.btitle=Encyclop%C3%A6dia+Britannica&rft.place=London+%26+New+York&rft.pages=608-611&rft.edition=13th&rft.pub=The+Encyclop%C3%A6dia+Britannica+Company&rft.date=1926&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fencyclopaedia-britannica-encyclopaedia-britannica.-3-encyclopaedia-britannica-inc.-1926%2FEncyclopaedia%2520Britannica%2520-%2520Encyclopaedia%2520Britannica.%25203-Encyclopaedia%2520Britannica%252C%2520Inc.%2520%25281926%2529%2Fpage%2F607%2Fmode%2F2up&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2750]:
+                  - generic [ref=f1e2751]:
+                    - text: Einstein, Albert (1954).
+                    - link "Ideas and Opinions" [ref=f1e2752] [cursor=pointer]:
+                      - /url: https://archive.org/details/ideasopinions00eins
+                    - text: ". New York: Crown Publishers."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Ideas+and+Opinions&rft.place=New+York&rft.pub=Crown+Publishers&rft.date=1954&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fideasopinions00eins&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - generic [ref=f1e2753]:
+                    - text: —————— (1995) [1954].
+                    - link "Ideas and Opinions" [ref=f1e2754] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=9fJkBqwDD3sC
+                    - text: ". New York: Three Rivers Press."
+                    - link "ISBN" [ref=f1e2755] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-517-88440-9" [ref=f1e2756] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-517-88440-9
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Ideas+and+Opinions&rft.place=New+York&rft.pub=Three+Rivers+Press&rft.date=1995&rft.isbn=978-0-517-88440-9&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D9fJkBqwDD3sC&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2757]:
+                  - generic [ref=f1e2758]:
+                    - text: Einstein, Albert (1979).
+                    - generic "Free registration required" [ref=f1e2759]:
+                      - link "Autobiographical Notes" [ref=f1e2760] [cursor=pointer]:
+                        - /url: https://archive.org/details/autobiographical1979eins
+                    - text: ". Paul Arthur Schilpp (Centennial ed.). Chicago: Open Court."
+                    - link "ISBN" [ref=f1e2761] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-87548-352-8" [ref=f1e2762] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-87548-352-8
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Autobiographical+Notes&rft.place=Chicago&rft.edition=Centennial&rft.pub=Open+Court&rft.date=1979&rft.isbn=978-0-87548-352-8&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fautobiographical1979eins&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: The chasing a light beam thought experiment is described on pages 48–51.
+            - region "Political" [ref=f1e2763]:
+              - heading "Political" [level=3] [ref=f1e2765]
+              - list [ref=f1e2766]:
+                - listitem [ref=f1e2767]:
+                  - generic [ref=f1e2768]:
+                    - text: Einstein, Albert; et al. (4 December 1948).
+                    - link "\"To the editors of The New York Times\"" [ref=f1e2769] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20071217113044/http://phys4.harvard.edu/~wilson/NYTimes1948.html
+                    - text: .
+                    - link "The New York Times" [ref=f1e2771] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_New_York_Times
+                    - text: . Archived from
+                    - link "the original" [ref=f1e2772] [cursor=pointer]:
+                      - /url: http://phys4.harvard.edu/~wilson/NYTimes1948.html
+                    - text: on 17 December 2007
+                    - generic [ref=f1e2773]: . Retrieved 25 May 2006
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=To+the+editors+of+The+New+York+Times&rft.date=1948-12-04&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=http%3A%2F%2Fphys4.harvard.edu%2F~wilson%2FNYTimes1948.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2774]:
+                  - generic [ref=f1e2775]:
+                    - text: Einstein, Albert (May 1949). Sweezy, Paul; Huberman, Leo (eds.).
+                    - link "\"Why Socialism?\"" [ref=f1e2776] [cursor=pointer]:
+                      - /url: https://monthlyreview.org/articles/why-socialism/
+                    - text: .
+                    - link "Monthly Review" [ref=f1e2778] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Monthly_Review
+                    - text: ". 1 (1): 9–15."
+                    - link "doi" [ref=f1e2779] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.14452/MR-001-01-1949-05_3" [ref=f1e2780] [cursor=pointer]:
+                      - /url: https://doi.org/10.14452%2FMR-001-01-1949-05_3
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Monthly+Review&rft.atitle=Why+Socialism%3F&rft.volume=1&rft.issue=1&rft.pages=9-15&rft.date=1949-05&rft_id=info%3Adoi%2F10.14452%2FMR-001-01-1949-05_3&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=https%3A%2F%2Fmonthlyreview.org%2Farticles%2Fwhy-socialism%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2781]:
+                  - generic [ref=f1e2782]:
+                    - text: —————— (May 2009) [May 1949].
+                    - link "\"Why Socialism? (Reprise)\"" [ref=f1e2783] [cursor=pointer]:
+                      - /url: https://monthlyreview.org/articles/why-socialism/
+                    - text: .
+                    - link "Monthly Review" [ref=f1e2785] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Monthly_Review
+                    - text: ". New York: Monthly Review Foundation."
+                    - link "Archived" [ref=f1e2786] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20060111081948/http://www.monthlyreview.org/598einst.htm
+                    - text: from the original on 11 January 2006
+                    - generic [ref=f1e2787]: . Retrieved 16 January 2006
+                    - text: – via MonthlyReview.org.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Monthly+Review&rft.atitle=Why+Socialism%3F+%28Reprise%29&rft.date=2009-05&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=https%3A%2F%2Fmonthlyreview.org%2Farticles%2Fwhy-socialism%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e2788]:
+                  - text: Einstein, Albert (September 1960).
+                  - 'link "Foreword to Gandhi Wields the Weapon of Moral Power: Three Case Histories." [ref=f1e2789] [cursor=pointer]':
+                    - /url: https://archive.org/download/gandhiwieldsweap00shar/gandhiwieldsweap00shar.pdf
+                  - text: "Introduction by Bharatan Kumarappa. Ahmedabad: Navajivan Publishing House. pp. v–vi."
+                  - link "OCLC" [ref=f1e2790] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/OCLC_(identifier)
+                  - link "2325889" [ref=f1e2791] [cursor=pointer]:
+                    - /url: https://www.worldcat.org/oclc/2325889
+                  - text: . Foreword originally written in April 1953.
+          - region "See also" [ref=f1e2792]:
+            - heading "See also" [level=2] [ref=f1e2794]
+            - list [ref=f1e2796]:
+              - listitem [ref=f1e2797]:
+                - link "Bern Historical Museum" [ref=f1e2798] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Bern_Historical_Museum
+                - text: – Einstein Museum
+              - listitem [ref=f1e2799]:
+                - link "Einstein notation" [ref=f1e2800] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Einstein_notation
+                - text: – Shorthand notation for tensor operations
+              - listitem [ref=f1e2801]:
+                - link "Frist Campus Center" [ref=f1e2802] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Frist_Campus_Center
+                - text: at
+                - link "Princeton University" [ref=f1e2803] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Princeton_University
+                - text: – Room 302 is associated with Einstein. The center was once the Palmer Physical Laboratory.
+              - listitem [ref=f1e2804]:
+                - link "Heinrich Burkhardt" [ref=f1e2805] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Heinrich_Burkhardt
+                - text: – German mathematician (1861–1914)
+              - listitem [ref=f1e2806]:
+                - link "Heinrich Zangger" [ref=f1e2807] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Heinrich_Zangger
+                - text: – Swiss toxicologist (1874–1957)
+              - listitem [ref=f1e2808]:
+                - link "History of gravitational theory" [ref=f1e2809] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/History_of_gravitational_theory
+              - listitem [ref=f1e2810]:
+                - link "List of coupled cousins" [ref=f1e2811] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_coupled_cousins
+                - text: – First cousin marriages
+              - listitem [ref=f1e2812]:
+                - link "List of German inventors and discoverers" [ref=f1e2813] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_German_inventors_and_discoverers
+              - listitem [ref=f1e2814]:
+                - link "List of Jewish Nobel laureates" [ref=f1e2815] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_Jewish_Nobel_laureates
+              - listitem [ref=f1e2816]:
+                - link "List of peace activists" [ref=f1e2817] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_peace_activists
+              - listitem [ref=f1e2818]:
+                - link "Relativity priority dispute" [ref=f1e2819] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Relativity_priority_dispute
+                - text: – Issue in science history
+              - listitem [ref=f1e2820]:
+                - link "Sticky bead argument" [ref=f1e2821] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sticky_bead_argument
+                - text: – Thought experiment in physics
+          - region "Footnotes" [ref=f1e2822]:
+            - heading "Footnotes" [level=2] [ref=f1e2824]
+            - list [ref=f1e2827]:
+              - listitem [ref=f1e2828]:
+                - link "Jump up" [ref=f1e2830] [cursor=pointer]:
+                  - /url: "#cite_ref-6"
+                  - text: ^
+                - generic [ref=f1e2831]:
+                  - link "/ˈaɪnstaɪn/" [ref=f1e2834] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Help:IPA/English
+                    - text: /
+                    - generic [ref=f1e2835]: ˈaɪnstaɪn
+                    - text: /
+                  - text: ;
+                  - superscript [ref=f1e2836]:
+                    - link "[4]" [ref=f1e2837] [cursor=pointer]:
+                      - /url: "#cite_note-NDxay-5"
+                  - text: "German:"
+                  - link "[ˈalbɛʁt ˈaɪnʃtaɪn]" [ref=f1e2839] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Help:IPA/Standard_German
+                  - generic [ref=f1e2840]:
+                    - button "Play audio" [ref=f1e2842] [cursor=pointer]
+                    - superscript [ref=f1e2844]:
+                      - link "ⓘ" [ref=f1e2845] [cursor=pointer]:
+                        - /url: /wiki/File:De-Albert_Einstein.oga
+              - listitem [ref=f1e2846]:
+                - link "Jump up" [ref=f1e2848] [cursor=pointer]:
+                  - /url: "#cite_ref-92"
+                  - text: ^
+                - generic [ref=f1e2849]:
+                  - text: "l-r: 1."
+                  - link "Karl Herzfeld" [ref=f1e2850] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Karl_Herzfeld
+                  - text: ; 2.
+                  - link "Otto Stern" [ref=f1e2851] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Otto_Stern
+                  - text: ; 3. Albert Einstein; 4. Fraulein Frankamp; 5.
+                  - link "Auguste Piccard" [ref=f1e2852] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Auguste_Piccard
+                  - text: ; 6.
+                  - link "Paul Ehrenfest" [ref=f1e2853] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Paul_Ehrenfest
+                  - text: ; 7. René Fortrat; 8. Fraulein Bruins; 9. Fraulein Girgorjeff; 10. Gabriel Foëx, 11. Wolfers (technician)
+              - listitem [ref=f1e2854]:
+                - link "Jump up" [ref=f1e2856] [cursor=pointer]:
+                  - /url: "#cite_ref-97"
+                  - text: ^
+                - generic [ref=f1e2857]:
+                  - text: Group photo with ladies, taken at the
+                  - link "Kaiser Wilhelm Institute's" [ref=f1e2858] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Kaiser_Wilhelm_Society
+                  - text: farewell party for
+                  - link "James Franck" [ref=f1e2859] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/James_Franck
+                  - text: in 1920. Seated between Einstein and
+                  - link "Haber" [ref=f1e2860] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Fritz_Haber
+                  - text: are Ingrid and James Franck and
+                  - link "Lise Meitner" [ref=f1e2861] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Lise_Meitner
+                  - text: ;
+                  - link "Otto Hahn" [ref=f1e2862] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Otto_Hahn
+                  - text: is on the far right
+          - region "Notes" [ref=f1e2863]:
+            - heading "Notes" [level=2] [ref=f1e2865]
+            - list [ref=f1e2868]:
+              - listitem [ref=f1e2869]:
+                - generic [ref=f1e2870]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2871] [cursor=pointer]:
+                    - /url: "#cite_ref-GEcitizen_1-0"
+                  - link [ref=f1e2873] [cursor=pointer]:
+                    - /url: "#cite_ref-GEcitizen_1-1"
+                  - link [ref=f1e2874] [cursor=pointer]:
+                    - /url: "#cite_ref-GEcitizen_1-2"
+                  - link [ref=f1e2875] [cursor=pointer]:
+                    - /url: "#cite_ref-GEcitizen_1-3"
+                  - link [ref=f1e2876] [cursor=pointer]:
+                    - /url: "#cite_ref-GEcitizen_1-4"
+                  - link [ref=f1e2877] [cursor=pointer]:
+                    - /url: "#cite_ref-GEcitizen_1-5"
+                - generic [ref=f1e2878]:
+                  - text: Until 1913, German citizenship was acquired through citizenship in a constituent state (whose requirements varied); from 1913, uniform citizenship requirements were
+                  - link "set at the national level" [ref=f1e2879] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Constitution_of_the_German_Empire#Citizenship
+                  - text: . Nevertheless, state citizenship remained in force until the Nazis came to power in 1933.
+              - listitem [ref=f1e2880]:
+                - link "Jump up" [ref=f1e2882] [cursor=pointer]:
+                  - /url: "#cite_ref-MaturaScore_38-0"
+                  - text: ^
+                - generic [ref=f1e2883]:
+                  - text: Einstein's scores on his
+                  - link "Matura" [ref=f1e2885] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Matura
+                  - text: "certificate: German 5; French 3; Italian 5; History 6; Geography 4; Algebra 6; Geometry 6; Descriptive Geometry 6; Physics 6; Chemistry 5; Natural History 5; Art Drawing 4; Technical Drawing 4."
+                  - link "Scale" [ref=f1e2886] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Grading_systems_by_country#Switzerland
+                  - text: ": 6 = very good, 5 = good, 4 = sufficient, 3 = insufficient, 2 = poor, 1 = very poor."
+              - listitem [ref=f1e2887]:
+                - link "Jump up" [ref=f1e2889] [cursor=pointer]:
+                  - /url: "#cite_ref-68"
+                  - text: ^
+                - generic [ref=f1e2890]:
+                  - text: The claim that Konenkova was a spy is based on
+                  - link "Special Tasks" [ref=f1e2891] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special_Tasks
+                  - text: ", a discredited memoir by"
+                  - link "Pavel Sudoplatov" [ref=f1e2892] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Pavel_Sudoplatov
+                  - text: .
+                  - superscript [ref=f1e2893]:
+                    - link "[64]" [ref=f1e2894] [cursor=pointer]:
+                      - /url: "#cite_note-67"
+              - listitem [ref=f1e2895]:
+                - link "Jump up" [ref=f1e2897] [cursor=pointer]:
+                  - /url: "#cite_ref-gnriE_152-0"
+                  - text: ^
+                - text: "\"Their leaders in Germany have not driven out her cut-throats and her blackguards. She has chosen the cream of her culture and has suppressed it. She has even turned upon her most glorious citizen, Albert Einstein, who is the supreme example of the selfless intellectual...The man, who, beyond all others, approximates a citizen of the world, is without a home. How proud we must be to offer him temporary shelter.\""
+              - listitem [ref=f1e2898]:
+                - link "Jump up" [ref=f1e2900] [cursor=pointer]:
+                  - /url: "#cite_ref-aBfxO_252-0"
+                  - text: ^
+                - generic [ref=f1e2901]:
+                  - text: In
+                  - link "his paper" [ref=f1e2902] [cursor=pointer]:
+                    - /url: https://en.wikisource.org/wiki/Translation:On%20the%20Electrodynamics%20of%20Moving%20Bodies
+                  - text: ", Einstein wrote: \"The introduction of a 'luminiferous æther' will be proved to be superfluous in so far, as according to the conceptions which will be developed, we shall introduce neither a 'space absolutely at rest' endowed with special properties, nor shall we associate a velocity-vector with a point in which electro-magnetic processes take place.\""
+              - listitem [ref=f1e2903]:
+                - link "Jump up" [ref=f1e2905] [cursor=pointer]:
+                  - /url: "#cite_ref-sBl2q_254-0"
+                  - text: ^
+                - generic [ref=f1e2906]:
+                  - text: For a discussion of the reception of relativity theory around the world, and the different controversies it encountered, see the articles in
+                  - link "Glick (1987)" [ref=f1e2907] [cursor=pointer]:
+                    - /url: "#CITEREFGlick1987"
+                  - text: .
+              - listitem [ref=f1e2908]:
+                - link "Jump up" [ref=f1e2910] [cursor=pointer]:
+                  - /url: "#cite_ref-331"
+                  - text: ^
+                - generic [ref=f1e2911]:
+                  - text: In September 2008, it was reported that
+                  - link "Malcolm McCulloch" [ref=f1e2912] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Malcolm_McCulloch?action=edit&redlink=1
+                  - text: of
+                  - link "Oxford University" [ref=f1e2913] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Oxford_University
+                  - text: was heading a three-year project to develop more robust appliances that could be used in locales lacking electricity, and that his team had completed a prototype Einstein refrigerator. He was quoted as saying that improving the design and changing the types of gases used might allow the design's efficiency to be quadrupled.
+                  - superscript [ref=f1e2914]:
+                    - link "[321]" [ref=f1e2915] [cursor=pointer]:
+                      - /url: "#cite_note-330"
+          - region "References" [ref=f1e2916]:
+            - heading "References" [level=2] [ref=f1e2918]
+            - list [ref=f1e2920]:
+              - listitem [ref=f1e2921]:
+                - generic [ref=f1e2922]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2923] [cursor=pointer]:
+                    - /url: "#cite_ref-frs_2-0"
+                  - link [ref=f1e2925] [cursor=pointer]:
+                    - /url: "#cite_ref-frs_2-1"
+                  - link [ref=f1e2926] [cursor=pointer]:
+                    - /url: "#cite_ref-frs_2-2"
+                  - link [ref=f1e2927] [cursor=pointer]:
+                    - /url: "#cite_ref-frs_2-3"
+                - generic [ref=f1e2928]:
+                  - generic [ref=f1e2929]:
+                    - link "Whittaker, E." [ref=f1e2930] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/E._T._Whittaker
+                    - text: (1 November 1955).
+                    - link "\"Albert Einstein. 1879–1955\"" [ref=f1e2931] [cursor=pointer]:
+                      - /url: https://doi.org/10.1098%2Frsbm.1955.0005
+                    - text: .
+                    - link "Biographical Memoirs of Fellows of the Royal Society" [ref=f1e2933] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Biographical_Memoirs_of_Fellows_of_the_Royal_Society
+                    - text: ". 1: 37–67."
+                    - link "doi" [ref=f1e2934] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e2935]:
+                      - link "10.1098/rsbm.1955.0005" [ref=f1e2936] [cursor=pointer]:
+                        - /url: https://doi.org/10.1098%2Frsbm.1955.0005
+                    - text: .
+                    - link "JSTOR" [ref=f1e2937] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "769242" [ref=f1e2938] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/769242
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Biographical+Memoirs+of+Fellows+of+the+Royal+Society&rft.atitle=Albert+Einstein.+1879%E2%80%931955&rft.volume=1&rft.pages=37-67&rft.date=1955-11-01&rft_id=info%3Adoi%2F10.1098%2Frsbm.1955.0005&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F769242%23id-name%3DJSTOR&rft.aulast=Whittaker&rft.aufirst=E.&rft_id=https%3A%2F%2Fdoi.org%2F10.1098%252Frsbm.1955.0005&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e2939]:
+                - link "Jump up" [ref=f1e2941] [cursor=pointer]:
+                  - /url: "#cite_ref-3"
+                  - text: ^
+                - generic [ref=f1e2942]:
+                  - generic [ref=f1e2943]:
+                    - link "\"The Gold Medal\"" [ref=f1e2944] [cursor=pointer]:
+                      - /url: https://ras.ac.uk/sites/default/files/2021-03/Gold%20Medal%202021.pdf
+                    - text: (PDF).
+                    - link "Royal Astronomical Society" [ref=f1e2945] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Royal_Astronomical_Society
+                    - text: .
+                    - link "Archived" [ref=f1e2946] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20211220130005/https://ras.ac.uk/sites/default/files/2021-03/Gold%20Medal%202021.pdf
+                    - text: (PDF) from the original on 20 December 2021
+                    - generic [ref=f1e2947]: . Retrieved 20 December 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=The+Gold+Medal&rft.pub=Royal+Astronomical+Society&rft_id=https%3A%2F%2Fras.ac.uk%2Fsites%2Fdefault%2Ffiles%2F2021-03%2FGold%2520Medal%25202021.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e2948]:
+                - link "Jump up" [ref=f1e2950] [cursor=pointer]:
+                  - /url: "#cite_ref-4"
+                  - text: ^
+                - generic [ref=f1e2951]:
+                  - generic [ref=f1e2952]:
+                    - link "\"Membership directory\"" [ref=f1e2953] [cursor=pointer]:
+                      - /url: https://www.nasonline.org/directory-entry/albert-einstein-txkyyv/
+                    - text: .
+                    - link "National Academy of Sciences" [ref=f1e2954] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/National_Academy_of_Sciences
+                    - text: .
+                    - link "Archived" [ref=f1e2955] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20211220080311/http://www.nasonline.org/member-directory/deceased-members/20001817.html
+                    - text: from the original on 20 December 2021
+                    - generic [ref=f1e2956]: . Retrieved 20 December 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Membership+directory&rft.pub=National+Academy+of+Sciences&rft_id=https%3A%2F%2Fwww.nasonline.org%2Fdirectory-entry%2Falbert-einstein-txkyyv%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e2957]:
+                - link "Jump up" [ref=f1e2959] [cursor=pointer]:
+                  - /url: "#cite_ref-NDxay_5-0"
+                  - text: ^
+                - generic [ref=f1e2960]:
+                  - generic [ref=f1e2961]:
+                    - link "Wells, John" [ref=f1e2962] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/John_C._Wells
+                    - text: ", ed. (3 April 2008). Longman Pronunciation Dictionary (3rd ed.). Pearson Longman."
+                    - link "ISBN" [ref=f1e2963] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-4058-8118-0" [ref=f1e2964] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-4058-8118-0
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Longman+Pronunciation+Dictionary&rft.edition=3rd&rft.pub=Pearson+Longman&rft.date=2008-04-03&rft.isbn=978-1-4058-8118-0&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e2965]:
+                - link "Jump up" [ref=f1e2967] [cursor=pointer]:
+                  - /url: "#cite_ref-YangHamilton2010_7-0"
+                  - text: ^
+                - generic [ref=f1e2968]:
+                  - generic [ref=f1e2969]:
+                    - text: Yang, Fujia; Hamilton, Joseph H. (2010). Modern Atomic and Nuclear Physics. World Scientific. p. 274.
+                    - link "ISBN" [ref=f1e2970] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-981-4277-16-7" [ref=f1e2971] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-981-4277-16-7
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Modern+Atomic+and+Nuclear+Physics&rft.pages=274&rft.pub=World+Scientific&rft.date=2010&rft.isbn=978-981-4277-16-7&rft.aulast=Yang&rft.aufirst=Fujia&rft.au=Hamilton%2C+Joseph+H.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e2972]:
+                - link "Jump up" [ref=f1e2974] [cursor=pointer]:
+                  - /url: "#cite_ref-LnLVo_8-0"
+                  - text: ^
+                - generic [ref=f1e2975]:
+                  - generic [ref=f1e2976]:
+                    - text: Bodanis, David (2000).
+                    - generic [ref=f1e2977]:
+                      - text: E=mc
+                      - superscript [ref=f1e2980]: "2"
+                      - text: ": A Biography of the World's Most Famous Equation"
+                    - text: ". New York: Walker."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=E%3Cspan+class%3D%22nowrap%22%3E+%3C%2Fspan%3E%3D%3Cspan+class%3D%22nowrap%22%3E+%3C%2Fspan%3Emc%3Csup%3E2%3C%2Fsup%3E%3A+A+Biography+of+the+World%27s+Most+Famous+Equation&rft.place=New+York&rft.pub=Walker&rft.date=2000&rft.aulast=Bodanis&rft.aufirst=David&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e2981]:
+                - generic [ref=f1e2982]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e2983] [cursor=pointer]:
+                    - /url: "#cite_ref-Nobel_Prize_9-0"
+                  - link [ref=f1e2985] [cursor=pointer]:
+                    - /url: "#cite_ref-Nobel_Prize_9-1"
+                  - link [ref=f1e2986] [cursor=pointer]:
+                    - /url: "#cite_ref-Nobel_Prize_9-2"
+                - generic [ref=f1e2987]:
+                  - generic [ref=f1e2988]:
+                    - link "\"The Nobel Prize in Physics 1921\"" [ref=f1e2989] [cursor=pointer]:
+                      - /url: https://www.nobelprize.org/nobel_prizes/physics/laureates/1921/
+                    - text: . Nobel Prize.
+                    - link "Archived" [ref=f1e2990] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20180703190346/https://www.nobelprize.org/nobel_prizes/physics/laureates/1921/
+                    - text: from the original on 3 July 2018
+                    - generic [ref=f1e2991]: . Retrieved 11 July 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=The+Nobel+Prize+in+Physics+1921&rft.pub=Nobel+Prize&rft_id=https%3A%2F%2Fwww.nobelprize.org%2Fnobel_prizes%2Fphysics%2Flaureates%2F1921%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e2992]:
+                - link "Jump up" [ref=f1e2994] [cursor=pointer]:
+                  - /url: "#cite_ref-10"
+                  - text: ^
+                - generic [ref=f1e2995]:
+                  - generic [ref=f1e2996]: Fölsing (1997). Albert Einstein. p. 40.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Albert+Einstein&rft.pages=40&rft.date=1997&rft.au=F%C3%B6lsing&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e2997]:
+                - link "Jump up" [ref=f1e2999] [cursor=pointer]:
+                  - /url: "#cite_ref-zE9Bz_11-0"
+                  - text: ^
+                - generic [ref=f1e3000]:
+                  - generic [ref=f1e3001]:
+                    - text: Levenson, Thomas (9 June 2017).
+                    - link "\"The Scientist and the Fascist\"" [ref=f1e3002] [cursor=pointer]:
+                      - /url: https://www.theatlantic.com/science/archive/2017/06/einstein-germany-and-the-bomb/528534/
+                    - text: . The Atlantic.
+                    - link "Archived" [ref=f1e3003] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20190512133141/https://www.theatlantic.com/science/archive/2017/06/einstein-germany-and-the-bomb/528534/
+                    - text: from the original on 12 May 2019
+                    - generic [ref=f1e3004]: . Retrieved 23 August 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+Atlantic&rft.atitle=The+Scientist+and+the+Fascist&rft.date=2017-06-09&rft.aulast=Levenson&rft.aufirst=Thomas&rft_id=https%3A%2F%2Fwww.theatlantic.com%2Fscience%2Farchive%2F2017%2F06%2Feinstein-germany-and-the-bomb%2F528534%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3005]:
+                - link "Jump up" [ref=f1e3007] [cursor=pointer]:
+                  - /url: "#cite_ref-BoyerDubofsky2001_12-0"
+                  - text: ^
+                - generic [ref=f1e3008]:
+                  - generic [ref=f1e3009]:
+                    - text: Paul S. Boyer; Melvyn Dubofsky (2001).
+                    - generic "Free registration required" [ref=f1e3010]:
+                      - link "The Oxford Companion to United States History" [ref=f1e3011] [cursor=pointer]:
+                        - /url: https://archive.org/details/oxfordcompaniont00paul_0
+                    - text: . Oxford University Press. p.
+                    - link "218" [ref=f1e3012] [cursor=pointer]:
+                      - /url: https://archive.org/details/oxfordcompaniont00paul_0/page/218
+                    - text: .
+                    - link "ISBN" [ref=f1e3013] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-19-508209-8" [ref=f1e3014] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-19-508209-8
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Oxford+Companion+to+United+States+History&rft.pages=218&rft.pub=Oxford+University+Press&rft.date=2001&rft.isbn=978-0-19-508209-8&rft.au=Paul+S.+Boyer&rft.au=Melvyn+Dubofsky&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Foxfordcompaniont00paul_0&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3015]:
+                - generic [ref=f1e3016]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3017] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEGalison2000377_13-0"
+                  - link [ref=f1e3019] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEGalison2000377_13-1"
+                - generic [ref=f1e3020]:
+                  - link "Galison (2000)" [ref=f1e3021] [cursor=pointer]:
+                    - /url: "#CITEREFGalison2000"
+                  - text: ", p. 377."
+              - listitem [ref=f1e3022]:
+                - generic [ref=f1e3023]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3024] [cursor=pointer]:
+                    - /url: "#cite_ref-Nobel_14-0"
+                  - link [ref=f1e3026] [cursor=pointer]:
+                    - /url: "#cite_ref-Nobel_14-1"
+                - generic [ref=f1e3027]:
+                  - generic [ref=f1e3028]:
+                    - link "\"Scientific Background on the Nobel Prize in Physics 2011. The accelerating universe\"" [ref=f1e3029] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20120516052710/https://www.nobelprize.org/nobel_prizes/physics/laureates/2011/advanced-physicsprize2011.pdf
+                    - text: (PDF). Nobel Media AB. p. 2. Archived from
+                    - link "the original" [ref=f1e3030] [cursor=pointer]:
+                      - /url: https://www.nobelprize.org/nobel_prizes/physics/laureates/2011/advanced-physicsprize2011.pdf
+                    - text: (PDF) on 16 May 2012
+                    - generic [ref=f1e3031]: . Retrieved 4 January 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Scientific+Background+on+the+Nobel+Prize+in+Physics+2011.+The+accelerating+universe&rft.pages=2&rft.pub=Nobel+Media+AB&rft_id=https%3A%2F%2Fwww.nobelprize.org%2Fnobel_prizes%2Fphysics%2Flaureates%2F2011%2Fadvanced-physicsprize2011.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3032]:
+                - generic [ref=f1e3033]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3034] [cursor=pointer]:
+                    - /url: "#cite_ref-NYT-20151124_15-0"
+                  - link [ref=f1e3036] [cursor=pointer]:
+                    - /url: "#cite_ref-NYT-20151124_15-1"
+                - generic [ref=f1e3037]:
+                  - generic [ref=f1e3038]:
+                    - link "Overbye, Dennis" [ref=f1e3039] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Dennis_Overbye
+                    - text: (24 November 2015).
+                    - link "\"A Century Ago, Einstein's Theory of Relativity Changed Everything\"" [ref=f1e3040] [cursor=pointer]:
+                      - /url: https://ghostarchive.org/archive/20220101/https://www.nytimes.com/2015/11/24/science/a-century-ago-einsteins-theory-of-relativity-changed-everything.html
+                    - text: .
+                    - link "The New York Times" [ref=f1e3042] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_New_York_Times
+                    - text: . Archived from
+                    - generic "Free access subject to limited trial, subscription normally required" [ref=f1e3043]:
+                      - link "the original" [ref=f1e3044] [cursor=pointer]:
+                        - /url: https://www.nytimes.com/2015/11/24/science/a-century-ago-einsteins-theory-of-relativity-changed-everything.html
+                    - text: on 1 January 2022
+                    - generic [ref=f1e3045]: . Retrieved 24 November 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=A+Century+Ago%2C+Einstein%27s+Theory+of+Relativity+Changed+Everything&rft.date=2015-11-24&rft.aulast=Overbye&rft.aufirst=Dennis&rft_id=https%3A%2F%2Fwww.nytimes.com%2F2015%2F11%2F24%2Fscience%2Fa-century-ago-einsteins-theory-of-relativity-changed-everything.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3046]:
+                - link "Jump up" [ref=f1e3048] [cursor=pointer]:
+                  - /url: "#cite_ref-16"
+                  - text: ^
+                - generic [ref=f1e3049]:
+                  - generic [ref=f1e3050]:
+                    - link "Kleppner, Daniel" [ref=f1e3051] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Daniel_Kleppner
+                    - text: (1 February 2005).
+                    - link "\"Rereading Einstein on Radiation\"" [ref=f1e3052] [cursor=pointer]:
+                      - /url: https://pubs.aip.org/physicstoday/article/58/2/30/904451/Rereading-Einstein-on-RadiationThe-concepts-of
+                    - text: ". Physics Today. 58 (2): 30–33."
+                    - link "Bibcode" [ref=f1e3053] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2005PhT....58b..30K" [ref=f1e3054] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2005PhT....58b..30K
+                    - text: .
+                    - link "doi" [ref=f1e3055] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1063/1.1897520" [ref=f1e3056] [cursor=pointer]:
+                      - /url: https://doi.org/10.1063%2F1.1897520
+                    - text: .
+                    - link "ISSN" [ref=f1e3057] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "0031-9228" [ref=f1e3058] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/0031-9228
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physics+Today&rft.atitle=Rereading+Einstein+on+Radiation&rft.volume=58&rft.issue=2&rft.pages=30-33&rft.date=2005-02-01&rft.issn=0031-9228&rft_id=info%3Adoi%2F10.1063%2F1.1897520&rft_id=info%3Abibcode%2F2005PhT....58b..30K&rft.aulast=Kleppner&rft.aufirst=Daniel&rft_id=https%3A%2F%2Fpubs.aip.org%2Fphysicstoday%2Farticle%2F58%2F2%2F30%2F904451%2FRereading-Einstein-on-RadiationThe-concepts-of&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3059]:
+                - link "Jump up" [ref=f1e3061] [cursor=pointer]:
+                  - /url: "#cite_ref-17"
+                  - text: ^
+                - generic [ref=f1e3062]:
+                  - generic [ref=f1e3063]:
+                    - text: Robinson, Andrew (30 April 2018).
+                    - link "\"Did Einstein really say that?\"" [ref=f1e3064] [cursor=pointer]:
+                      - /url: https://www.nature.com/articles/d41586-018-05004-4
+                    - text: .
+                    - link "Nature" [ref=f1e3066] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Nature_(journal)
+                    - text: ". 557 (30): 30."
+                    - link "Bibcode" [ref=f1e3067] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2018Natur.557...30R" [ref=f1e3068] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2018Natur.557...30R
+                    - text: .
+                    - link "doi" [ref=f1e3069] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1038/d41586-018-05004-4" [ref=f1e3070] [cursor=pointer]:
+                      - /url: https://doi.org/10.1038%2Fd41586-018-05004-4
+                    - text: .
+                    - link "ISSN" [ref=f1e3071] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "0028-0836" [ref=f1e3072] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/0028-0836
+                    - text: .
+                    - link "S2CID" [ref=f1e3073] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "14013938" [ref=f1e3074] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:14013938
+                    - text: .
+                    - link "Archived" [ref=f1e3075] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20201109033021/https://www.nature.com/articles/d41586-018-05004-4
+                    - text: from the original on 9 November 2020
+                    - generic [ref=f1e3076]: . Retrieved 21 February 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Nature&rft.atitle=Did+Einstein+really+say+that%3F&rft.volume=557&rft.issue=30&rft.pages=30&rft.date=2018-04-30&rft_id=info%3Adoi%2F10.1038%2Fd41586-018-05004-4&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A14013938%23id-name%3DS2CID&rft.issn=0028-0836&rft_id=info%3Abibcode%2F2018Natur.557...30R&rft.aulast=Robinson&rft.aufirst=Andrew&rft_id=https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-018-05004-4&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3077]:
+                - generic [ref=f1e3078]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3079] [cursor=pointer]:
+                    - /url: "#cite_ref-TIME_18-0"
+                  - link [ref=f1e3081] [cursor=pointer]:
+                    - /url: "#cite_ref-TIME_18-1"
+                - generic [ref=f1e3082]:
+                  - generic [ref=f1e3083]:
+                    - text: Golden, Frederic (31 December 1999).
+                    - link "\"Albert Einstein\"" [ref=f1e3084] [cursor=pointer]:
+                      - /url: https://time.com/archive/6598209/albert-einstein/
+                    - text: .
+                    - link "Time" [ref=f1e3086] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Time_(magazine)
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Time&rft.atitle=Albert+Einstein&rft.date=1999-12-31&rft.aulast=Golden&rft.aufirst=Frederic&rft_id=https%3A%2F%2Ftime.com%2Farchive%2F6598209%2Falbert-einstein%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3087]:
+                - generic [ref=f1e3088]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3089] [cursor=pointer]:
+                    - /url: "#cite_ref-Bio_19-0"
+                  - link [ref=f1e3091] [cursor=pointer]:
+                    - /url: "#cite_ref-Bio_19-1"
+                  - link [ref=f1e3092] [cursor=pointer]:
+                    - /url: "#cite_ref-Bio_19-2"
+                - generic [ref=f1e3093]:
+                  - generic [ref=f1e3094]:
+                    - link "\"Albert Einstein – Biography\"" [ref=f1e3095] [cursor=pointer]:
+                      - /url: http://nobelprize.org/nobel_prizes/physics/laureates/1921/einstein-bio.html
+                      - text: "\"Albert Einstein– Biography\""
+                    - text: .
+                    - link "Nobel Foundation" [ref=f1e3097] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Nobel_Foundation
+                    - text: .
+                    - link "Archived" [ref=f1e3098] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20070306133522/http://nobelprize.org/nobel_prizes/physics/laureates/1921/einstein-bio.html
+                    - text: from the original on 6 March 2007
+                    - generic [ref=f1e3099]: . Retrieved 7 March 2007
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Albert+Einstein%3Cspan+class%3D%22nowrap%22%3E+%3C%2Fspan%3E%E2%80%93+Biography&rft.pub=Nobel+Foundation&rft_id=http%3A%2F%2Fnobelprize.org%2Fnobel_prizes%2Fphysics%2Flaureates%2F1921%2Feinstein-bio.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3100]:
+                - link "Jump up" [ref=f1e3102] [cursor=pointer]:
+                  - /url: "#cite_ref-20"
+                  - text: ^
+                - generic [ref=f1e3103]:
+                  - generic [ref=f1e3104]: "Seelig, Carl (1956). Albert Einstein: A Documentary Biography. Staples Press."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Albert+Einstein%3A+A+Documentary+Biography&rft.pub=Staples+Press&rft.date=1956&rft.aulast=Seelig&rft.aufirst=Carl&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3105]:
+                - link "Jump up" [ref=f1e3107] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson200713_21-0"
+                  - text: ^
+                - generic [ref=f1e3108]:
+                  - link "Isaacson (2007)" [ref=f1e3109] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 13."
+              - listitem [ref=f1e3110]:
+                - link "Jump up" [ref=f1e3112] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEStachel2002[httpsbooksgooglecombooksidOAsQ_hFjhrACpgPA59_59–61]_22-0"
+                  - text: ^
+                - generic [ref=f1e3113]:
+                  - link "Stachel (2002)" [ref=f1e3114] [cursor=pointer]:
+                    - /url: "#CITEREFStachel2002"
+                  - text: ", pp."
+                  - link "59–61" [ref=f1e3115] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=OAsQ_hFjhrAC&pg=PA59
+                  - text: .
+              - listitem [ref=f1e3116]:
+                - link "Jump up" [ref=f1e3118] [cursor=pointer]:
+                  - /url: "#cite_ref-EQyag_23-0"
+                  - text: ^
+                - generic [ref=f1e3119]: "Barry R. Parker (2003). Einstein: The Passions of a Scientist, Prometheus Books, p. 31"
+              - listitem [ref=f1e3120]:
+                - link "Jump up" [ref=f1e3122] [cursor=pointer]:
+                  - /url: "#cite_ref-24"
+                  - text: ^
+                - generic [ref=f1e3123]:
+                  - generic [ref=f1e3124]:
+                    - text: University of Pavia.
+                    - link "\"Einstein, Albert\"" [ref=f1e3125] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20230118175928/http://musei.unipv.eu/msu/our-museums/historical-figures/albert-einstein/
+                    - text: . Museo per la Storia dell'Università di Pavia. University of Pavia. Archived from
+                    - link "the original" [ref=f1e3126] [cursor=pointer]:
+                      - /url: http://musei.unipv.eu/msu/our-museums/historical-figures/albert-einstein/
+                    - text: on 18 January 2023
+                    - generic [ref=f1e3127]: . Retrieved 7 January 2023
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Museo+per+la+Storia+dell%27Universit%C3%A0+di+Pavia&rft.atitle=Einstein%2C+Albert&rft.au=University+of+Pavia&rft_id=http%3A%2F%2Fmusei.unipv.eu%2Fmsu%2Four-museums%2Fhistorical-figures%2Falbert-einstein%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3128]:
+                - link "Jump up" [ref=f1e3130] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEFölsing199730–31_25-0"
+                  - text: ^
+                - generic [ref=f1e3131]:
+                  - link "Fölsing (1997)" [ref=f1e3132] [cursor=pointer]:
+                    - /url: "#CITEREFFölsing1997"
+                  - text: ", pp. 30–31."
+                  - generic [ref=f1e3133]:
+                    - text: "sfnp error: multiple targets (2×): CITEREFFölsing1997 ("
+                    - link "help" [ref=f1e3134] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Category:Harv_and_Sfn_template_errors
+                    - text: )
+              - listitem [ref=f1e3135]:
+                - link "Jump up" [ref=f1e3137] [cursor=pointer]:
+                  - /url: "#cite_ref-Stachel2008_26-0"
+                  - text: ^
+                - text: Stachel, et al (2008). Vol. 1 (1987), doc. 5.
+              - listitem [ref=f1e3138]:
+                - link "Jump up" [ref=f1e3140] [cursor=pointer]:
+                  - /url: "#cite_ref-1RgTv_27-0"
+                  - text: ^
+                - generic [ref=f1e3141]:
+                  - generic [ref=f1e3142]:
+                    - text: Mehra, Jagdish (2001).
+                    - link "\"Albert Einstein's \"First Paper\"\"" [ref=f1e3143] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=o1XVCgAAQBAJ&pg=PA1
+                    - text: .
+                    - link "Golden Age Of Theoretical Physics, The (Boxed Set Of 2 Vols)" [ref=f1e3145] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=o1XVCgAAQBAJ
+                    - text: . World Scientific.
+                    - link "ISBN" [ref=f1e3146] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-981-4492-85-0" [ref=f1e3147] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-981-4492-85-0
+                    - generic [ref=f1e3148]: . Retrieved 5 January 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Albert+Einstein%27s+%22First+Paper%22&rft.btitle=Golden+Age+Of+Theoretical+Physics%2C+The+%28Boxed+Set+Of+2+Vols%29&rft.pub=World+Scientific&rft.date=2001&rft.isbn=978-981-4492-85-0&rft.aulast=Mehra&rft.aufirst=Jagdish&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Do1XVCgAAQBAJ%26pg%3DPA1&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3149]:
+                - link "Jump up" [ref=f1e3151] [cursor=pointer]:
+                  - /url: "#cite_ref-FVfDU_28-0"
+                  - text: ^
+                - generic [ref=f1e3152]: The Three-body Problem from Pythagoras to Hawking, Mauri Valtonen, Joanna Anosova, Konstantin Kholshevnikov, Aleksandr Mylläri, Victor Orlov, Kiyotaka Tanikawa, (Springer 2016), p. 43, Simon and Schuster, 2008
+              - listitem [ref=f1e3153]:
+                - link "Jump up" [ref=f1e3155] [cursor=pointer]:
+                  - /url: "#cite_ref-29"
+                  - text: ^
+                - generic [ref=f1e3156]:
+                  - generic [ref=f1e3157]:
+                    - text: Bloom, Howard (2012).
+                    - 'link "The God Problem: How a Godless Cosmos Creates" [ref=f1e3158] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=xlEupJb4ojIC
+                    - text: (illustrated ed.). Prometheus Books. p. 294.
+                    - link "ISBN" [ref=f1e3159] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-61614-552-1" [ref=f1e3160] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-61614-552-1
+                    - generic [ref=f1e3161]: . Retrieved 8 August 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+God+Problem%3A+How+a+Godless+Cosmos+Creates&rft.pages=294&rft.edition=illustrated&rft.pub=Prometheus+Books&rft.date=2012&rft.isbn=978-1-61614-552-1&rft.aulast=Bloom&rft.aufirst=Howard&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DxlEupJb4ojIC&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3162]:
+                - generic [ref=f1e3163]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3164] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson200717_30-0"
+                  - link [ref=f1e3166] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson200717_30-1"
+                - generic [ref=f1e3167]:
+                  - link "Isaacson (2007)" [ref=f1e3168] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 17."
+              - listitem [ref=f1e3169]:
+                - link "Jump up" [ref=f1e3171] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson200716_31-0"
+                  - text: ^
+                - generic [ref=f1e3172]:
+                  - link "Isaacson (2007)" [ref=f1e3173] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 16."
+              - listitem [ref=f1e3174]:
+                - link "Jump up" [ref=f1e3176] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson200717–18_32-0"
+                  - text: ^
+                - generic [ref=f1e3177]:
+                  - link "Isaacson (2007)" [ref=f1e3178] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", pp. 17–18."
+              - listitem [ref=f1e3179]:
+                - link "Jump up" [ref=f1e3181] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTECalapriceLipscombe20058_33-0"
+                  - text: ^
+                - generic [ref=f1e3182]:
+                  - link "Calaprice & Lipscombe (2005)" [ref=f1e3183] [cursor=pointer]:
+                    - /url: "#CITEREFCalapriceLipscombe2005"
+                  - text: ", p. 8."
+              - listitem [ref=f1e3184]:
+                - link "Jump up" [ref=f1e3186] [cursor=pointer]:
+                  - /url: "#cite_ref-Stachel2008a_34-0"
+                  - text: ^
+                - text: Stachel, et al (2008). Vol. 1 (1987), p. 11.
+              - listitem [ref=f1e3187]:
+                - link "Jump up" [ref=f1e3189] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEFölsing199736–37_35-0"
+                  - text: ^
+                - generic [ref=f1e3190]:
+                  - link "Fölsing (1997)" [ref=f1e3191] [cursor=pointer]:
+                    - /url: "#CITEREFFölsing1997"
+                  - text: ", pp. 36–37."
+                  - generic [ref=f1e3192]:
+                    - text: "sfnp error: multiple targets (2×): CITEREFFölsing1997 ("
+                    - link "help" [ref=f1e3193] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Category:Harv_and_Sfn_template_errors
+                    - text: )
+              - listitem [ref=f1e3194]:
+                - link "Jump up" [ref=f1e3196] [cursor=pointer]:
+                  - /url: "#cite_ref-b250_36-0"
+                  - text: ^
+                - generic [ref=f1e3197]:
+                  - generic [ref=f1e3198]:
+                    - text: "Hunziker, Herbert (2015). \"Albert Einstein's Magic Mountain: An Aarau Education*\". Physics in Perspective. 17 (1): 55–69."
+                    - link "Bibcode" [ref=f1e3199] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2015PhP....17...55H" [ref=f1e3200] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2015PhP....17...55H
+                    - text: .
+                    - link "doi" [ref=f1e3201] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1007/s00016-014-0153-5" [ref=f1e3202] [cursor=pointer]:
+                      - /url: https://doi.org/10.1007%2Fs00016-014-0153-5
+                    - text: .
+                    - link "ISSN" [ref=f1e3203] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "1422-6944" [ref=f1e3204] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/1422-6944
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physics+in+Perspective&rft.atitle=Albert+Einstein%27s+Magic+Mountain%3A+An+Aarau+Education%2A&rft.volume=17&rft.issue=1&rft.pages=55-69&rft.date=2015&rft.issn=1422-6944&rft_id=info%3Adoi%2F10.1007%2Fs00016-014-0153-5&rft_id=info%3Abibcode%2F2015PhP....17...55H&rft.aulast=Hunziker&rft.aufirst=Herbert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: "ref for:"
+                  - link "Old Cantonal School Aarau" [ref=f1e3205] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Old_Cantonal_School_Aarau
+              - listitem [ref=f1e3206]:
+                - generic [ref=f1e3207]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3208] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEHighfieldCarter199321,_31,_56–57_37-0"
+                  - link [ref=f1e3210] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEHighfieldCarter199321,_31,_56–57_37-1"
+                - generic [ref=f1e3211]:
+                  - link "Highfield & Carter (1993)" [ref=f1e3212] [cursor=pointer]:
+                    - /url: "#CITEREFHighfieldCarter1993"
+                  - text: ", pp. 21, 31, 56–57."
+              - listitem [ref=f1e3213]:
+                - link "Jump up" [ref=f1e3215] [cursor=pointer]:
+                  - /url: "#cite_ref-Stachel2008b_39-0"
+                  - text: ^
+                - text: Stachel, et al (2008). Vol. 1 (1987), docs. 21–27.
+              - listitem [ref=f1e3216]:
+                - generic [ref=f1e3217]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3218] [cursor=pointer]:
+                    - /url: "#cite_ref-mileva_40-0"
+                  - link [ref=f1e3220] [cursor=pointer]:
+                    - /url: "#cite_ref-mileva_40-1"
+                  - link [ref=f1e3221] [cursor=pointer]:
+                    - /url: "#cite_ref-mileva_40-2"
+                - generic [ref=f1e3222]:
+                  - generic [ref=f1e3223]:
+                    - text: Gagnon, Pauline (19 December 2016).
+                    - link "\"The Forgotten Life of Einstein's First Wife\"" [ref=f1e3224] [cursor=pointer]:
+                      - /url: https://blogs.scientificamerican.com/guest-blog/the-forgotten-life-of-einsteins-first-wife/
+                    - text: . Scientific American Blog Network.
+                    - link "Archived" [ref=f1e3225] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20201017222145/https://blogs.scientificamerican.com/guest-blog/the-forgotten-life-of-einsteins-first-wife/
+                    - text: from the original on 17 October 2020
+                    - generic [ref=f1e3226]: . Retrieved 17 October 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Scientific+American+Blog+Network&rft.atitle=The+Forgotten+Life+of+Einstein%27s+First+Wife&rft.date=2016-12-19&rft.aulast=Gagnon&rft.aufirst=Pauline&rft_id=https%3A%2F%2Fblogs.scientificamerican.com%2Fguest-blog%2Fthe-forgotten-life-of-einsteins-first-wife%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3227]:
+                - link "Jump up" [ref=f1e3229] [cursor=pointer]:
+                  - /url: "#cite_ref-7HA7H_41-0"
+                  - text: ^
+                - generic [ref=f1e3230]:
+                  - generic [ref=f1e3231]:
+                    - text: "Troemel-Ploetz, D. (1990). \"Mileva Einstein-Marić: The Woman Who Did Einstein's Mathematics\". Women's Studies International Forum. 13 (5): 415–432."
+                    - link "doi" [ref=f1e3232] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1016/0277-5395(90)90094-e" [ref=f1e3233] [cursor=pointer]:
+                      - /url: https://doi.org/10.1016%2F0277-5395%2890%2990094-e
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Women%27s+Studies+International+Forum&rft.atitle=Mileva+Einstein-Mari%C4%87%3A+The+Woman+Who+Did+Einstein%27s+Mathematics&rft.volume=13&rft.issue=5&rft.pages=415-432&rft.date=1990&rft_id=info%3Adoi%2F10.1016%2F0277-5395%2890%2990094-e&rft.au=Troemel-Ploetz%2C+D.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3234]:
+                - link "Jump up" [ref=f1e3236] [cursor=pointer]:
+                  - /url: "#cite_ref-1zJdH_42-0"
+                  - text: ^
+                - generic [ref=f1e3237]:
+                  - generic [ref=f1e3238]:
+                    - text: Walker, Evan Harris (February 1989).
+                    - link "\"Did Einstein Espouse his Spouse's Ideas?\"" [ref=f1e3239] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20120119093653/http://philosci40.unibe.ch/lehre/winter99/einstein/Walker_Stachel.pdf
+                    - text: "(PDF). Physics Today. 42 (2): 9–13."
+                    - link "Bibcode" [ref=f1e3240] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1989PhT....42b...9W" [ref=f1e3241] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1989PhT....42b...9W
+                    - text: .
+                    - link "doi" [ref=f1e3242] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1063/1.2810898" [ref=f1e3243] [cursor=pointer]:
+                      - /url: https://doi.org/10.1063%2F1.2810898
+                    - text: . Archived from
+                    - link "the original" [ref=f1e3244] [cursor=pointer]:
+                      - /url: http://philosci40.unibe.ch/lehre/winter99/einstein/Walker_Stachel.pdf
+                    - text: (PDF) on 19 January 2012
+                    - generic [ref=f1e3245]: . Retrieved 19 October 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physics+Today&rft.atitle=Did+Einstein+Espouse+his+Spouse%27s+Ideas%3F&rft.volume=42&rft.issue=2&rft.pages=9-13&rft.date=1989-02&rft_id=info%3Adoi%2F10.1063%2F1.2810898&rft_id=info%3Abibcode%2F1989PhT....42b...9W&rft.au=Walker%2C+Evan+Harris&rft_id=http%3A%2F%2Fphilosci40.unibe.ch%2Flehre%2Fwinter99%2Feinstein%2FWalker_Stachel.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3246]:
+                - link "Jump up" [ref=f1e3248] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEPais19941–29_43-0"
+                  - text: ^
+                - generic [ref=f1e3249]:
+                  - link "Pais (1994)" [ref=f1e3250] [cursor=pointer]:
+                    - /url: "#CITEREFPais1994"
+                  - text: ", pp. 1–29."
+              - listitem [ref=f1e3251]:
+                - link "Jump up" [ref=f1e3253] [cursor=pointer]:
+                  - /url: "#cite_ref-xKrMG_44-0"
+                  - text: ^
+                - generic [ref=f1e3254]: Holton, G., Einstein, History, and Other Passions, Harvard University Press, 1996, pp. 177–193.
+              - listitem [ref=f1e3255]:
+                - link "Jump up" [ref=f1e3257] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEStachel2002[httpsbooksgooglecombooksidOAsQ_hFjhrACpgPA49_49–56]_45-0"
+                  - text: ^
+                - generic [ref=f1e3258]:
+                  - link "Stachel (2002)" [ref=f1e3259] [cursor=pointer]:
+                    - /url: "#CITEREFStachel2002"
+                  - text: ", pp."
+                  - link "49–56" [ref=f1e3260] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=OAsQ_hFjhrAC&pg=PA49
+                  - text: .
+              - listitem [ref=f1e3261]:
+                - link "Jump up" [ref=f1e3263] [cursor=pointer]:
+                  - /url: "#cite_ref-dUxMl_46-0"
+                  - text: ^
+                - generic [ref=f1e3264]:
+                  - text: "Martinez, A. A., \"Handling evidence in history: the case of Einstein's wife\", School Science Review, 86 (316), March 2005, pp. 49–56."
+                  - generic [ref=f1e3265]:
+                    - link "\"PDF\"" [ref=f1e3266] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20110811141225/https://webspace.utexas.edu/aam829/1/m/Maric_files/EvidenceMaric.pdf
+                    - text: (PDF). Archived from
+                    - link "the original" [ref=f1e3267] [cursor=pointer]:
+                      - /url: https://webspace.utexas.edu/aam829/1/m/Maric_files/EvidenceMaric.pdf
+                    - text: (PDF) on 11 August 2011
+                    - generic [ref=f1e3268]: . Retrieved 11 August 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=PDF&rft_id=https%3A%2F%2Fwebspace.utexas.edu%2Faam829%2F1%2Fm%2FMaric_files%2FEvidenceMaric.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3269]:
+                - link "Jump up" [ref=f1e3271] [cursor=pointer]:
+                  - /url: "#cite_ref-HBMes_47-0"
+                  - text: ^
+                - generic [ref=f1e3272]:
+                  - generic [ref=f1e3273]:
+                    - text: Renn, Jürgen; Schulmann, Robert, eds. (16 November 2000).
+                    - 'link "Albert Einstein, Mileva Maric: The Love Letters" [ref=f1e3274] [cursor=pointer]':
+                      - /url: https://press.princeton.edu/books/paperback/9780691088860/albert-einstein-mileva-maric
+                    - text: . Translated by Smith, Shawn.
+                    - link "Princeton University Press" [ref=f1e3275] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Princeton_University_Press
+                    - text: . pp. 73–74, 78.
+                    - link "ISBN" [ref=f1e3276] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-691-08886-0" [ref=f1e3277] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-08886-0
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Albert+Einstein%2C+Mileva+Maric%3A+The+Love+Letters&rft.pages=73-74%2C+78&rft.pub=Princeton+University+Press&rft.date=2000-11-16&rft.isbn=978-0-691-08886-0&rft_id=https%3A%2F%2Fpress.princeton.edu%2Fbooks%2Fpaperback%2F9780691088860%2Falbert-einstein-mileva-maric&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3278]:
+                - link "Jump up" [ref=f1e3280] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTECalapriceLipscombe200522–23_48-0"
+                  - text: ^
+                - generic [ref=f1e3281]:
+                  - link "Calaprice & Lipscombe (2005)" [ref=f1e3282] [cursor=pointer]:
+                    - /url: "#CITEREFCalapriceLipscombe2005"
+                  - text: ", pp. 22–23."
+              - listitem [ref=f1e3283]:
+                - link "Jump up" [ref=f1e3285] [cursor=pointer]:
+                  - /url: "#cite_ref-MlQLY_49-0"
+                  - text: ^
+                - generic [ref=f1e3286]:
+                  - generic [ref=f1e3287]:
+                    - text: Wüthrich, Urs (11 April 2015).
+                    - link "\"Die Liebesbriefe des untreuen Einstein\"" [ref=f1e3288] [cursor=pointer]:
+                      - /url: http://www.bernerzeitung.ch/region/bern/Die-Liebesbriefe-des-untreuen-Einstein/story/11875058
+                    - text: "[The love letters of the unfaithful Einstein]."
+                    - link "Berner Zeitung" [ref=f1e3290] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Berner_Zeitung
+                    - text: (in German). Bern, Switzerland.
+                    - link "Archived" [ref=f1e3291] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20150416075918/http://www.bernerzeitung.ch/region/bern/Die-Liebesbriefe-des-untreuen-Einstein/story/11875058
+                    - text: from the original on 16 April 2015
+                    - generic [ref=f1e3292]: . Retrieved 11 April 2015
+                    - text: . Ich denke in innigster Liebe an Dich in jeder freien Minute und bin so unglücklich, wie nur ein Mensch es sein kann.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Berner+Zeitung&rft.atitle=Die+Liebesbriefe+des+untreuen+Einstein&rft.date=2015-04-11&rft.aulast=W%C3%BCthrich&rft.aufirst=Urs&rft_id=http%3A%2F%2Fwww.bernerzeitung.ch%2Fregion%2Fbern%2FDie-Liebesbriefe-des-untreuen-Einstein%2Fstory%2F11875058&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3293]:
+                - link "Jump up" [ref=f1e3295] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTECalapriceLipscombe2005[httpsbooksgooglecombooksid5eWh2O_3OAQCpgPA50_50]_50-0"
+                  - text: ^
+                - generic [ref=f1e3296]:
+                  - link "Calaprice & Lipscombe (2005)" [ref=f1e3297] [cursor=pointer]:
+                    - /url: "#CITEREFCalapriceLipscombe2005"
+                  - text: ", p."
+                  - link "50" [ref=f1e3298] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=5eWh2O_3OAQC&pg=PA50
+                  - text: .
+              - listitem [ref=f1e3299]:
+                - generic [ref=f1e3300]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3301] [cursor=pointer]:
+                    - /url: "#cite_ref-dh_51-0"
+                  - link [ref=f1e3303] [cursor=pointer]:
+                    - /url: "#cite_ref-dh_51-1"
+                  - link [ref=f1e3304] [cursor=pointer]:
+                    - /url: "#cite_ref-dh_51-2"
+                  - link [ref=f1e3305] [cursor=pointer]:
+                    - /url: "#cite_ref-dh_51-3"
+                  - link [ref=f1e3306] [cursor=pointer]:
+                    - /url: "#cite_ref-dh_51-4"
+                - generic [ref=f1e3307]:
+                  - generic [ref=f1e3308]:
+                    - text: "Hoffmann, Dieter (2013). Einstein's Berlin: In the footsteps of a genius. Baltimore: The Johns Hopkins University Press. pp. 2–9, 28."
+                    - link "ISBN" [ref=f1e3309] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-4214-1040-1" [ref=f1e3310] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-4214-1040-1
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein%27s+Berlin%3A+In+the+footsteps+of+a+genius&rft.place=Baltimore&rft.pages=2-9%2C+28&rft.pub=The+Johns+Hopkins+University+Press&rft.date=2013&rft.isbn=978-1-4214-1040-1&rft.aulast=Hoffmann&rft.aufirst=Dieter&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3311]:
+                - link "Jump up" [ref=f1e3313] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEStachel1996212_52-0"
+                  - text: ^
+                - generic [ref=f1e3314]:
+                  - link "Stachel (1996)" [ref=f1e3315] [cursor=pointer]:
+                    - /url: "#CITEREFStachel1996"
+                  - text: ", p. 212."
+              - listitem [ref=f1e3316]:
+                - link "Jump up" [ref=f1e3318] [cursor=pointer]:
+                  - /url: "#cite_ref-53"
+                  - text: ^
+                - generic [ref=f1e3319]:
+                  - generic [ref=f1e3320]:
+                    - text: Smith, Dinitia (6 November 1996).
+                    - link "\"Dark Side of Einstein Emerges in His Letters\"" [ref=f1e3321] [cursor=pointer]:
+                      - /url: https://www.nytimes.com/1996/11/06/arts/dark-side-of-einstein-emerges-in-his-letters.html
+                    - text: . The New York Times.
+                    - link "Archived" [ref=f1e3322] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210105092333/https://www.nytimes.com/1996/11/06/arts/dark-side-of-einstein-emerges-in-his-letters.html
+                    - text: from the original on 5 January 2021
+                    - generic [ref=f1e3323]: . Retrieved 17 August 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=Dark+Side+of+Einstein+Emerges+in+His+Letters&rft.date=1996-11-06&rft.aulast=Smith&rft.aufirst=Dinitia&rft_id=https%3A%2F%2Fwww.nytimes.com%2F1996%2F11%2F06%2Farts%2Fdark-side-of-einstein-emerges-in-his-letters.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3324]:
+                - link "Jump up" [ref=f1e3326] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEStachel1996219_54-0"
+                  - text: ^
+                - generic [ref=f1e3327]:
+                  - link "Stachel (1996)" [ref=f1e3328] [cursor=pointer]:
+                    - /url: "#CITEREFStachel1996"
+                  - text: ", p. 219."
+              - listitem [ref=f1e3329]:
+                - link "Jump up" [ref=f1e3331] [cursor=pointer]:
+                  - /url: "#cite_ref-55"
+                  - text: ^
+                - generic [ref=f1e3332]:
+                  - generic [ref=f1e3333]:
+                    - 'link "\"Volume 9: The Berlin Years: Correspondence, January 1919 – April 1920 (English translation supplement) page 6\"" [ref=f1e3334] [cursor=pointer]':
+                      - /url: https://einsteinpapers.press.princeton.edu/vol9-trans/28
+                    - text: . einsteinpapers.press.princeton.edu.
+                    - link "Archived" [ref=f1e3335] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20211004033245/https://einsteinpapers.press.princeton.edu/vol9-trans/28
+                    - text: from the original on 4 October 2021
+                    - generic [ref=f1e3336]: . Retrieved 4 October 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=einsteinpapers.press.princeton.edu&rft.atitle=Volume+9%3A+The+Berlin+Years%3A+Correspondence%2C+January+1919+%E2%80%93+April+1920+%28English+translation+supplement%29+page+6&rft_id=https%3A%2F%2Feinsteinpapers.press.princeton.edu%2Fvol9-trans%2F28&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3337]:
+                - link "Jump up" [ref=f1e3339] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007xix_56-0"
+                  - text: ^
+                - generic [ref=f1e3340]:
+                  - link "Isaacson (2007)" [ref=f1e3341] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. xix."
+              - listitem [ref=f1e3342]:
+                - link "Jump up" [ref=f1e3344] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTECalapriceKennefickSchulmann201562_57-0"
+                  - text: ^
+                - generic [ref=f1e3345]:
+                  - link "Calaprice, Kennefick & Schulmann (2015)" [ref=f1e3346] [cursor=pointer]:
+                    - /url: "#CITEREFCalapriceKennefickSchulmann2015"
+                  - text: ", p. 62."
+              - listitem [ref=f1e3347]:
+                - link "Jump up" [ref=f1e3349] [cursor=pointer]:
+                  - /url: "#cite_ref-58"
+                  - text: ^
+                - generic [ref=f1e3350]:
+                  - generic [ref=f1e3351]:
+                    - text: Highfield, Roger (10 July 2006).
+                    - generic "Paid subscription required" [ref=f1e3352]:
+                      - link "\"Einstein's theory of fidelity\"" [ref=f1e3353] [cursor=pointer]:
+                        - /url: https://www.telegraph.co.uk/news/worldnews/northamerica/usa/1523626/Einsteins-theory-of-fidelity.html
+                    - text: . The Daily Telegraph.
+                    - link "Archived" [ref=f1e3354] [cursor=pointer]:
+                      - /url: https://ghostarchive.org/archive/20220110/https://www.telegraph.co.uk/news/worldnews/northamerica/usa/1523626/Einsteins-theory-of-fidelity.html
+                    - text: from the original on 10 January 2022.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=The+Daily+Telegraph&rft.atitle=Einstein%27s+theory+of+fidelity&rft.date=2006-07-10&rft.aulast=Highfield&rft.aufirst=Roger&rft_id=https%3A%2F%2Fwww.telegraph.co.uk%2Fnews%2Fworldnews%2Fnorthamerica%2Fusa%2F1523626%2FEinsteins-theory-of-fidelity.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3355]:
+                - link "Jump up" [ref=f1e3357] [cursor=pointer]:
+                  - /url: "#cite_ref-59"
+                  - text: ^
+                - generic [ref=f1e3358]:
+                  - generic [ref=f1e3359]:
+                    - text: Overbye, Dennis (17 April 2017).
+                    - link "\"'Genius' Unravels the Mysteries of Einstein's Universe\"" [ref=f1e3360] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20170418100011/https://www.nytimes.com/2017/04/17/science/albert-einstein-genius-national-geographic-channel.html
+                    - text: .
+                    - link "The New York Times" [ref=f1e3363] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_New_York_Times
+                    - text: . Archived from
+                    - generic "Free access subject to limited trial, subscription normally required" [ref=f1e3364]:
+                      - link "the original" [ref=f1e3365] [cursor=pointer]:
+                        - /url: https://www.nytimes.com/2017/04/17/science/albert-einstein-genius-national-geographic-channel.html
+                    - text: on 18 April 2017.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=%27Genius%27+Unravels+the+Mysteries+of+Einstein%27s+Universe&rft.date=2017-04-17&rft.aulast=Overbye&rft.aufirst=Dennis&rft_id=https%3A%2F%2Fwww.nytimes.com%2F2017%2F04%2F17%2Fscience%2Falbert-einstein-genius-national-geographic-channel.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3366]:
+                - link "Jump up" [ref=f1e3368] [cursor=pointer]:
+                  - /url: "#cite_ref-60"
+                  - text: ^
+                - generic [ref=f1e3369]:
+                  - generic [ref=f1e3370]:
+                    - link "\"Genius Albert Einstein's Theory of Infidelity\"" [ref=f1e3371] [cursor=pointer]:
+                      - /url: https://www.natgeotv.com/za/special/genius-albert-einsteins-theory-of-infidelity
+                    - text: . NatGeo TV.
+                    - link "Archived" [ref=f1e3372] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200923010851/https://www.natgeotv.com/za/special/genius-albert-einsteins-theory-of-infidelity
+                    - text: from the original on 23 September 2020
+                    - generic [ref=f1e3373]: . Retrieved 9 August 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Genius+Albert+Einstein%27s+Theory+of+Infidelity&rft.pub=NatGeo+TV&rft_id=https%3A%2F%2Fwww.natgeotv.com%2Fza%2Fspecial%2Fgenius-albert-einsteins-theory-of-infidelity&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3374]:
+                - link "Jump up" [ref=f1e3376] [cursor=pointer]:
+                  - /url: "#cite_ref-61"
+                  - text: ^
+                - generic [ref=f1e3377]:
+                  - generic [ref=f1e3378]:
+                    - link "\"Getting up close and personal with Einstein\"" [ref=f1e3379] [cursor=pointer]:
+                      - /url: https://www.jpost.com/health-and-science/getting-up-close-and-personal-with-einstein
+                    - text: .
+                    - generic [ref=f1e3380]: The Jerusalem Post | JPost.com
+                    - text: .
+                    - link "Archived" [ref=f1e3381] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200923001654/https://www.jpost.com/Health-and-Science/Getting-up-close-and-personal-with-Einstein
+                    - text: from the original on 23 September 2020
+                    - generic [ref=f1e3382]: . Retrieved 29 August 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+Jerusalem+Post+%26%23124%3B+JPost.com&rft.atitle=Getting+up+close+and+personal+with+Einstein&rft_id=https%3A%2F%2Fwww.jpost.com%2Fhealth-and-science%2Fgetting-up-close-and-personal-with-einstein&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3383]:
+                - link "Jump up" [ref=f1e3385] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEHighfieldCarter1993216_62-0"
+                  - text: ^
+                - generic [ref=f1e3386]:
+                  - link "Highfield & Carter (1993)" [ref=f1e3387] [cursor=pointer]:
+                    - /url: "#CITEREFHighfieldCarter1993"
+                  - text: ", p. 216."
+              - listitem [ref=f1e3388]:
+                - link "Jump up" [ref=f1e3390] [cursor=pointer]:
+                  - /url: "#cite_ref-63"
+                  - text: ^
+                - generic [ref=f1e3391]:
+                  - generic [ref=f1e3392]:
+                    - link "\"Einstein secret love affairs out!\"" [ref=f1e3393] [cursor=pointer]:
+                      - /url: https://www.hindustantimes.com/india/einstein-secret-love-affairs-out/story-QVSHrfMYJzCRcIlbBCJKAM.html
+                    - text: . Hindustan Times. 13 July 2006.
+                    - link "Archived" [ref=f1e3394] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200923115250/https://www.hindustantimes.com/india/einstein-secret-love-affairs-out/story-QVSHrfMYJzCRcIlbBCJKAM.html
+                    - text: from the original on 23 September 2020
+                    - generic [ref=f1e3395]: . Retrieved 17 August 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Hindustan+Times&rft.atitle=Einstein+secret+love+affairs+out%21&rft.date=2006-07-13&rft_id=https%3A%2F%2Fwww.hindustantimes.com%2Findia%2Feinstein-secret-love-affairs-out%2Fstory-QVSHrfMYJzCRcIlbBCJKAM.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3396]:
+                - link "Jump up" [ref=f1e3398] [cursor=pointer]:
+                  - /url: "#cite_ref-64"
+                  - text: ^
+                - generic [ref=f1e3399]:
+                  - generic [ref=f1e3400]:
+                    - text: Graydon, Samuel (14 November 2023).
+                    - 'link "Einstein in Time and Space: A Life in 99 Particles" [ref=f1e3401] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=PRSsEAAAQBAJ&dq=Margarete+Lebach&pg=PA199
+                    - text: "(1 ed.). New York: Simon and Schuster. p. 199."
+                    - link "ISBN" [ref=f1e3402] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-9821-8512-1" [ref=f1e3403] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-9821-8512-1
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+in+Time+and+Space%3A+A+Life+in+99+Particles&rft.place=New+York&rft.pages=199&rft.edition=1&rft.pub=Simon+and+Schuster&rft.date=2023-11-14&rft.isbn=978-1-9821-8512-1&rft.aulast=Graydon&rft.aufirst=Samuel&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DPRSsEAAAQBAJ%26dq%3DMargarete%2BLebach%26pg%3DPA199&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3404]:
+                - link "Jump up" [ref=f1e3406] [cursor=pointer]:
+                  - /url: "#cite_ref-65"
+                  - text: ^
+                - generic [ref=f1e3407]:
+                  - generic [ref=f1e3408]:
+                    - link "\"New letters shed light on Einstein's love life\"" [ref=f1e3409] [cursor=pointer]:
+                      - /url: https://www.nbcnews.com/id/wbna13804030
+                    - text: . NBC News. 11 July 2006.
+                    - link "Archived" [ref=f1e3410] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200222022647/http://www.nbcnews.com/id/13804030/ns/technology_and_science-science/t/new-letters-shed-light-einsteins-love-life
+                    - text: from the original on 22 February 2020
+                    - generic [ref=f1e3411]: . Retrieved 15 August 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=New+letters+shed+light+on+Einstein%27s+love+life&rft.pub=NBC+News&rft.date=2006-07-11&rft_id=https%3A%2F%2Fwww.nbcnews.com%2Fid%2Fwbna13804030&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3412]:
+                - link "Jump up" [ref=f1e3414] [cursor=pointer]:
+                  - /url: "#cite_ref-66"
+                  - text: ^
+                - generic [ref=f1e3415]:
+                  - generic [ref=f1e3416]:
+                    - link "\"Albert Einstein may have had the IQ, but he needed to work on his EQ\"" [ref=f1e3417] [cursor=pointer]:
+                      - /url: https://economictimes.indiatimes.com/magazines/panache/albert-einstein-may-have-had-the-iq-but-he-needed-to-work-on-his-eq/articleshow/64849211.cms?from=mdr
+                    - text: . The Economic Times.
+                    - link "Archived" [ref=f1e3418] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210208134808/https://economictimes.indiatimes.com/magazines/panache/albert-einstein-may-have-had-the-iq-but-he-needed-to-work-on-his-eq/articleshow/64849211.cms?from=mdr
+                    - text: from the original on 8 February 2021
+                    - generic [ref=f1e3419]: . Retrieved 15 August 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+Economic+Times&rft.atitle=Albert+Einstein+may+have+had+the+IQ%2C+but+he+needed+to+work+on+his+EQ&rft_id=https%3A%2F%2Feconomictimes.indiatimes.com%2Fmagazines%2Fpanache%2Falbert-einstein-may-have-had-the-iq-but-he-needed-to-work-on-his-eq%2Farticleshow%2F64849211.cms%3Ffrom%3Dmdr&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3420]:
+                - link "Jump up" [ref=f1e3422] [cursor=pointer]:
+                  - /url: "#cite_ref-67"
+                  - text: ^
+                - generic [ref=f1e3423]:
+                  - generic [ref=f1e3424]:
+                    - text: Levy, Josh (30 November 2023).
+                    - 'link "\"Love and Intrigue at Princeton: Newly Opened Letters from Einstein''s Love Affair with Margarita Konenkova | Unfolding History\"" [ref=f1e3425] [cursor=pointer]':
+                      - /url: https://blogs.loc.gov/manuscripts/2023/11/love-and-intrigue-at-princeton-newly-opened-letters-from-einsteins-love-affair-with-margarita-konenkova
+                    - text: . The Library of Congress
+                    - generic [ref=f1e3426]: . Retrieved 21 July 2026
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=The+Library+of+Congress&rft.atitle=Love+and+Intrigue+at+Princeton%3A+Newly+Opened+Letters+from+Einstein%27s+Love+Affair+with+Margarita+Konenkova+%7C+Unfolding+History&rft.date=2023-11-30&rft.aulast=Levy&rft.aufirst=Josh&rft_id=https%3A%2F%2Fblogs.loc.gov%2Fmanuscripts%2F2023%2F11%2Flove-and-intrigue-at-princeton-newly-opened-letters-from-einsteins-love-affair-with-margarita-konenkova&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3427]:
+                - link "Jump up" [ref=f1e3429] [cursor=pointer]:
+                  - /url: "#cite_ref-69"
+                  - text: ^
+                - generic [ref=f1e3430]:
+                  - generic [ref=f1e3431]:
+                    - text: Pogrebin, Robin (1 June 1998).
+                    - link "\"Love Letters By Einstein at Auction\"" [ref=f1e3432] [cursor=pointer]:
+                      - /url: https://www.nytimes.com/1998/06/01/us/love-letters-by-einstein-at-auction.html
+                    - text: . The New York Times.
+                    - link "Archived" [ref=f1e3433] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20201107053956/https://www.nytimes.com/1998/06/01/us/love-letters-by-einstein-at-auction.html
+                    - text: from the original on 7 November 2020
+                    - generic [ref=f1e3434]: . Retrieved 10 August 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=Love+Letters+By+Einstein+at+Auction&rft.date=1998-06-01&rft.aulast=Pogrebin&rft.aufirst=Robin&rft_id=https%3A%2F%2Fwww.nytimes.com%2F1998%2F06%2F01%2Fus%2Flove-letters-by-einstein-at-auction.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3435]:
+                - link "Jump up" [ref=f1e3437] [cursor=pointer]:
+                  - /url: "#cite_ref-70"
+                  - text: ^
+                - generic [ref=f1e3438]:
+                  - generic [ref=f1e3439]:
+                    - link "\"Einstein's letters show affair with spy\"" [ref=f1e3440] [cursor=pointer]:
+                      - /url: https://www.independent.co.uk/news/einsteins-letters-show-affair-with-spy-1162418.html
+                    - text: . The Independent. 2 June 1998.
+                    - link "Archived" [ref=f1e3441] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20201116013010/https://www.independent.co.uk/news/einsteins-letters-show-affair-with-spy-1162418.html
+                    - text: from the original on 16 November 2020
+                    - generic [ref=f1e3442]: . Retrieved 10 November 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=The+Independent&rft.atitle=Einstein%27s+letters+show+affair+with+spy&rft.date=1998-06-02&rft_id=https%3A%2F%2Fwww.independent.co.uk%2Fnews%2Feinsteins-letters-show-affair-with-spy-1162418.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3443]:
+                - link "Jump up" [ref=f1e3445] [cursor=pointer]:
+                  - /url: "#cite_ref-Robinson2015a_71-0"
+                  - text: ^
+                - generic [ref=f1e3446]:
+                  - generic [ref=f1e3447]:
+                    - link "Robinson, Andrew" [ref=f1e3448] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Walter_Isaacson
+                    - text: (2015).
+                    - 'link "Einstein: A Hundred Years of Relativity" [ref=f1e3449] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=Px4_CQAAQBAJ&pg=PA144
+                    - text: . Princeton University Press. pp. 143–145.
+                    - link "ISBN" [ref=f1e3450] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-691-16989-7" [ref=f1e3451] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-16989-7
+                    - generic [ref=f1e3452]: . Retrieved 19 July 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein%3A+A+Hundred+Years+of+Relativity&rft.pages=143-145&rft.pub=Princeton+University+Press&rft.date=2015&rft.isbn=978-0-691-16989-7&rft.aulast=Robinson&rft.aufirst=Andrew&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DPx4_CQAAQBAJ%26pg%3DPA144&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3453]:
+                - link "Jump up" [ref=f1e3455] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTENeffe2007[httpsarchiveorgdetailseinsteinbiograph00neffpage203_203]_72-0"
+                  - text: ^
+                - generic [ref=f1e3456]:
+                  - link "Neffe (2007)" [ref=f1e3457] [cursor=pointer]:
+                    - /url: "#CITEREFNeffe2007"
+                  - text: ", p."
+                  - link "203" [ref=f1e3458] [cursor=pointer]:
+                    - /url: https://archive.org/details/einsteinbiograph00neff/page/203
+                  - text: .
+              - listitem [ref=f1e3459]:
+                - link "Jump up" [ref=f1e3461] [cursor=pointer]:
+                  - /url: "#cite_ref-73"
+                  - text: ^
+                - text: Stachel, et al (2008). Vol. 1 (1987), doc. 67.
+              - listitem [ref=f1e3462]:
+                - link "Jump up" [ref=f1e3464] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEFölsing199782_74-0"
+                  - text: ^
+                - generic [ref=f1e3465]:
+                  - link "Fölsing (1997)" [ref=f1e3466] [cursor=pointer]:
+                    - /url: "#CITEREFFölsing1997"
+                  - text: ", p. 82."
+                  - generic [ref=f1e3467]:
+                    - text: "sfnp error: multiple targets (2×): CITEREFFölsing1997 ("
+                    - link "help" [ref=f1e3468] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Category:Harv_and_Sfn_template_errors
+                    - text: )
+              - listitem [ref=f1e3469]:
+                - link "Jump up" [ref=f1e3471] [cursor=pointer]:
+                  - /url: "#cite_ref-ODY5p_75-0"
+                  - text: ^
+                - generic [ref=f1e3472]:
+                  - generic [ref=f1e3473]:
+                    - text: J. J. O'Connor; E. F. Robertson (May 2010).
+                    - link "\"Grossmann biography\"" [ref=f1e3474] [cursor=pointer]:
+                      - /url: http://www-history.mcs.st-and.ac.uk/Biographies/Grossmann.html
+                    - text: . MacTutor. School of Mathematics and Statistics, University of St Andrews, Scotland.
+                    - link "Archived" [ref=f1e3475] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20150910072254/http://www-history.mcs.st-and.ac.uk/Biographies/Grossmann.html
+                    - text: from the original on 10 September 2015
+                    - generic [ref=f1e3476]: . Retrieved 27 March 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=MacTutor&rft.atitle=Grossmann+biography&rft.date=2010-05&rft.au=J.+J.+O%27Connor&rft.au=E.+F.+Robertson&rft_id=http%3A%2F%2Fwww-history.mcs.st-and.ac.uk%2FBiographies%2FGrossmann.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3477]:
+                - link "Jump up" [ref=f1e3479] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson200763_76-0"
+                  - text: ^
+                - generic [ref=f1e3480]:
+                  - link "Isaacson (2007)" [ref=f1e3481] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 63."
+              - listitem [ref=f1e3482]:
+                - link "Jump up" [ref=f1e3484] [cursor=pointer]:
+                  - /url: "#cite_ref-MeZPN_77-0"
+                  - text: ^
+                - generic [ref=f1e3485]:
+                  - generic [ref=f1e3486]:
+                    - link "\"Einstein at the patent office\"" [ref=f1e3487] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20160830195148/https://www.ipi.ch/en/about-us/einstein/einstein-at-the-patent-office.html
+                    - text: "(official website). Berne, Switzerland: Swiss Federal Institute of Intellectual Property, IGE/IPI. 6 February 2014. Archived from"
+                    - link "the original" [ref=f1e3488] [cursor=pointer]:
+                      - /url: https://www.ipi.ch/en/about-us/einstein/einstein-at-the-patent-office.html
+                    - text: on 30 August 2016
+                    - generic [ref=f1e3489]: . Retrieved 9 September 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Einstein+at+the+patent+office&rft.place=Berne%2C+Switzerland&rft.pub=Swiss+Federal+Institute+of+Intellectual+Property%2C+IGE%2FIPI&rft.date=2014-02-06&rft_id=https%3A%2F%2Fwww.ipi.ch%2Fen%2Fabout-us%2Feinstein%2Feinstein-at-the-patent-office.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3490]:
+                - generic [ref=f1e3491]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3492] [cursor=pointer]:
+                    - /url: "#cite_ref-IGEFAQ_78-0"
+                  - link [ref=f1e3494] [cursor=pointer]:
+                    - /url: "#cite_ref-IGEFAQ_78-1"
+                - generic [ref=f1e3495]:
+                  - generic [ref=f1e3496]:
+                    - link "\"FAQ about Einstein and the Institute\"" [ref=f1e3497] [cursor=pointer]:
+                      - /url: https://www.ige.ch/en/about-us/the-history-of-the-ipi/einstein/faq
+                    - text: "(official website). Berne, Switzerland: Swiss Federal Institute of Intellectual Property, IGE/IPI. 27 May 2014."
+                    - link "Archived" [ref=f1e3498] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210612105555/https://www.ige.ch/en/about-us/the-history-of-the-ipi/einstein/faq
+                    - text: from the original on 12 June 2021
+                    - generic [ref=f1e3499]: . Retrieved 27 March 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=FAQ+about+Einstein+and+the+Institute&rft.place=Berne%2C+Switzerland&rft.pub=Swiss+Federal+Institute+of+Intellectual+Property%2C+IGE%2FIPI&rft.date=2014-05-27&rft_id=https%3A%2F%2Fwww.ige.ch%2Fen%2Fabout-us%2Fthe-history-of-the-ipi%2Feinstein%2Ffaq&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3500]:
+                - link "Jump up" [ref=f1e3502] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEGalison2000370_79-0"
+                  - text: ^
+                - generic [ref=f1e3503]:
+                  - link "Galison (2000)" [ref=f1e3504] [cursor=pointer]:
+                    - /url: "#CITEREFGalison2000"
+                  - text: ", p. 370."
+              - listitem [ref=f1e3505]:
+                - link "Jump up" [ref=f1e3507] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEHighfieldCarter199396–98_80-0"
+                  - text: ^
+                - generic [ref=f1e3508]:
+                  - link "Highfield & Carter (1993)" [ref=f1e3509] [cursor=pointer]:
+                    - /url: "#CITEREFHighfieldCarter1993"
+                  - text: ", pp. 96–98."
+              - listitem [ref=f1e3510]:
+                - link "Jump up" [ref=f1e3512] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson200779–84_81-0"
+                  - text: ^
+                - generic [ref=f1e3513]:
+                  - link "Isaacson (2007)" [ref=f1e3514] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 79–84."
+              - listitem [ref=f1e3515]:
+                - generic [ref=f1e3516]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3517] [cursor=pointer]:
+                    - /url: "#cite_ref-Einstein_1901_82-0"
+                  - link [ref=f1e3519] [cursor=pointer]:
+                    - /url: "#cite_ref-Einstein_1901_82-1"
+                - text: Einstein (1901).
+              - listitem [ref=f1e3520]:
+                - link "Jump up" [ref=f1e3522] [cursor=pointer]:
+                  - /url: "#cite_ref-83"
+                  - text: ^
+                - generic [ref=f1e3523]:
+                  - generic [ref=f1e3524]:
+                    - text: "Murrell, J. N.; Grobert, N. (January 2002). \"The centenary of Einstein's first scientific paper\". Notes and Records of the Royal Society of London. 56 (1): 89–94."
+                    - link "doi" [ref=f1e3525] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1098/rsnr.2002.0169" [ref=f1e3526] [cursor=pointer]:
+                      - /url: https://doi.org/10.1098%2Frsnr.2002.0169
+                    - text: .
+                    - link "JSTOR" [ref=f1e3527] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "532124" [ref=f1e3528] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/532124
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Notes+and+Records+of+the+Royal+Society+of+London&rft.atitle=The+centenary+of+Einstein%27s+first+scientific+paper&rft.volume=56&rft.issue=1&rft.pages=89-94&rft.date=2002-01&rft_id=info%3Adoi%2F10.1098%2Frsnr.2002.0169&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F532124%23id-name%3DJSTOR&rft.aulast=Murrell&rft.aufirst=J.+N.&rft.au=Grobert%2C+N.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3529]:
+                - generic [ref=f1e3530]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3531] [cursor=pointer]:
+                    - /url: "#cite_ref-1905b_84-0"
+                  - link [ref=f1e3533] [cursor=pointer]:
+                    - /url: "#cite_ref-1905b_84-1"
+                - text: Einstein (1905b).
+              - listitem [ref=f1e3534]:
+                - link "Jump up" [ref=f1e3536] [cursor=pointer]:
+                  - /url: "#cite_ref-85"
+                  - text: ^
+                - generic [ref=f1e3537]: Einstein (1926b). A New Determination of Molecular Dimensions.
+              - listitem [ref=f1e3538]:
+                - link "Jump up" [ref=f1e3540] [cursor=pointer]:
+                  - /url: "#cite_ref-86"
+                  - text: ^
+                - generic [ref=f1e3541]:
+                  - generic [ref=f1e3542]:
+                    - text: Mehra, Jagdish (28 February 2001).
+                    - link "Golden Age Of Theoretical Physics, The (Boxed Set Of 2 Vols)" [ref=f1e3543] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=o1XVCgAAQBAJ
+                    - text: . World Scientific.
+                    - link "ISBN" [ref=f1e3544] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-981-4492-85-0" [ref=f1e3545] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-981-4492-85-0
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Golden+Age+Of+Theoretical+Physics%2C+The+%28Boxed+Set+Of+2+Vols%29&rft.pub=World+Scientific&rft.date=2001-02-28&rft.isbn=978-981-4492-85-0&rft.aulast=Mehra&rft.aufirst=Jagdish&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Do1XVCgAAQBAJ&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3546]:
+                - link "Jump up" [ref=f1e3548] [cursor=pointer]:
+                  - /url: "#cite_ref-87"
+                  - text: ^
+                - generic [ref=f1e3549]:
+                  - generic [ref=f1e3550]:
+                    - text: "May, Andrew (2017). Clegg, Brian (ed.). Albert Einstein, in 30-Second Physics: The 50 most fundamental concepts in physics, each explained in half a minute. London: Ivy Press. pp. 108–109."
+                    - link "ISBN" [ref=f1e3551] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-78240-514-6" [ref=f1e3552] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-78240-514-6
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Albert+Einstein%2C+in+30-Second+Physics%3A+The+50+most+fundamental+concepts+in+physics%2C+each+explained+in+half+a+minute&rft.place=London&rft.pages=108-109&rft.pub=Ivy+Press&rft.date=2017&rft.isbn=978-1-78240-514-6&rft.aulast=May&rft.aufirst=Andrew&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3553]:
+                - link "Jump up" [ref=f1e3555] [cursor=pointer]:
+                  - /url: "#cite_ref-bG2yp_88-0"
+                  - text: ^
+                - generic [ref=f1e3556]:
+                  - generic [ref=f1e3557]:
+                    - link "\"Associate Professor at the University of Zurich und professor in Prague (1909–1912)\"" [ref=f1e3558] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20140821032129/http://www.library.ethz.ch/en/Resources/Digital-library/Einstein-Online/Associate-Professor-at-the-Universiy-of-Zurich-und-professor-in-Prague-1909-1912
+                    - text: "(digital library). Einstein Online (in German and English). Bern, Switzerland: ETH-Bibliothek Zürich, ETH Zürich, www.ethz.ch. 2014. Archived from"
+                    - link "the original" [ref=f1e3559] [cursor=pointer]:
+                      - /url: http://www.library.ethz.ch/en/Resources/Digital-library/Einstein-Online/Associate-Professor-at-the-Universiy-of-Zurich-und-professor-in-Prague-1909-1912
+                    - text: on 21 August 2014
+                    - generic [ref=f1e3560]: . Retrieved 17 August 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Associate+Professor+at+the+University+of+Zurich+und+professor+in+Prague+%281909%E2%80%931912%29&rft.place=Bern%2C+Switzerland&rft.series=Einstein+Online&rft.pub=ETH-Bibliothek+Z%C3%BCrich%2C+ETH+Z%C3%BCrich%2C+www.ethz.ch&rft.date=2014&rft_id=http%3A%2F%2Fwww.library.ethz.ch%2Fen%2FResources%2FDigital-library%2FEinstein-Online%2FAssociate-Professor-at-the-Universiy-of-Zurich-und-professor-in-Prague-1909-1912&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3561]:
+                - link "Jump up" [ref=f1e3563] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEGordin2020[httpsbooksgooglecombooksidoJ27DwAAQBAJpgPA45_45]_89-0"
+                  - text: ^
+                - generic [ref=f1e3564]:
+                  - link "Gordin (2020)" [ref=f1e3565] [cursor=pointer]:
+                    - /url: "#CITEREFGordin2020"
+                  - text: ", p."
+                  - link "45" [ref=f1e3566] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=oJ27DwAAQBAJ&pg=PA45
+                  - text: .
+              - listitem [ref=f1e3567]:
+                - link "Jump up" [ref=f1e3569] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEGordin2020[httpsbooksgooglecombooksidoJ27DwAAQBAJpgPA14_20]_90-0"
+                  - text: ^
+                - generic [ref=f1e3570]:
+                  - link "Gordin (2020)" [ref=f1e3571] [cursor=pointer]:
+                    - /url: "#CITEREFGordin2020"
+                  - text: ", p."
+                  - link "20" [ref=f1e3572] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=oJ27DwAAQBAJ&pg=PA14
+                  - text: .
+              - listitem [ref=f1e3573]:
+                - link "Jump up" [ref=f1e3575] [cursor=pointer]:
+                  - /url: "#cite_ref-91"
+                  - text: ^
+                - generic [ref=f1e3576]:
+                  - generic [ref=f1e3577]:
+                    - text: Lyth, David (31 January 2019).
+                    - 'link "The Road to Einstein''s Relativity: Following in the Footsteps of the Giants" [ref=f1e3578] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=pRaGDwAAQBAJ&dq=%22Einstein%22+%22Prague%22+%22Eleven%22&pg=PA122
+                    - text: . CRC Press.
+                    - link "ISBN" [ref=f1e3579] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-429-68268-1" [ref=f1e3580] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-429-68268-1
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Road+to+Einstein%27s+Relativity%3A+Following+in+the+Footsteps+of+the+Giants&rft.pub=CRC+Press&rft.date=2019-01-31&rft.isbn=978-0-429-68268-1&rft.aulast=Lyth&rft.aufirst=David&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DpRaGDwAAQBAJ%26dq%3D%2522Einstein%2522%2B%2522Prague%2522%2B%2522Eleven%2522%26pg%3DPA122&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3581]:
+                - link "Jump up" [ref=f1e3583] [cursor=pointer]:
+                  - /url: "#cite_ref-93"
+                  - text: ^
+                - generic [ref=f1e3584]:
+                  - text: Paul Langevin and Maurice de Broglie, eds.,
+                  - link "La théorie du rayonnement et les quanta. Rapports et discussions de la réunion tenue à Bruxelles, du 30 octobre au 3 novembre 1911, sous les auspices de M. E. Solvay" [ref=f1e3585] [cursor=pointer]:
+                    - /url: https://archive.org/details/lathoriedurayo00inst
+                  - text: ". Paris:"
+                  - link "Gauthier-Villars" [ref=f1e3586] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Gauthier-Villars?action=edit&redlink=1
+                  - generic [ref=f1e3587]:
+                    - text: "["
+                    - link "fr" [ref=f1e3588] [cursor=pointer]:
+                      - /url: https://fr.wikipedia.org/wiki/Gauthier-Villars
+                    - text: "]"
+                  - text: ", 1912. See also: The Collected Papers of Albert Einstein, Vol. 3: Writings 1909–1911, Doc. 26, p. 402 (English translation supplement)."
+              - listitem [ref=f1e3589]:
+                - link "Jump up" [ref=f1e3591] [cursor=pointer]:
+                  - /url: "#cite_ref-hXQin_94-0"
+                  - text: ^
+                - generic [ref=f1e3592]:
+                  - generic [ref=f1e3593]:
+                    - link "\"Professor at the ETH Zurich (1912–1914)\"" [ref=f1e3594] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20140821032349/http://www.library.ethz.ch/en/Resources/Digital-library/Einstein-Online/Professor-at-the-ETH-Zurich-1912-1914
+                    - text: "(digital library). Einstein Online (in German and English). Zurich, Switzerland: ETH-Bibliothek Zürich, ETH Zürich, www.ethz.ch. 2014. Archived from"
+                    - link "the original" [ref=f1e3595] [cursor=pointer]:
+                      - /url: http://www.library.ethz.ch/en/Resources/Digital-library/Einstein-Online/Professor-at-the-ETH-Zurich-1912-1914
+                    - text: on 21 August 2014
+                    - generic [ref=f1e3596]: . Retrieved 17 August 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Professor+at+the+ETH+Zurich+%281912%E2%80%931914%29&rft.place=Zurich%2C+Switzerland&rft.series=Einstein+Online&rft.pub=ETH-Bibliothek+Z%C3%BCrich%2C+ETH+Z%C3%BCrich%2C+www.ethz.ch&rft.date=2014&rft_id=http%3A%2F%2Fwww.library.ethz.ch%2Fen%2FResources%2FDigital-library%2FEinstein-Online%2FProfessor-at-the-ETH-Zurich-1912-1914&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3597]:
+                - generic [ref=f1e3598]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3599] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEStachel2002534_95-0"
+                  - link [ref=f1e3601] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEStachel2002534_95-1"
+                - generic [ref=f1e3602]:
+                  - link "Stachel (2002)" [ref=f1e3603] [cursor=pointer]:
+                    - /url: "#CITEREFStachel2002"
+                  - text: ", p. 534."
+              - listitem [ref=f1e3604]:
+                - generic [ref=f1e3605]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3606] [cursor=pointer]:
+                    - /url: "#cite_ref-jstor.org_96-0"
+                  - link [ref=f1e3608] [cursor=pointer]:
+                    - /url: "#cite_ref-jstor.org_96-1"
+                - generic [ref=f1e3609]:
+                  - generic [ref=f1e3610]:
+                    - 'link "\"Albert Einstein: His Influence on Physics, Philosophy and Politics JL Heilbron – 1982, Published by: American Association for the Advancement of Science\"" [ref=f1e3611] [cursor=pointer]':
+                      - /url: https://www.jstor.org/stable/1687520
+                    - text: .
+                    - link "JSTOR" [ref=f1e3612] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "1687520" [ref=f1e3613] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/1687520
+                    - text: .
+                    - link "Archived" [ref=f1e3614] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20211122130724/https://www.jstor.org/stable/1687520
+                    - text: from the original on 22 November 2021
+                    - generic [ref=f1e3615]: . Retrieved 22 November 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Albert+Einstein%3A+His+Influence+on+Physics%2C+Philosophy+and+Politics+JL+Heilbron+%E2%80%93+1982%2C+Published+by%3A+American+Association+for+the+Advancement+of+Science&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F1687520%23id-name%3DJSTOR&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F1687520&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3616]:
+                - link "Jump up" [ref=f1e3618] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEScheideler2002333_98-0"
+                  - text: ^
+                - generic [ref=f1e3619]:
+                  - link "Scheideler (2002)" [ref=f1e3620] [cursor=pointer]:
+                    - /url: "#CITEREFScheideler2002"
+                  - text: ", p. 333."
+              - listitem [ref=f1e3621]:
+                - link "Jump up" [ref=f1e3623] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTECalapriceLipscombe2005[httpsbooksgooglecombooksid5eWh2O_3OAQCpgPR19_\"Timeline\",_p._xix]_99-0"
+                  - text: ^
+                - generic [ref=f1e3624]:
+                  - link "Calaprice & Lipscombe (2005)" [ref=f1e3625] [cursor=pointer]:
+                    - /url: "#CITEREFCalapriceLipscombe2005"
+                  - text: ","
+                  - link "\"Timeline\", p. xix" [ref=f1e3626] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=5eWh2O_3OAQC&pg=PR19
+                  - text: .
+              - listitem [ref=f1e3627]:
+                - link "Jump up" [ref=f1e3629] [cursor=pointer]:
+                  - /url: "#cite_ref-EXcH6_100-0"
+                  - text: ^
+                - generic [ref=f1e3630]:
+                  - generic [ref=f1e3631]:
+                    - link "\"Director in the attic\"" [ref=f1e3632] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20170131021344/https://www.mpg.de/dossier/einstein/in-berlin
+                    - text: . Max-Planck-Gesellschaft, München. Archived from
+                    - link "the original" [ref=f1e3633] [cursor=pointer]:
+                      - /url: https://www.mpg.de/dossier/einstein/in-berlin
+                    - text: on 31 January 2017
+                    - generic [ref=f1e3634]: . Retrieved 9 July 2017
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Director+in+the+attic&rft.pub=Max-Planck-Gesellschaft%2C+M%C3%BCnchen&rft_id=https%3A%2F%2Fwww.mpg.de%2Fdossier%2Feinstein%2Fin-berlin&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3635]:
+                - link "Jump up" [ref=f1e3637] [cursor=pointer]:
+                  - /url: "#cite_ref-3gcYy_101-0"
+                  - text: ^
+                - generic [ref=f1e3638]:
+                  - generic [ref=f1e3639]:
+                    - link "\"Albert Einstein (1879–1955)\"" [ref=f1e3640] [cursor=pointer]:
+                      - /url: http://www.dwc.knaw.nl/biografie/pmknaw/?pagetype=authorDetail&aId=PE00000116
+                    - text: . Royal Netherlands Academy of Arts and Sciences.
+                    - link "Archived" [ref=f1e3641] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20150923225403/http://www.dwc.knaw.nl/biografie/pmknaw/?pagetype=authorDetail&aId=PE00000116
+                    - text: from the original on 23 September 2015
+                    - generic [ref=f1e3642]: . Retrieved 21 July 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Albert+Einstein+%281879%E2%80%931955%29&rft.pub=Royal+Netherlands+Academy+of+Arts+and+Sciences&rft_id=http%3A%2F%2Fwww.dwc.knaw.nl%2Fbiografie%2Fpmknaw%2F%3Fpagetype%3DauthorDetail%26aId%3DPE00000116&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3643]:
+                - link "Jump up" [ref=f1e3645] [cursor=pointer]:
+                  - /url: "#cite_ref-102"
+                  - text: ^
+                - generic [ref=f1e3646]:
+                  - generic [ref=f1e3647]:
+                    - link "\"Albert Einstein\"" [ref=f1e3648] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20240221194114/https://www.amacad.org/person/albert-einstein
+                    - text: . American Academy of Arts & Sciences. 9 February 2023. Archived from
+                    - link "the original" [ref=f1e3649] [cursor=pointer]:
+                      - /url: https://www.amacad.org/person/albert-einstein
+                    - text: on 21 February 2024
+                    - generic [ref=f1e3650]: . Retrieved 13 July 2023
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=American+Academy+of+Arts+%26+Sciences&rft.atitle=Albert+Einstein&rft.date=2023-02-09&rft_id=https%3A%2F%2Fwww.amacad.org%2Fperson%2Falbert-einstein&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3651]:
+                - link "Jump up" [ref=f1e3653] [cursor=pointer]:
+                  - /url: "#cite_ref-103"
+                  - text: ^
+                - generic [ref=f1e3654]:
+                  - generic [ref=f1e3655]:
+                    - link "\"APS Member History\"" [ref=f1e3656] [cursor=pointer]:
+                      - /url: https://search.amphilsoc.org/memhist/search?creator=Albert+Einstein&title=&subject=&subdiv=&mem=&year=&year-max=&dead=&keyword=&smode=advanced
+                    - text: . search.amphilsoc.org
+                    - generic [ref=f1e3657]: . Retrieved 13 July 2023
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=search.amphilsoc.org&rft.atitle=APS+Member+History&rft_id=https%3A%2F%2Fsearch.amphilsoc.org%2Fmemhist%2Fsearch%3Fcreator%3DAlbert%2BEinstein%26title%3D%26subject%3D%26subdiv%3D%26mem%3D%26year%3D%26year-max%3D%26dead%3D%26keyword%3D%26smode%3Dadvanced&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3658]:
+                - link "Jump up" [ref=f1e3660] [cursor=pointer]:
+                  - /url: "#cite_ref-NYTimes_19191125_104-0"
+                  - text: ^
+                - generic [ref=f1e3661]:
+                  - generic [ref=f1e3662]:
+                    - generic "Paid subscription required" [ref=f1e3663]:
+                      - link "\"A New Physics, Based on Einstein\"" [ref=f1e3664] [cursor=pointer]:
+                        - /url: https://newspaperarchive.com/new-york-times-nov-25-1919-p-17/
+                    - text: . The New York Times. 25 November 1919. p. 17.
+                    - link "Archived" [ref=f1e3665] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20190608033600/https://newspaperarchive.com/new-york-times-nov-25-1919-p-17/
+                    - text: from the original on 8 June 2019
+                    - generic [ref=f1e3666]: . Retrieved 8 June 2019
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=A+New+Physics%2C+Based+on+Einstein&rft.pages=17&rft.date=1919-11-25&rft_id=https%3A%2F%2Fnewspaperarchive.com%2Fnew-york-times-nov-25-1919-p-17%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3667]:
+                - link "Jump up" [ref=f1e3669] [cursor=pointer]:
+                  - /url: "#cite_ref-105"
+                  - text: ^
+                - generic [ref=f1e3670]:
+                  - generic [ref=f1e3671]:
+                    - text: "Weinberg, Steven (1972). Gravitation and Cosmology: Principles and applications of the general theory of relativity. John Wiley & Sons, Inc. pp. 19–20."
+                    - link "ISBN" [ref=f1e3672] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "9788126517558" [ref=f1e3673] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/9788126517558
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Gravitation+and+Cosmology%3A+Principles+and+applications+of+the+general+theory+of+relativity&rft.pages=19-20&rft.pub=John+Wiley+%26+Sons%2C+Inc.&rft.date=1972&rft.isbn=9788126517558&rft.aulast=Weinberg&rft.aufirst=Steven&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3674]:
+                - link "Jump up" [ref=f1e3676] [cursor=pointer]:
+                  - /url: "#cite_ref-Eddington_106-0"
+                  - text: ^
+                - generic [ref=f1e3677]:
+                  - generic [ref=f1e3678]:
+                    - text: Andrzej, Stasiak (2003).
+                    - link "\"Myths in science\"" [ref=f1e3679] [cursor=pointer]:
+                      - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1315907
+                    - text: ". EMBO Reports. 4 (3): 236."
+                    - link "doi" [ref=f1e3680] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e3681]:
+                      - link "10.1038/sj.embor.embor779" [ref=f1e3682] [cursor=pointer]:
+                        - /url: https://doi.org/10.1038%2Fsj.embor.embor779
+                    - text: .
+                    - link "PMC" [ref=f1e3683] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMC_(identifier)
+                    - generic "Freely accessible" [ref=f1e3684]:
+                      - link "1315907" [ref=f1e3685] [cursor=pointer]:
+                        - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1315907
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=EMBO+Reports&rft.atitle=Myths+in+science&rft.volume=4&rft.issue=3&rft.pages=236&rft.date=2003&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC1315907%23id-name%3DPMC&rft_id=info%3Adoi%2F10.1038%2Fsj.embor.embor779&rft.aulast=Andrzej&rft.aufirst=Stasiak&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC1315907&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3686]:
+                - link "Jump up" [ref=f1e3688] [cursor=pointer]:
+                  - /url: "#cite_ref-107"
+                  - text: ^
+                - generic [ref=f1e3689]:
+                  - generic [ref=f1e3690]:
+                    - text: Francis, Matthew (3 March 2017).
+                    - link "\"How Albert Einstein Used His Fame to Denounce American Racism\"" [ref=f1e3691] [cursor=pointer]:
+                      - /url: https://www.smithsonianmag.com/science-nature/how-celebrity-scientist-albert-einstein-used-fame-denounce-american-racism-180962356/
+                    - text: . Smithsonian Magazine.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=How+Albert+Einstein+Used+His+Fame+to+Denounce+American+Racism&rft.pub=Smithsonian+Magazine&rft.date=2017-03-03&rft.aulast=Francis&rft.aufirst=Matthew&rft_id=https%3A%2F%2Fwww.smithsonianmag.com%2Fscience-nature%2Fhow-celebrity-scientist-albert-einstein-used-fame-denounce-american-racism-180962356%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3692]:
+                - link "Jump up" [ref=f1e3694] [cursor=pointer]:
+                  - /url: "#cite_ref-108"
+                  - text: ^
+                - generic [ref=f1e3695]:
+                  - generic [ref=f1e3696]:
+                    - text: Falk, Dan (2 April 2021).
+                    - link "\"One Hundred Years Ago, Einstein Was Given a Hero's Welcome by America's Jews\"" [ref=f1e3697] [cursor=pointer]:
+                      - /url: https://www.smithsonianmag.com/history/one-hundred-years-ago-einstein-was-given-heros-welcome-americas-jews-180977386/
+                    - text: .
+                    - link "Smithsonian Magazine" [ref=f1e3699] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Smithsonian_Magazine
+                    - generic [ref=f1e3700]: . Retrieved 14 March 2025
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Smithsonian+Magazine&rft.atitle=One+Hundred+Years+Ago%2C+Einstein+Was+Given+a+Hero%27s+Welcome+by+America%27s+Jews&rft.date=2021-04-02&rft.aulast=Falk&rft.aufirst=Dan&rft_id=https%3A%2F%2Fwww.smithsonianmag.com%2Fhistory%2Fone-hundred-years-ago-einstein-was-given-heros-welcome-americas-jews-180977386%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3701]:
+                - link "Jump up" [ref=f1e3703] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEHoffmannDukas1972145–148_109-0"
+                  - text: ^
+                - generic [ref=f1e3704]:
+                  - link "Hoffmann & Dukas (1972)" [ref=f1e3705] [cursor=pointer]:
+                    - /url: "#CITEREFHoffmannDukas1972"
+                  - text: ", pp. 145–148."
+              - listitem [ref=f1e3706]:
+                - link "Jump up" [ref=f1e3708] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEFölsing1997499–508_110-0"
+                  - text: ^
+                - generic [ref=f1e3709]:
+                  - link "Fölsing (1997)" [ref=f1e3710] [cursor=pointer]:
+                    - /url: "#CITEREFFölsing1997"
+                  - text: ", pp. 499–508."
+                  - generic [ref=f1e3711]:
+                    - text: "sfnp error: multiple targets (2×): CITEREFFölsing1997 ("
+                    - link "help" [ref=f1e3712] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Category:Harv_and_Sfn_template_errors
+                    - text: )
+              - listitem [ref=f1e3713]:
+                - link "Jump up" [ref=f1e3715] [cursor=pointer]:
+                  - /url: "#cite_ref-7gwHd_111-0"
+                  - text: ^
+                - generic [ref=f1e3716]:
+                  - generic [ref=f1e3717]:
+                    - link "\"As Einstein Sees America\"" [ref=f1e3718] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200225121713/http://www.einsteinsworld.com/news-new-york-herald-tribune-1931-as-einstein-sees-america.htm
+                    - text: . Archived from
+                    - link "the original" [ref=f1e3719] [cursor=pointer]:
+                      - /url: http://www.einsteinsworld.com/News-New-York-Herald-Tribune-1931-As-Einstein-Sees-America.htm
+                    - text: on 25 February 2020
+                    - generic [ref=f1e3720]: . Retrieved 25 May 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=As+Einstein+Sees+America&rft_id=http%3A%2F%2Fwww.einsteinsworld.com%2FNews-New-York-Herald-Tribune-1931-As-Einstein-Sees-America.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: ", Einstein's World, a 1931 reprint with minor changes, of his 1921 essay."
+              - listitem [ref=f1e3721]:
+                - link "Jump up" [ref=f1e3723] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEHolton198420_112-0"
+                  - text: ^
+                - generic [ref=f1e3724]:
+                  - link "Holton (1984)" [ref=f1e3725] [cursor=pointer]:
+                    - /url: "#CITEREFHolton1984"
+                  - text: ", p. 20."
+              - listitem [ref=f1e3726]:
+                - generic [ref=f1e3727]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3728] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson2007307–308_113-0"
+                  - link [ref=f1e3730] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson2007307–308_113-1"
+                - generic [ref=f1e3731]:
+                  - link "Isaacson (2007)" [ref=f1e3732] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 307–308."
+              - listitem [ref=f1e3733]:
+                - link "Jump up" [ref=f1e3735] [cursor=pointer]:
+                  - /url: "#cite_ref-38YkY_114-0"
+                  - text: ^
+                - generic [ref=f1e3736]:
+                  - generic [ref=f1e3737]:
+                    - text: Flood, Alison (12 June 2018).
+                    - link "\"Einstein's travel diaries reveal 'shocking' xenophobia\"" [ref=f1e3738] [cursor=pointer]:
+                      - /url: https://www.theguardian.com/books/2018/jun/12/einsteins-travel-diaries-reveal-shocking-xenophobia
+                    - text: .
+                    - link "The Guardian" [ref=f1e3740] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_Guardian
+                    - text: .
+                    - link "Archived" [ref=f1e3741] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20190117005146/https://www.theguardian.com/books/2018/jun/12/einsteins-travel-diaries-reveal-shocking-xenophobia
+                    - text: from the original on 17 January 2019
+                    - generic [ref=f1e3742]: . Retrieved 13 June 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+Guardian&rft.atitle=Einstein%27s+travel+diaries+reveal+%27shocking%27+xenophobia&rft.date=2018-06-12&rft.aulast=Flood&rft.aufirst=Alison&rft_id=https%3A%2F%2Fwww.theguardian.com%2Fbooks%2F2018%2Fjun%2F12%2Feinsteins-travel-diaries-reveal-shocking-xenophobia&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3743]:
+                - link "Jump up" [ref=f1e3745] [cursor=pointer]:
+                  - /url: "#cite_ref-115"
+                  - text: ^
+                - generic [ref=f1e3746]:
+                  - generic [ref=f1e3747]:
+                    - text: Katz, Brigit.
+                    - link "\"Einstein's Travel Diaries Reveal His Deeply Troubling Views on Race\"" [ref=f1e3748] [cursor=pointer]:
+                      - /url: https://www.smithsonianmag.com/smart-news/einsteins-travel-diaries-reveal-his-deeply-troubling-views-race-180969387/
+                    - text: . Smithsonian Magazine.
+                    - link "Archived" [ref=f1e3749] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20201225201826/https://www.smithsonianmag.com/smart-news/einsteins-travel-diaries-reveal-his-deeply-troubling-views-race-180969387/
+                    - text: from the original on 25 December 2020
+                    - generic [ref=f1e3750]: . Retrieved 3 January 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Smithsonian+Magazine&rft.atitle=Einstein%27s+Travel+Diaries+Reveal+His+Deeply+Troubling+Views+on+Race&rft.aulast=Katz&rft.aufirst=Brigit&rft_id=https%3A%2F%2Fwww.smithsonianmag.com%2Fsmart-news%2Feinsteins-travel-diaries-reveal-his-deeply-troubling-views-race-180969387%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3751]:
+                - link "Jump up" [ref=f1e3753] [cursor=pointer]:
+                  - /url: "#cite_ref-116"
+                  - text: ^
+                - generic [ref=f1e3754]:
+                  - generic [ref=f1e3755]: "Canales, Jimena (2014). The Physicist and the Philosopher: Einstein, Bergson, and the Debate That Changed Our Understanding of Time. Princeton University Press."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Physicist+and+the+Philosopher%3A+Einstein%2C+Bergson%2C+and+the+Debate+That+Changed+Our+Understanding+of+Time&rft.pub=Princeton+University+Press&rft.date=2014&rft.aulast=Canales&rft.aufirst=Jimena&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3756]:
+                - link "Jump up" [ref=f1e3758] [cursor=pointer]:
+                  - /url: "#cite_ref-oxak7_117-0"
+                  - text: ^
+                - generic [ref=f1e3759]:
+                  - generic [ref=f1e3760]:
+                    - 'link "\"The Nobel Prize in Physics 1921: Albert Einstein. Banquet Speech by R. Nadolny (in German)\"" [ref=f1e3761] [cursor=pointer]':
+                      - /url: https://www.nobelprize.org/nobel_prizes/physics/laureates/1921/einstein-speech.html
+                    - text: .
+                    - link "Archived" [ref=f1e3762] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20170612114023/http://www.nobelprize.org/nobel_prizes/physics/laureates/1921/einstein-speech.html
+                    - text: from the original on 12 June 2017
+                    - generic [ref=f1e3763]: . Retrieved 13 June 2017
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=The+Nobel+Prize+in+Physics+1921%3A+Albert+Einstein.+Banquet+Speech+by+R.+Nadolny+%28in+German%29.&rft_id=https%3A%2F%2Fwww.nobelprize.org%2Fnobel_prizes%2Fphysics%2Flaureates%2F1921%2Feinstein-speech.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: Retrieved 9 December 2015 via Nobelprize.org
+              - listitem [ref=f1e3764]:
+                - link "Jump up" [ref=f1e3766] [cursor=pointer]:
+                  - /url: "#cite_ref-w74nv_118-0"
+                  - text: ^
+                - generic [ref=f1e3767]:
+                  - generic [ref=f1e3768]:
+                    - text: "Montes-Santiago, J. (16 July 2017). \"[The meeting of Einstein with Cajal (Madrid, 1923): a lost tide of fortune]\". Revista de Neurología. 43 (2): 113–117."
+                    - link "ISSN" [ref=f1e3769] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "0210-0010" [ref=f1e3770] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/0210-0010
+                    - text: .
+                    - link "PMID" [ref=f1e3771] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "16838259" [ref=f1e3772] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/16838259
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Revista+de+Neurolog%C3%ADa&rft.atitle=%5BThe+meeting+of+Einstein+with+Cajal+%28Madrid%2C+1923%29%3A+a+lost+tide+of+fortune%5D&rft.volume=43&rft.issue=2&rft.pages=113-117&rft.date=2017-07-16&rft_id=info%3Apmid%2F16838259&rft.issn=0210-0010&rft.aulast=Montes-Santiago&rft.aufirst=J.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3773]:
+                - link "Jump up" [ref=f1e3775] [cursor=pointer]:
+                  - /url: "#cite_ref-Q5hgx_119-0"
+                  - text: ^
+                - generic [ref=f1e3776]:
+                  - generic [ref=f1e3777]:
+                    - text: Grandjean, Martin (2026).
+                    - link "La coopération intellectuelle. Relations scientifiques et diplomatie culturelle à la Société des Nations (1919-1939)" [ref=f1e3778] [cursor=pointer]:
+                      - /url: https://doi.org/10.33055/ALPHIL.00695
+                    - text: "[Intellectual Cooperation. Scientific Relations and Cultural Diplomacy at the League of Nations]. Neuchâtel: Alphil Presses Universitaires Suisses."
+                    - link "doi" [ref=f1e3779] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e3780]:
+                      - link "10.33055/ALPHIL.00695" [ref=f1e3781] [cursor=pointer]:
+                        - /url: https://doi.org/10.33055%2FALPHIL.00695
+                    - text: .
+                    - link "ISBN" [ref=f1e3782] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-2-88930-764-7" [ref=f1e3783] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-2-88930-764-7
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=La+coop%C3%A9ration+intellectuelle.+Relations+scientifiques+et+diplomatie+culturelle+%C3%A0+la+Soci%C3%A9t%C3%A9+des+Nations+%281919-1939%29&rft.place=Neuch%C3%A2tel&rft.pub=Alphil+Presses+Universitaires+Suisses&rft.date=2026&rft_id=info%3Adoi%2F10.33055%2FALPHIL.00695&rft.isbn=978-2-88930-764-7&rft.aulast=Grandjean&rft.aufirst=Martin&rft_id=https%3A%2F%2Fdoi.org%2F10.33055%2FALPHIL.00695&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: pp. 271–276.
+              - listitem [ref=f1e3784]:
+                - link "Jump up" [ref=f1e3786] [cursor=pointer]:
+                  - /url: "#cite_ref-vNNnX_120-0"
+                  - text: ^
+                - generic [ref=f1e3787]:
+                  - generic [ref=f1e3788]:
+                    - text: "Grandjean, Martin (2017). \"Analisi e visualizzazioni delle reti in storia. L'esempio della cooperazione intellettuale della Società delle Nazioni\". Memoria e Ricerca (2): 371–393."
+                    - link "doi" [ref=f1e3789] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.14647/87204" [ref=f1e3790] [cursor=pointer]:
+                      - /url: https://doi.org/10.14647%2F87204
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Memoria+e+Ricerca&rft.atitle=Analisi+e+visualizzazioni+delle+reti+in+storia.+L%27esempio+della+cooperazione+intellettuale+della+Societ%C3%A0+delle+Nazioni&rft.issue=2&rft.pages=371-393&rft.date=2017&rft_id=info%3Adoi%2F10.14647%2F87204&rft.aulast=Grandjean&rft.aufirst=Martin&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: "See also:"
+                  - generic [ref=f1e3791]:
+                    - text: Martin Grandjean (2017).
+                    - link "\"French version\"" [ref=f1e3792] [cursor=pointer]:
+                      - /url: https://halshs.archives-ouvertes.fr/halshs-01610098v2
+                    - text: ". Memoria e Ricerca (2): 371–393."
+                    - link "doi" [ref=f1e3793] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.14647/87204" [ref=f1e3794] [cursor=pointer]:
+                      - /url: https://doi.org/10.14647%2F87204
+                    - text: .
+                    - link "Archived" [ref=f1e3795] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20171107004313/https://halshs.archives-ouvertes.fr/halshs-01610098v2
+                    - text: from the original on 7 November 2017
+                    - generic [ref=f1e3796]: . Retrieved 1 December 2017
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Memoria+e+Ricerca&rft.atitle=French+version&rft.issue=2&rft.pages=371-393&rft.date=2017&rft_id=info%3Adoi%2F10.14647%2F87204&rft.au=Martin+Grandjean&rft_id=https%3A%2F%2Fhalshs.archives-ouvertes.fr%2Fhalshs-01610098v2&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: (PDF) and
+                  - generic [ref=f1e3797]:
+                    - link "\"English summary\"" [ref=f1e3798] [cursor=pointer]:
+                      - /url: http://www.martingrandjean.ch/complex-structures-and-international-organizations/
+                    - text: .
+                    - link "Archived" [ref=f1e3799] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20171102034717/http://www.martingrandjean.ch/complex-structures-and-international-organizations/
+                    - text: from the original on 2 November 2017
+                    - generic [ref=f1e3800]: . Retrieved 1 December 2017
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=English+summary&rft_id=http%3A%2F%2Fwww.martingrandjean.ch%2Fcomplex-structures-and-international-organizations%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: .
+              - listitem [ref=f1e3801]:
+                - link "Jump up" [ref=f1e3803] [cursor=pointer]:
+                  - /url: "#cite_ref-e9Xyh_121-0"
+                  - text: ^
+                - generic [ref=f1e3804]:
+                  - generic [ref=f1e3805]:
+                    - text: Shine, Cormac (2018). "Papal Diplomacy by Proxy? Catholic Internationalism at the League of Nations' International Committee on Intellectual Cooperation".
+                    - link "The Journal of Ecclesiastical History" [ref=f1e3807] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_Journal_of_Ecclesiastical_History
+                    - text: ". 69 (4): 785–805."
+                    - link "doi" [ref=f1e3808] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1017/S0022046917002731" [ref=f1e3809] [cursor=pointer]:
+                      - /url: https://doi.org/10.1017%2FS0022046917002731
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+Journal+of+Ecclesiastical+History&rft.atitle=Papal+Diplomacy+by+Proxy%3F+Catholic+Internationalism+at+the+League+of+Nations%27+International+Committee+on+Intellectual+Cooperation&rft.volume=69&rft.issue=4&rft.pages=785-805&rft.date=2018&rft_id=info%3Adoi%2F10.1017%2FS0022046917002731&rft.aulast=Shine&rft.aufirst=Cormac&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3810]:
+                - link "Jump up" [ref=f1e3812] [cursor=pointer]:
+                  - /url: "#cite_ref-122"
+                  - text: ^
+                - generic [ref=f1e3813]:
+                  - generic [ref=f1e3814]:
+                    - link "\"The Committee on Intellectual Cooperation of the League of Nations\"" [ref=f1e3815] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/1651869
+                    - text: ". Science. 64 (1649). American Association for the Advancement of Science: 132–133. 6 August 1926."
+                    - link "doi" [ref=f1e3816] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1126/science.64.1649.132.b" [ref=f1e3817] [cursor=pointer]:
+                      - /url: https://doi.org/10.1126%2Fscience.64.1649.132.b
+                    - text: .
+                    - link "JSTOR" [ref=f1e3818] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "1651869" [ref=f1e3819] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/1651869
+                    - text: .
+                    - link "S2CID" [ref=f1e3820] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "239778182" [ref=f1e3821] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:239778182
+                    - generic [ref=f1e3822]: . Retrieved 30 May 2022
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Science&rft.atitle=The+Committee+on+Intellectual+Cooperation+of+the+League+of+Nations&rft.volume=64&rft.issue=1649&rft.pages=132-133&rft.date=1926-08-06&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A239778182%23id-name%3DS2CID&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F1651869%23id-name%3DJSTOR&rft_id=info%3Adoi%2F10.1126%2Fscience.64.1649.132.b&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F1651869&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3823]:
+                - link "Jump up" [ref=f1e3825] [cursor=pointer]:
+                  - /url: "#cite_ref-123"
+                  - text: ^
+                - generic [ref=f1e3826]:
+                  - generic [ref=f1e3827]:
+                    - text: Tolmasquim, Alfredo Tiomno (2012). "Science and Ideology in Einstein's Visit to South America in 1925". In Lehner, Christoph; Renn, Jürgen; Schemmel, Matthias (eds.). Einstein and the Changing Worldviews of Physics. pp. 117–133.
+                    - link "doi" [ref=f1e3828] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1007/978-0-8176-4940-1_6" [ref=f1e3829] [cursor=pointer]:
+                      - /url: https://doi.org/10.1007%2F978-0-8176-4940-1_6
+                    - text: .
+                    - link "ISBN" [ref=f1e3830] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-8176-4939-5" [ref=f1e3831] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-8176-4939-5
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Science+and+Ideology+in+Einstein%27s+Visit+to+South+America+in+1925&rft.btitle=Einstein+and+the+Changing+Worldviews+of+Physics&rft.pages=117-133&rft.date=2012&rft_id=info%3Adoi%2F10.1007%2F978-0-8176-4940-1_6&rft.isbn=978-0-8176-4939-5&rft.aulast=Tolmasquim&rft.aufirst=Alfredo+Tiomno&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3832]:
+                - link "Jump up" [ref=f1e3834] [cursor=pointer]:
+                  - /url: "#cite_ref-124"
+                  - text: ^
+                - generic [ref=f1e3835]:
+                  - generic [ref=f1e3836]:
+                    - text: "Gangui, Alejandro; Ortiz, Eduardo L. (2008). \"Einstein's Unpublished Opening Lecture for His Course on Relativity Theory in Argentina, 1925\". Science in Context. 21 (3): 435–450."
+                    - link "arXiv" [ref=f1e3837] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e3838]:
+                      - link "0903.2064" [ref=f1e3839] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/0903.2064
+                    - text: .
+                    - link "doi" [ref=f1e3840] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1017/S0269889708001853" [ref=f1e3841] [cursor=pointer]:
+                      - /url: https://doi.org/10.1017%2FS0269889708001853
+                    - text: .
+                    - link "S2CID" [ref=f1e3842] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "54920641" [ref=f1e3843] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:54920641
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Science+in+Context&rft.atitle=Einstein%27s+Unpublished+Opening+Lecture+for+His+Course+on+Relativity+Theory+in+Argentina%2C+1925&rft.volume=21&rft.issue=3&rft.pages=435-450&rft.date=2008&rft_id=info%3Aarxiv%2F0903.2064&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A54920641%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.1017%2FS0269889708001853&rft.aulast=Gangui&rft.aufirst=Alejandro&rft.au=Ortiz%2C+Eduardo+L.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3844]:
+                - link "Jump up" [ref=f1e3846] [cursor=pointer]:
+                  - /url: "#cite_ref-125"
+                  - text: ^
+                - generic [ref=f1e3847]:
+                  - generic [ref=f1e3848]:
+                    - text: Gangui, Alejandro; Ortiz, Eduardo L. (2016). "The scientific impact of Einstein's visit to Argentina, in 1925".
+                    - link "arXiv" [ref=f1e3849] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e3850]:
+                      - link "1603.03792" [ref=f1e3851] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/1603.03792
+                    - text: "["
+                    - link "physics.hist-ph" [ref=f1e3852] [cursor=pointer]:
+                      - /url: https://arxiv.org/archive/physics.hist-ph
+                    - text: "]."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=preprint&rft.jtitle=arXiv&rft.atitle=The+scientific+impact+of+Einstein%27s+visit+to+Argentina%2C+in+1925&rft.date=2016&rft_id=info%3Aarxiv%2F1603.03792&rft.aulast=Gangui&rft.aufirst=Alejandro&rft.au=Ortiz%2C+Eduardo+L.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3853]:
+                - link "Jump up" [ref=f1e3855] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007368_126-0"
+                  - text: ^
+                - generic [ref=f1e3856]:
+                  - link "Isaacson (2007)" [ref=f1e3857] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 368."
+              - listitem [ref=f1e3858]:
+                - generic [ref=f1e3859]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3860] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson2007370_127-0"
+                  - link [ref=f1e3862] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson2007370_127-1"
+                  - link [ref=f1e3863] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson2007370_127-2"
+                - generic [ref=f1e3864]:
+                  - link "Isaacson (2007)" [ref=f1e3865] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 370."
+              - listitem [ref=f1e3866]:
+                - link "Jump up" [ref=f1e3868] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007373_128-0"
+                  - text: ^
+                - generic [ref=f1e3869]:
+                  - link "Isaacson (2007)" [ref=f1e3870] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 373."
+              - listitem [ref=f1e3871]:
+                - generic [ref=f1e3872]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3873] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson2007374_129-0"
+                  - link [ref=f1e3875] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson2007374_129-1"
+                  - link [ref=f1e3876] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson2007374_129-2"
+                - generic [ref=f1e3877]:
+                  - link "Isaacson (2007)" [ref=f1e3878] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 374."
+              - listitem [ref=f1e3879]:
+                - link "Jump up" [ref=f1e3881] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEChaplin1964320_130-0"
+                  - text: ^
+                - generic [ref=f1e3882]:
+                  - link "Chaplin (1964)" [ref=f1e3883] [cursor=pointer]:
+                    - /url: "#CITEREFChaplin1964"
+                  - text: ", p. 320."
+              - listitem [ref=f1e3884]:
+                - link "Jump up" [ref=f1e3886] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEChaplin1964322_131-0"
+                  - text: ^
+                - generic [ref=f1e3887]:
+                  - link "Chaplin (1964)" [ref=f1e3888] [cursor=pointer]:
+                    - /url: "#CITEREFChaplin1964"
+                  - text: ", p. 322."
+              - listitem [ref=f1e3889]:
+                - link "Jump up" [ref=f1e3891] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEFölsing1997659_132-0"
+                  - text: ^
+                - generic [ref=f1e3892]:
+                  - link "Fölsing (1997)" [ref=f1e3893] [cursor=pointer]:
+                    - /url: "#CITEREFFölsing1997"
+                  - text: ", p. 659."
+                  - generic [ref=f1e3894]:
+                    - text: "sfnp error: multiple targets (2×): CITEREFFölsing1997 ("
+                    - link "help" [ref=f1e3895] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Category:Harv_and_Sfn_template_errors
+                    - text: )
+              - listitem [ref=f1e3896]:
+                - link "Jump up" [ref=f1e3898] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007404_133-0"
+                  - text: ^
+                - generic [ref=f1e3899]:
+                  - link "Isaacson (2007)" [ref=f1e3900] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 404."
+              - listitem [ref=f1e3901]:
+                - link "Jump up" [ref=f1e3903] [cursor=pointer]:
+                  - /url: "#cite_ref-134"
+                  - text: ^
+                - generic [ref=f1e3904]:
+                  - generic [ref=f1e3905]:
+                    - link "\"Albert Einstein Quits Germany, Renounces Citizenship\"" [ref=f1e3906] [cursor=pointer]:
+                      - /url: https://newspapers.ushmm.org/events/albert-einstein-quits-germany-renounces-citizenship
+                    - text: ". History Unfolded: US Newspapers and the Holocaust."
+                    - link "Archived" [ref=f1e3907] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210417085304/https://newspapers.ushmm.org/events/albert-einstein-quits-germany-renounces-citizenship
+                    - text: from the original on 17 April 2021
+                    - generic [ref=f1e3908]: . Retrieved 14 March 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=History+Unfolded%3A+US+Newspapers+and+the+Holocaust&rft.atitle=Albert+Einstein+Quits+Germany%2C+Renounces+Citizenship&rft_id=https%3A%2F%2Fnewspapers.ushmm.org%2Fevents%2Falbert-einstein-quits-germany-renounces-citizenship&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3909]:
+                - link "Jump up" [ref=f1e3911] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007405_135-0"
+                  - text: ^
+                - generic [ref=f1e3912]:
+                  - link "Isaacson (2007)" [ref=f1e3913] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 405."
+              - listitem [ref=f1e3914]:
+                - link "Jump up" [ref=f1e3916] [cursor=pointer]:
+                  - /url: "#cite_ref-136"
+                  - text: ^
+                - generic [ref=f1e3917]:
+                  - generic [ref=f1e3918]:
+                    - link "\"Einstein wird ausgebürgert\"" [ref=f1e3919] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20160322221922/http://www.menscheinstein.de/biografie/biografie_jsp/key=3019.html
+                    - text: . Mensch Einstein (in German). Archived from
+                    - link "the original" [ref=f1e3920] [cursor=pointer]:
+                      - /url: http://www.menscheinstein.de/biografie/biografie_jsp/key=3019.html
+                    - text: on 22 March 2016
+                    - generic [ref=f1e3921]: . Retrieved 18 May 2026
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Mensch+Einstein&rft.atitle=Einstein+wird+ausgeb%C3%BCrgert&rft_id=http%3A%2F%2Fwww.menscheinstein.de%2Fbiografie%2Fbiografie_jsp%2Fkey%3D3019.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3922]:
+                - link "Jump up" [ref=f1e3924] [cursor=pointer]:
+                  - /url: "#cite_ref-el4GB_137-0"
+                  - text: ^
+                - generic [ref=f1e3925]:
+                  - generic [ref=f1e3926]:
+                    - text: Richard Kroehling (July 1991).
+                    - 'link "\"Albert Einstein: How I See the World\"" [ref=f1e3927] [cursor=pointer]':
+                      - /url: http://www.pbs.org/wnet/americanmasters/albert-einstein-how-i-see-the-world/585/
+                    - text: . American Masters. PBS.
+                    - link "Archived" [ref=f1e3928] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20111114020538/http://www.pbs.org/wnet/americanmasters/episodes/albert-einstein/how-i-see-the-world/585/
+                    - text: from the original on 14 November 2011
+                    - generic [ref=f1e3929]: . Retrieved 29 May 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=American+Masters&rft.atitle=Albert+Einstein%3A+How+I+See+the+World&rft.date=1991-07&rft.au=Richard+Kroehling&rft_id=http%3A%2F%2Fwww.pbs.org%2Fwnet%2Famericanmasters%2Falbert-einstein-how-i-see-the-world%2F585%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3930]:
+                - generic [ref=f1e3931]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3932] [cursor=pointer]:
+                    - /url: "#cite_ref-robinson19_138-0"
+                  - link [ref=f1e3934] [cursor=pointer]:
+                    - /url: "#cite_ref-robinson19_138-1"
+                - generic [ref=f1e3935]:
+                  - generic [ref=f1e3936]:
+                    - link "Robinson, Andrew" [ref=f1e3937] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/W._Andrew_Robinson
+                    - text: (2019).
+                    - link "Einstein on the Run" [ref=f1e3939] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Einstein_on_the_Run
+                    - text: .
+                    - link "Yale University Press" [ref=f1e3940] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Yale_University_Press
+                    - text: .
+                    - link "ISBN" [ref=f1e3941] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-300-23476-3" [ref=f1e3942] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-300-23476-3
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+on+the+Run&rft.pub=Yale+University+Press&rft.date=2019&rft.isbn=978-0-300-23476-3&rft.aulast=Robinson&rft.aufirst=Andrew&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3943]:
+                - generic [ref=f1e3944]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3945] [cursor=pointer]:
+                    - /url: "#cite_ref-robinson24_139-0"
+                  - link [ref=f1e3947] [cursor=pointer]:
+                    - /url: "#cite_ref-robinson24_139-1"
+                - generic [ref=f1e3948]:
+                  - generic [ref=f1e3949]:
+                    - link "Robinson, Andrew" [ref=f1e3950] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/W._Andrew_Robinson
+                    - text: (2024). Einstein in Oxford.
+                    - link "Bodleian Library Publishing" [ref=f1e3951] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bodleian_Library_Publishing
+                    - text: .
+                    - link "ISBN" [ref=f1e3952] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-85124-638-0" [ref=f1e3953] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-85124-638-0
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+in+Oxford&rft.pub=Bodleian+Library+Publishing&rft.date=2024&rft.isbn=978-1-85124-638-0&rft.aulast=Robinson&rft.aufirst=Andrew&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3954]:
+                - generic [ref=f1e3955]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3956] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson2007407–410_140-0"
+                  - link [ref=f1e3958] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson2007407–410_140-1"
+                  - link [ref=f1e3959] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEIsaacson2007407–410_140-2"
+                - generic [ref=f1e3960]:
+                  - link "Isaacson (2007)" [ref=f1e3961] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 407–410."
+              - listitem [ref=f1e3962]:
+                - link "Jump up" [ref=f1e3964] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEHolton198418_141-0"
+                  - text: ^
+                - generic [ref=f1e3965]:
+                  - link "Holton (1984)" [ref=f1e3966] [cursor=pointer]:
+                    - /url: "#CITEREFHolton1984"
+                  - text: ", p. 18."
+              - listitem [ref=f1e3967]:
+                - link "Jump up" [ref=f1e3969] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEJeromeTaylor20067_142-0"
+                  - text: ^
+                - generic [ref=f1e3970]:
+                  - link "Jerome & Taylor (2006)" [ref=f1e3971] [cursor=pointer]:
+                    - /url: "#CITEREFJeromeTaylor2006"
+                  - text: ", p. 7."
+              - listitem [ref=f1e3972]:
+                - link "Jump up" [ref=f1e3974] [cursor=pointer]:
+                  - /url: "#cite_ref-143"
+                  - text: ^
+                - text: Einstein (1954), p. 197.
+              - listitem [ref=f1e3975]:
+                - generic [ref=f1e3976]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e3977] [cursor=pointer]:
+                    - /url: "#cite_ref-Albert_Hall_144-0"
+                  - link [ref=f1e3979] [cursor=pointer]:
+                    - /url: "#cite_ref-Albert_Hall_144-1"
+                - generic [ref=f1e3980]:
+                  - generic [ref=f1e3981]:
+                    - text: Keyte, Suzanne (9 October 2013).
+                    - link "\"3 October 1933 – Albert Einstein presents his final speech given in Europe, at the Royal Albert Hall\"" [ref=f1e3982] [cursor=pointer]:
+                      - /url: https://www.royalalberthall.com/about-the-hall/news/2013/october/3-october-1933-albert-einstein-speaks-at-the-hall/
+                    - text: . Royal Albert Hall
+                    - generic [ref=f1e3983]: . Retrieved 20 June 2022
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Royal+Albert+Hall&rft.atitle=3+October+1933+%E2%80%93+Albert+Einstein+presents+his+final+speech+given+in+Europe%2C+at+the+Royal+Albert+Hall&rft.date=2013-10-09&rft.aulast=Keyte&rft.aufirst=Suzanne&rft_id=https%3A%2F%2Fwww.royalalberthall.com%2Fabout-the-hall%2Fnews%2F2013%2Foctober%2F3-october-1933-albert-einstein-speaks-at-the-hall%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e3984]:
+                - link "Jump up" [ref=f1e3986] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007422_145-0"
+                  - text: ^
+                - generic [ref=f1e3987]:
+                  - link "Isaacson (2007)" [ref=f1e3988] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 422."
+              - listitem [ref=f1e3989]:
+                - link "Jump up" [ref=f1e3991] [cursor=pointer]:
+                  - /url: "#cite_ref-3zIp7_146-0"
+                  - text: ^
+                - generic [ref=f1e3992]:
+                  - generic [ref=f1e3993]:
+                    - link "\"Professor Einstein with Commander Locker-Lampson\"" [ref=f1e3994] [cursor=pointer]:
+                      - /url: http://collection.sciencemuseum.org.uk/objects/co8223551/professor-einstein-with-commander-locker-lampson-gelatin-silver-print-photograph
+                    - text: .
+                    - link "Archived" [ref=f1e3995] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20170906091509/http://collection.sciencemuseum.org.uk/objects/co8223551/professor-einstein-with-commander-locker-lampson-gelatin-silver-print-photograph
+                    - text: from the original on 6 September 2017
+                    - generic [ref=f1e3996]: . Retrieved 2 June 2017
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Professor+Einstein+with+Commander+Locker-Lampson&rft_id=http%3A%2F%2Fcollection.sciencemuseum.org.uk%2Fobjects%2Fco8223551%2Fprofessor-einstein-with-commander-locker-lampson-gelatin-silver-print-photograph&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: ", ScienceMuseum.org, UK"
+              - listitem [ref=f1e3997]:
+                - link "Jump up" [ref=f1e3999] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007419–420_147-0"
+                  - text: ^
+                - generic [ref=f1e4000]:
+                  - link "Isaacson (2007)" [ref=f1e4001] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 419–420."
+              - listitem [ref=f1e4002]:
+                - generic [ref=f1e4003]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4004] [cursor=pointer]:
+                    - /url: "#cite_ref-Gilbert_148-0"
+                  - link [ref=f1e4006] [cursor=pointer]:
+                    - /url: "#cite_ref-Gilbert_148-1"
+                - generic [ref=f1e4007]: Gilbert, Martin. Churchill and the Jews, Henry Holt and Company, N.Y. (2007) pp. 101, 176
+              - listitem [ref=f1e4008]:
+                - link "Jump up" [ref=f1e4010] [cursor=pointer]:
+                  - /url: "#cite_ref-aDu8s_149-0"
+                  - text: ^
+                - generic [ref=f1e4011]:
+                  - generic [ref=f1e4012]:
+                    - text: Reisman, Arnold (20 November 2006).
+                    - link "\"What a Freshly Discovered Einstein Letter Says About Turkey Today\"" [ref=f1e4013] [cursor=pointer]:
+                      - /url: http://hnn.us/article/31946
+                    - text: . History News Network, George Mason University.
+                    - link "Archived" [ref=f1e4014] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20140417075103/http://hnn.us/article/31946
+                    - text: from the original on 17 April 2014
+                    - generic [ref=f1e4015]: . Retrieved 2 June 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=What+a+Freshly+Discovered+Einstein+Letter+Says+About+Turkey+Today&rft.pub=History+News+Network%2C+George+Mason+University&rft.date=2006-11-20&rft.aulast=Reisman&rft.aufirst=Arnold&rft_id=http%3A%2F%2Fhnn.us%2Farticle%2F31946&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4016]:
+                - generic [ref=f1e4017]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4018] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEClark1971_150-0"
+                  - link [ref=f1e4020] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEClark1971_150-1"
+                  - link [ref=f1e4021] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEClark1971_150-2"
+                  - link [ref=f1e4022] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEClark1971_150-3"
+                  - link [ref=f1e4023] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEClark1971_150-4"
+                - generic [ref=f1e4024]:
+                  - link "Clark (1971)" [ref=f1e4025] [cursor=pointer]:
+                    - /url: "#CITEREFClark1971"
+                  - text: .
+              - listitem [ref=f1e4026]:
+                - link "Jump up" [ref=f1e4028] [cursor=pointer]:
+                  - /url: "#cite_ref-AP_151-0"
+                  - text: ^
+                - text: "\"Denunciation of German Policy is a Stirring Event\", Associated Press, 27 July 1933"
+              - listitem [ref=f1e4029]:
+                - link "Jump up" [ref=f1e4031] [cursor=pointer]:
+                  - /url: "#cite_ref-Guardian_153-0"
+                  - text: ^
+                - generic [ref=f1e4032]: "\"Stateless Jews: The Exiles from Germany, Nationality Plan\", The Guardian (UK) 27 July 1933"
+              - listitem [ref=f1e4033]:
+                - link "Jump up" [ref=f1e4035] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEFölsing1997649,_678_154-0"
+                  - text: ^
+                - generic [ref=f1e4036]:
+                  - link "Fölsing (1997)" [ref=f1e4037] [cursor=pointer]:
+                    - /url: "#CITEREFFölsing1997"
+                  - text: ", pp. 649, 678."
+                  - generic [ref=f1e4038]:
+                    - text: "sfnp error: multiple targets (2×): CITEREFFölsing1997 ("
+                    - link "help" [ref=f1e4039] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Category:Harv_and_Sfn_template_errors
+                    - text: )
+              - listitem [ref=f1e4040]:
+                - generic [ref=f1e4041]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4042] [cursor=pointer]:
+                    - /url: "#cite_ref-Arntzenius2011_155-0"
+                  - link [ref=f1e4044] [cursor=pointer]:
+                    - /url: "#cite_ref-Arntzenius2011_155-1"
+                - generic [ref=f1e4045]:
+                  - generic [ref=f1e4046]:
+                    - text: Arntzenius, Linda G. (2011).
+                    - link "Institute for Advanced Study" [ref=f1e4047] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=zHHguITir80C&pg=PA19
+                    - text: . Arcadia Publishing. p. 19.
+                    - link "ISBN" [ref=f1e4048] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-7385-7409-7" [ref=f1e4049] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-7385-7409-7
+                    - generic [ref=f1e4050]: . Retrieved 18 June 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Institute+for+Advanced+Study&rft.pages=19&rft.pub=Arcadia+Publishing&rft.date=2011&rft.isbn=978-0-7385-7409-7&rft.aulast=Arntzenius&rft.aufirst=Linda+G.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DzHHguITir80C%26pg%3DPA19&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4051]:
+                - link "Jump up" [ref=f1e4053] [cursor=pointer]:
+                  - /url: "#cite_ref-FFt5E_156-0"
+                  - text: ^
+                - generic [ref=f1e4054]:
+                  - generic [ref=f1e4055]:
+                    - link "\"Oxford Jewish Personalities\"" [ref=f1e4056] [cursor=pointer]:
+                      - /url: http://www.oxfordchabad.org/templates/articlecco_cdo/aid/457396/jewish/Albert-Einstein.htm
+                    - text: . Oxford Chabad Society.
+                    - link "Archived" [ref=f1e4057] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20160112172707/http://www.oxfordchabad.org/templates/articlecco_cdo/aid/457396/jewish/Albert-Einstein.htm
+                    - text: from the original on 12 January 2016
+                    - generic [ref=f1e4058]: . Retrieved 7 March 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Oxford+Jewish+Personalities&rft.pub=Oxford+Chabad+Society&rft_id=http%3A%2F%2Fwww.oxfordchabad.org%2Ftemplates%2Farticlecco_cdo%2Faid%2F457396%2Fjewish%2FAlbert-Einstein.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4059]:
+                - link "Jump up" [ref=f1e4061] [cursor=pointer]:
+                  - /url: "#cite_ref-v8v06_157-0"
+                  - text: ^
+                - generic [ref=f1e4062]:
+                  - generic [ref=f1e4063]:
+                    - link "\"How Einstein fled from the Nazis to an Oxford college\"" [ref=f1e4064] [cursor=pointer]:
+                      - /url: http://www.oxfordtimes.co.uk/leisure/history_heritage/9617968.How_Einstein_fled_from_the_Nazis_to_an_Oxford_college/
+                    - text: . The Oxford Times. 2012.
+                    - link "Archived" [ref=f1e4065] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20150402094400/http://www.oxfordtimes.co.uk/leisure/history_heritage/9617968.How_Einstein_fled_from_the_Nazis_to_an_Oxford_college/
+                    - text: from the original on 2 April 2015
+                    - generic [ref=f1e4066]: . Retrieved 7 March 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+Oxford+Times&rft.atitle=How+Einstein+fled+from+the+Nazis+to+an+Oxford+college&rft.date=2012&rft_id=http%3A%2F%2Fwww.oxfordtimes.co.uk%2Fleisure%2Fhistory_heritage%2F9617968.How_Einstein_fled_from_the_Nazis_to_an_Oxford_college%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4067]:
+                - link "Jump up" [ref=f1e4069] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEFölsing1997686–687_158-0"
+                  - text: ^
+                - generic [ref=f1e4070]:
+                  - link "Fölsing (1997)" [ref=f1e4071] [cursor=pointer]:
+                    - /url: "#CITEREFFölsing1997"
+                  - text: ", pp. 686–687."
+                  - generic [ref=f1e4072]:
+                    - text: "sfnp error: multiple targets (2×): CITEREFFölsing1997 ("
+                    - link "help" [ref=f1e4073] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Category:Harv_and_Sfn_template_errors
+                    - text: )
+              - listitem [ref=f1e4074]:
+                - link "Jump up" [ref=f1e4076] [cursor=pointer]:
+                  - /url: "#cite_ref-mzNc5_159-0"
+                  - text: ^
+                - generic [ref=f1e4077]:
+                  - generic [ref=f1e4078]:
+                    - link "\"In Brief\"" [ref=f1e4079] [cursor=pointer]:
+                      - /url: http://www.ias.edu/people/einstein/in-brief
+                    - text: . Institute for Advanced Study. 10 September 2009.
+                    - link "Archived" [ref=f1e4080] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20100329064405/http://www.ias.edu/people/einstein/in-brief
+                    - text: from the original on 29 March 2010
+                    - generic [ref=f1e4081]: . Retrieved 4 March 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=In+Brief&rft.pub=Institute+for+Advanced+Study&rft.date=2009-09-10&rft_id=http%3A%2F%2Fwww.ias.edu%2Fpeople%2Feinstein%2Fin-brief&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4082]:
+                - link "Jump up" [ref=f1e4084] [cursor=pointer]:
+                  - /url: "#cite_ref-160"
+                  - text: ^
+                - generic [ref=f1e4085]:
+                  - generic [ref=f1e4086]:
+                    - text: Weyl, Hermann (2013). Pesic, Peter (ed.).
+                    - 'link "Levels of Infinity: Selected Writings on Mathematics and Philosophy" [ref=f1e4087] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=Dd-vAAAAQBAJ
+                    - text: . Dover Publications. p. 5.
+                    - link "ISBN" [ref=f1e4088] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "9780486266930" [ref=f1e4089] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/9780486266930
+                    - generic [ref=f1e4090]: . Retrieved 30 May 2022
+                    - text: . By 1933, Weyl... left for the newly-founded Institute for Advanced Studies at Princeton, where his colleagues included Einstein, Kurt Gödel, and John von Neumann.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Levels+of+Infinity%3A+Selected+Writings+on+Mathematics+and+Philosophy&rft.pages=5&rft.pub=Dover+Publications&rft.date=2013&rft.isbn=9780486266930&rft.aulast=Weyl&rft.aufirst=Hermann&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DDd-vAAAAQBAJ&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4091]:
+                - link "Jump up" [ref=f1e4093] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007630_161-0"
+                  - text: ^
+                - generic [ref=f1e4094]:
+                  - link "Isaacson (2007)" [ref=f1e4095] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 630."
+              - listitem [ref=f1e4096]:
+                - link "Jump up" [ref=f1e4098] [cursor=pointer]:
+                  - /url: "#cite_ref-o4fkQ_162-0"
+                  - text: ^
+                - generic [ref=f1e4099]:
+                  - generic [ref=f1e4100]:
+                    - text: Gosling, F. G. (2010).
+                    - 'link "\"The Manhattan Project: Making the Atomic Bomb\"" [ref=f1e4101] [cursor=pointer]':
+                      - /url: http://energy.gov/management/downloads/gosling-manhattan-project-making-atomic-bomb
+                    - text: . U.S. Department of Energy, History Division. p. vii.
+                    - link "Archived" [ref=f1e4102] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20150613145416/http://energy.gov/management/downloads/gosling-manhattan-project-making-atomic-bomb
+                    - text: from the original on 13 June 2015
+                    - generic [ref=f1e4103]: . Retrieved 7 June 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=The+Manhattan+Project%3A+Making+the+Atomic+Bomb&rft.pages=vii&rft.pub=U.S.+Department+of+Energy%2C+History+Division&rft.date=2010&rft.aulast=Gosling&rft.aufirst=F.+G.&rft_id=http%3A%2F%2Fenergy.gov%2Fmanagement%2Fdownloads%2Fgosling-manhattan-project-making-atomic-bomb&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4104]:
+                - link "Jump up" [ref=f1e4106] [cursor=pointer]:
+                  - /url: "#cite_ref-pRqWK_163-0"
+                  - text: ^
+                - generic [ref=f1e4107]:
+                  - generic [ref=f1e4108]:
+                    - text: Lanouette, William; Silard, Bela (1992).
+                    - 'link "Genius in the Shadows: A Biography of Leo Szilárd: The Man Behind The Bomb" [ref=f1e4109] [cursor=pointer]':
+                      - /url: https://archive.org/details/geniusinshadowsa00lano/page/198
+                    - text: ". New York: Charles Scribner's Sons. pp."
+                    - link "198–200" [ref=f1e4110] [cursor=pointer]:
+                      - /url: https://archive.org/details/geniusinshadowsa00lano/page/198
+                    - text: .
+                    - link "ISBN" [ref=f1e4111] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-684-19011-2" [ref=f1e4112] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-684-19011-2
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Genius+in+the+Shadows%3A+A+Biography+of+Leo+Szil%C3%A1rd%3A+The+Man+Behind+The+Bomb&rft.place=New+York&rft.pages=198-200&rft.pub=Charles+Scribner%27s+Sons&rft.date=1992&rft.isbn=978-0-684-19011-2&rft.aulast=Lanouette&rft.aufirst=William&rft.au=Silard%2C+Bela&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fgeniusinshadowsa00lano%2Fpage%2F198&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4113]:
+                - link "Jump up" [ref=f1e4115] [cursor=pointer]:
+                  - /url: "#cite_ref-4Z68g_164-0"
+                  - text: ^
+                - generic [ref=f1e4116]:
+                  - generic [ref=f1e4117]:
+                    - text: Diehl, Sarah J.; Moltz, James Clay (2008).
+                    - 'link "Nuclear Weapons and Nonproliferation: A Reference Handbook" [ref=f1e4118] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=3PN-NEfl_U0C&pg=PA218
+                    - text: . ABC-CLIO. p. 218.
+                    - link "ISBN" [ref=f1e4119] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-59884-071-1" [ref=f1e4120] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-59884-071-1
+                    - generic [ref=f1e4121]: . Retrieved 7 June 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Nuclear+Weapons+and+Nonproliferation%3A+A+Reference+Handbook&rft.pages=218&rft.pub=ABC-CLIO&rft.date=2008&rft.isbn=978-1-59884-071-1&rft.aulast=Diehl&rft.aufirst=Sarah+J.&rft.au=Moltz%2C+James+Clay&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D3PN-NEfl_U0C%26pg%3DPA218&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4122]:
+                - link "Jump up" [ref=f1e4124] [cursor=pointer]:
+                  - /url: "#cite_ref-eZym8_165-0"
+                  - text: ^
+                - generic [ref=f1e4125]:
+                  - generic [ref=f1e4126]:
+                    - text: Hewlett, Richard G.; Anderson, Oscar E. (1962).
+                    - link "The New World, 1939–1946" [ref=f1e4127] [cursor=pointer]:
+                      - /url: https://www.governmentattic.org/5docs/TheNewWorld1939-1946.pdf
+                    - text: "(PDF). University Park: Pennsylvania State University Press. pp. 15–16."
+                    - link "OCLC" [ref=f1e4128] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/OCLC_(identifier)
+                    - link "637004643" [ref=f1e4129] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/oclc/637004643
+                    - text: .
+                    - link "Archived" [ref=f1e4130] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20190926065049/https://www.governmentattic.org/5docs/TheNewWorld1939-1946.pdf
+                    - text: (PDF) from the original on 26 September 2019
+                    - generic [ref=f1e4131]: . Retrieved 7 June 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+New+World%2C+1939%E2%80%931946&rft.place=University+Park&rft.pages=15-16&rft.pub=Pennsylvania+State+University+Press&rft.date=1962&rft_id=info%3Aoclcnum%2F637004643&rft.aulast=Hewlett&rft.aufirst=Richard+G.&rft.au=Anderson%2C+Oscar+E.&rft_id=https%3A%2F%2Fwww.governmentattic.org%2F5docs%2FTheNewWorld1939-1946.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4132]:
+                - link "Jump up" [ref=f1e4134] [cursor=pointer]:
+                  - /url: "#cite_ref-z73PK_166-0"
+                  - text: ^
+                - generic [ref=f1e4135]:
+                  - generic [ref=f1e4136]:
+                    - text: Einstein, Albert (1952).
+                    - link "\"On My Participation in the Atom Bomb Project\"" [ref=f1e4137] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20150828230457/http://www.atomicarchive.com/Docs/Hiroshima/EinsteinResponse.shtml
+                    - text: . Archived from
+                    - link "the original" [ref=f1e4138] [cursor=pointer]:
+                      - /url: http://www.atomicarchive.com/Docs/Hiroshima/EinsteinResponse.shtml
+                    - text: on 28 August 2015
+                    - generic [ref=f1e4139]: . Retrieved 7 June 2015
+                    - text: – via atomicarchive.org.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=On+My+Participation+in+the+Atom+Bomb+Project&rft.date=1952&rft.aulast=Einstein&rft.aufirst=Albert&rft_id=http%3A%2F%2Fwww.atomicarchive.com%2FDocs%2FHiroshima%2FEinsteinResponse.shtml&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4140]:
+                - link "Jump up" [ref=f1e4142] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEClark1971752_167-0"
+                  - text: ^
+                - generic [ref=f1e4143]:
+                  - link "Clark (1971)" [ref=f1e4144] [cursor=pointer]:
+                    - /url: "#CITEREFClark1971"
+                  - text: ", p. 752."
+              - listitem [ref=f1e4145]:
+                - link "Jump up" [ref=f1e4147] [cursor=pointer]:
+                  - /url: "#cite_ref-168"
+                  - text: ^
+                - generic [ref=f1e4148]:
+                  - generic [ref=f1e4149]:
+                    - text: Einstein, Albert; Russell, Bertrand (9 July 1955).
+                    - link "The Russell-Einstein Manifesto" [ref=f1e4150] [cursor=pointer]:
+                      - /url: https://pugwash.org/1955/07/09/statement-manifesto/
+                    - text: ". London: Pugwash Conferences."
+                    - link "Archived" [ref=f1e4151] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200301114337/https://pugwash.org/1955/07/09/statement-manifesto/
+                    - text: from the original on 1 March 2020
+                    - generic [ref=f1e4152]: . Retrieved 9 June 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Russell-Einstein+Manifesto&rft.place=London&rft.pub=Pugwash+Conferences&rft.date=1955-07-09&rft.aulast=Einstein&rft.aufirst=Albert&rft.au=Russell%2C+Bertrand&rft_id=https%3A%2F%2Fpugwash.org%2F1955%2F07%2F09%2Fstatement-manifesto%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4153]:
+                - link "Jump up" [ref=f1e4155] [cursor=pointer]:
+                  - /url: "#cite_ref-169"
+                  - text: ^
+                - generic [ref=f1e4156]:
+                  - generic [ref=f1e4157]:
+                    - text: Boyko, Hugo.
+                    - link "Science and the Future of Mankind" [ref=f1e4158] [cursor=pointer]:
+                      - /url: https://www.worldacademy.org/files/publications/Science%20and%20the%20Future%20of%20Mankind.pdf
+                    - text: (PDF). Indiana University Press. p. 377.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Science+and+the+Future+of+Mankind&rft.pages=377&rft.pub=Indiana+University+Press&rft.aulast=Boyko&rft.aufirst=Hugo&rft_id=https%3A%2F%2Fwww.worldacademy.org%2Ffiles%2Fpublications%2FScience%2520and%2520the%2520Future%2520of%2520Mankind.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4159]:
+                - link "Jump up" [ref=f1e4161] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007432_170-0"
+                  - text: ^
+                - generic [ref=f1e4162]:
+                  - link "Isaacson (2007)" [ref=f1e4163] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 432."
+              - listitem [ref=f1e4164]:
+                - link "Jump up" [ref=f1e4166] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEJeromeTaylor2006x_171-0"
+                  - text: ^
+                - generic [ref=f1e4167]:
+                  - link "Jerome & Taylor (2006)" [ref=f1e4168] [cursor=pointer]:
+                    - /url: "#CITEREFJeromeTaylor2006"
+                  - text: ", p. x."
+              - listitem [ref=f1e4169]:
+                - generic [ref=f1e4170]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4171] [cursor=pointer]:
+                    - /url: "#cite_ref-smithsonianmag_172-0"
+                  - link [ref=f1e4173] [cursor=pointer]:
+                    - /url: "#cite_ref-smithsonianmag_172-1"
+                - generic [ref=f1e4174]:
+                  - generic [ref=f1e4175]:
+                    - text: Francis, Matthew (3 March 2017).
+                    - link "\"How Albert Einstein Used His Fame to Denounce American Racism\"" [ref=f1e4176] [cursor=pointer]:
+                      - /url: https://www.smithsonianmag.com/science-nature/how-celebrity-scientist-albert-einstein-used-fame-denounce-american-racism-180962356
+                    - text: . Smithsonian Magazine.
+                    - link "Archived" [ref=f1e4177] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210211150143/https://www.smithsonianmag.com/science-nature/how-celebrity-scientist-albert-einstein-used-fame-denounce-american-racism-180962356/
+                    - text: from the original on 11 February 2021
+                    - generic [ref=f1e4178]: . Retrieved 10 February 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Smithsonian+Magazine&rft.atitle=How+Albert+Einstein+Used+His+Fame+to+Denounce+American+Racism&rft.date=2017-03-03&rft.aulast=Francis&rft.aufirst=Matthew&rft_id=https%3A%2F%2Fwww.smithsonianmag.com%2Fscience-nature%2Fhow-celebrity-scientist-albert-einstein-used-fame-denounce-american-racism-180962356&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4179]:
+                - link "Jump up" [ref=f1e4181] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTECalaprice2005148–149_173-0"
+                  - text: ^
+                - generic [ref=f1e4182]:
+                  - link "Calaprice (2005)" [ref=f1e4183] [cursor=pointer]:
+                    - /url: "#CITEREFCalaprice2005"
+                  - text: ", pp. 148–149."
+              - listitem [ref=f1e4184]:
+                - link "Jump up" [ref=f1e4186] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTERobeson2002565_174-0"
+                  - text: ^
+                - generic [ref=f1e4187]:
+                  - link "Robeson (2002)" [ref=f1e4188] [cursor=pointer]:
+                    - /url: "#CITEREFRobeson2002"
+                  - text: ", p. 565."
+              - listitem [ref=f1e4189]:
+                - generic [ref=f1e4190]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4191] [cursor=pointer]:
+                    - /url: "#cite_ref-civil_175-0"
+                  - link [ref=f1e4193] [cursor=pointer]:
+                    - /url: "#cite_ref-civil_175-1"
+                - generic [ref=f1e4194]:
+                  - generic [ref=f1e4195]:
+                    - link "\"Albert Einstein, Civil Rights activist\"" [ref=f1e4196] [cursor=pointer]:
+                      - /url: http://news.harvard.edu/gazette/story/2007/04/albert-einstein-civil-rights-activist/
+                    - text: . 12 April 2007.
+                    - link "Archived" [ref=f1e4197] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20180302182248/https://news.harvard.edu/gazette/story/2007/04/albert-einstein-civil-rights-activist/
+                    - text: from the original on 2 March 2018
+                    - generic [ref=f1e4198]: . Retrieved 8 June 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Albert+Einstein%2C+Civil+Rights+activist&rft.date=2007-04-12&rft_id=http%3A%2F%2Fnews.harvard.edu%2Fgazette%2Fstory%2F2007%2F04%2Falbert-einstein-civil-rights-activist%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: ", Harvard Gazette, 12 April 2007"
+              - listitem [ref=f1e4199]:
+                - link "Jump up" [ref=f1e4201] [cursor=pointer]:
+                  - /url: "#cite_ref-Jerome_Isis_176-0"
+                  - text: ^
+                - generic [ref=f1e4202]:
+                  - generic [ref=f1e4203]:
+                    - text: "Jerome, Fred (December 2004). \"Einstein, Race, and the Myth of the Cultural Icon\". Isis. 95 (4): 627–639."
+                    - link "Bibcode" [ref=f1e4204] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2004Isis...95..627J" [ref=f1e4205] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2004Isis...95..627J
+                    - text: .
+                    - link "doi" [ref=f1e4206] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1086/430653" [ref=f1e4207] [cursor=pointer]:
+                      - /url: https://doi.org/10.1086%2F430653
+                    - text: .
+                    - link "JSTOR" [ref=f1e4208] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "10.1086/430653" [ref=f1e4209] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/10.1086/430653
+                    - text: .
+                    - link "PMID" [ref=f1e4210] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "16011298" [ref=f1e4211] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/16011298
+                    - text: .
+                    - link "S2CID" [ref=f1e4212] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "24738716" [ref=f1e4213] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:24738716
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Isis&rft.atitle=Einstein%2C+Race%2C+and+the+Myth+of+the+Cultural+Icon&rft.volume=95&rft.issue=4&rft.pages=627-639&rft.date=2004-12&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A24738716%23id-name%3DS2CID&rft_id=info%3Abibcode%2F2004Isis...95..627J&rft_id=info%3Apmid%2F16011298&rft_id=info%3Adoi%2F10.1086%2F430653&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F10.1086%2F430653%23id-name%3DJSTOR&rft.aulast=Jerome&rft.aufirst=Fred&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4214]:
+                - link "Jump up" [ref=f1e4216] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007445_177-0"
+                  - text: ^
+                - generic [ref=f1e4217]:
+                  - link "Isaacson (2007)" [ref=f1e4218] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 445."
+              - listitem [ref=f1e4219]:
+                - link "Jump up" [ref=f1e4221] [cursor=pointer]:
+                  - /url: "#cite_ref-178"
+                  - text: ^
+                - generic [ref=f1e4222]:
+                  - generic [ref=f1e4223]:
+                    - text: Tobies, Renate (2012).
+                    - link "Iris Runge – A Life at the Crossroads of Mathematics, Science, and Industry" [ref=f1e4224] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=EDm0eQqFUQ4C&pg=PA116
+                    - text: ". Basel: Birkhèauser. p. 116."
+                    - link "ISBN" [ref=f1e4225] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-3034802512" [ref=f1e4226] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-3034802512
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Iris+Runge+%E2%80%93+A+Life+at+the+Crossroads+of+Mathematics%2C+Science%2C+and+Industry&rft.place=Basel&rft.pages=116&rft.pub=Birkh%C3%A8auser&rft.date=2012&rft.isbn=978-3034802512&rft.aulast=Tobies&rft.aufirst=Renate&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DEDm0eQqFUQ4C%26pg%3DPA116&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4227]:
+                - link "Jump up" [ref=f1e4229] [cursor=pointer]:
+                  - /url: "#cite_ref-179"
+                  - text: ^
+                - generic [ref=f1e4230]:
+                  - generic [ref=f1e4231]:
+                    - text: Gimbel, Steven (2015).
+                    - link "Einstein - His Space and Times" [ref=f1e4232] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=HvTOBwAAQBAJ&pg=PA111
+                    - text: ". New Haven: Yale University Press. p. 111."
+                    - link "ISBN" [ref=f1e4233] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0300196719" [ref=f1e4234] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0300196719
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+-+His+Space+and+Times&rft.place=New+Haven&rft.pages=111&rft.pub=Yale+University+Press&rft.date=2015&rft.isbn=978-0300196719&rft.aulast=Gimbel&rft.aufirst=Steven&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DHvTOBwAAQBAJ%26pg%3DPA111&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4235]:
+                - link "Jump up" [ref=f1e4237] [cursor=pointer]:
+                  - /url: "#cite_ref-180"
+                  - text: ^
+                - text: Einstein (1949), pp. 9–15.
+              - listitem [ref=f1e4238]:
+                - link "Jump up" [ref=f1e4240] [cursor=pointer]:
+                  - /url: "#cite_ref-LXsUJ_181-0"
+                  - text: ^
+                - generic [ref=f1e4241]:
+                  - generic [ref=f1e4242]:
+                    - text: Rowe, David E.; Schulmann, Robert (8 June 2007a). David A., Walsh (ed.).
+                    - link "\"What Were Einstein's Politics?\"" [ref=f1e4243] [cursor=pointer]:
+                      - /url: http://hnn.us/articles/39445.html
+                    - text: .
+                    - link "History News Network" [ref=f1e4245] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/History_News_Network
+                    - text: .
+                    - link "Archived" [ref=f1e4246] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20190203065834/http://hnn.us/articles/39445.html
+                    - text: from the original on 3 February 2019
+                    - generic [ref=f1e4247]: . Retrieved 29 July 2012
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=History+News+Network&rft.atitle=What+Were+Einstein%27s+Politics%3F&rft.date=2007-06-08&rft.aulast=Rowe&rft.aufirst=David+E.&rft.au=Schulmann%2C+Robert&rft_id=http%3A%2F%2Fhnn.us%2Farticles%2F39445.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4248]:
+                - link "Jump up" [ref=f1e4250] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTERoweSchulmann2013[httpsbooksgooglecombooksid_X1dAAAAQBAJpg413_412,_413]_182-0"
+                  - text: ^
+                - generic [ref=f1e4251]:
+                  - link "Rowe & Schulmann (2013)" [ref=f1e4252] [cursor=pointer]:
+                    - /url: "#CITEREFRoweSchulmann2013"
+                  - text: ", pp."
+                  - link "412, 413" [ref=f1e4253] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=_X1dAAAAQBAJ&pg=413
+                  - text: .
+              - listitem [ref=f1e4254]:
+                - link "Jump up" [ref=f1e4256] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007487,_494,_550_183-0"
+                  - text: ^
+                - generic [ref=f1e4257]:
+                  - link "Isaacson (2007)" [ref=f1e4258] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 487, 494, 550."
+              - listitem [ref=f1e4259]:
+                - link "Jump up" [ref=f1e4261] [cursor=pointer]:
+                  - /url: "#cite_ref-184"
+                  - text: ^
+                - text: "Bulletin of the Atomic Scientists 4 (February 1948), No. 2 35–37: 'A Reply to the Soviet Scientists, December 1947'"
+              - listitem [ref=f1e4262]:
+                - link "Jump up" [ref=f1e4264] [cursor=pointer]:
+                  - /url: "#cite_ref-ixWWZ_185-0"
+                  - text: ^
+                - generic [ref=f1e4265]:
+                  - generic [ref=f1e4266]:
+                    - text: Waldrop, Mitch (19 April 2017).
+                    - link "\"Why the FBI Kept a 1,400-Page File on Einstein\"" [ref=f1e4267] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20170526164434/http://news.nationalgeographic.com/2017/04/science-march-einstein-fbi-genius-science/
+                    - text: . National Geographic. Archived from
+                    - link "the original" [ref=f1e4268] [cursor=pointer]:
+                      - /url: http://news.nationalgeographic.com/2017/04/science-march-einstein-fbi-genius-science/
+                    - text: on 26 May 2017
+                    - generic [ref=f1e4269]: . Retrieved 7 June 2017
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=National+Geographic&rft.atitle=Why+the+FBI+Kept+a+1%2C400-Page+File+on+Einstein&rft.date=2017-04-19&rft.aulast=Waldrop&rft.aufirst=Mitch&rft_id=http%3A%2F%2Fnews.nationalgeographic.com%2F2017%2F04%2Fscience-march-einstein-fbi-genius-science%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4270]:
+                - link "Jump up" [ref=f1e4272] [cursor=pointer]:
+                  - /url: "#cite_ref-EinsteinGandhi_2023_186-0"
+                  - text: ^
+                - generic [ref=f1e4273]:
+                  - generic [ref=f1e4274]:
+                    - text: Gandhi Information Center, Berlin (13 December 2023) [Einstein's handwritten manuscript from January 1939].
+                    - link "\"Albert Einstein and Mohandas Karamchand Gandhi Facsimiles, Sources, Transcripts\"" [ref=f1e4275] [cursor=pointer]:
+                      - /url: https://nonviolent-resistance.info/files/Einstein/Einstein%20on%20Gandhi%20(Facsimiles,%20Transcripts)%20-%2013%20December%202023.pdf
+                    - text: (PDF)
+                    - generic [ref=f1e4276]: . Retrieved 4 June 2026
+                    - text: ". p. 5: Wir dürfen alle glücklich und dankbar sein, dass uns das Schicksal einen erleuchteten Zeitgenossen geschenkt hat, ein Vorbild für die kommenden Generationen. [We may all be happy and grateful that destiny gifted us with such an enlightened contemporary, a role model for the generations to come.]"
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Albert+Einstein+and+Mohandas+Karamchand+Gandhi+Facsimiles%2C+Sources%2C+Transcripts&rft.pages=5&rft.date=2023-12-13&rft.au=Gandhi+Information+Center%2C+Berlin&rft_id=https%3A%2F%2Fnonviolent-resistance.info%2Ffiles%2FEinstein%2FEinstein%2520on%2520Gandhi%2520%28Facsimiles%2C%2520Transcripts%29%2520-%252013%2520December%25202023.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4277]:
+                - link "Jump up" [ref=f1e4279] [cursor=pointer]:
+                  - /url: "#cite_ref-Gandhiserve.org_187-0"
+                  - text: ^
+                - generic [ref=f1e4280]:
+                  - generic [ref=f1e4281]:
+                    - text: Rühe, Peter (c. 2004) [Letters from September–October 1931].
+                    - link "\"Einstein on Gandhi\"" [ref=f1e4282] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20120117104005/http://www.gandhiserve.org/streams/einstein.html
+                    - text: . Gandhiserve.org. Archived from
+                    - link "the original" [ref=f1e4283] [cursor=pointer]:
+                      - /url: http://www.gandhiserve.org/streams/einstein.html
+                    - text: on 17 January 2012
+                    - generic [ref=f1e4284]: . Retrieved 24 January 2012
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Gandhiserve.org&rft.atitle=Einstein+on+Gandhi&rft.aulast=R%C3%BChe&rft.aufirst=Peter&rft_id=http%3A%2F%2Fwww.gandhiserve.org%2Fstreams%2Feinstein.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4285]:
+                - link "Jump up" [ref=f1e4287] [cursor=pointer]:
+                  - /url: "#cite_ref-188"
+                  - text: ^
+                - generic [ref=f1e4288]:
+                  - generic [ref=f1e4289]:
+                    - link "\"Einstein Would Refuse Any War Services No Matter What the Cause\"" [ref=f1e4290] [cursor=pointer]:
+                      - /url: https://www.jta.org/archive/einstein-would-refuse-any-war-services-no-matter-what-the-cause
+                    - text: . Jewish Telegraphic Agency Bulletin
+                    - generic [ref=f1e4291]: . Retrieved 5 April 2026
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Einstein+Would+Refuse+Any+War+Services+No+Matter+What+the+Cause&rft.series=Jewish+Telegraphic+Agency+Bulletin&rft_id=https%3A%2F%2Fwww.jta.org%2Farchive%2Feinstein-would-refuse-any-war-services-no-matter-what-the-cause&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4292]:
+                - link "Jump up" [ref=f1e4294] [cursor=pointer]:
+                  - /url: "#cite_ref-189"
+                  - text: ^
+                - generic [ref=f1e4295]:
+                  - generic [ref=f1e4296]:
+                    - text: Dennis Overbye (25 January 2005).
+                    - link "\"Brace Yourself! Here Comes Einstein's Year\"" [ref=f1e4297] [cursor=pointer]:
+                      - /url: https://www.nytimes.com/2005/01/25/science/brace-yourself-here-comes-einsteins-year.html
+                    - text: .
+                    - link "The New York Times" [ref=f1e4299] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_New_York_Times
+                    - text: .
+                    - link "Archived" [ref=f1e4300] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20201030232656/https://www.nytimes.com/2005/01/25/science/brace-yourself-here-comes-einsteins-year.html
+                    - text: from the original on 30 October 2020
+                    - generic [ref=f1e4301]: . Retrieved 27 October 2020
+                    - text: . Hebrew University ... which he helped found
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=Brace+Yourself%21+Here+Comes+Einstein%27s+Year&rft.date=2005-01-25&rft.au=Dennis+Overbye&rft_id=https%3A%2F%2Fwww.nytimes.com%2F2005%2F01%2F25%2Fscience%2Fbrace-yourself-here-comes-einsteins-year.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4302]:
+                - link "Jump up" [ref=f1e4304] [cursor=pointer]:
+                  - /url: "#cite_ref-190"
+                  - text: ^
+                - generic [ref=f1e4305]:
+                  - generic [ref=f1e4306]:
+                    - link "\"History\"" [ref=f1e4307] [cursor=pointer]:
+                      - /url: https://en.huji.ac.il/history
+                    - text: . Hebrew University.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Hebrew+University&rft.atitle=History&rft_id=https%3A%2F%2Fen.huji.ac.il%2Fhistory&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4308]:
+                - link "Jump up" [ref=f1e4310] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007290_191-0"
+                  - text: ^
+                - generic [ref=f1e4311]:
+                  - link "Isaacson (2007)" [ref=f1e4312] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 290."
+              - listitem [ref=f1e4313]:
+                - link "Jump up" [ref=f1e4315] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTERoweSchulmann2007161_192-0"
+                  - text: ^
+                - generic [ref=f1e4316]:
+                  - link "Rowe & Schulmann (2007)" [ref=f1e4317] [cursor=pointer]:
+                    - /url: "#CITEREFRoweSchulmann2007"
+                  - text: ", p. 161."
+              - listitem [ref=f1e4318]:
+                - link "Jump up" [ref=f1e4320] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTERoweSchulmann2007158_193-0"
+                  - text: ^
+                - generic [ref=f1e4321]:
+                  - link "Rowe & Schulmann (2007)" [ref=f1e4322] [cursor=pointer]:
+                    - /url: "#CITEREFRoweSchulmann2007"
+                  - text: ", p. 158."
+              - listitem [ref=f1e4323]:
+                - link "Jump up" [ref=f1e4325] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTERoweSchulmann200733_194-0"
+                  - text: ^
+                - generic [ref=f1e4326]:
+                  - link "Rowe & Schulmann (2007)" [ref=f1e4327] [cursor=pointer]:
+                    - /url: "#CITEREFRoweSchulmann2007"
+                  - text: ", p. 33."
+              - listitem [ref=f1e4328]:
+                - link "Jump up" [ref=f1e4330] [cursor=pointer]:
+                  - /url: "#cite_ref-195"
+                  - text: ^
+                - generic [ref=f1e4331]:
+                  - generic [ref=f1e4332]:
+                    - text: "Rosenkranz, Ze'ev (2011). Einstein Before Israel: Zionist Icon Or Iconoclast?. Princeton University Press. pp. 4–5."
+                    - link "ISBN" [ref=f1e4333] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-691-14412-2" [ref=f1e4334] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-14412-2
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+Before+Israel%3A+Zionist+Icon+Or+Iconoclast%3F&rft.pages=4-5&rft.pub=Princeton+University+Press&rft.date=2011&rft.isbn=978-0-691-14412-2&rft.aulast=Rosenkranz&rft.aufirst=Ze%27ev&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4335]:
+                - link "Jump up" [ref=f1e4337] [cursor=pointer]:
+                  - /url: "#cite_ref-196"
+                  - text: ^
+                - generic [ref=f1e4338]:
+                  - generic [ref=f1e4339]:
+                    - text: Morris, Benny (15 February 2005).
+                    - link "\"Einstein's other theory\"" [ref=f1e4340] [cursor=pointer]:
+                      - /url: https://www.theguardian.com/world/2005/feb/16/israel.india
+                    - text: .
+                    - link "The Guardian" [ref=f1e4342] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_Guardian
+                    - generic [ref=f1e4343]: . Retrieved 8 July 2026
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+Guardian&rft.atitle=Einstein%27s+other+theory&rft.date=2005-02-15&rft.aulast=Morris&rft.aufirst=Benny&rft_id=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2005%2Ffeb%2F16%2Fisrael.india&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4344]:
+                - link "Jump up" [ref=f1e4346] [cursor=pointer]:
+                  - /url: "#cite_ref-197"
+                  - text: ^
+                - generic [ref=f1e4347]:
+                  - generic [ref=f1e4348]:
+                    - link "\"The Einstein-Nehru Exchange on Israel and Palestine\"" [ref=f1e4349] [cursor=pointer]:
+                      - /url: https://www.constitutionofindia.net/blog/the-einstein-nehru-exchange-on-the-state-of-israel/
+                    - text: . Constitutionofindia.net
+                    - generic [ref=f1e4350]: . Retrieved 25 July 2026
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Constitutionofindia.net&rft.atitle=The+Einstein-Nehru+Exchange+on+Israel+and+Palestine&rft_id=https%3A%2F%2Fwww.constitutionofindia.net%2Fblog%2Fthe-einstein-nehru-exchange-on-the-state-of-israel%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4351]:
+                - link "Jump up" [ref=f1e4353] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007520_198-0"
+                  - text: ^
+                - generic [ref=f1e4354]:
+                  - link "Isaacson (2007)" [ref=f1e4355] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 520."
+              - listitem [ref=f1e4356]:
+                - link "Jump up" [ref=f1e4358] [cursor=pointer]:
+                  - /url: "#cite_ref-Time_199-0"
+                  - text: ^
+                - generic [ref=f1e4359]:
+                  - generic [ref=f1e4360]:
+                    - 'link "\"ISRAEL: Einstein Declines\"" [ref=f1e4361] [cursor=pointer]':
+                      - /url: https://web.archive.org/web/20080518022224/http://www.time.com/time/magazine/article/0,9171,817454,00.html
+                    - text: .
+                    - link "Time" [ref=f1e4363] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Time_(magazine)
+                    - text: . 1 December 1952. Archived from
+                    - link "the original" [ref=f1e4364] [cursor=pointer]:
+                      - /url: http://www.time.com/time/magazine/article/0,9171,817454,00.html
+                    - text: on 18 May 2008
+                    - generic [ref=f1e4365]: . Retrieved 31 March 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Time&rft.atitle=ISRAEL%3A+Einstein+Declines&rft.date=1952-12-01&rft_id=http%3A%2F%2Fwww.time.com%2Ftime%2Fmagazine%2Farticle%2F0%2C9171%2C817454%2C00.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4366]:
+                - link "Jump up" [ref=f1e4368] [cursor=pointer]:
+                  - /url: "#cite_ref-Msb2q_200-0"
+                  - text: ^
+                - generic [ref=f1e4369]:
+                  - generic [ref=f1e4370]:
+                    - text: "Rosenkranz, Ze'ev (6 November 2002). The Einstein Scrapbook. Baltimore, Maryland:"
+                    - link "Johns Hopkins University Press" [ref=f1e4371] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Johns_Hopkins_University_Press
+                    - text: . p. 103.
+                    - link "ISBN" [ref=f1e4372] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-8018-7203-7" [ref=f1e4373] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-8018-7203-7
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Einstein+Scrapbook&rft.place=Baltimore%2C+Maryland&rft.pages=103&rft.pub=Johns+Hopkins+University+Press&rft.date=2002-11-06&rft.isbn=978-0-8018-7203-7&rft.aulast=Rosenkranz&rft.aufirst=Ze%27ev&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4374]:
+                - link "Jump up" [ref=f1e4376] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007522_201-0"
+                  - text: ^
+                - generic [ref=f1e4377]:
+                  - link "Isaacson (2007)" [ref=f1e4378] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 522."
+              - listitem [ref=f1e4379]:
+                - link "Jump up" [ref=f1e4381] [cursor=pointer]:
+                  - /url: "#cite_ref-202"
+                  - text: ^
+                - generic [ref=f1e4382]:
+                  - generic [ref=f1e4383]:
+                    - text: Kindy, David (6 August 2025).
+                    - link "\"When Albert Einstein Was Asked to Become President of Israel\"" [ref=f1e4384] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20250827052120/https://www.history.com/articles/albert-einstein-presidency-israel
+                    - text: . HISTORY. Archived from
+                    - link "the original" [ref=f1e4385] [cursor=pointer]:
+                      - /url: https://www.history.com/articles/albert-einstein-presidency-israel
+                    - text: on 27 August 2025.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=When+Albert+Einstein+Was+Asked+to+Become+President+of+Israel&rft.pub=HISTORY&rft.date=2025-08-06&rft.aulast=Kindy&rft.aufirst=David&rft_id=https%3A%2F%2Fwww.history.com%2Farticles%2Falbert-einstein-presidency-israel&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4386]:
+                - link "Jump up" [ref=f1e4388] [cursor=pointer]:
+                  - /url: "#cite_ref-203"
+                  - text: ^
+                - generic [ref=f1e4389]:
+                  - generic [ref=f1e4390]:
+                    - text: Gordon, Albert J. (1 May 1955).
+                    - link "\"PLEA BY EINSTEIN FOR ISRAEL BARED; In Last Illness, He Worked on TV Address to Review Nation's Achievements\"" [ref=f1e4391] [cursor=pointer]:
+                      - /url: https://www.nytimes.com/1955/05/01/archives/plea-by-einstein-for-israel-bared-in-last-illness-he-worked-on-tv.html
+                    - text: .
+                    - link "The New York Times" [ref=f1e4393] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_New_York_Times
+                    - text: . p. 1.
+                    - link "Archived" [ref=f1e4394] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20250114043518/https://www.nytimes.com/1955/05/01/archives/plea-by-einstein-for-israel-bared-in-last-illness-he-worked-on-tv.html
+                    - text: from the original on 14 January 2025
+                    - generic [ref=f1e4395]: . Retrieved 8 July 2026
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=PLEA+BY+EINSTEIN+FOR+ISRAEL+BARED%3B+In+Last+Illness%2C+He+Worked+on+TV+Address+to+Review+Nation%27s+Achievements&rft.pages=1&rft.date=1955-05-01&rft.aulast=Gordon&rft.aufirst=Albert+J.&rft_id=https%3A%2F%2Fwww.nytimes.com%2F1955%2F05%2F01%2Farchives%2Fplea-by-einstein-for-israel-bared-in-last-illness-he-worked-on-tv.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4396]:
+                - link "Jump up" [ref=f1e4398] [cursor=pointer]:
+                  - /url: "#cite_ref-204"
+                  - text: ^
+                - generic [ref=f1e4399]:
+                  - generic [ref=f1e4400]:
+                    - link "\"Something went wrong...\"" [ref=f1e4401] [cursor=pointer]:
+                      - /url: https://en.huji.ac.il/einstein
+                    - text: En.huji.ac.il
+                    - generic [ref=f1e4402]: . Retrieved 25 July 2026
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=En.huji.ac.il&rft.atitle=Something+went+wrong...&rft_id=https%3A%2F%2Fen.huji.ac.il%2Feinstein&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4403]:
+                - link "Jump up" [ref=f1e4405] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007549–550_205-0"
+                  - text: ^
+                - generic [ref=f1e4406]:
+                  - link "Isaacson (2007)" [ref=f1e4407] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 549–550."
+              - listitem [ref=f1e4408]:
+                - link "Jump up" [ref=f1e4410] [cursor=pointer]:
+                  - /url: "#cite_ref-018QJ_206-0"
+                  - text: ^
+                - generic [ref=f1e4411]:
+                  - generic [ref=f1e4412]:
+                    - link "Hitchens, Christopher" [ref=f1e4413] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Christopher_Hitchens
+                    - text: ", ed. (2007). \"Selected Writings on Religion: Albert Einstein\"."
+                    - 'link "The Portable Atheist: Essential Readings for the Nonbeliever" [ref=f1e4414] [cursor=pointer]':
+                      - /url: https://en.wikipedia.org/wiki/The_Portable_Atheist
+                    - text: . Da Capo Press. p. 155.
+                    - link "ISBN" [ref=f1e4415] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-306-81608-6" [ref=f1e4416] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-306-81608-6
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Selected+Writings+on+Religion%3A+Albert+Einstein&rft.btitle=The+Portable+Atheist%3A+Essential+Readings+for+the+Nonbeliever&rft.pages=155&rft.pub=Da+Capo+Press&rft.date=2007&rft.isbn=978-0-306-81608-6&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4417]:
+                - link "Jump up" [ref=f1e4419] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007[httpsbooksgooglecombooksidG_iziBAPXtECpgPA325_325]_207-0"
+                  - text: ^
+                - generic [ref=f1e4420]:
+                  - link "Isaacson (2007)" [ref=f1e4421] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p."
+                  - link "325" [ref=f1e4422] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=G_iziBAPXtEC&pg=PA325
+                  - text: .
+              - listitem [ref=f1e4423]:
+                - generic [ref=f1e4424]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4425] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTECalaprice2000218_208-0"
+                  - link [ref=f1e4427] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTECalaprice2000218_208-1"
+                - generic [ref=f1e4428]:
+                  - link "Calaprice (2000)" [ref=f1e4429] [cursor=pointer]:
+                    - /url: "#CITEREFCalaprice2000"
+                  - text: ", p. 218."
+              - listitem [ref=f1e4430]:
+                - link "Jump up" [ref=f1e4432] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007390_209-0"
+                  - text: ^
+                - generic [ref=f1e4433]:
+                  - link "Isaacson (2007)" [ref=f1e4434] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 390."
+              - listitem [ref=f1e4435]:
+                - link "Jump up" [ref=f1e4437] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTECalaprice2010[httpsbooksgooglecombooksidG_iziBAPXtECpgPA340_340]_210-0"
+                  - text: ^
+                - generic [ref=f1e4438]:
+                  - link "Calaprice (2010)" [ref=f1e4439] [cursor=pointer]:
+                    - /url: "#CITEREFCalaprice2010"
+                  - text: ", p."
+                  - link "340" [ref=f1e4440] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=G_iziBAPXtEC&pg=PA340
+                  - text: .
+              - listitem [ref=f1e4441]:
+                - link "Jump up" [ref=f1e4443] [cursor=pointer]:
+                  - /url: "#cite_ref-flickr2687_211-0"
+                  - text: ^
+                - generic [ref=f1e4444]:
+                  - generic [ref=f1e4445]:
+                    - link "\"Letter to M. Berkowitz, 25 October 1950\"" [ref=f1e4446] [cursor=pointer]:
+                      - /url: http://farm3.static.flickr.com/2687/4496554935_0b573db853_o.jpg
+                    - generic [ref=f1e4447]: . Retrieved 16 February 2017
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Letter+to+M.+Berkowitz%2C+25+October+1950.&rft_id=http%3A%2F%2Ffarm3.static.flickr.com%2F2687%2F4496554935_0b573db853_o.jpg&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: Einstein Archive 59–215.
+              - listitem [ref=f1e4448]:
+                - link "Jump up" [ref=f1e4450] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007550–551_212-0"
+                  - text: ^
+                - generic [ref=f1e4451]:
+                  - link "Isaacson (2007)" [ref=f1e4452] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 550–551."
+              - listitem [ref=f1e4453]:
+                - link "Jump up" [ref=f1e4455] [cursor=pointer]:
+                  - /url: "#cite_ref-mKToJ_213-0"
+                  - text: ^
+                - generic [ref=f1e4456]:
+                  - text: "Dowbiggin, Ian (2003). A Merciful End. New York: Oxford University Press,"
+                  - generic [ref=f1e4457]:
+                    - text: Dowbiggin, Ian (9 January 2003).
+                    - link "p. 41" [ref=f1e4458] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=E1AKtIEIIvUC&pg=PA41
+                    - text: . Oxford University Press.
+                    - link "ISBN" [ref=f1e4459] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-19-803515-2" [ref=f1e4460] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-19-803515-2
+                    - generic [ref=f1e4461]: . Retrieved 26 March 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=p.+41.&rft.pub=Oxford+University+Press&rft.date=2003-01-09&rft.isbn=978-0-19-803515-2&rft.aulast=Dowbiggin&rft.aufirst=Ian&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DE1AKtIEIIvUC%26pg%3DPA41&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4462]:
+                - link "Jump up" [ref=f1e4464] [cursor=pointer]:
+                  - /url: "#cite_ref-214"
+                  - text: ^
+                - generic [ref=f1e4465]:
+                  - text: Einstein (1995), p. 62.
+                  - link "https://books.google.com/books?id=9fJkBqwDD3sC&pg=PA62" [ref=f1e4466] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=9fJkBqwDD3sC&pg=PA62
+              - listitem [ref=f1e4467]:
+                - link "Jump up" [ref=f1e4469] [cursor=pointer]:
+                  - /url: "#cite_ref-xI99y_215-0"
+                  - text: ^
+                - generic [ref=f1e4470]:
+                  - generic [ref=f1e4471]:
+                    - text: Dvorsky, George (23 October 2012).
+                    - link "\"Einstein's 'I don't believe in God' letter has sold on eBay...\"" [ref=f1e4472] [cursor=pointer]:
+                      - /url: http://io9.com/5954119/einsteins-i-dont-believe-in-god-letter-has-sold-on-ebay--and-youre-not-going-to-believe-the-price
+                    - text: io9.
+                    - link "Archived" [ref=f1e4473] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20151209103816/http://io9.com/5954119/einsteins-i-dont-believe-in-god-letter-has-sold-on-ebay--and-youre-not-going-to-believe-the-price
+                    - text: from the original on 9 December 2015
+                    - generic [ref=f1e4474]: . Retrieved 23 April 2019
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=io9&rft.atitle=Einstein%27s+%27I+don%27t+believe+in+God%27+letter+has+sold+on+eBay...&rft.date=2012-10-23&rft.aulast=Dvorsky&rft.aufirst=George&rft_id=http%3A%2F%2Fio9.com%2F5954119%2Feinsteins-i-dont-believe-in-god-letter-has-sold-on-ebay--and-youre-not-going-to-believe-the-price&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4475]:
+                - link "Jump up" [ref=f1e4477] [cursor=pointer]:
+                  - /url: "#cite_ref-216"
+                  - text: ^
+                - generic [ref=f1e4478]:
+                  - generic [ref=f1e4479]:
+                    - link "\"Albert Einstein (1879–1955)\"" [ref=f1e4480] [cursor=pointer]:
+                      - /url: https://ivu.org/history/northam20a/einstein.html
+                    - text: .
+                    - link "International Vegetarian Union" [ref=f1e4481] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/International_Vegetarian_Union
+                    - generic [ref=f1e4482]: . Retrieved 19 July 2025
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Albert+Einstein+%281879%E2%80%931955%29&rft.pub=International+Vegetarian+Union&rft_id=https%3A%2F%2Fivu.org%2Fhistory%2Fnortham20a%2Feinstein.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4483]:
+                - link "Jump up" [ref=f1e4485] [cursor=pointer]:
+                  - /url: "#cite_ref-217"
+                  - text: ^
+                - generic [ref=f1e4486]:
+                  - generic [ref=f1e4487]:
+                    - link "\"History of Vegetarianism - Albert Einstein (1879-1955)\"" [ref=f1e4488] [cursor=pointer]:
+                      - /url: https://www.ivu.org/history/northam20a/einstein.html
+                    - text: . Ivu.org.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Ivu.org&rft.atitle=History+of+Vegetarianism+-+Albert+Einstein+%281879-1955%29&rft_id=https%3A%2F%2Fwww.ivu.org%2Fhistory%2Fnortham20a%2Feinstein.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4489]:
+                - link "Jump up" [ref=f1e4491] [cursor=pointer]:
+                  - /url: "#cite_ref-BQH5A_218-0"
+                  - text: ^
+                - generic [ref=f1e4492]:
+                  - generic [ref=f1e4493]:
+                    - link "Duchen, Jessica" [ref=f1e4494] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Jessica_Duchen
+                    - text: (28 January 2011).
+                    - link "\"The relative beauty of the violin\"" [ref=f1e4495] [cursor=pointer]:
+                      - /url: https://www.independent.co.uk/arts-entertainment/classical/features/the-relative-beauty-of-the-violin-2196313.html
+                    - text: .
+                    - link "The Independent" [ref=f1e4497] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_Independent
+                    - text: .
+                    - link "Archived" [ref=f1e4498] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200722171721/https://www.independent.co.uk/arts-entertainment/classical/features/the-relative-beauty-of-the-violin-2196313.html
+                    - text: from the original on 22 July 2020
+                    - generic [ref=f1e4499]: . Retrieved 23 August 2017
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+Independent&rft.atitle=The+relative+beauty+of+the+violin&rft.date=2011-01-28&rft.au=Duchen%2C+Jessica&rft_id=https%3A%2F%2Fwww.independent.co.uk%2Farts-entertainment%2Fclassical%2Ffeatures%2Fthe-relative-beauty-of-the-violin-2196313.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4500]:
+                - link "Jump up" [ref=f1e4502] [cursor=pointer]:
+                  - /url: "#cite_ref-aBOjz_219-0"
+                  - text: ^
+                - generic [ref=f1e4503]:
+                  - generic [ref=f1e4504]:
+                    - link "\"Einstein and his love of music\"" [ref=f1e4505] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20150828225916/http://www.pha.jhu.edu/einstein/stuff/einstein%26music.pdf
+                    - text: (PDF).
+                    - link "Physics World" [ref=f1e4506] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Physics_World
+                    - text: . January 2005. Archived from
+                    - link "the original" [ref=f1e4507] [cursor=pointer]:
+                      - /url: http://www.pha.jhu.edu/einstein/stuff/einstein&music.pdf
+                    - text: (PDF) on 28 August 2015.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Einstein+and+his+love+of+music&rft.date=2005-01&rft_id=http%3A%2F%2Fwww.pha.jhu.edu%2Feinstein%2Fstuff%2Feinstein%26music.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4508]:
+                - generic [ref=f1e4509]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4510] [cursor=pointer]:
+                    - /url: "#cite_ref-Botstein_220-0"
+                  - link [ref=f1e4512] [cursor=pointer]:
+                    - /url: "#cite_ref-Botstein_220-1"
+                  - link [ref=f1e4513] [cursor=pointer]:
+                    - /url: "#cite_ref-Botstein_220-2"
+                  - link [ref=f1e4514] [cursor=pointer]:
+                    - /url: "#cite_ref-Botstein_220-3"
+                - generic [ref=f1e4515]:
+                  - generic [ref=f1e4516]:
+                    - link "Peter Galison" [ref=f1e4517] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Peter_Galison
+                    - text: ;
+                    - link "Gerald James Holton" [ref=f1e4518] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Gerald_Holton
+                    - text: ;
+                    - link "Silvan S. Schweber" [ref=f1e4519] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Silvan_S._Schweber
+                    - text: (2008).
+                    - generic "Free access subject to limited trial, subscription normally required" [ref=f1e4520]:
+                      - 'link "Einstein for the 21st Century: His Legacy in Science, Art, and Modern Culture" [ref=f1e4521] [cursor=pointer]':
+                        - /url: https://archive.org/details/einsteinforstcen00gali
+                    - text: . Princeton University Press. pp.
+                    - link "161" [ref=f1e4522] [cursor=pointer]:
+                      - /url: https://archive.org/details/einsteinforstcen00gali/page/n181
+                    - text: –164.
+                    - link "ISBN" [ref=f1e4523] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-691-13520-5" [ref=f1e4524] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-13520-5
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+for+the+21st+Century%3A+His+Legacy+in+Science%2C+Art%2C+and+Modern+Culture&rft.pages=161-164&rft.pub=Princeton+University+Press&rft.date=2008&rft.isbn=978-0-691-13520-5&rft.au=Peter+Galison&rft.au=Gerald+James+Holton&rft.au=Silvan+S.+Schweber&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Feinsteinforstcen00gali&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4525]:
+                - link "Jump up" [ref=f1e4527] [cursor=pointer]:
+                  - /url: "#cite_ref-kGuWC_221-0"
+                  - text: ^
+                - generic [ref=f1e4528]:
+                  - text: Article "Alfred Einstein", in
+                  - link "The New Grove Dictionary of Music and Musicians" [ref=f1e4530] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/The_New_Grove_Dictionary_of_Music_and_Musicians
+                  - text: ", ed."
+                  - link "Stanley Sadie" [ref=f1e4531] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Stanley_Sadie
+                  - text: . 20 vol. London, Macmillan Publishers Ltd., 1980.
+                  - link "ISBN" [ref=f1e4532] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-1-56159-174-9" [ref=f1e4533] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-56159-174-9
+              - listitem [ref=f1e4534]:
+                - link "Jump up" [ref=f1e4536] [cursor=pointer]:
+                  - /url: "#cite_ref-OIn6p_222-0"
+                  - text: ^
+                - generic [ref=f1e4537]:
+                  - generic [ref=f1e4538]:
+                    - text: The Concise Edition of
+                    - link "Baker's Biographical Dictionary of Musicians" [ref=f1e4539] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Baker's_Biographical_Dictionary_of_Musicians
+                  - text: ", 8th ed. Revised by"
+                  - link "Nicolas Slonimsky" [ref=f1e4540] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Nicolas_Slonimsky
+                  - text: . New York, Schirmer Books, 1993.
+                  - link "ISBN" [ref=f1e4541] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0-02-872416-4" [ref=f1e4542] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-02-872416-4
+              - listitem [ref=f1e4543]:
+                - link "Jump up" [ref=f1e4545] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson200738_223-0"
+                  - text: ^
+                - generic [ref=f1e4546]:
+                  - link "Isaacson (2007)" [ref=f1e4547] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 38."
+              - listitem [ref=f1e4548]:
+                - link "Jump up" [ref=f1e4550] [cursor=pointer]:
+                  - /url: "#cite_ref-Times_224-0"
+                  - text: ^
+                - generic [ref=f1e4551]:
+                  - generic [ref=f1e4552]:
+                    - text: Cariaga, Daniel (22 December 1985).
+                    - 'link "\"Not Taking It with You: A Tale of Two Estates\"" [ref=f1e4553] [cursor=pointer]':
+                      - /url: https://www.latimes.com/archives/la-xpm-1985-12-22-ca-20526-story.html
+                    - text: .
+                    - link "Los Angeles Times" [ref=f1e4555] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Los_Angeles_Times
+                    - generic [ref=f1e4556]: . Retrieved 14 March 2025
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Los+Angeles+Times&rft.atitle=Not+Taking+It+with+You%3A+A+Tale+of+Two+Estates&rft.date=1985-12-22&rft.aulast=Cariaga&rft.aufirst=Daniel&rft_id=https%3A%2F%2Fwww.latimes.com%2Farchives%2Fla-xpm-1985-12-22-ca-20526-story.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4557]:
+                - link "Jump up" [ref=f1e4559] [cursor=pointer]:
+                  - /url: "#cite_ref-RR_225-0"
+                  - text: ^
+                - generic [ref=f1e4560]:
+                  - generic [ref=f1e4561]:
+                    - link "\"Relaxed Einstein signs for a fellow violinist before sailing to Germany for the last time\"" [ref=f1e4562] [cursor=pointer]:
+                      - /url: http://www.rrauction.com/albert_einstein_signed_photo_to_joseph_zoellner.cfm
+                    - text: . RR Auction. 2010.
+                    - link "Archived" [ref=f1e4563] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20130524160226/http://www.rrauction.com/albert_einstein_signed_photo_to_joseph_zoellner.cfm
+                    - text: from the original on 24 May 2013
+                    - generic [ref=f1e4564]: . Retrieved 6 June 2012
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=RR+Auction&rft.atitle=Relaxed+Einstein+signs+for+a+fellow+violinist+before+sailing+to+Germany+for+the+last+time&rft.date=2010&rft_id=http%3A%2F%2Fwww.rrauction.com%2Falbert_einstein_signed_photo_to_joseph_zoellner.cfm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4565]:
+                - link "Jump up" [ref=f1e4567] [cursor=pointer]:
+                  - /url: "#cite_ref-BXLfp_226-0"
+                  - text: ^
+                - generic [ref=f1e4568]:
+                  - generic [ref=f1e4569]:
+                    - link "\"The Case of the Scientist with a Pulsating Mass\"" [ref=f1e4570] [cursor=pointer]:
+                      - /url: http://www.medscape.com/viewarticle/436253
+                    - text: .
+                    - link "Medscape" [ref=f1e4572] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Medscape
+                    - text: . 14 June 2002.
+                    - link "Archived" [ref=f1e4573] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20090708043220/http://www.medscape.com/viewarticle/436253
+                    - text: from the original on 8 July 2009
+                    - generic [ref=f1e4574]: . Retrieved 11 June 2007
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Medscape&rft.atitle=The+Case+of+the+Scientist+with+a+Pulsating+Mass&rft.date=2002-06-14&rft_id=http%3A%2F%2Fwww.medscape.com%2Fviewarticle%2F436253&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4575]:
+                - link "Jump up" [ref=f1e4577] [cursor=pointer]:
+                  - /url: "#cite_ref-QN45b_227-0"
+                  - text: ^
+                - generic [ref=f1e4578]:
+                  - generic [ref=f1e4579]:
+                    - text: Albert Einstein Archives (April 1955).
+                    - link "\"Draft of projected Telecast Israel Independence Day, April 1955 (last statement ever written)\"" [ref=f1e4580] [cursor=pointer]:
+                      - /url: http://alberteinstein.info/vufind1/Digital/EAR000020078#page/1/mode/1up
+                    - text: . Einstein Archives Online.
+                    - link "Archived" [ref=f1e4581] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20070313231657/http://www.alberteinstein.info/
+                    - text: from the original on 13 March 2007
+                    - generic [ref=f1e4582]: . Retrieved 14 March 2007
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Draft+of+projected+Telecast+Israel+Independence+Day%2C+April+1955+%28last+statement+ever+written%29&rft.pub=Einstein+Archives+Online&rft.date=1955-04&rft.au=Albert+Einstein+Archives&rft_id=http%3A%2F%2Falberteinstein.info%2Fvufind1%2FDigital%2FEAR000020078%23page%2F1%2Fmode%2F1up&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4583]:
+                - link "Jump up" [ref=f1e4585] [cursor=pointer]:
+                  - /url: "#cite_ref-BhiNM_228-0"
+                  - text: ^
+                - generic [ref=f1e4586]:
+                  - generic [ref=f1e4587]:
+                    - text: "Cohen, J. R.; Graver, L. M. (November 1995). \"The ruptured abdominal aortic aneurysm of Albert Einstein\". Surgery, Gynecology & Obstetrics. 170 (5): 455–458."
+                    - link "PMID" [ref=f1e4588] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "2183375" [ref=f1e4589] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/2183375
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Surgery%2C+Gynecology+%26+Obstetrics&rft.atitle=The+ruptured+abdominal+aortic+aneurysm+of+Albert+Einstein&rft.volume=170&rft.issue=5&rft.pages=455-458&rft.date=1995-11&rft_id=info%3Apmid%2F2183375&rft.au=Cohen%2C+J.+R.&rft.au=Graver%2C+L.+M.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4590]:
+                - link "Jump up" [ref=f1e4592] [cursor=pointer]:
+                  - /url: "#cite_ref-YUhsl_229-0"
+                  - text: ^
+                - generic [ref=f1e4593]:
+                  - generic [ref=f1e4594]:
+                    - text: Cosgrove, Ben (14 March 2014).
+                    - 'link "\"The Day Albert Einstein Died: A Photographer''s Story\"" [ref=f1e4595] [cursor=pointer]':
+                      - /url: https://time.com/3494553/the-day-albert-einstein-died-a-photographers-story/
+                    - text: .
+                    - link "Time" [ref=f1e4597] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Time_(magazine)
+                    - text: .
+                    - link "Archived" [ref=f1e4598] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20141112114029/http://time.com/3494553/the-day-albert-einstein-died-a-photographers-story/
+                    - text: from the original on 12 November 2014
+                    - generic [ref=f1e4599]: . Retrieved 24 April 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Time&rft.atitle=The+Day+Albert+Einstein+Died%3A+A+Photographer%27s+Story&rft.date=2014-03-14&rft.au=Cosgrove%2C+Ben&rft_id=https%3A%2F%2Ftime.com%2F3494553%2Fthe-day-albert-einstein-died-a-photographers-story%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4600]:
+                - link "Jump up" [ref=f1e4602] [cursor=pointer]:
+                  - /url: "#cite_ref-MqyYW_230-0"
+                  - text: ^
+                - generic [ref=f1e4603]:
+                  - generic [ref=f1e4604]:
+                    - link "\"The Long, Strange Journey of Einstein's Brain\"" [ref=f1e4605] [cursor=pointer]:
+                      - /url: https://www.npr.org/templates/story/story.php?storyId=4602913
+                    - text: .
+                    - link "NPR" [ref=f1e4606] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/NPR
+                    - text: .
+                    - link "Archived" [ref=f1e4607] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20190714011830/https://www.npr.org/templates/story/story.php?storyId=4602913
+                    - text: from the original on 14 July 2019
+                    - generic [ref=f1e4608]: . Retrieved 3 October 2007
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=The+Long%2C+Strange+Journey+of+Einstein%27s+Brain&rft_id=https%3A%2F%2Fwww.npr.org%2Ftemplates%2Fstory%2Fstory.php%3FstoryId%3D4602913&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4609]:
+                - link "Jump up" [ref=f1e4611] [cursor=pointer]:
+                  - /url: "#cite_ref-231"
+                  - text: ^
+                - generic [ref=f1e4612]:
+                  - generic [ref=f1e4613]:
+                    - text: Cosgrove, Benjamin; Morse, Ralph (14 March 2014).
+                    - 'link "\"The Day Albert Einstein Died: A Photographer''s Story\"" [ref=f1e4614] [cursor=pointer]':
+                      - /url: https://www.life.com/history/the-day-albert-einstein-died-a-photographers-story/
+                    - text: .
+                    - link "Life" [ref=f1e4616] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Life_(magazine)
+                    - text: .
+                    - link "Archived" [ref=f1e4617] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210319004714/https://www.life.com/history/the-day-albert-einstein-died-a-photographers-story/
+                    - text: from the original on 19 March 2021
+                    - generic [ref=f1e4618]: . Retrieved 10 March 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Life&rft.atitle=The+Day+Albert+Einstein+Died%3A+A+Photographer%27s+Story&rft.date=2014-03-14&rft.aulast=Cosgrove&rft.aufirst=Benjamin&rft.au=Morse%2C+Ralph&rft_id=https%3A%2F%2Fwww.life.com%2Fhistory%2Fthe-day-albert-einstein-died-a-photographers-story%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4619]:
+                - link "Jump up" [ref=f1e4621] [cursor=pointer]:
+                  - /url: "#cite_ref-GQrBZ_232-0"
+                  - text: ^
+                - generic [ref=f1e4622]:
+                  - generic [ref=f1e4623]:
+                    - text: O'Connor, J. J.; Robertson, E.F. (1997).
+                    - link "\"Albert Einstein\"" [ref=f1e4624] [cursor=pointer]:
+                      - /url: http://www-history.mcs.st-andrews.ac.uk/Biographies/Einstein.html
+                    - text: . The MacTutor History of Mathematics archive. School of Mathematics and Statistics, University of St. Andrews.
+                    - link "Archived" [ref=f1e4625] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20070213223549/http://www-history.mcs.st-andrews.ac.uk/Biographies/Einstein.html
+                    - text: from the original on 13 February 2007
+                    - generic [ref=f1e4626]: . Retrieved 11 March 2007
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Albert+Einstein&rft.btitle=The+MacTutor+History+of+Mathematics+archive&rft.pub=School+of+Mathematics+and+Statistics%2C+University+of+St.+Andrews&rft.date=1997&rft.aulast=O%27Connor&rft.aufirst=J.+J.&rft.au=Robertson%2C+E.F.&rft_id=http%3A%2F%2Fwww-history.mcs.st-andrews.ac.uk%2FBiographies%2FEinstein.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4627]:
+                - link "Jump up" [ref=f1e4629] [cursor=pointer]:
+                  - /url: "#cite_ref-Obit_233-0"
+                  - text: ^
+                - generic [ref=f1e4630]:
+                  - generic [ref=f1e4631]:
+                    - text: Late City, ed. (18 April 1955). Written at Princeton, NJ.
+                    - link "\"Dr. Albert Einstein Dies in Sleep at 76; World Mourns Loss of Great Scientist, Rupture of Aorta Causes Death, Body Cremated, Memorial Here Set\"" [ref=f1e4632] [cursor=pointer]:
+                      - /url: https://select.nytimes.com/gst/abstract.html?res=F60C1EFC3D55107A93CBA8178FD85F418585F9
+                    - text: . The New York Times. Vol. CIV, no. 35, 514. New York (published 19 April 1955). p. 1.
+                    - link "ISSN" [ref=f1e4633] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "0362-4331" [ref=f1e4634] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/0362-4331
+                    - text: .
+                    - link "Archived" [ref=f1e4635] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20140525200758/http://select.nytimes.com/gst/abstract.html?res=F60C1EFC3D55107A93CBA8178FD85F418585F9
+                    - text: from the original on 25 May 2014
+                    - generic [ref=f1e4636]: . Retrieved 24 May 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=Dr.+Albert+Einstein+Dies+in+Sleep+at+76%3B+World+Mourns+Loss+of+Great+Scientist%2C+Rupture+of+Aorta+Causes+Death%2C+Body+Cremated%2C+Memorial+Here+Set&rft.volume=CIV&rft.issue=35%2C+514&rft.pages=1&rft.date=1955-04-18&rft.issn=0362-4331&rft_id=http%3A%2F%2Fselect.nytimes.com%2Fgst%2Fabstract.html%3Fres%3DF60C1EFC3D55107A93CBA8178FD85F418585F9&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4637]:
+                - link "Jump up" [ref=f1e4639] [cursor=pointer]:
+                  - /url: "#cite_ref-aJHxn_234-0"
+                  - text: ^
+                - generic [ref=f1e4640]:
+                  - generic [ref=f1e4641]:
+                    - link "Oppenheimer, J. Robert" [ref=f1e4642] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/J._Robert_Oppenheimer
+                    - text: (March 1979).
+                    - link "\"Oppenheimer on Einstein\"" [ref=f1e4643] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=7goAAAAAMBAJ&pg=PA38
+                    - text: .
+                    - link "Bulletin of the Atomic Scientists" [ref=f1e4645] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bulletin_of_the_Atomic_Scientists
+                    - text: ". 35 (3): 38."
+                    - link "Bibcode" [ref=f1e4646] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1979BuAtS..35c..36O" [ref=f1e4647] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1979BuAtS..35c..36O
+                    - text: .
+                    - link "doi" [ref=f1e4648] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1080/00963402.1979.11458597" [ref=f1e4649] [cursor=pointer]:
+                      - /url: https://doi.org/10.1080%2F00963402.1979.11458597
+                    - generic [ref=f1e4650]: . Retrieved 12 January 2017
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Bulletin+of+the+Atomic+Scientists&rft.atitle=Oppenheimer+on+Einstein&rft.volume=35&rft.issue=3&rft.pages=38&rft.date=1979-03&rft_id=info%3Adoi%2F10.1080%2F00963402.1979.11458597&rft_id=info%3Abibcode%2F1979BuAtS..35c..36O&rft.aulast=Oppenheimer&rft.aufirst=J.+Robert&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D7goAAAAAMBAJ%26pg%3DPA38&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4651]:
+                - link "Jump up" [ref=f1e4653] [cursor=pointer]:
+                  - /url: "#cite_ref-235"
+                  - text: ^
+                - generic [ref=f1e4654]:
+                  - generic [ref=f1e4655]:
+                    - text: Unna, Issachar (22 June 2007).
+                    - link "\"An Ongoing Power of Attraction\"" [ref=f1e4656] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210616043403/https://www.haaretz.com/1.4945718
+                    - text: .
+                    - link "Haaretz" [ref=f1e4658] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Haaretz
+                    - text: . Archived from
+                    - link "the original" [ref=f1e4659] [cursor=pointer]:
+                      - /url: https://www.haaretz.com/1.4945718
+                    - text: on 16 June 2021
+                    - generic [ref=f1e4660]: . Retrieved 15 June 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Haaretz&rft.atitle=An+Ongoing+Power+of+Attraction&rft.date=2007-06-22&rft.aulast=Unna&rft.aufirst=Issachar&rft_id=https%3A%2F%2Fwww.haaretz.com%2F1.4945718&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4661]:
+                - generic [ref=f1e4662]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4663] [cursor=pointer]:
+                    - /url: "#cite_ref-Paul_Arthur_Schilpp,_editor_1951_730–746_236-0"
+                  - link [ref=f1e4665] [cursor=pointer]:
+                    - /url: "#cite_ref-Paul_Arthur_Schilpp,_editor_1951_730–746_236-1"
+                - generic [ref=f1e4666]:
+                  - generic [ref=f1e4667]: "Paul Arthur Schilpp, ed. (1951). Albert Einstein: Philosopher-Scientist. Vol. II. New York: Harper and Brothers Publishers (Harper Torchbook edition). pp. 730–746."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Albert+Einstein%3A+Philosopher-Scientist&rft.place=New+York&rft.pages=730-746&rft.pub=Harper+and+Brothers+Publishers+%28Harper+Torchbook+edition%29&rft.date=1951&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: "His non-scientific works include: About Zionism: Speeches and Lectures by Professor Albert Einstein (1930), \"Why War?\" (1933, co-authored by"
+                  - link "Sigmund Freud" [ref=f1e4668] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Sigmund_Freud
+                  - text: ), The World As I See It (1934), Out of My Later Years (1950), and a book on science for the general reader,
+                  - link "The Evolution of Physics" [ref=f1e4670] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/The_Evolution_of_Physics
+                  - text: (1938, co-authored by
+                  - link "Leopold Infeld" [ref=f1e4671] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Leopold_Infeld
+                  - text: ).
+              - listitem [ref=f1e4672]:
+                - link "Jump up" [ref=f1e4674] [cursor=pointer]:
+                  - /url: "#cite_ref-237"
+                  - text: ^
+                - text: Stachel et al (2008).
+              - listitem [ref=f1e4675]:
+                - link "Jump up" [ref=f1e4677] [cursor=pointer]:
+                  - /url: "#cite_ref-NYT-20141204-DB_238-0"
+                  - text: ^
+                - generic [ref=f1e4678]:
+                  - generic [ref=f1e4679]:
+                    - link "Overbye, Dennis" [ref=f1e4680] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Dennis_Overbye
+                    - text: (4 December 2014).
+                    - link "\"Thousands of Einstein Documents Are Now a Click Away\"" [ref=f1e4681] [cursor=pointer]:
+                      - /url: https://ghostarchive.org/archive/20220101/https://www.nytimes.com/2014/12/05/science/huge-trove-of-albert-einstein-documents-becomes-available-online.html
+                    - text: . The New York Times. Archived from
+                    - generic "Free access subject to limited trial, subscription normally required" [ref=f1e4682]:
+                      - link "the original" [ref=f1e4683] [cursor=pointer]:
+                        - /url: https://www.nytimes.com/2014/12/05/science/huge-trove-of-albert-einstein-documents-becomes-available-online.html
+                    - text: on 1 January 2022
+                    - generic [ref=f1e4684]: . Retrieved 4 January 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=Thousands+of+Einstein+Documents+Are+Now+a+Click+Away&rft.date=2014-12-04&rft.aulast=Overbye&rft.aufirst=Dennis&rft_id=https%3A%2F%2Fwww.nytimes.com%2F2014%2F12%2F05%2Fscience%2Fhuge-trove-of-albert-einstein-documents-becomes-available-online.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4685]:
+                - generic [ref=f1e4686]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4687] [cursor=pointer]:
+                    - /url: "#cite_ref-Instituut-Lorentz_239-0"
+                  - link [ref=f1e4689] [cursor=pointer]:
+                    - /url: "#cite_ref-Instituut-Lorentz_239-1"
+                - generic [ref=f1e4690]:
+                  - generic [ref=f1e4691]:
+                    - link "\"Einstein archive at the Instituut-Lorentz\"" [ref=f1e4692] [cursor=pointer]:
+                      - /url: http://www.lorentz.leidenuniv.nl/history/Einstein_archive/
+                    - text: . Instituut-Lorentz. 2005.
+                    - link "Archived" [ref=f1e4693] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20150519023226/http://www.lorentz.leidenuniv.nl/history/Einstein_archive/
+                    - text: from the original on 19 May 2015
+                    - generic [ref=f1e4694]: . Retrieved 21 August 2005
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Einstein+archive+at+the+Instituut-Lorentz&rft.pub=Instituut-Lorentz&rft.date=2005&rft_id=http%3A%2F%2Fwww.lorentz.leidenuniv.nl%2Fhistory%2FEinstein_archive%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4695]:
+                - link "Jump up" [ref=f1e4697] [cursor=pointer]:
+                  - /url: "#cite_ref-e5xd8_240-0"
+                  - text: ^
+                - generic [ref=f1e4698]:
+                  - generic [ref=f1e4699]:
+                    - text: "Pietrow, Alexander G. M. (2019). \"Investigations into the origin of Einstein's Sink\". Studium. 11 (4): 260–268."
+                    - link "arXiv" [ref=f1e4700] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e4701]:
+                      - link "1905.09022" [ref=f1e4702] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/1905.09022
+                    - text: .
+                    - link "Bibcode" [ref=f1e4703] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2019Studi..11E...1P" [ref=f1e4704] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2019Studi..11E...1P
+                    - text: .
+                    - link "doi" [ref=f1e4705] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.18352/studium.10183" [ref=f1e4706] [cursor=pointer]:
+                      - /url: https://doi.org/10.18352%2Fstudium.10183
+                    - text: .
+                    - link "S2CID" [ref=f1e4707] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "162168640" [ref=f1e4708] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:162168640
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Studium&rft.atitle=Investigations+into+the+origin+of+Einstein%27s+Sink&rft.volume=11&rft.issue=4&rft.pages=260-268&rft.date=2019&rft_id=info%3Aarxiv%2F1905.09022&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A162168640%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.18352%2Fstudium.10183&rft_id=info%3Abibcode%2F2019Studi..11E...1P&rft.aulast=Pietrow&rft.aufirst=Alexander+G.+M.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4709]:
+                - generic [ref=f1e4710]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4711] [cursor=pointer]:
+                    - /url: "#cite_ref-PubList_241-0"
+                  - link [ref=f1e4713] [cursor=pointer]:
+                    - /url: "#cite_ref-PubList_241-1"
+                - generic [ref=f1e4714]:
+                  - generic [ref=f1e4715]:
+                    - text: Kuepper, Hans-Josef.
+                    - link "\"List of Scientific Publications of Albert Einstein\"" [ref=f1e4716] [cursor=pointer]:
+                      - /url: http://www.einstein-website.de/z_physics/wisspub-e.html
+                    - text: . Einstein-website.de.
+                    - link "Archived" [ref=f1e4717] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20130508071317/http://www.einstein-website.de/z_physics/wisspub-e.html
+                    - text: from the original on 8 May 2013
+                    - generic [ref=f1e4718]: . Retrieved 3 April 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=List+of+Scientific+Publications+of+Albert+Einstein&rft.pub=Einstein-website.de&rft.aulast=Kuepper&rft.aufirst=Hans-Josef&rft_id=http%3A%2F%2Fwww.einstein-website.de%2Fz_physics%2Fwisspub-e.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4719]:
+                - link "Jump up" [ref=f1e4721] [cursor=pointer]:
+                  - /url: "#cite_ref-L2N73_242-0"
+                  - text: ^
+                - generic [ref=f1e4722]:
+                  - generic [ref=f1e4723]:
+                    - text: Levenson, Thomas.
+                    - link "\"Genius Among Geniuses\"" [ref=f1e4724] [cursor=pointer]:
+                      - /url: https://www.pbs.org/wgbh/nova/einstein/genius/
+                    - text: ". Einstein's Big Idea. Boston: WBGH."
+                    - link "Archived" [ref=f1e4725] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20181106193928/https://www.pbs.org/wgbh/nova/einstein/genius/
+                    - text: from the original on 6 November 2018
+                    - generic [ref=f1e4726]: . Retrieved 20 June 2015
+                    - text: – via NOVA by
+                    - link "Public Broadcasting Service" [ref=f1e4727] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Public_Broadcasting_Service
+                    - text: (PBS).
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Einstein%27s+Big+Idea&rft.atitle=Genius+Among+Geniuses&rft.aulast=Levenson&rft.aufirst=Thomas&rft_id=https%3A%2F%2Fwww.pbs.org%2Fwgbh%2Fnova%2Feinstein%2Fgenius%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4728]:
+                - generic [ref=f1e4729]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4730] [cursor=pointer]:
+                    - /url: "#cite_ref-1905a_243-0"
+                  - link [ref=f1e4732] [cursor=pointer]:
+                    - /url: "#cite_ref-1905a_243-1"
+                  - link [ref=f1e4733] [cursor=pointer]:
+                    - /url: "#cite_ref-1905a_243-2"
+                - text: Einstein (1905a).
+              - listitem [ref=f1e4734]:
+                - link "Jump up" [ref=f1e4736] [cursor=pointer]:
+                  - /url: "#cite_ref-1Jhcb_244-0"
+                  - text: ^
+                - generic [ref=f1e4737]:
+                  - generic [ref=f1e4738]:
+                    - text: Das, Ashok (2003). Lectures on quantum mechanics. Hindustan Book Agency. p. 59.
+                    - link "ISBN" [ref=f1e4739] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-81-85931-41-8" [ref=f1e4740] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-81-85931-41-8
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Lectures+on+quantum+mechanics&rft.pages=59&rft.pub=Hindustan+Book+Agency&rft.date=2003&rft.isbn=978-81-85931-41-8&rft.aulast=Das&rft.aufirst=Ashok&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4741]:
+                - link "Jump up" [ref=f1e4743] [cursor=pointer]:
+                  - /url: "#cite_ref-oJBvd_245-0"
+                  - text: ^
+                - generic [ref=f1e4744]:
+                  - generic [ref=f1e4745]:
+                    - text: Spielberg, Nathan; Anderson, Bryon D. (1995).
+                    - generic "Free access subject to limited trial, subscription normally required" [ref=f1e4746]:
+                      - link "Seven ideas that shook the universe" [ref=f1e4747] [cursor=pointer]:
+                        - /url: https://archive.org/details/sevenideasthatsh00spie_874
+                    - text: (2nd ed.). John Wiley & Sons. p.
+                    - link "263" [ref=f1e4748] [cursor=pointer]:
+                      - /url: https://archive.org/details/sevenideasthatsh00spie_874/page/n276
+                    - text: .
+                    - link "ISBN" [ref=f1e4749] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-471-30606-1" [ref=f1e4750] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-471-30606-1
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Seven+ideas+that+shook+the+universe&rft.pages=263&rft.edition=2nd&rft.pub=John+Wiley+%26+Sons&rft.date=1995&rft.isbn=978-0-471-30606-1&rft.aulast=Spielberg&rft.aufirst=Nathan&rft.au=Anderson%2C+Bryon+D.&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fsevenideasthatsh00spie_874&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4751]:
+                - link "Jump up" [ref=f1e4753] [cursor=pointer]:
+                  - /url: "#cite_ref-246"
+                  - text: ^
+                - text: Einstein (1905c).
+              - listitem [ref=f1e4754]:
+                - generic [ref=f1e4755]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4756] [cursor=pointer]:
+                    - /url: "#cite_ref-1905d_247-0"
+                  - link [ref=f1e4758] [cursor=pointer]:
+                    - /url: "#cite_ref-1905d_247-1"
+                - text: Einstein (1905d).
+              - listitem [ref=f1e4759]:
+                - link "Jump up" [ref=f1e4761] [cursor=pointer]:
+                  - /url: "#cite_ref-RhZ8x_248-0"
+                  - text: ^
+                - generic [ref=f1e4762]:
+                  - generic [ref=f1e4763]:
+                    - text: Major, Fouad G. (2007).
+                    - 'link "The quantum beat: principles and applications of atomic clocks" [ref=f1e4764] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=tmdr6Wx_2PYC
+                    - text: (2nd ed.). Springer. p. 142.
+                    - link "ISBN" [ref=f1e4765] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-387-69533-4" [ref=f1e4766] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-387-69533-4
+                    - generic [ref=f1e4767]: . Retrieved 18 June 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+quantum+beat%3A+principles+and+applications+of+atomic+clocks&rft.pages=142&rft.edition=2nd&rft.pub=Springer&rft.date=2007&rft.isbn=978-0-387-69533-4&rft.aulast=Major&rft.aufirst=Fouad+G.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Dtmdr6Wx_2PYC&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4768]:
+                - link "Jump up" [ref=f1e4770] [cursor=pointer]:
+                  - /url: "#cite_ref-lhfJ9_249-0"
+                  - text: ^
+                - generic [ref=f1e4771]:
+                  - generic [ref=f1e4772]:
+                    - text: Lindsay, Robert Bruce; Margenau, Henry (1981).
+                    - link "Foundations of physics" [ref=f1e4773] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=dwZltQAACAAJ
+                    - text: . Ox Bow Press. p. 330.
+                    - link "ISBN" [ref=f1e4774] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-918024-17-6" [ref=f1e4775] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-918024-17-6
+                    - generic [ref=f1e4776]: . Retrieved 18 June 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Foundations+of+physics&rft.pages=330&rft.pub=Ox+Bow+Press&rft.date=1981&rft.isbn=978-0-918024-17-6&rft.aulast=Lindsay&rft.aufirst=Robert+Bruce&rft.au=Margenau%2C+Henry&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DdwZltQAACAAJ&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4777]:
+                - link "Jump up" [ref=f1e4779] [cursor=pointer]:
+                  - /url: "#cite_ref-250"
+                  - text: ^
+                - text: Einstein (1905e).
+              - listitem [ref=f1e4780]:
+                - link "Jump up" [ref=f1e4782] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEFölsing1997178–198_251-0"
+                  - text: ^
+                - generic [ref=f1e4783]:
+                  - link "Fölsing (1997)" [ref=f1e4784] [cursor=pointer]:
+                    - /url: "#CITEREFFölsing1997"
+                  - text: ", pp. 178–198."
+                  - generic [ref=f1e4785]:
+                    - text: "sfnp error: multiple targets (2×): CITEREFFölsing1997 ("
+                    - link "help" [ref=f1e4786] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Category:Harv_and_Sfn_template_errors
+                    - text: )
+              - listitem [ref=f1e4787]:
+                - link "Jump up" [ref=f1e4789] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEStachel2002vi,_15,_90,_131,_[httpsbooksgooglecombooksidOAsQ_hFjhrACpgPA215_215]_253-0"
+                  - text: ^
+                - generic [ref=f1e4790]:
+                  - link "Stachel (2002)" [ref=f1e4791] [cursor=pointer]:
+                    - /url: "#CITEREFStachel2002"
+                  - text: ", pp. vi, 15, 90, 131,"
+                  - link "215" [ref=f1e4792] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=OAsQ_hFjhrAC&pg=PA215
+                  - text: .
+              - listitem [ref=f1e4793]:
+                - link "Jump up" [ref=f1e4795] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEPais1982382–386_255-0"
+                  - text: ^
+                - generic [ref=f1e4796]:
+                  - link "Pais (1982)" [ref=f1e4797] [cursor=pointer]:
+                    - /url: "#CITEREFPais1982"
+                  - text: ", pp. 382–386."
+              - listitem [ref=f1e4798]:
+                - link "Jump up" [ref=f1e4800] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEPais1982151–152_256-0"
+                  - text: ^
+                - generic [ref=f1e4801]:
+                  - link "Pais (1982)" [ref=f1e4802] [cursor=pointer]:
+                    - /url: "#CITEREFPais1982"
+                  - text: ", pp. 151–152."
+              - listitem [ref=f1e4803]:
+                - link "Jump up" [ref=f1e4805] [cursor=pointer]:
+                  - /url: "#cite_ref-257"
+                  - text: ^
+                - generic [ref=f1e4806]:
+                  - generic [ref=f1e4807]:
+                    - text: Fraknoi, Andrew; et al. (2022).
+                    - link "Astronomy 2e" [ref=f1e4808] [cursor=pointer]:
+                      - /url: https://openstax.org/details/books/astronomy-2e
+                    - text: (2e ed.). OpenStax. pp. 800–815.
+                    - link "ISBN" [ref=f1e4809] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-951693-50-3" [ref=f1e4810] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-951693-50-3
+                    - text: .
+                    - link "OCLC" [ref=f1e4811] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/OCLC_(identifier)
+                    - link "1322188620" [ref=f1e4812] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/oclc/1322188620
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Astronomy+2e&rft.pages=800-815&rft.edition=2e&rft.pub=OpenStax&rft.date=2022&rft_id=info%3Aoclcnum%2F1322188620&rft.isbn=978-1-951693-50-3&rft.aulast=Fraknoi&rft.aufirst=Andrew&rft_id=https%3A%2F%2Fopenstax.org%2Fdetails%2Fbooks%2Fastronomy-2e&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4813]:
+                - link "Jump up" [ref=f1e4815] [cursor=pointer]:
+                  - /url: "#cite_ref-258"
+                  - text: ^
+                - text: Einstein (1923).
+              - listitem [ref=f1e4816]:
+                - link "Jump up" [ref=f1e4818] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEPais1982179–183_259-0"
+                  - text: ^
+                - generic [ref=f1e4819]:
+                  - link "Pais (1982)" [ref=f1e4820] [cursor=pointer]:
+                    - /url: "#CITEREFPais1982"
+                  - text: ", pp. 179–183."
+              - listitem [ref=f1e4821]:
+                - link "Jump up" [ref=f1e4823] [cursor=pointer]:
+                  - /url: "#cite_ref-260"
+                  - text: ^
+                - text: "Stachel, et al (2008). Vol. 2: The Swiss Years—Writings, 1900–1909, pp. 273–274."
+              - listitem [ref=f1e4824]:
+                - link "Jump up" [ref=f1e4826] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEPais1982194–195_261-0"
+                  - text: ^
+                - generic [ref=f1e4827]:
+                  - link "Pais (1982)" [ref=f1e4828] [cursor=pointer]:
+                    - /url: "#CITEREFPais1982"
+                  - text: ", pp. 194–195."
+              - listitem [ref=f1e4829]:
+                - link "Jump up" [ref=f1e4831] [cursor=pointer]:
+                  - /url: "#cite_ref-262"
+                  - text: ^
+                - text: Einstein (1916).
+              - listitem [ref=f1e4832]:
+                - link "Jump up" [ref=f1e4834] [cursor=pointer]:
+                  - /url: "#cite_ref-263"
+                  - text: ^
+                - text: Einstein (1918).
+              - listitem [ref=f1e4835]:
+                - generic [ref=f1e4836]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4837] [cursor=pointer]:
+                    - /url: "#cite_ref-natgeo_264-0"
+                  - link [ref=f1e4839] [cursor=pointer]:
+                    - /url: "#cite_ref-natgeo_264-1"
+                  - link [ref=f1e4840] [cursor=pointer]:
+                    - /url: "#cite_ref-natgeo_264-2"
+                - generic [ref=f1e4841]:
+                  - generic [ref=f1e4842]:
+                    - link "Nadia Drake" [ref=f1e4843] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Nadia_Drake
+                    - text: (11 February 2016).
+                    - link "\"Found! Gravitational Waves, or a Wrinkle in Spacetime\"" [ref=f1e4844] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20160212083049/http://news.nationalgeographic.com/2016/02/160211-gravitational-waves-found-spacetime-science/
+                    - text: . National Geographic. Archived from
+                    - link "the original" [ref=f1e4845] [cursor=pointer]:
+                      - /url: http://news.nationalgeographic.com/2016/02/160211-gravitational-waves-found-spacetime-science/
+                    - text: on 12 February 2016
+                    - generic [ref=f1e4846]: . Retrieved 6 July 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=National+Geographic&rft.atitle=Found%21+Gravitational+Waves%2C+or+a+Wrinkle+in+Spacetime&rft.date=2016-02-11&rft.au=Nadia+Drake&rft_id=http%3A%2F%2Fnews.nationalgeographic.com%2F2016%2F02%2F160211-gravitational-waves-found-spacetime-science%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4847]:
+                - link "Jump up" [ref=f1e4849] [cursor=pointer]:
+                  - /url: "#cite_ref-Tf1T0_265-0"
+                  - text: ^
+                - generic [ref=f1e4850]:
+                  - generic [ref=f1e4851]:
+                    - 'link "\"Gravity investigated with a binary pulsar-Press Release: The 1993 Nobel Prize in Physics\"" [ref=f1e4852] [cursor=pointer]':
+                      - /url: https://www.nobelprize.org/nobel_prizes/physics/laureates/1993/press.html
+                    - text: . Nobel Foundation.
+                    - link "Archived" [ref=f1e4853] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20180810182047/https://www.nobelprize.org/nobel_prizes/physics/laureates/1993/press.html
+                    - text: from the original on 10 August 2018
+                    - generic [ref=f1e4854]: . Retrieved 6 July 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Gravity+investigated+with+a+binary+pulsar-Press+Release%3A+The+1993+Nobel+Prize+in+Physics&rft.pub=Nobel+Foundation&rft_id=https%3A%2F%2Fwww.nobelprize.org%2Fnobel_prizes%2Fphysics%2Flaureates%2F1993%2Fpress.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4855]:
+                - link "Jump up" [ref=f1e4857] [cursor=pointer]:
+                  - /url: "#cite_ref-PRL-20160211_266-0"
+                  - text: ^
+                - generic [ref=f1e4858]:
+                  - generic [ref=f1e4859]:
+                    - text: Abbott, Benjamin P.; et al. (LIGO Scientific Collaboration and Virgo Collaboration) (2016).
+                    - link "\"Observation of Gravitational Waves from a Binary Black Hole Merger\"" [ref=f1e4860] [cursor=pointer]:
+                      - /url: https://www.ligo.caltech.edu/system/media_files/binaries/301/original/detection-science-summary.pdf
+                    - text: (PDF).
+                    - link "Phys. Rev. Lett." [ref=f1e4862] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Phys._Rev._Lett.
+                    - text: 116 (6) 061102.
+                    - link "arXiv" [ref=f1e4863] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e4864]:
+                      - link "1602.03837" [ref=f1e4865] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/1602.03837
+                    - text: .
+                    - link "Bibcode" [ref=f1e4866] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2016PhRvL.116f1102A" [ref=f1e4867] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2016PhRvL.116f1102A
+                    - text: .
+                    - link "doi" [ref=f1e4868] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1103/PhysRevLett.116.061102" [ref=f1e4869] [cursor=pointer]:
+                      - /url: https://doi.org/10.1103%2FPhysRevLett.116.061102
+                    - text: .
+                    - link "PMID" [ref=f1e4870] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "26918975" [ref=f1e4871] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/26918975
+                    - text: .
+                    - link "S2CID" [ref=f1e4872] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "124959784" [ref=f1e4873] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:124959784
+                    - text: .
+                    - link "Archived" [ref=f1e4874] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20160216132808/https://www.ligo.caltech.edu/system/media_files/binaries/301/original/detection-science-summary.pdf
+                    - text: (PDF) from the original on 16 February 2016
+                    - generic [ref=f1e4875]: . Retrieved 6 July 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Phys.+Rev.+Lett.&rft.atitle=Observation+of+Gravitational+Waves+from+a+Binary+Black+Hole+Merger&rft.volume=116&rft.issue=6&rft.artnum=061102&rft.date=2016&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A124959784%23id-name%3DS2CID&rft_id=info%3Abibcode%2F2016PhRvL.116f1102A&rft_id=info%3Aarxiv%2F1602.03837&rft_id=info%3Apmid%2F26918975&rft_id=info%3Adoi%2F10.1103%2FPhysRevLett.116.061102&rft.aulast=Abbott&rft.aufirst=Benjamin+P.&rft_id=https%3A%2F%2Fwww.ligo.caltech.edu%2Fsystem%2Fmedia_files%2Fbinaries%2F301%2Foriginal%2Fdetection-science-summary.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4876]:
+                - link "Jump up" [ref=f1e4878] [cursor=pointer]:
+                  - /url: "#cite_ref-CO6kH_267-0"
+                  - text: ^
+                - generic [ref=f1e4879]:
+                  - generic [ref=f1e4880]:
+                    - 'link "\"Gravitational Waves: Ripples in the fabric of space-time\"" [ref=f1e4881] [cursor=pointer]':
+                      - /url: http://space.mit.edu/LIGO/more.html
+                    - text: . LIGO | MIT. 11 February 2016.
+                    - link "Archived" [ref=f1e4882] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20160219224900/http://space.mit.edu/LIGO/more.html
+                    - text: from the original on 19 February 2016
+                    - generic [ref=f1e4883]: . Retrieved 12 February 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Gravitational+Waves%3A+Ripples+in+the+fabric+of+space-time&rft.pub=LIGO+%7C+MIT&rft.date=2016-02-11&rft_id=http%3A%2F%2Fspace.mit.edu%2FLIGO%2Fmore.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4884]:
+                - link "Jump up" [ref=f1e4886] [cursor=pointer]:
+                  - /url: "#cite_ref-oSmHb_268-0"
+                  - text: ^
+                - generic [ref=f1e4887]:
+                  - generic [ref=f1e4888]:
+                    - link "\"Scientists make first direct detection of gravitational waves\"" [ref=f1e4889] [cursor=pointer]:
+                      - /url: https://news.mit.edu/2016/ligo-first-detection-gravitational-waves-0211
+                    - text: . Jennifer Chu. MIT News. 11 February 2016.
+                    - link "Archived" [ref=f1e4890] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20190407170726/http://news.mit.edu/2016/ligo-first-detection-gravitational-waves-0211
+                    - text: from the original on 7 April 2019
+                    - generic [ref=f1e4891]: . Retrieved 12 February 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Jennifer+Chu&rft.atitle=Scientists+make+first+direct+detection+of+gravitational+waves&rft.date=2016-02-11&rft_id=https%3A%2F%2Fnews.mit.edu%2F2016%2Fligo-first-detection-gravitational-waves-0211&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4892]:
+                - link "Jump up" [ref=f1e4894] [cursor=pointer]:
+                  - /url: "#cite_ref-hkKSp_269-0"
+                  - text: ^
+                - generic [ref=f1e4895]:
+                  - generic [ref=f1e4896]:
+                    - text: Ghosh, Pallab (11 February 2016).
+                    - link "\"Einstein's gravitational waves 'seen' from black holes\"" [ref=f1e4897] [cursor=pointer]:
+                      - /url: https://www.bbc.com/news/science-environment-35524440
+                    - text: . BBC News.
+                    - link "Archived" [ref=f1e4898] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20160211235836/https://www.bbc.com/news/science-environment-35524440
+                    - text: from the original on 11 February 2016
+                    - generic [ref=f1e4899]: . Retrieved 12 February 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=BBC+News&rft.atitle=Einstein%27s+gravitational+waves+%27seen%27+from+black+holes&rft.date=2016-02-11&rft.aulast=Ghosh&rft.aufirst=Pallab&rft_id=https%3A%2F%2Fwww.bbc.com%2Fnews%2Fscience-environment-35524440&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4900]:
+                - link "Jump up" [ref=f1e4902] [cursor=pointer]:
+                  - /url: "#cite_ref-38Msx_270-0"
+                  - text: ^
+                - generic [ref=f1e4903]:
+                  - generic [ref=f1e4904]:
+                    - text: Overbye, Dennis (11 February 2016).
+                    - link "\"Gravitational Waves Detected, Confirming Einstein's Theory\"" [ref=f1e4905] [cursor=pointer]:
+                      - /url: https://www.nytimes.com/2016/02/12/science/ligo-gravitational-waves-black-holes-einstein.html
+                    - text: . The New York Times.
+                    - link "ISSN" [ref=f1e4906] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "0362-4331" [ref=f1e4907] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/0362-4331
+                    - text: .
+                    - link "Archived" [ref=f1e4908] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20160211165128/http://www.nytimes.com/2016/02/12/science/ligo-gravitational-waves-black-holes-einstein.html
+                    - text: from the original on 11 February 2016
+                    - generic [ref=f1e4909]: . Retrieved 12 February 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=Gravitational+Waves+Detected%2C+Confirming+Einstein%27s+Theory&rft.date=2016-02-11&rft.issn=0362-4331&rft.aulast=Overbye&rft.aufirst=Dennis&rft_id=https%3A%2F%2Fwww.nytimes.com%2F2016%2F02%2F12%2Fscience%2Fligo-gravitational-waves-black-holes-einstein.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4910]:
+                - link "Jump up" [ref=f1e4912] [cursor=pointer]:
+                  - /url: "#cite_ref-271"
+                  - text: ^
+                - generic [ref=f1e4913]:
+                  - generic [ref=f1e4914]:
+                    - link "Norton, John" [ref=f1e4915] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/John_D._Norton
+                    - text: (1984).
+                    - 'link "\"How Einstein Found His Field Equations: 1912–1915\"" [ref=f1e4916] [cursor=pointer]':
+                      - /url: https://www.jstor.org/stable/27757535
+                    - text: ". Historical Studies in the Physical Sciences. 14 (2): 253–316."
+                    - link "doi" [ref=f1e4917] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.2307/27757535" [ref=f1e4918] [cursor=pointer]:
+                      - /url: https://doi.org/10.2307%2F27757535
+                    - text: .
+                    - link "ISSN" [ref=f1e4919] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "0073-2672" [ref=f1e4920] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/0073-2672
+                    - text: .
+                    - link "JSTOR" [ref=f1e4921] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "27757535" [ref=f1e4922] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/27757535
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Historical+Studies+in+the+Physical+Sciences&rft.atitle=How+Einstein+Found+His+Field+Equations%3A+1912%E2%80%931915&rft.volume=14&rft.issue=2&rft.pages=253-316&rft.date=1984&rft.issn=0073-2672&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F27757535%23id-name%3DJSTOR&rft_id=info%3Adoi%2F10.2307%2F27757535&rft.aulast=Norton&rft.aufirst=John&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F27757535&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4923]:
+                - link "Jump up" [ref=f1e4925] [cursor=pointer]:
+                  - /url: "#cite_ref-sOA9t_272-0"
+                  - text: ^
+                - generic [ref=f1e4926]: van Dongen, Jeroen (2010) Einstein's Unification Cambridge University Press, p. 23.
+              - listitem [ref=f1e4927]:
+                - link "Jump up" [ref=f1e4929] [cursor=pointer]:
+                  - /url: "#cite_ref-273"
+                  - text: ^
+                - text: Einstein (1917a).
+              - listitem [ref=f1e4930]:
+                - link "Jump up" [ref=f1e4932] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEPais1994285–286_274-0"
+                  - text: ^
+                - generic [ref=f1e4933]:
+                  - link "Pais (1994)" [ref=f1e4934] [cursor=pointer]:
+                    - /url: "#CITEREFPais1994"
+                  - text: ", pp. 285–286."
+              - listitem [ref=f1e4935]:
+                - link "Jump up" [ref=f1e4937] [cursor=pointer]:
+                  - /url: "#cite_ref-iJwuX_275-0"
+                  - text: ^
+                - generic [ref=f1e4938]:
+                  - generic [ref=f1e4939]: "North, J.D. (1965). The Measure of the Universe: A History of Modern Cosmology. New York: Dover. pp. 81–83."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Measure+of+the+Universe%3A+A+History+of+Modern+Cosmology&rft.place=New+York&rft.pages=81-83&rft.pub=Dover&rft.date=1965&rft.aulast=North&rft.aufirst=J.D.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4940]:
+                - link "Jump up" [ref=f1e4942] [cursor=pointer]:
+                  - /url: "#cite_ref-276"
+                  - text: ^
+                - generic [ref=f1e4943]:
+                  - generic [ref=f1e4944]:
+                    - text: Smeenk, Christopher (2014),
+                    - link "\"Einstein's Role in the Creation of Relativistic Cosmology\"" [ref=f1e4945] [cursor=pointer]:
+                      - /url: https://www.cambridge.org/core/books/cambridge-companion-to-einstein/einsteins-role-in-the-creation-of-relativistic-cosmology/498FDAF3672B3E7328F212765130E631
+                    - text: ", in Lehner, Christoph; Janssen, Michel (eds.), The Cambridge Companion to Einstein, Cambridge Companions to Philosophy, Cambridge: Cambridge University Press, pp. 228–269,"
+                    - link "doi" [ref=f1e4946] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1017/cco9781139024525.009" [ref=f1e4947] [cursor=pointer]:
+                      - /url: https://doi.org/10.1017%2Fcco9781139024525.009
+                    - text: ","
+                    - link "ISBN" [ref=f1e4948] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-521-82834-5" [ref=f1e4949] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-521-82834-5
+                    - generic [ref=f1e4950]: ", retrieved 14 December 2025"
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Einstein%27s+Role+in+the+Creation+of+Relativistic+Cosmology&rft.btitle=The+Cambridge+Companion+to+Einstein&rft.place=Cambridge&rft.series=Cambridge+Companions+to+Philosophy&rft.pages=228-269&rft.pub=Cambridge+University+Press&rft.date=2014&rft_id=info%3Adoi%2F10.1017%2Fcco9781139024525.009&rft.isbn=978-0-521-82834-5&rft.aulast=Smeenk&rft.aufirst=Christopher&rft_id=https%3A%2F%2Fwww.cambridge.org%2Fcore%2Fbooks%2Fcambridge-companion-to-einstein%2Feinsteins-role-in-the-creation-of-relativistic-cosmology%2F498FDAF3672B3E7328F212765130E631&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4951]:
+                - generic [ref=f1e4952]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4953] [cursor=pointer]:
+                    - /url: "#cite_ref-E1931_277-0"
+                  - link [ref=f1e4955] [cursor=pointer]:
+                    - /url: "#cite_ref-E1931_277-1"
+                - text: Einstein (1931).
+              - listitem [ref=f1e4956]:
+                - generic [ref=f1e4957]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e4958] [cursor=pointer]:
+                    - /url: "#cite_ref-cor-2013_278-0"
+                  - link [ref=f1e4960] [cursor=pointer]:
+                    - /url: "#cite_ref-cor-2013_278-1"
+                - generic [ref=f1e4961]:
+                  - generic [ref=f1e4962]:
+                    - text: O'Raifeartaigh, C; McCann, B (2014).
+                    - 'link "\"Einstein''s cosmic model of 1931 revisited: An analysis and translation of a forgotten model of the universe\"" [ref=f1e4963] [cursor=pointer]':
+                      - /url: http://repository.wit.ie/2867/1/cosmic.pdf
+                    - text: "(PDF). The European Physical Journal H. 39 (2014): 63–85."
+                    - link "arXiv" [ref=f1e4964] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e4965]:
+                      - link "1312.2192" [ref=f1e4966] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/1312.2192
+                    - text: .
+                    - link "Bibcode" [ref=f1e4967] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2014EPJH...39...63O" [ref=f1e4968] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2014EPJH...39...63O
+                    - text: .
+                    - link "doi" [ref=f1e4969] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1140/epjh/e2013-40038-x" [ref=f1e4970] [cursor=pointer]:
+                      - /url: https://doi.org/10.1140%2Fepjh%2Fe2013-40038-x
+                    - text: .
+                    - link "S2CID" [ref=f1e4971] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "53419239" [ref=f1e4972] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:53419239
+                    - text: .
+                    - link "Archived" [ref=f1e4973] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200929102551/https://repository.wit.ie/2867/1/cosmic.pdf
+                    - text: (PDF) from the original on 29 September 2020
+                    - generic [ref=f1e4974]: . Retrieved 31 December 2019
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+European+Physical+Journal+H&rft.atitle=Einstein%27s+cosmic+model+of+1931+revisited%3A+An+analysis+and+translation+of+a+forgotten+model+of+the+universe&rft.volume=39&rft.issue=2014&rft.pages=63-85&rft.date=2014&rft_id=info%3Aarxiv%2F1312.2192&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A53419239%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.1140%2Fepjh%2Fe2013-40038-x&rft_id=info%3Abibcode%2F2014EPJH...39...63O&rft.aulast=O%27Raifeartaigh&rft.aufirst=C&rft.au=McCann%2C+B&rft_id=http%3A%2F%2Frepository.wit.ie%2F2867%2F1%2Fcosmic.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4975]:
+                - link "Jump up" [ref=f1e4977] [cursor=pointer]:
+                  - /url: "#cite_ref-279"
+                  - text: ^
+                - text: Einstein & de Sitter (1932).
+              - listitem [ref=f1e4978]:
+                - link "Jump up" [ref=f1e4980] [cursor=pointer]:
+                  - /url: "#cite_ref-J9Tqu_280-0"
+                  - text: ^
+                - generic [ref=f1e4981]:
+                  - generic [ref=f1e4982]:
+                    - text: "Nussbaumer, Harry (2014). \"Einstein's conversion from his static to an expanding universe\". Eur. Phys. J. H. 39 (1): 37–62."
+                    - link "arXiv" [ref=f1e4983] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e4984]:
+                      - link "1311.2763" [ref=f1e4985] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/1311.2763
+                    - text: .
+                    - link "Bibcode" [ref=f1e4986] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2014EPJH...39...37N" [ref=f1e4987] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2014EPJH...39...37N
+                    - text: .
+                    - link "doi" [ref=f1e4988] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1140/epjh/e2013-40037-6" [ref=f1e4989] [cursor=pointer]:
+                      - /url: https://doi.org/10.1140%2Fepjh%2Fe2013-40037-6
+                    - text: .
+                    - link "S2CID" [ref=f1e4990] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "122011477" [ref=f1e4991] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:122011477
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Eur.+Phys.+J.+H&rft.atitle=Einstein%27s+conversion+from+his+static+to+an+expanding+universe&rft.volume=39&rft.issue=1&rft.pages=37-62&rft.date=2014&rft_id=info%3Aarxiv%2F1311.2763&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A122011477%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.1140%2Fepjh%2Fe2013-40037-6&rft_id=info%3Abibcode%2F2014EPJH...39...37N&rft.aulast=Nussbaumer&rft.aufirst=Harry&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4992]:
+                - link "Jump up" [ref=f1e4994] [cursor=pointer]:
+                  - /url: "#cite_ref-sxfvo_281-0"
+                  - text: ^
+                - generic [ref=f1e4995]:
+                  - generic [ref=f1e4996]: "Nussbaumer and Bieri (2009). Discovering the Expanding Universe. Cambridge: Cambridge University Press. pp. 144–152."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Discovering+the+Expanding+Universe&rft.place=Cambridge&rft.pages=144-152&rft.pub=Cambridge+University+Press&rft.date=2009&rft.au=Nussbaumer+and+Bieri&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e4997]:
+                - link "Jump up" [ref=f1e4999] [cursor=pointer]:
+                  - /url: "#cite_ref-qmmVf_282-0"
+                  - text: ^
+                - generic [ref=f1e5000]:
+                  - generic [ref=f1e5001]:
+                    - text: Zimmer, Carl (9 June 2013).
+                    - link "\"The Genius of Getting It Wrong\"" [ref=f1e5002] [cursor=pointer]:
+                      - /url: https://ghostarchive.org/archive/20220101/https://www.nytimes.com/2013/06/09/books/review/brilliant-blunders-by-mario-livio.html
+                    - text: . The New York Times. Archived from
+                    - generic "Free access subject to limited trial, subscription normally required" [ref=f1e5003]:
+                      - link "the original" [ref=f1e5004] [cursor=pointer]:
+                        - /url: https://www.nytimes.com/2013/06/09/books/review/brilliant-blunders-by-mario-livio.html
+                    - text: on 1 January 2022.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=The+Genius+of+Getting+It+Wrong&rft.date=2013-06-09&rft.aulast=Zimmer&rft.aufirst=Carl&rft_id=https%3A%2F%2Fwww.nytimes.com%2F2013%2F06%2F09%2Fbooks%2Freview%2Fbrilliant-blunders-by-mario-livio.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5005]:
+                - link "Jump up" [ref=f1e5007] [cursor=pointer]:
+                  - /url: "#cite_ref-Tq53z_283-0"
+                  - text: ^
+                - generic [ref=f1e5008]:
+                  - generic [ref=f1e5009]:
+                    - text: Castelvecchi, Davide (2014).
+                    - link "\"Einstein's lost theory uncovered\"" [ref=f1e5010] [cursor=pointer]:
+                      - /url: https://doi.org/10.1038%2F506418a
+                    - text: ". Nature News & Comment. 506 (7489): 418–419."
+                    - link "Bibcode" [ref=f1e5011] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2014Natur.506..418C" [ref=f1e5012] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2014Natur.506..418C
+                    - text: .
+                    - link "doi" [ref=f1e5013] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5014]:
+                      - link "10.1038/506418a" [ref=f1e5015] [cursor=pointer]:
+                        - /url: https://doi.org/10.1038%2F506418a
+                    - text: .
+                    - link "PMID" [ref=f1e5016] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "24572403" [ref=f1e5017] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/24572403
+                    - text: .
+                    - link "S2CID" [ref=f1e5018] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "205080245" [ref=f1e5019] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:205080245
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Nature+News+%26+Comment&rft.atitle=Einstein%27s+lost+theory+uncovered&rft.volume=506&rft.issue=7489&rft.pages=418-419&rft.date=2014&rft_id=info%3Adoi%2F10.1038%2F506418a&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A205080245%23id-name%3DS2CID&rft_id=info%3Apmid%2F24572403&rft_id=info%3Abibcode%2F2014Natur.506..418C&rft.aulast=Castelvecchi&rft.aufirst=Davide&rft_id=https%3A%2F%2Fdoi.org%2F10.1038%252F506418a&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5020]:
+                - link "Jump up" [ref=f1e5022] [cursor=pointer]:
+                  - /url: "#cite_ref-8pfEk_284-0"
+                  - text: ^
+                - generic [ref=f1e5023]:
+                  - generic [ref=f1e5024]:
+                    - link "\"On His 135th Birthday, Einstein is Still Full of Surprises\"" [ref=f1e5025] [cursor=pointer]:
+                      - /url: https://blogs.discovermagazine.com/outthere/2014/03/14/135th-birthday-einstein-still-full-surprises/
+                    - text: . Out There. 14 March 2014.
+                    - link "Archived" [ref=f1e5026] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20140318005847/http://blogs.discovermagazine.com/outthere/2014/03/14/135th-birthday-einstein-still-full-surprises/
+                    - text: from the original on 18 March 2014
+                    - generic [ref=f1e5027]: . Retrieved 17 March 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Out+There&rft.atitle=On+His+135th+Birthday%2C+Einstein+is+Still+Full+of+Surprises&rft.date=2014-03-14&rft_id=http%3A%2F%2Fblogs.discovermagazine.com%2Foutthere%2F2014%2F03%2F14%2F135th-birthday-einstein-still-full-surprises%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5028]:
+                - generic [ref=f1e5029]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e5030] [cursor=pointer]:
+                    - /url: "#cite_ref-cor-steady-state_285-0"
+                  - link [ref=f1e5032] [cursor=pointer]:
+                    - /url: "#cite_ref-cor-steady-state_285-1"
+                - generic [ref=f1e5033]:
+                  - generic [ref=f1e5034]:
+                    - text: O'Raifeartaigh, C.; McCann, B.; Nahm, W.; Mitton, S. (2014).
+                    - 'link "\"Einstein''s steady-state theory: an abandoned model of the cosmos\"" [ref=f1e5035] [cursor=pointer]':
+                      - /url: http://repository.wit.ie/2866/1/cormac.pdf
+                    - text: "(PDF). Eur. Phys. J. H. 39 (3): 353–369."
+                    - link "arXiv" [ref=f1e5036] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5037]:
+                      - link "1402.0132" [ref=f1e5038] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/1402.0132
+                    - text: .
+                    - link "Bibcode" [ref=f1e5039] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2014EPJH...39..353O" [ref=f1e5040] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2014EPJH...39..353O
+                    - text: .
+                    - link "doi" [ref=f1e5041] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1140/epjh/e2014-50011-x" [ref=f1e5042] [cursor=pointer]:
+                      - /url: https://doi.org/10.1140%2Fepjh%2Fe2014-50011-x
+                    - text: .
+                    - link "S2CID" [ref=f1e5043] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "38384067" [ref=f1e5044] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:38384067
+                    - text: .
+                    - link "Archived" [ref=f1e5045] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200929120033/https://repository.wit.ie/2866/1/cormac.pdf
+                    - text: (PDF) from the original on 29 September 2020
+                    - generic [ref=f1e5046]: . Retrieved 31 December 2019
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Eur.+Phys.+J.+H&rft.atitle=Einstein%27s+steady-state+theory%3A+an+abandoned+model+of+the+cosmos&rft.volume=39&rft.issue=3&rft.pages=353-369&rft.date=2014&rft_id=info%3Aarxiv%2F1402.0132&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A38384067%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.1140%2Fepjh%2Fe2014-50011-x&rft_id=info%3Abibcode%2F2014EPJH...39..353O&rft.aulast=O%27Raifeartaigh&rft.aufirst=C.&rft.au=McCann%2C+B.&rft.au=Nahm%2C+W.&rft.au=Mitton%2C+S.&rft_id=http%3A%2F%2Frepository.wit.ie%2F2866%2F1%2Fcormac.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5047]:
+                - generic [ref=f1e5048]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e5049] [cursor=pointer]:
+                    - /url: "#cite_ref-Einstein's_aborted_model_286-0"
+                  - link [ref=f1e5051] [cursor=pointer]:
+                    - /url: "#cite_ref-Einstein's_aborted_model_286-1"
+                - generic [ref=f1e5052]:
+                  - generic [ref=f1e5053]:
+                    - text: Nussbaumer, Harry (2014). "Einstein's aborted attempt at a dynamic steady-state universe". In memoriam Hilmar Duerbeck. p. 463.
+                    - link "arXiv" [ref=f1e5054] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5055]:
+                      - link "1402.4099" [ref=f1e5056] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/1402.4099
+                    - text: .
+                    - link "Bibcode" [ref=f1e5057] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2014arXiv1402.4099N" [ref=f1e5058] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2014arXiv1402.4099N
+                    - text: .
+                    - link "ISBN" [ref=f1e5059] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-3-944913-56-8" [ref=f1e5060] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-3-944913-56-8
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Einstein%27s+aborted+attempt+at+a+dynamic+steady-state+universe&rft.btitle=In+memoriam+Hilmar+Duerbeck&rft.pages=463&rft.date=2014&rft_id=info%3Aarxiv%2F1402.4099&rft_id=info%3Abibcode%2F2014arXiv1402.4099N&rft.isbn=978-3-944913-56-8&rft.aulast=Nussbaumer&rft.aufirst=Harry&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5061]:
+                - link "Jump up" [ref=f1e5063] [cursor=pointer]:
+                  - /url: "#cite_ref-ILjYQ_287-0"
+                  - text: ^
+                - generic [ref=f1e5064]:
+                  - generic [ref=f1e5065]:
+                    - text: Hoyle (1948).
+                    - link "\"A New Model for the Expanding Universe\"" [ref=f1e5066] [cursor=pointer]:
+                      - /url: https://doi.org/10.1093%2Fmnras%2F108.5.372
+                    - text: ". MNRAS. 108 (5): 372."
+                    - link "Bibcode" [ref=f1e5067] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1948MNRAS.108..372H" [ref=f1e5068] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1948MNRAS.108..372H
+                    - text: .
+                    - link "doi" [ref=f1e5069] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5070]:
+                      - link "10.1093/mnras/108.5.372" [ref=f1e5071] [cursor=pointer]:
+                        - /url: https://doi.org/10.1093%2Fmnras%2F108.5.372
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=MNRAS&rft.atitle=A+New+Model+for+the+Expanding+Universe&rft.volume=108&rft.issue=5&rft.pages=372&rft.date=1948&rft_id=info%3Adoi%2F10.1093%2Fmnras%2F108.5.372&rft_id=info%3Abibcode%2F1948MNRAS.108..372H&rft.au=Hoyle&rft_id=https%3A%2F%2Fdoi.org%2F10.1093%252Fmnras%252F108.5.372&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5072]:
+                - link "Jump up" [ref=f1e5074] [cursor=pointer]:
+                  - /url: "#cite_ref-ThZb0_288-0"
+                  - text: ^
+                - generic [ref=f1e5075]:
+                  - generic [ref=f1e5076]:
+                    - text: Bondi; Gold (1948).
+                    - link "\"The Steady-State Theory of the Expanding Universe\"" [ref=f1e5077] [cursor=pointer]:
+                      - /url: https://doi.org/10.1093%2Fmnras%2F108.3.252
+                    - text: ". MNRAS. 108 (3): 252."
+                    - link "Bibcode" [ref=f1e5078] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1948MNRAS.108..252B" [ref=f1e5079] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1948MNRAS.108..252B
+                    - text: .
+                    - link "doi" [ref=f1e5080] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5081]:
+                      - link "10.1093/mnras/108.3.252" [ref=f1e5082] [cursor=pointer]:
+                        - /url: https://doi.org/10.1093%2Fmnras%2F108.3.252
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=MNRAS&rft.atitle=The+Steady-State+Theory+of+the+Expanding+Universe&rft.volume=108&rft.issue=3&rft.pages=252&rft.date=1948&rft_id=info%3Adoi%2F10.1093%2Fmnras%2F108.3.252&rft_id=info%3Abibcode%2F1948MNRAS.108..252B&rft.au=Bondi&rft.au=Gold&rft_id=https%3A%2F%2Fdoi.org%2F10.1093%252Fmnras%252F108.3.252&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5083]:
+                - link "Jump up" [ref=f1e5085] [cursor=pointer]:
+                  - /url: "#cite_ref-7ShC9_289-0"
+                  - text: ^
+                - generic [ref=f1e5086]:
+                  - generic [ref=f1e5087]:
+                    - text: Amir Aczel (7 March 2014).
+                    - link "\"Einstein's Lost Theory Describes a Universe Without a Big Bang\"" [ref=f1e5088] [cursor=pointer]:
+                      - /url: https://blogs.discovermagazine.com/crux/2014/03/07/einsteins-lost-theory-describes-a-universe-without-a-big-bang/
+                    - text: . The Crux.
+                    - link "Archived" [ref=f1e5089] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20140319110251/http://blogs.discovermagazine.com/crux/2014/03/07/einsteins-lost-theory-describes-a-universe-without-a-big-bang/
+                    - text: from the original on 19 March 2014
+                    - generic [ref=f1e5090]: . Retrieved 17 March 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=The+Crux&rft.atitle=Einstein%27s+Lost+Theory+Describes+a+Universe+Without+a+Big+Bang&rft.date=2014-03-07&rft.au=Amir+Aczel&rft_id=http%3A%2F%2Fblogs.discovermagazine.com%2Fcrux%2F2014%2F03%2F07%2Feinsteins-lost-theory-describes-a-universe-without-a-big-bang%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5091]:
+                - link "Jump up" [ref=f1e5093] [cursor=pointer]:
+                  - /url: "#cite_ref-290"
+                  - text: ^
+                - generic [ref=f1e5094]:
+                  - generic [ref=f1e5095]:
+                    - link "Byers, Nina" [ref=f1e5096] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Nina_Byers
+                    - text: (23 September 1998). "E. Noether's Discovery of the Deep Connection Between Symmetries and Conservation Laws".
+                    - link "arXiv" [ref=f1e5097] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5098]:
+                      - link "physics/9807044" [ref=f1e5099] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/physics/9807044
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=preprint&rft.jtitle=arXiv&rft.atitle=E.+Noether%27s+Discovery+of+the+Deep+Connection+Between+Symmetries+and+Conservation+Laws&rft.date=1998-09-23&rft_id=info%3Aarxiv%2Fphysics%2F9807044&rft.aulast=Byers&rft.aufirst=Nina&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5100]:
+                - link "Jump up" [ref=f1e5102] [cursor=pointer]:
+                  - /url: "#cite_ref-291"
+                  - text: ^
+                - generic [ref=f1e5103]:
+                  - generic [ref=f1e5104]:
+                    - text: "Goldberg, J. N. (1958). \"Conservation laws in general relativity\". Physical Review. 111 (1): 315–320."
+                    - link "Bibcode" [ref=f1e5105] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1958PhRv..111..315G" [ref=f1e5106] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1958PhRv..111..315G
+                    - text: .
+                    - link "doi" [ref=f1e5107] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1103/PhysRev.111.315" [ref=f1e5108] [cursor=pointer]:
+                      - /url: https://doi.org/10.1103%2FPhysRev.111.315
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physical+Review&rft.atitle=Conservation+laws+in+general+relativity&rft.volume=111&rft.issue=1&rft.pages=315-320&rft.date=1958&rft_id=info%3Adoi%2F10.1103%2FPhysRev.111.315&rft_id=info%3Abibcode%2F1958PhRv..111..315G&rft.aulast=Goldberg&rft.aufirst=J.+N.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5109]:
+                - link "Jump up" [ref=f1e5111] [cursor=pointer]:
+                  - /url: "#cite_ref-292"
+                  - text: ^
+                - text: Einstein & Rosen (1935).
+              - listitem [ref=f1e5112]:
+                - link "Jump up" [ref=f1e5114] [cursor=pointer]:
+                  - /url: "#cite_ref-QNjpt_293-0"
+                  - text: ^
+                - generic [ref=f1e5115]:
+                  - generic [ref=f1e5116]:
+                    - link "\"2015 – General Relativity's Centennial\"" [ref=f1e5117] [cursor=pointer]:
+                      - /url: https://journals.aps.org/general-relativity-centennial
+                    - text: . APS Journals.
+                    - link "American Physical Society" [ref=f1e5118] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/American_Physical_Society
+                    - text: . 2015.
+                    - link "Archived" [ref=f1e5119] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20181115201857/https://journals.aps.org/general-relativity-centennial
+                    - text: from the original on 15 November 2018
+                    - generic [ref=f1e5120]: . Retrieved 7 April 2017
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=APS+Journals&rft.atitle=2015+%E2%80%93+General+Relativity%27s+Centennial&rft.date=2015&rft_id=https%3A%2F%2Fjournals.aps.org%2Fgeneral-relativity-centennial&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5121]:
+                - link "Jump up" [ref=f1e5123] [cursor=pointer]:
+                  - /url: "#cite_ref-ja7FY_294-0"
+                  - text: ^
+                - generic [ref=f1e5124]:
+                  - generic [ref=f1e5125]:
+                    - text: "Lindley, David (25 March 2005). \"Focus: The Birth of Wormholes\". Physics. 15: 11."
+                    - link "doi" [ref=f1e5126] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1103/physrevfocus.15.11" [ref=f1e5127] [cursor=pointer]:
+                      - /url: https://doi.org/10.1103%2Fphysrevfocus.15.11
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physics&rft.atitle=Focus%3A+The+Birth+of+Wormholes&rft.volume=15&rft.pages=11&rft.date=2005-03-25&rft_id=info%3Adoi%2F10.1103%2Fphysrevfocus.15.11&rft.aulast=Lindley&rft.aufirst=David&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5128]:
+                - link "Jump up" [ref=f1e5130] [cursor=pointer]:
+                  - /url: "#cite_ref-Wheeler_295-0"
+                  - text: ^
+                - generic [ref=f1e5131]:
+                  - generic [ref=f1e5132]:
+                    - link "Wheeler, John Archibald" [ref=f1e5133] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/John_Archibald_Wheeler
+                    - text: (18 June 2010).
+                    - 'link "Geons, Black Holes, and Quantum Foam: A Life in Physics" [ref=f1e5134] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=zGFkK2tTXPsC&pg=PA235
+                    - text: . W. W. Norton & Company.
+                    - link "ISBN" [ref=f1e5135] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-393-07948-7" [ref=f1e5136] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-393-07948-7
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Geons%2C+Black+Holes%2C+and+Quantum+Foam%3A+A+Life+in+Physics&rft.pub=W.+W.+Norton+%26+Company&rft.date=2010-06-18&rft.isbn=978-0-393-07948-7&rft.aulast=Wheeler&rft.aufirst=John+Archibald&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DzGFkK2tTXPsC%26pg%3DPA235&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5137]:
+                - link "Jump up" [ref=f1e5139] [cursor=pointer]:
+                  - /url: "#cite_ref-296"
+                  - text: ^
+                - generic [ref=f1e5140]:
+                  - generic [ref=f1e5141]:
+                    - text: Kersting, Magdalena (May 2019).
+                    - link "\"Free fall in curved spacetime—how to visualise gravity in general relativity\"" [ref=f1e5142] [cursor=pointer]:
+                      - /url: https://doi.org/10.1088%2F1361-6552%2Fab08f5
+                    - text: .
+                    - link "Physics Education" [ref=f1e5144] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Physics_Education
+                    - text: ". 54 (3): 035008."
+                    - link "Bibcode" [ref=f1e5145] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2019PhyEd..54c5008K" [ref=f1e5146] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2019PhyEd..54c5008K
+                    - text: .
+                    - link "doi" [ref=f1e5147] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5148]:
+                      - link "10.1088/1361-6552/ab08f5" [ref=f1e5149] [cursor=pointer]:
+                        - /url: https://doi.org/10.1088%2F1361-6552%2Fab08f5
+                    - text: .
+                    - link "hdl" [ref=f1e5150] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Hdl_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5151]:
+                      - link "10852/74677" [ref=f1e5152] [cursor=pointer]:
+                        - /url: https://hdl.handle.net/10852%2F74677
+                    - text: .
+                    - link "ISSN" [ref=f1e5153] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "0031-9120" [ref=f1e5154] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/0031-9120
+                    - text: .
+                    - link "S2CID" [ref=f1e5155] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "127471222" [ref=f1e5156] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:127471222
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physics+Education&rft.atitle=Free+fall+in+curved+spacetime%E2%80%94how+to+visualise+gravity+in+general+relativity&rft.volume=54&rft.issue=3&rft.pages=035008&rft.date=2019-05&rft_id=info%3Ahdl%2F10852%2F74677&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A127471222%23id-name%3DS2CID&rft_id=info%3Abibcode%2F2019PhyEd..54c5008K&rft.issn=0031-9120&rft_id=info%3Adoi%2F10.1088%2F1361-6552%2Fab08f5&rft.aulast=Kersting&rft.aufirst=Magdalena&rft_id=https%3A%2F%2Fdoi.org%2F10.1088%252F1361-6552%252Fab08f5&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5157]:
+                - link "Jump up" [ref=f1e5159] [cursor=pointer]:
+                  - /url: "#cite_ref-297"
+                  - text: ^
+                - generic [ref=f1e5160]:
+                  - generic [ref=f1e5161]:
+                    - text: Tamir, M (2012).
+                    - 'link "\"Proving the principle: Taking geodesic dynamics too seriously in Einstein''s theory\"" [ref=f1e5162] [cursor=pointer]':
+                      - /url: http://philsci-archive.pitt.edu/9158/1/Tamir_-_Proving_the_Principle.pdf
+                    - text: "(PDF). Studies in History and Philosophy of Modern Physics. 43 (2): 137–154."
+                    - link "Bibcode" [ref=f1e5163] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2012SHPMP..43..137T" [ref=f1e5164] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2012SHPMP..43..137T
+                    - text: .
+                    - link "doi" [ref=f1e5165] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1016/j.shpsb.2011.12.002" [ref=f1e5166] [cursor=pointer]:
+                      - /url: https://doi.org/10.1016%2Fj.shpsb.2011.12.002
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Studies+in+History+and+Philosophy+of+Modern+Physics&rft.atitle=Proving+the+principle%3A+Taking+geodesic+dynamics+too+seriously+in+Einstein%27s+theory&rft.volume=43&rft.issue=2&rft.pages=137-154&rft.date=2012&rft_id=info%3Adoi%2F10.1016%2Fj.shpsb.2011.12.002&rft_id=info%3Abibcode%2F2012SHPMP..43..137T&rft.aulast=Tamir&rft.aufirst=M&rft_id=http%3A%2F%2Fphilsci-archive.pitt.edu%2F9158%2F1%2FTamir_-_Proving_the_Principle.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5167]:
+                - link "Jump up" [ref=f1e5169] [cursor=pointer]:
+                  - /url: "#cite_ref-298"
+                  - text: ^
+                - generic [ref=f1e5170]:
+                  - generic [ref=f1e5171]:
+                    - link "Malament, David" [ref=f1e5172] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/David_Malament
+                    - text: (2012).
+                    - link "\"A Remark About the \"Geodesic Principle\" in General Relativity\"" [ref=f1e5173] [cursor=pointer]:
+                      - /url: http://philsci-archive.pitt.edu/5072/1/GeodesicLaw.pdf
+                    - text: (PDF). In Frappier, M.; Brown, D.; DiSalle, R. (eds.). Analysis and Interpretation in the Exact Sciences. The Western Ontario Series in Philosophy of Science. Vol. 78. Springer. pp. 245–252.
+                    - link "doi" [ref=f1e5174] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1007/978-94-007-2582-9_14" [ref=f1e5175] [cursor=pointer]:
+                      - /url: https://doi.org/10.1007%2F978-94-007-2582-9_14
+                    - text: .
+                    - link "ISBN" [ref=f1e5176] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-94-007-2581-2" [ref=f1e5177] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-94-007-2581-2
+                    - text: . Though the geodesic principle can be recovered as theorem in general relativity, it is not a consequence of Einstein's equation (or the conservation principle) alone. Other assumptions are needed to derive the theorems in question.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=A+Remark+About+the+%22Geodesic+Principle%22+in+General+Relativity&rft.btitle=Analysis+and+Interpretation+in+the+Exact+Sciences&rft.series=The+Western+Ontario+Series+in+Philosophy+of+Science&rft.pages=245-252&rft.pub=Springer&rft.date=2012&rft_id=info%3Adoi%2F10.1007%2F978-94-007-2582-9_14&rft.isbn=978-94-007-2581-2&rft.aulast=Malament&rft.aufirst=David&rft_id=http%3A%2F%2Fphilsci-archive.pitt.edu%2F5072%2F1%2FGeodesicLaw.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5178]:
+                - link "Jump up" [ref=f1e5180] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEIsaacson2007576_299-0"
+                  - text: ^
+                - generic [ref=f1e5181]:
+                  - link "Isaacson (2007)" [ref=f1e5182] [cursor=pointer]:
+                    - /url: "#CITEREFIsaacson2007"
+                  - text: ", p. 576."
+              - listitem [ref=f1e5183]:
+                - link "Jump up" [ref=f1e5185] [cursor=pointer]:
+                  - /url: "#cite_ref-ixm32_300-0"
+                  - text: ^
+                - generic [ref=f1e5186]:
+                  - generic [ref=f1e5187]:
+                    - link "\"Celebrating Einstein 'Solid Cold'. U.S. DOE\"" [ref=f1e5188] [cursor=pointer]:
+                      - /url: https://www.osti.gov/accomplishments/nuggets/einstein/solidcolda.html
+                    - text: .
+                    - link "Archived" [ref=f1e5189] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20170719091347/https://www.osti.gov/accomplishments/nuggets/einstein/solidcolda.html
+                    - text: from the original on 19 July 2017
+                    - generic [ref=f1e5190]: . Retrieved 21 February 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Celebrating+Einstein+%27Solid+Cold%27.+U.S.+DOE.&rft_id=http%3A%2F%2Fwww.osti.gov%2Faccomplishments%2Fnuggets%2Feinstein%2Fsolidcolda.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: ","
+                  - link "Office of Scientific and Technical Information" [ref=f1e5191] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Office_of_Scientific_and_Technical_Information
+                  - text: ", 2011."
+              - listitem [ref=f1e5192]:
+                - link "Jump up" [ref=f1e5194] [cursor=pointer]:
+                  - /url: "#cite_ref-301"
+                  - text: ^
+                - text: Einstein (1924).
+              - listitem [ref=f1e5195]:
+                - link "Jump up" [ref=f1e5197] [cursor=pointer]:
+                  - /url: "#cite_ref-nlagl_302-0"
+                  - text: ^
+                - generic [ref=f1e5198]:
+                  - generic [ref=f1e5199]:
+                    - link "\"Cornell and Wieman Share 2001 Nobel Prize in Physics\"" [ref=f1e5200] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20070610080506/https://www.nist.gov/public_affairs/releases/n01-04.htm
+                    - text: . 9 October 2001. Archived from
+                    - link "the original" [ref=f1e5201] [cursor=pointer]:
+                      - /url: https://www.nist.gov/public_affairs/releases/n01-04.htm
+                    - text: on 10 June 2007
+                    - generic [ref=f1e5202]: . Retrieved 11 June 2007
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Cornell+and+Wieman+Share+2001+Nobel+Prize+in+Physics&rft.date=2001-10-09&rft_id=https%3A%2F%2Fwww.nist.gov%2Fpublic_affairs%2Freleases%2Fn01-04.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5203]:
+                - link "Jump up" [ref=f1e5205] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEPais1982522_303-0"
+                  - text: ^
+                - generic [ref=f1e5206]:
+                  - link "Pais (1982)" [ref=f1e5207] [cursor=pointer]:
+                    - /url: "#CITEREFPais1982"
+                  - text: ", p. 522."
+              - listitem [ref=f1e5208]:
+                - link "Jump up" [ref=f1e5210] [cursor=pointer]:
+                  - /url: "#cite_ref-304"
+                  - text: ^
+                - text: "Stachel et al (2008) Vol. 4: The Swiss Years—Writings, 1912–1914, pp. 270 ff."
+              - listitem [ref=f1e5211]:
+                - link "Jump up" [ref=f1e5213] [cursor=pointer]:
+                  - /url: "#cite_ref-305"
+                  - text: ^
+                - text: Einstein (1917b).
+              - listitem [ref=f1e5214]:
+                - link "Jump up" [ref=f1e5216] [cursor=pointer]:
+                  - /url: "#cite_ref-306"
+                  - text: ^
+                - generic [ref=f1e5217]:
+                  - generic [ref=f1e5218]:
+                    - text: Duncan, Anthony; Janssen, Michel (2019).
+                    - generic [ref=f1e5219]: "Constructing quantum mechanics. Volume 1, The scaffold : 1900–1923"
+                    - text: "(1st ed.). Oxford:"
+                    - link "Oxford University Press" [ref=f1e5220] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Oxford_University_Press
+                    - text: . pp. 133–142.
+                    - link "ISBN" [ref=f1e5221] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-19-258422-9" [ref=f1e5222] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-19-258422-9
+                    - text: .
+                    - link "OCLC" [ref=f1e5223] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/OCLC_(identifier)
+                    - link "1119627546" [ref=f1e5224] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/oclc/1119627546
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Constructing+quantum+mechanics.+Volume+1%2C+The+scaffold+%3A+1900%E2%80%931923&rft.place=Oxford&rft.pages=133-142&rft.edition=1st&rft.pub=Oxford+University+Press&rft.date=2019&rft_id=info%3Aoclcnum%2F1119627546&rft.isbn=978-0-19-258422-9&rft.aulast=Duncan&rft.aufirst=Anthony&rft.au=Janssen%2C+Michel&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5225]:
+                - link "Jump up" [ref=f1e5227] [cursor=pointer]:
+                  - /url: "#cite_ref-307"
+                  - text: ^
+                - generic [ref=f1e5228]:
+                  - generic [ref=f1e5229]:
+                    - text: Hanle, Paul A. (July 1979).
+                    - link "\"The Schrödinger-Einstein correspondence and the sources of wave mechanics\"" [ref=f1e5230] [cursor=pointer]:
+                      - /url: https://pubs.aip.org/aapt/ajp/article/47/7/644-648/1051199
+                    - text: ". American Journal of Physics. 47 (7): 644–648."
+                    - link "Bibcode" [ref=f1e5231] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1979AmJPh..47..644H" [ref=f1e5232] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1979AmJPh..47..644H
+                    - text: .
+                    - link "doi" [ref=f1e5233] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1119/1.11950" [ref=f1e5234] [cursor=pointer]:
+                      - /url: https://doi.org/10.1119%2F1.11950
+                    - text: .
+                    - link "ISSN" [ref=f1e5235] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "0002-9505" [ref=f1e5236] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/0002-9505
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=American+Journal+of+Physics&rft.atitle=The+Schr%C3%B6dinger-Einstein+correspondence+and+the+sources+of+wave+mechanics&rft.volume=47&rft.issue=7&rft.pages=644-648&rft.date=1979-07&rft.issn=0002-9505&rft_id=info%3Adoi%2F10.1119%2F1.11950&rft_id=info%3Abibcode%2F1979AmJPh..47..644H&rft.aulast=Hanle&rft.aufirst=Paul+A.&rft_id=https%3A%2F%2Fpubs.aip.org%2Faapt%2Fajp%2Farticle%2F47%2F7%2F644-648%2F1051199&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5237]:
+                - link "Jump up" [ref=f1e5239] [cursor=pointer]:
+                  - /url: "#cite_ref-308"
+                  - text: ^
+                - generic [ref=f1e5240]:
+                  - generic [ref=f1e5241]:
+                    - text: Raman, V. V.; Forman, Paul (1969).
+                    - link "\"Why Was It Schrödinger Who Developed de Broglie's Ideas?\"" [ref=f1e5242] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/27757299
+                    - text: ". Historical Studies in the Physical Sciences. 1: 291–314."
+                    - link "doi" [ref=f1e5243] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.2307/27757299" [ref=f1e5244] [cursor=pointer]:
+                      - /url: https://doi.org/10.2307%2F27757299
+                    - text: .
+                    - link "ISSN" [ref=f1e5245] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "0073-2672" [ref=f1e5246] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/0073-2672
+                    - text: .
+                    - link "JSTOR" [ref=f1e5247] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "27757299" [ref=f1e5248] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/27757299
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Historical+Studies+in+the+Physical+Sciences&rft.atitle=Why+Was+It+Schr%C3%B6dinger+Who+Developed+de+Broglie%27s+Ideas%3F&rft.volume=1&rft.pages=291-314&rft.date=1969&rft.issn=0073-2672&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F27757299%23id-name%3DJSTOR&rft_id=info%3Adoi%2F10.2307%2F27757299&rft.aulast=Raman&rft.aufirst=V.+V.&rft.au=Forman%2C+Paul&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F27757299&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5249]:
+                - link "Jump up" [ref=f1e5251] [cursor=pointer]:
+                  - /url: "#cite_ref-zZ2hS_309-0"
+                  - text: ^
+                - generic [ref=f1e5252]:
+                  - generic [ref=f1e5253]:
+                    - text: Andrews, Robert (2003).
+                    - link "The New Penguin Dictionary of Modern Quotations" [ref=f1e5254] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=VK0vR4fsaigC&pg=PT499
+                    - text: . Penguin UK. p. 499.
+                    - link "ISBN" [ref=f1e5255] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-14-196531-4" [ref=f1e5256] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-14-196531-4
+                    - generic [ref=f1e5257]: . Retrieved 18 June 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+New+Penguin+Dictionary+of+Modern+Quotations&rft.pages=499&rft.pub=Penguin+UK&rft.date=2003&rft.isbn=978-0-14-196531-4&rft.aulast=Andrews&rft.aufirst=Robert&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DVK0vR4fsaigC%26pg%3DPT499&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5258]:
+                - link "Jump up" [ref=f1e5260] [cursor=pointer]:
+                  - /url: "#cite_ref-yzZtL_310-0"
+                  - text: ^
+                - generic [ref=f1e5261]:
+                  - generic [ref=f1e5262]:
+                    - text: Pais, Abraham (October 1979).
+                    - link "\"Einstein and the quantum theory\"" [ref=f1e5263] [cursor=pointer]:
+                      - /url: http://ursula.chem.yale.edu/~batista/classes/vvv/RevModPhys.51.863.pdf
+                    - text: "(PDF). Reviews of Modern Physics. 51 (4): 863–914."
+                    - link "Bibcode" [ref=f1e5264] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1979RvMP...51..863P" [ref=f1e5265] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1979RvMP...51..863P
+                    - text: .
+                    - link "doi" [ref=f1e5266] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1103/RevModPhys.51.863" [ref=f1e5267] [cursor=pointer]:
+                      - /url: https://doi.org/10.1103%2FRevModPhys.51.863
+                    - text: .
+                    - link "Archived" [ref=f1e5268] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20190829151347/http://ursula.chem.yale.edu/~batista/classes/vvv/RevModPhys.51.863.pdf
+                    - text: (PDF) from the original on 29 August 2019
+                    - generic [ref=f1e5269]: . Retrieved 18 November 2019
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Reviews+of+Modern+Physics&rft.atitle=Einstein+and+the+quantum+theory&rft.volume=51&rft.issue=4&rft.pages=863-914&rft.date=1979-10&rft_id=info%3Adoi%2F10.1103%2FRevModPhys.51.863&rft_id=info%3Abibcode%2F1979RvMP...51..863P&rft.aulast=Pais&rft.aufirst=Abraham&rft_id=http%3A%2F%2Fursula.chem.yale.edu%2F~batista%2Fclasses%2Fvvv%2FRevModPhys.51.863.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5270]:
+                - link "Jump up" [ref=f1e5272] [cursor=pointer]:
+                  - /url: "#cite_ref-Bohr1949_311-0"
+                  - text: ^
+                - generic [ref=f1e5273]:
+                  - generic [ref=f1e5274]:
+                    - text: Bohr, N.
+                    - link "\"Discussions with Einstein on Epistemological Problems in Atomic Physics\"" [ref=f1e5275] [cursor=pointer]:
+                      - /url: https://www.marxists.org/reference/subject/philosophy/works/dk/bohr.htm
+                    - text: ". The Value of Knowledge: A Miniature Library of Philosophy."
+                    - link "Marxists Internet Archive" [ref=f1e5276] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Marxists_Internet_Archive
+                    - text: .
+                    - link "Archived" [ref=f1e5277] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20100913033345/http://www.marxists.org/reference/subject/philosophy/works/dk/bohr.htm
+                    - text: from the original on 13 September 2010
+                    - generic [ref=f1e5278]: . Retrieved 30 August 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=The+Value+of+Knowledge%3A+A+Miniature+Library+of+Philosophy&rft.atitle=Discussions+with+Einstein+on+Epistemological+Problems+in+Atomic+Physics&rft.au=Bohr%2C+N.&rft_id=http%3A%2F%2Fwww.marxists.org%2Freference%2Fsubject%2Fphilosophy%2Fworks%2Fdk%2Fbohr.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: "From Albert Einstein: Philosopher-Scientist (1949), publ. Cambridge University Press, 1949. Niels Bohr's report of conversations with Einstein."
+              - listitem [ref=f1e5279]:
+                - link "Jump up" [ref=f1e5281] [cursor=pointer]:
+                  - /url: "#cite_ref-312"
+                  - text: ^
+                - text: Einstein (1969).
+              - listitem [ref=f1e5282]:
+                - link "Jump up" [ref=f1e5284] [cursor=pointer]:
+                  - /url: "#cite_ref-313"
+                  - text: ^
+                - generic [ref=f1e5285]:
+                  - generic [ref=f1e5286]:
+                    - text: "Schlosshauer, Maximilian; Kofler, Johannes; Zeilinger, Anton (1 August 2013). \"A snapshot of foundational attitudes toward quantum mechanics\". Studies in History and Philosophy of Science Part B: Studies in History and Philosophy of Modern Physics. 44 (3): 222–230."
+                    - link "arXiv" [ref=f1e5287] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5288]:
+                      - link "1301.1069" [ref=f1e5289] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/1301.1069
+                    - text: .
+                    - link "Bibcode" [ref=f1e5290] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2013SHPMP..44..222S" [ref=f1e5291] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2013SHPMP..44..222S
+                    - text: .
+                    - link "doi" [ref=f1e5292] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1016/j.shpsb.2013.04.004" [ref=f1e5293] [cursor=pointer]:
+                      - /url: https://doi.org/10.1016%2Fj.shpsb.2013.04.004
+                    - text: .
+                    - link "ISSN" [ref=f1e5294] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "1355-2198" [ref=f1e5295] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/1355-2198
+                    - text: .
+                    - link "S2CID" [ref=f1e5296] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "55537196" [ref=f1e5297] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:55537196
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Studies+in+History+and+Philosophy+of+Science+Part+B%3A+Studies+in+History+and+Philosophy+of+Modern+Physics&rft.atitle=A+snapshot+of+foundational+attitudes+toward+quantum+mechanics&rft.volume=44&rft.issue=3&rft.pages=222-230&rft.date=2013-08-01&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A55537196%23id-name%3DS2CID&rft_id=info%3Abibcode%2F2013SHPMP..44..222S&rft_id=info%3Aarxiv%2F1301.1069&rft.issn=1355-2198&rft_id=info%3Adoi%2F10.1016%2Fj.shpsb.2013.04.004&rft.aulast=Schlosshauer&rft.aufirst=Maximilian&rft.au=Kofler%2C+Johannes&rft.au=Zeilinger%2C+Anton&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5298]:
+                - generic [ref=f1e5299]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e5300] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEHoward1990_314-0"
+                  - link [ref=f1e5302] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEHoward1990_314-1"
+                - generic [ref=f1e5303]:
+                  - link "Howard (1990)" [ref=f1e5304] [cursor=pointer]:
+                    - /url: "#CITEREFHoward1990"
+                  - text: .
+              - listitem [ref=f1e5305]:
+                - generic [ref=f1e5306]:
+                  - text: ^
+                  - link "Jump up to:" [ref=f1e5307] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEHarriganSpekkens2010_315-0"
+                  - link [ref=f1e5309] [cursor=pointer]:
+                    - /url: "#cite_ref-FOOTNOTEHarriganSpekkens2010_315-1"
+                - generic [ref=f1e5310]:
+                  - link "Harrigan & Spekkens (2010)" [ref=f1e5311] [cursor=pointer]:
+                    - /url: "#CITEREFHarriganSpekkens2010"
+                  - text: .
+              - listitem [ref=f1e5312]:
+                - link "Jump up" [ref=f1e5314] [cursor=pointer]:
+                  - /url: "#cite_ref-316"
+                  - text: ^
+                - text: Einstein, Podolsky & Rosen (1935).
+              - listitem [ref=f1e5315]:
+                - link "Jump up" [ref=f1e5317] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEPeres2002_317-0"
+                  - text: ^
+                - generic [ref=f1e5318]:
+                  - link "Peres (2002)" [ref=f1e5319] [cursor=pointer]:
+                    - /url: "#CITEREFPeres2002"
+                  - text: .
+              - listitem [ref=f1e5320]:
+                - link "Jump up" [ref=f1e5322] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEMermin1993_318-0"
+                  - text: ^
+                - generic [ref=f1e5323]:
+                  - link "Mermin (1993)" [ref=f1e5324] [cursor=pointer]:
+                    - /url: "#CITEREFMermin1993"
+                  - text: .
+              - listitem [ref=f1e5325]:
+                - link "Jump up" [ref=f1e5327] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEPenrose2007_319-0"
+                  - text: ^
+                - generic [ref=f1e5328]:
+                  - link "Penrose (2007)" [ref=f1e5329] [cursor=pointer]:
+                    - /url: "#CITEREFPenrose2007"
+                  - text: .
+              - listitem [ref=f1e5330]:
+                - link "Jump up" [ref=f1e5332] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEBell1966_320-0"
+                  - text: ^
+                - generic [ref=f1e5333]:
+                  - link "Bell (1966)" [ref=f1e5334] [cursor=pointer]:
+                    - /url: "#CITEREFBell1966"
+                  - text: .
+              - listitem [ref=f1e5335]:
+                - link "Jump up" [ref=f1e5337] [cursor=pointer]:
+                  - /url: "#cite_ref-FOOTNOTEFine2017_321-0"
+                  - text: ^
+                - generic [ref=f1e5338]:
+                  - link "Fine (2017)" [ref=f1e5339] [cursor=pointer]:
+                    - /url: "#CITEREFFine2017"
+                  - text: .
+              - listitem [ref=f1e5340]:
+                - link "Jump up" [ref=f1e5342] [cursor=pointer]:
+                  - /url: "#cite_ref-322"
+                  - text: ^
+                - text: Einstein (1950).
+              - listitem [ref=f1e5343]:
+                - link "Jump up" [ref=f1e5345] [cursor=pointer]:
+                  - /url: "#cite_ref-323"
+                  - text: ^
+                - generic [ref=f1e5346]:
+                  - generic [ref=f1e5347]:
+                    - text: Goenner, Hubert F. M. (1 December 2004).
+                    - link "\"On the History of Unified Field Theories\"" [ref=f1e5348] [cursor=pointer]:
+                      - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5256024
+                    - text: . Living Reviews in Relativity. 7 (1) 2.
+                    - link "Bibcode" [ref=f1e5349] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2004LRR.....7....2G" [ref=f1e5350] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2004LRR.....7....2G
+                    - text: .
+                    - link "doi" [ref=f1e5351] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5352]:
+                      - link "10.12942/lrr-2004-2" [ref=f1e5353] [cursor=pointer]:
+                        - /url: https://doi.org/10.12942%2Flrr-2004-2
+                    - text: .
+                    - link "ISSN" [ref=f1e5354] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "1433-8351" [ref=f1e5355] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/1433-8351
+                    - text: .
+                    - link "PMC" [ref=f1e5356] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMC_(identifier)
+                    - generic "Freely accessible" [ref=f1e5357]:
+                      - link "5256024" [ref=f1e5358] [cursor=pointer]:
+                        - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5256024
+                    - text: .
+                    - link "PMID" [ref=f1e5359] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/PMID_(identifier)
+                    - link "28179864" [ref=f1e5360] [cursor=pointer]:
+                      - /url: https://pubmed.ncbi.nlm.nih.gov/28179864
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Living+Reviews+in+Relativity&rft.atitle=On+the+History+of+Unified+Field+Theories&rft.volume=7&rft.issue=1&rft.artnum=2&rft.date=2004-12-01&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5256024%23id-name%3DPMC&rft_id=info%3Abibcode%2F2004LRR.....7....2G&rft_id=info%3Apmid%2F28179864&rft_id=info%3Adoi%2F10.12942%2Flrr-2004-2&rft.issn=1433-8351&rft.aulast=Goenner&rft.aufirst=Hubert+F.+M.&rft_id=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5256024&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5361]:
+                - link "Jump up" [ref=f1e5363] [cursor=pointer]:
+                  - /url: "#cite_ref-Richardson-1908_324-0"
+                  - text: ^
+                - generic [ref=f1e5364]:
+                  - generic [ref=f1e5365]:
+                    - text: Richardson, O. W. (1908).
+                    - link "\"A Mechanical Effect Accompanying Magnetization\"" [ref=f1e5366] [cursor=pointer]:
+                      - /url: https://zenodo.org/record/1997325
+                    - text: ". Physical Review. Series I. 26 (3): 248–253."
+                    - link "Bibcode" [ref=f1e5367] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1908PhRvI..26..248R" [ref=f1e5368] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1908PhRvI..26..248R
+                    - text: .
+                    - link "doi" [ref=f1e5369] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1103/PhysRevSeriesI.26.248" [ref=f1e5370] [cursor=pointer]:
+                      - /url: https://doi.org/10.1103%2FPhysRevSeriesI.26.248
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physical+Review&rft.atitle=A+Mechanical+Effect+Accompanying+Magnetization&rft.volume=26&rft.issue=3&rft.pages=248-253&rft.date=1908&rft_id=info%3Adoi%2F10.1103%2FPhysRevSeriesI.26.248&rft_id=info%3Abibcode%2F1908PhRvI..26..248R&rft.aulast=Richardson&rft.aufirst=O.+W.&rft_id=https%3A%2F%2Fzenodo.org%2Frecord%2F1997325&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5371]:
+                - link "Jump up" [ref=f1e5373] [cursor=pointer]:
+                  - /url: "#cite_ref-EdH-1-1915_325-0"
+                  - text: ^
+                - generic [ref=f1e5374]:
+                  - generic [ref=f1e5375]:
+                    - text: "Einstein, A.; de Haas, W. J. (1915). \"Experimenteller Nachweis der Ampereschen Molekularströme\" [Experimental Proof of Ampère's Molecular Currents]. Deutsche Physikalische Gesellschaft, Verhandlungen (in German). 17: 152–170."
+                    - link "Bibcode" [ref=f1e5376] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1915DPhyG..17..152E" [ref=f1e5377] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1915DPhyG..17..152E
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Deutsche+Physikalische+Gesellschaft%2C+Verhandlungen&rft.atitle=Experimenteller+Nachweis+der+Ampereschen+Molekularstr%C3%B6me&rft.volume=17&rft.pages=152-170&rft.date=1915&rft_id=info%3Abibcode%2F1915DPhyG..17..152E&rft.aulast=Einstein&rft.aufirst=A.&rft.au=de+Haas%2C+W.+J.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5378]:
+                - link "Jump up" [ref=f1e5380] [cursor=pointer]:
+                  - /url: "#cite_ref-EdH-2-1915_326-0"
+                  - text: ^
+                - generic [ref=f1e5381]:
+                  - generic [ref=f1e5382]:
+                    - text: Einstein, A.; de Haas, W. J. (1915).
+                    - link "\"Experimental proof of the existence of Ampère's molecular currents\"" [ref=f1e5383] [cursor=pointer]:
+                      - /url: http://www.dwc.knaw.nl/DL/publications/PU00012546.pdf
+                    - text: "(PDF). Koninklijke Akademie van Wetenschappen te Amsterdam, Proceedings. 18: 696–711."
+                    - link "Bibcode" [ref=f1e5384] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1915KNAB...18..696E" [ref=f1e5385] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1915KNAB...18..696E
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Koninklijke+Akademie+van+Wetenschappen+te+Amsterdam%2C+Proceedings&rft.atitle=Experimental+proof+of+the+existence+of+Amp%C3%A8re%27s+molecular+currents&rft.volume=18&rft.pages=696-711&rft.date=1915&rft_id=info%3Abibcode%2F1915KNAB...18..696E&rft.aulast=Einstein&rft.aufirst=A.&rft.au=de+Haas%2C+W.+J.&rft_id=http%3A%2F%2Fwww.dwc.knaw.nl%2FDL%2Fpublications%2FPU00012546.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5386]:
+                - link "Jump up" [ref=f1e5388] [cursor=pointer]:
+                  - /url: "#cite_ref-327"
+                  - text: ^
+                - generic [ref=f1e5389]:
+                  - generic [ref=f1e5390]:
+                    - text: San Miguel, Alfonso; Pallandre, Bernard (13 March 2024).
+                    - 'link "\"Revisiting the Einstein-de Haas experiment: the Ampère Museum''s hidden treasure\"" [ref=f1e5391] [cursor=pointer]':
+                      - /url: https://www.europhysicsnews.org/images/stories/news/epn_Einstein-de_Haas.pdf
+                    - text: "(PDF). Europhysics News. 55 (4): 12–14."
+                    - link "arXiv" [ref=f1e5392] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5393]:
+                      - link "2505.07826" [ref=f1e5394] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/2505.07826
+                    - text: .
+                    - link "Bibcode" [ref=f1e5395] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2024ENews..55...28S" [ref=f1e5396] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2024ENews..55...28S
+                    - text: .
+                    - link "doi" [ref=f1e5397] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1051/epn/2024409" [ref=f1e5398] [cursor=pointer]:
+                      - /url: https://doi.org/10.1051%2Fepn%2F2024409
+                    - text: .
+                    - link "Archived" [ref=f1e5399] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20240316122040/https://www.europhysicsnews.org/images/stories/news/epn_Einstein-de_Haas.pdf
+                    - text: (PDF) from the original on 16 March 2024.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Europhysics+News&rft.atitle=Revisiting+the+Einstein-de+Haas+experiment%3A+the+Amp%C3%A8re+Museum%27s+hidden+treasure&rft.volume=55&rft.issue=4&rft.pages=12-14&rft.date=2024-03-13&rft_id=info%3Aarxiv%2F2505.07826&rft_id=info%3Adoi%2F10.1051%2Fepn%2F2024409&rft_id=info%3Abibcode%2F2024ENews..55...28S&rft.aulast=San+Miguel&rft.aufirst=Alfonso&rft.au=Pallandre%2C+Bernard&rft_id=https%3A%2F%2Fwww.europhysicsnews.org%2Fimages%2Fstories%2Fnews%2Fepn_Einstein-de_Haas.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5400]:
+                - link "Jump up" [ref=f1e5402] [cursor=pointer]:
+                  - /url: "#cite_ref-328"
+                  - text: ^
+                - generic [ref=f1e5403]:
+                  - generic [ref=f1e5404]:
+                    - text: Johnston, Hamish (17 March 2024).
+                    - link "\"Einstein's only experiment is found in French museum\"" [ref=f1e5405] [cursor=pointer]:
+                      - /url: https://physicsworld.com/einsteins-only-experiment-is-found-in-french-museum/
+                    - text: . Physics World
+                    - generic [ref=f1e5406]: . Retrieved 24 March 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Physics+World&rft.atitle=Einstein%27s+only+experiment+is+found+in+French+museum&rft.date=2024-03-17&rft.aulast=Johnston&rft.aufirst=Hamish&rft_id=https%3A%2F%2Fphysicsworld.com%2Feinsteins-only-experiment-is-found-in-french-museum%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5407]:
+                - link "Jump up" [ref=f1e5409] [cursor=pointer]:
+                  - /url: "#cite_ref-Goettling_329-0"
+                  - text: ^
+                - generic [ref=f1e5410]:
+                  - text: Goettling, Gary.
+                  - generic [ref=f1e5411]:
+                    - link "\"Einstein's refrigerator\"" [ref=f1e5412] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20050525082445/http://gtalumni.org/Publications/magazine/sum98/einsrefr.html
+                    - text: . Archived from
+                    - link "the original" [ref=f1e5413] [cursor=pointer]:
+                      - /url: http://gtalumni.org/Publications/magazine/sum98/einsrefr.html
+                    - text: on 25 May 2005.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Einstein%27s+refrigerator&rft_id=http%3A%2F%2Fgtalumni.org%2FPublications%2Fmagazine%2Fsum98%2Feinsrefr.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                  - text: Georgia Tech Alumni Magazine. 1998. Retrieved 12 November 2014.
+                  - link "Leó Szilárd" [ref=f1e5414] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Leó_Szilárd
+                  - text: ", a Hungarian physicist who later worked on the Manhattan Project, is credited with the discovery of the"
+                  - link "chain reaction" [ref=f1e5415] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Chain_reaction
+              - listitem [ref=f1e5416]:
+                - link "Jump up" [ref=f1e5418] [cursor=pointer]:
+                  - /url: "#cite_ref-330"
+                  - text: ^
+                - generic [ref=f1e5419]:
+                  - generic [ref=f1e5420]:
+                    - text: Alok, Jha (21 September 2008).
+                    - link "\"Einstein fridge design can help global cooling\"" [ref=f1e5421] [cursor=pointer]:
+                      - /url: https://www.theguardian.com/science/2008/sep/21/scienceofclimatechange.climatechange
+                    - text: . The Guardian.
+                    - link "Archived" [ref=f1e5422] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20110124172925/http://www.guardian.co.uk/science/2008/sep/21/scienceofclimatechange.climatechange
+                    - text: from the original on 24 January 2011
+                    - generic [ref=f1e5423]: . Retrieved 22 February 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+Guardian&rft.atitle=Einstein+fridge+design+can+help+global+cooling&rft.date=2008-09-21&rft.aulast=Alok&rft.aufirst=Jha&rft_id=https%3A%2F%2Fwww.theguardian.com%2Fscience%2F2008%2Fsep%2F21%2Fscienceofclimatechange.climatechange&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5424]:
+                - link "Jump up" [ref=f1e5426] [cursor=pointer]:
+                  - /url: "#cite_ref-patents.google.com_332-0"
+                  - text: ^
+                - generic [ref=f1e5427]:
+                  - generic [ref=f1e5428]:
+                    - link "\"Electrodynamic movement of fluid metals particularly for refrigerating machines\"" [ref=f1e5429] [cursor=pointer]:
+                      - /url: https://patents.google.com/patent/GB303065A/en?oq=GB303065
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Electrodynamic+movement+of+fluid+metals+particularly+for+refrigerating+machines&rft_id=https%3A%2F%2Fpatents.google.com%2Fpatent%2FGB303065A%2Fen%3Foq%3DGB303065&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5430]:
+                - link "Jump up" [ref=f1e5432] [cursor=pointer]:
+                  - /url: "#cite_ref-333"
+                  - text: ^
+                - generic [ref=f1e5433]:
+                  - generic [ref=f1e5434]:
+                    - link "\"Device, in particular for sound reproduction devices, in which changes in electrical current through magnetostriction cause movements of a magnetic body\"" [ref=f1e5435] [cursor=pointer]:
+                      - /url: https://patents.google.com/patent/DE590783C/en
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Device%2C+in+particular+for+sound+reproduction+devices%2C+in+which+changes+in+electrical+current+through+magnetostriction+cause+movements+of+a+magnetic+body&rft_id=https%3A%2F%2Fpatents.google.com%2Fpatent%2FDE590783C%2Fen&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5436]:
+                - link "Jump up" [ref=f1e5438] [cursor=pointer]:
+                  - /url: "#cite_ref-334"
+                  - text: ^
+                - text: "Albert Einstein's patents. 2006. World Pat Inf. 28/2, 159–65. M. Trainer. doi: 10.1016/j.wpi.2005.10.012"
+              - listitem [ref=f1e5439]:
+                - link "Jump up" [ref=f1e5441] [cursor=pointer]:
+                  - /url: "#cite_ref-margot-obituary_335-0"
+                  - text: ^
+                - generic [ref=f1e5442]:
+                  - generic [ref=f1e5443]:
+                    - link "\"Obituary\"" [ref=f1e5444] [cursor=pointer]:
+                      - /url: https://www.nytimes.com/1986/07/12/obituaries/margot-einstein-86-is-dead-stepdaughter-of-physicist.html
+                    - text: . The New York Times. 12 July 1986.
+                    - link "Archived" [ref=f1e5445] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20170910002303/http://www.nytimes.com/1986/07/12/obituaries/margot-einstein-86-is-dead-stepdaughter-of-physicist.html
+                    - text: from the original on 10 September 2017
+                    - generic [ref=f1e5446]: . Retrieved 3 April 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=Obituary&rft.date=1986-07-12&rft_id=https%3A%2F%2Fwww.nytimes.com%2F1986%2F07%2F12%2Fobituaries%2Fmargot-einstein-86-is-dead-stepdaughter-of-physicist.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5447]:
+                - link "Jump up" [ref=f1e5449] [cursor=pointer]:
+                  - /url: "#cite_ref-letters-love_336-0"
+                  - text: ^
+                - generic [ref=f1e5450]:
+                  - generic [ref=f1e5451]:
+                    - link "\"Letters Reveal Einstein Love Life\"" [ref=f1e5452] [cursor=pointer]:
+                      - /url: http://news.bbc.co.uk/2/hi/science/nature/5168002.stm
+                    - text: .
+                    - link "BBC News" [ref=f1e5454] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/BBC_News
+                    - text: . 11 July 2006.
+                    - link "Archived" [ref=f1e5455] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20190502100238/http://news.bbc.co.uk/2/hi/science/nature/5168002.stm
+                    - text: from the original on 2 May 2019
+                    - generic [ref=f1e5456]: . Retrieved 14 March 2007
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=BBC+News&rft.atitle=Letters+Reveal+Einstein+Love+Life&rft.date=2006-07-11&rft_id=http%3A%2F%2Fnews.bbc.co.uk%2F2%2Fhi%2Fscience%2Fnature%2F5168002.stm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5457]:
+                - link "Jump up" [ref=f1e5459] [cursor=pointer]:
+                  - /url: "#cite_ref-337"
+                  - text: ^
+                - generic [ref=f1e5460]:
+                  - generic [ref=f1e5461]: "Jaffé, ER (1996). \"The early history of the Albert Einstein College of Medicine\". Einstein Quarterly Journal of Biology and Medicine. 13: 22–36."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Einstein+Quarterly+Journal+of+Biology+and+Medicine&rft.atitle=The+early+history+of+the+Albert+Einstein+College+of+Medicine&rft.volume=13&rft.pages=22-36&rft.date=1996&rft.aulast=Jaff%C3%A9&rft.aufirst=ER&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5462]:
+                - link "Jump up" [ref=f1e5464] [cursor=pointer]:
+                  - /url: "#cite_ref-338"
+                  - text: ^
+                - generic [ref=f1e5465]:
+                  - generic [ref=f1e5466]:
+                    - link "\"The Einstein Memorial\"" [ref=f1e5467] [cursor=pointer]:
+                      - /url: https://www.nasonline.org/about-the-nas/locations/the-einstein-memorial/
+                    - text: .
+                    - link "National Academy of Sciences" [ref=f1e5469] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/National_Academy_of_Sciences
+                    - text: .
+                    - link "Archived" [ref=f1e5470] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20260730234329/https://www.nasonline.org/about-the-nas/locations/the-einstein-memorial/
+                    - text: from the original on 30 July 2026.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=National+Academy+of+Sciences&rft.atitle=The+Einstein+Memorial&rft_id=https%3A%2F%2Fwww.nasonline.org%2Fabout-the-nas%2Flocations%2Fthe-einstein-memorial%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5471]:
+                - link "Jump up" [ref=f1e5473] [cursor=pointer]:
+                  - /url: "#cite_ref-casetext-hebrew-university_339-0"
+                  - text: ^
+                - generic [ref=f1e5474]:
+                  - generic [ref=f1e5475]:
+                    - link "\"United States District Court, Central District of California, Case No. CV10–03790 AHM (JCx)\"" [ref=f1e5476] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200121133844/https://casetext.com/case/hebrew-univ-of-jerusalem-v-gen-motors-llc
+                    - text: . 15 October 2012. Archived from
+                    - link "the original" [ref=f1e5477] [cursor=pointer]:
+                      - /url: https://casetext.com/case/hebrew-univ-of-jerusalem-v-gen-motors-llc
+                    - text: on 21 January 2020
+                    - generic [ref=f1e5478]: . Retrieved 24 November 2019
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=United+States+District+Court%2C+Central+District+of+California%2C+Case+No.+CV10%E2%80%9303790+AHM+%28JCx%29&rft.date=2012-10-15&rft_id=https%3A%2F%2Fcasetext.com%2Fcase%2Fhebrew-univ-of-jerusalem-v-gen-motors-llc&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5479]:
+                - link "Jump up" [ref=f1e5481] [cursor=pointer]:
+                  - /url: "#cite_ref-pacermonitor-hebrew-university_340-0"
+                  - text: ^
+                - generic [ref=f1e5482]:
+                  - generic [ref=f1e5483]:
+                    - 'link "\"United States District Court, Central District of California, Case No.: CV-10-3790-AB (JCx)\"" [ref=f1e5484] [cursor=pointer]':
+                      - /url: https://www.pacermonitor.com/public/case/944657/The_Hebrew_University_of_Jerusalem_v_General_Motors_LLC
+                    - text: . 15 January 2015.
+                    - link "Archived" [ref=f1e5485] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200725030614/https://www.pacermonitor.com/public/case/944657/The_Hebrew_University_of_Jerusalem_v_General_Motors_LLC
+                    - text: from the original on 25 July 2020
+                    - generic [ref=f1e5486]: . Retrieved 24 November 2019
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=United+States+District+Court%2C+Central+District+of+California%2C+Case+No.%3A+CV-10-3790-AB+%28JCx%29&rft.date=2015-01-15&rft_id=https%3A%2F%2Fwww.pacermonitor.com%2Fpublic%2Fcase%2F944657%2FThe_Hebrew_University_of_Jerusalem_v_General_Motors_LLC&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5487]:
+                - link "Jump up" [ref=f1e5489] [cursor=pointer]:
+                  - /url: "#cite_ref-einstein.biz_341-0"
+                  - text: ^
+                - generic [ref=f1e5490]:
+                  - generic [ref=f1e5491]:
+                    - link "\"Einstein\"" [ref=f1e5492] [cursor=pointer]:
+                      - /url: http://einstein.biz/
+                    - text: . Corbis Rights Representation.
+                    - link "Archived" [ref=f1e5493] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20080819220424/http://einstein.biz/
+                    - text: from the original on 19 August 2008
+                    - generic [ref=f1e5494]: . Retrieved 8 August 2008
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Einstein&rft.pub=Corbis+Rights+Representation&rft_id=http%3A%2F%2Feinstein.biz%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5495]:
+                - link "Jump up" [ref=f1e5497] [cursor=pointer]:
+                  - /url: "#cite_ref-342"
+                  - text: ^
+                - generic [ref=f1e5498]:
+                  - generic [ref=f1e5499]:
+                    - 'link "\"Place name detail: Mount Einstein\"" [ref=f1e5500] [cursor=pointer]':
+                      - /url: https://gazetteer.linz.govt.nz/place/3694
+                    - text: . New Zealand Gazetteer.
+                    - link "Land Information New Zealand" [ref=f1e5501] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Land_Information_New_Zealand
+                    - generic [ref=f1e5502]: . Retrieved 21 August 2022
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=New+Zealand+Gazetteer&rft.atitle=Place+name+detail%3A+Mount+Einstein&rft_id=https%3A%2F%2Fgazetteer.linz.govt.nz%2Fplace%2F3694&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5503]:
+                - link "Jump up" [ref=f1e5505] [cursor=pointer]:
+                  - /url: "#cite_ref-343"
+                  - text: ^
+                - generic [ref=f1e5506]:
+                  - generic [ref=f1e5507]:
+                    - link "\"Einstein the Greatest\"" [ref=f1e5508] [cursor=pointer]:
+                      - /url: http://news.bbc.co.uk/2/hi/science/nature/541840.stm
+                    - text: .
+                    - link "BBC News" [ref=f1e5510] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/BBC_News
+                    - text: . 29 November 1999
+                    - generic [ref=f1e5511]: . Retrieved 19 November 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=BBC+News&rft.atitle=Einstein+the+Greatest&rft.date=1999-11-29&rft_id=http%3A%2F%2Fnews.bbc.co.uk%2F2%2Fhi%2Fscience%2Fnature%2F541840.stm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5512]:
+                - link "Jump up" [ref=f1e5514] [cursor=pointer]:
+                  - /url: "#cite_ref-344"
+                  - text: ^
+                - generic [ref=f1e5515]:
+                  - generic [ref=f1e5516]:
+                    - link "\"Newton tops PhysicsWeb poll\"" [ref=f1e5517] [cursor=pointer]:
+                      - /url: https://physicsworld.com/a/newton-tops-physicsweb-poll/
+                    - text: . Physics World. 29 November 1999
+                    - generic [ref=f1e5518]: . Retrieved 19 December 2024
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physics+World&rft.atitle=Newton+tops+PhysicsWeb+poll&rft.date=1999-11-29&rft_id=https%3A%2F%2Fphysicsworld.com%2Fa%2Fnewton-tops-physicsweb-poll%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5519]:
+                - link "Jump up" [ref=f1e5521] [cursor=pointer]:
+                  - /url: "#cite_ref-345"
+                  - text: ^
+                - generic [ref=f1e5522]:
+                  - generic [ref=f1e5523]:
+                    - link "Goldberg, Elkhonon" [ref=f1e5524] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Elkhonon_Goldberg
+                    - text: (2018).
+                    - 'link "Creativity: The Human Brain in the Age of Innovation" [ref=f1e5525] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=Rr9EDwAAQBAJ&pg=PA166
+                    - text: ". New York, NY: Oxford University Press. p. 166."
+                    - link "ISBN" [ref=f1e5526] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-19-046649-7" [ref=f1e5527] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-19-046649-7
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Creativity%3A+The+Human+Brain+in+the+Age+of+Innovation&rft.place=New+York%2C+NY&rft.pages=166&rft.pub=Oxford+University+Press&rft.date=2018&rft.isbn=978-0-19-046649-7&rft.aulast=Goldberg&rft.aufirst=Elkhonon&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DRr9EDwAAQBAJ%26pg%3DPA166&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5528]:
+                - link "Jump up" [ref=f1e5530] [cursor=pointer]:
+                  - /url: "#cite_ref-346"
+                  - text: ^
+                - generic [ref=f1e5531]:
+                  - generic [ref=f1e5532]:
+                    - text: Alter, Adam (2023).
+                    - 'link "Anatomy of a Breakthrough: How to Get Unstuck When It Matters Most" [ref=f1e5533] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=yI4CEQAAQBAJ&pg=PA214
+                    - text: ". New York: Simon & Schuster. p. 214."
+                    - link "ISBN" [ref=f1e5534] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-9821-8296-0" [ref=f1e5535] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-9821-8296-0
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Anatomy+of+a+Breakthrough%3A+How+to+Get+Unstuck+When+It+Matters+Most&rft.place=New+York&rft.pages=214&rft.pub=Simon+%26+Schuster&rft.date=2023&rft.isbn=978-1-9821-8296-0&rft.aulast=Alter&rft.aufirst=Adam&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DyI4CEQAAQBAJ%26pg%3DPA214&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5536]:
+                - link "Jump up" [ref=f1e5538] [cursor=pointer]:
+                  - /url: "#cite_ref-347"
+                  - text: ^
+                - generic [ref=f1e5539]:
+                  - generic [ref=f1e5540]:
+                    - text: Simmons, John G. (1996).
+                    - 'link "The Scientific 100: A Ranking of the Most Influential Scientists, Past and Present" [ref=f1e5541] [cursor=pointer]':
+                      - /url: https://archive.org/details/scientific100ran0000simm/page/8
+                    - text: ". Secaucus, New Jersey: Citadel Press. p. xviii, 8."
+                    - link "ISBN" [ref=f1e5542] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-8065-1749-0" [ref=f1e5543] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-8065-1749-0
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Scientific+100%3A+A+Ranking+of+the+Most+Influential+Scientists%2C+Past+and+Present&rft.place=Secaucus%2C+New+Jersey&rft.pages=xviii%2C+8&rft.pub=Citadel+Press&rft.date=1996&rft.isbn=978-0-8065-1749-0&rft.aulast=Simmons&rft.aufirst=John+G.&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fscientific100ran0000simm%2Fpage%2F8&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5544]:
+                - link "Jump up" [ref=f1e5546] [cursor=pointer]:
+                  - /url: "#cite_ref-348"
+                  - text: ^
+                - generic [ref=f1e5547]:
+                  - generic [ref=f1e5548]:
+                    - text: Szanton, Andrew (1992).
+                    - link "The Recollections of Eugene P. Wigner" [ref=f1e5549] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=6Hj1BwAAQBAJ&pg=PA170
+                    - text: ". Boston, MA: Springer US. pp. 58, 170."
+                    - link "doi" [ref=f1e5550] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1007/978-1-4899-6313-0" [ref=f1e5551] [cursor=pointer]:
+                      - /url: https://doi.org/10.1007%2F978-1-4899-6313-0
+                    - text: .
+                    - link "ISBN" [ref=f1e5552] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-306-44326-8" [ref=f1e5553] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-306-44326-8
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Recollections+of+Eugene+P.+Wigner&rft.place=Boston%2C+MA&rft.pages=58%2C+170&rft.pub=Springer+US&rft.date=1992&rft_id=info%3Adoi%2F10.1007%2F978-1-4899-6313-0&rft.isbn=978-0-306-44326-8&rft.aulast=Szanton&rft.aufirst=Andrew&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D6Hj1BwAAQBAJ%26pg%3DPA170&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5554]:
+                - link "Jump up" [ref=f1e5556] [cursor=pointer]:
+                  - /url: "#cite_ref-349"
+                  - text: ^
+                - generic [ref=f1e5557]:
+                  - generic [ref=f1e5558]:
+                    - link "\"Here Comes the World Year of Physics\"" [ref=f1e5559] [cursor=pointer]:
+                      - /url: https://www.aps.org/archives/publications/apsnews/200310/wyp.cfm
+                    - text: . aps.org.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=aps.org&rft.atitle=Here+Comes+the+World+Year+of+Physics&rft_id=https%3A%2F%2Fwww.aps.org%2Farchives%2Fpublications%2Fapsnews%2F200310%2Fwyp.cfm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5560]:
+                - link "Jump up" [ref=f1e5562] [cursor=pointer]:
+                  - /url: "#cite_ref-350"
+                  - text: ^
+                - generic [ref=f1e5563]:
+                  - generic [ref=f1e5564]:
+                    - link "\"International Year of Physics, 2005\"" [ref=f1e5565] [cursor=pointer]:
+                      - /url: https://digitallibrary.un.org/record/523158?ln=en&v=pdf
+                    - text: . United Nations Digital Library. 16 January 2004.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=United+Nations+Digital+Library&rft.atitle=International+Year+of+Physics%2C+2005&rft.date=2004-01-16&rft_id=https%3A%2F%2Fdigitallibrary.un.org%2Frecord%2F523158%3Fln%3Den%26v%3Dpdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5566]:
+                - link "Jump up" [ref=f1e5568] [cursor=pointer]:
+                  - /url: "#cite_ref-351"
+                  - text: ^
+                - generic [ref=f1e5569]:
+                  - generic [ref=f1e5570]:
+                    - link "Halpern, Paul" [ref=f1e5571] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Paul_Halpern
+                    - text: (2019).
+                    - link "\"Albert Einstein, celebrity scientist\"" [ref=f1e5572] [cursor=pointer]:
+                      - /url: https://physicstoday.scitation.org/doi/10.1063/PT.3.4183
+                    - text: .
+                    - link "Physics Today" [ref=f1e5574] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Physics_Today
+                    - text: ". 72 (4): 38–45."
+                    - link "Bibcode" [ref=f1e5575] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2019PhT....72d..38H" [ref=f1e5576] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2019PhT....72d..38H
+                    - text: .
+                    - link "doi" [ref=f1e5577] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1063/PT.3.4183" [ref=f1e5578] [cursor=pointer]:
+                      - /url: https://doi.org/10.1063%2FPT.3.4183
+                    - text: .
+                    - link "S2CID" [ref=f1e5579] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "187603798" [ref=f1e5580] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:187603798
+                    - text: .
+                    - link "Archived" [ref=f1e5581] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210414011401/https://physicstoday.scitation.org/doi/10.1063/PT.3.4183
+                    - text: from the original on 14 April 2021
+                    - generic [ref=f1e5582]: . Retrieved 21 February 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physics+Today&rft.atitle=Albert+Einstein%2C+celebrity+scientist&rft.volume=72&rft.issue=4&rft.pages=38-45&rft.date=2019&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A187603798%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.1063%2FPT.3.4183&rft_id=info%3Abibcode%2F2019PhT....72d..38H&rft.aulast=Halpern&rft.aufirst=Paul&rft_id=https%3A%2F%2Fphysicstoday.scitation.org%2Fdoi%2F10.1063%2FPT.3.4183&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5583]:
+                - link "Jump up" [ref=f1e5585] [cursor=pointer]:
+                  - /url: "#cite_ref-352"
+                  - text: ^
+                - generic [ref=f1e5586]:
+                  - generic [ref=f1e5587]:
+                    - text: Fahy, Declan (2015).
+                    - link "\"A Brief History Of Scientific Celebrity\"" [ref=f1e5588] [cursor=pointer]:
+                      - /url: https://skepticalinquirer.org/2015/07/a-brief-history-of-scientific-celebrity/
+                    - text: .
+                    - link "Skeptical Inquirer" [ref=f1e5590] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Skeptical_Inquirer
+                    - text: . Vol. 39, no. 4.
+                    - link "Archived" [ref=f1e5591] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210510182647/https://skepticalinquirer.org/2015/07/a-brief-history-of-scientific-celebrity/
+                    - text: from the original on 10 May 2021
+                    - generic [ref=f1e5592]: . Retrieved 21 February 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Skeptical+Inquirer&rft.atitle=A+Brief+History+Of+Scientific+Celebrity&rft.volume=39&rft.issue=4&rft.date=2015&rft.aulast=Fahy&rft.aufirst=Declan&rft_id=https%3A%2F%2Fskepticalinquirer.org%2F2015%2F07%2Fa-brief-history-of-scientific-celebrity%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5593]:
+                - link "Jump up" [ref=f1e5595] [cursor=pointer]:
+                  - /url: "#cite_ref-353"
+                  - text: ^
+                - generic [ref=f1e5596]:
+                  - generic [ref=f1e5597]:
+                    - text: Missner, Marshall (May 1985). "Why Einstein Became Famous in America".
+                    - link "Social Studies of Science" [ref=f1e5599] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Social_Studies_of_Science
+                    - text: ". 15 (2): 267–291."
+                    - link "doi" [ref=f1e5600] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1177/030631285015002003" [ref=f1e5601] [cursor=pointer]:
+                      - /url: https://doi.org/10.1177%2F030631285015002003
+                    - text: .
+                    - link "JSTOR" [ref=f1e5602] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "285389" [ref=f1e5603] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/285389
+                    - text: .
+                    - link "S2CID" [ref=f1e5604] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "143398600" [ref=f1e5605] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:143398600
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Social+Studies+of+Science&rft.atitle=Why+Einstein+Became+Famous+in+America&rft.volume=15&rft.issue=2&rft.pages=267-291&rft.date=1985-05&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A143398600%23id-name%3DS2CID&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F285389%23id-name%3DJSTOR&rft_id=info%3Adoi%2F10.1177%2F030631285015002003&rft.aulast=Missner&rft.aufirst=Marshall&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5606]:
+                - link "Jump up" [ref=f1e5608] [cursor=pointer]:
+                  - /url: "#cite_ref-disguise_354-0"
+                  - text: ^
+                - generic [ref=f1e5609]:
+                  - generic [ref=f1e5610]:
+                    - text: Libman, E. (14 January 1939).
+                    - generic "Free access subject to limited trial, subscription normally required" [ref=f1e5611]:
+                      - link "\"Disguise\"" [ref=f1e5612] [cursor=pointer]:
+                        - /url: https://www.newyorker.com/magazine/1939/01/14/disguise-2
+                    - text: . The New Yorker.
+                    - link "Archived" [ref=f1e5613] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20200725014949/https://www.newyorker.com/magazine/1939/01/14/disguise-2
+                    - text: from the original on 25 July 2020
+                    - generic [ref=f1e5614]: . Retrieved 15 April 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+Yorker&rft.atitle=Disguise&rft.date=1939-01-14&rft.aulast=Libman&rft.aufirst=E.&rft_id=https%3A%2F%2Fwww.newyorker.com%2Fmagazine%2F1939%2F01%2F14%2Fdisguise-2&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5615]:
+                - link "Jump up" [ref=f1e5617] [cursor=pointer]:
+                  - /url: "#cite_ref-orchestra_355-0"
+                  - text: ^
+                - generic [ref=f1e5618]:
+                  - generic [ref=f1e5619]:
+                    - text: McTee, Cindy.
+                    - link "\"Einstein's Dream for orchestra\"" [ref=f1e5620] [cursor=pointer]:
+                      - /url: http://www.cindymctee.com/einsteins_dream.html
+                    - text: . Cindymctee.com.
+                    - link "Archived" [ref=f1e5621] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20170418203004/http://cindymctee.com/einsteins_dream.html
+                    - text: from the original on 18 April 2017
+                    - generic [ref=f1e5622]: . Retrieved 17 July 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Einstein%27s+Dream+for+orchestra&rft.pub=Cindymctee.com&rft.aulast=McTee&rft.aufirst=Cindy&rft_id=http%3A%2F%2Fwww.cindymctee.com%2Feinsteins_dream.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5623]:
+                - link "Jump up" [ref=f1e5625] [cursor=pointer]:
+                  - /url: "#cite_ref-slqbwn_356-0"
+                  - text: ^
+                - generic [ref=f1e5626]:
+                  - generic [ref=f1e5627]:
+                    - text: Golden, Frederic (3 January 2000).
+                    - 'link "\"Person of the Century: Albert Einstein\"" [ref=f1e5628] [cursor=pointer]':
+                      - /url: https://web.archive.org/web/20060221080452/http://www.time.com/time/time100/poc/magazine/albert_einstein5a.html
+                    - text: . Time. Archived from
+                    - link "the original" [ref=f1e5629] [cursor=pointer]:
+                      - /url: https://www.time.com/time/time100/poc/magazine/albert_einstein5a.html
+                    - text: on 21 February 2006
+                    - generic [ref=f1e5630]: . Retrieved 25 February 2006
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Time&rft.atitle=Person+of+the+Century%3A+Albert+Einstein&rft.date=2000-01-03&rft.aulast=Golden&rft.aufirst=Frederic&rft_id=https%3A%2F%2Fwww.time.com%2Ftime%2Ftime100%2Fpoc%2Fmagazine%2Falbert_einstein5a.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5631]:
+                - link "Jump up" [ref=f1e5633] [cursor=pointer]:
+                  - /url: "#cite_ref-wordnetweb.princeton.edu_357-0"
+                  - text: ^
+                - generic [ref=f1e5634]:
+                  - generic [ref=f1e5635]:
+                    - link "\"Result of WordNet Search for Einstein\"" [ref=f1e5636] [cursor=pointer]:
+                      - /url: http://wordnetweb.princeton.edu/perl/webwn?s=Einstein
+                    - text: . 3.1. The Trustees of Princeton University.
+                    - link "Archived" [ref=f1e5637] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20150828054753/http://wordnetweb.princeton.edu/perl/webwn?s=Einstein
+                    - text: from the original on 28 August 2015
+                    - generic [ref=f1e5638]: . Retrieved 4 January 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Result+of+WordNet+Search+for+Einstein&rft.series=3.1&rft.pub=The+Trustees+of+Princeton+University&rft_id=http%3A%2F%2Fwordnetweb.princeton.edu%2Fperl%2Fwebwn%3Fs%3DEinstein&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5639]:
+                - link "Jump up" [ref=f1e5641] [cursor=pointer]:
+                  - /url: "#cite_ref-fake-quotes_358-0"
+                  - text: ^
+                - generic [ref=f1e5642]:
+                  - generic [ref=f1e5643]:
+                    - text: Novak, Matt (16 May 2015).
+                    - link "\"9 Albert Einstein Quotes That Are Completely Fake\"" [ref=f1e5644] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20180705004258/https://www.gizmodo.com.au/2015/05/9-albert-einstein-quotes-that-are-totally-fake/
+                    - text: . Gizmodo. Archived from
+                    - link "the original" [ref=f1e5645] [cursor=pointer]:
+                      - /url: https://www.gizmodo.com.au/2015/05/9-albert-einstein-quotes-that-are-totally-fake/
+                    - text: on 5 July 2018
+                    - generic [ref=f1e5646]: . Retrieved 4 May 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Gizmodo&rft.atitle=9+Albert+Einstein+Quotes+That+Are+Completely+Fake&rft.date=2015-05-16&rft.aulast=Novak&rft.aufirst=Matt&rft_id=https%3A%2F%2Fwww.gizmodo.com.au%2F2015%2F05%2F9-albert-einstein-quotes-that-are-totally-fake%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5647]:
+                - link "Jump up" [ref=f1e5649] [cursor=pointer]:
+                  - /url: "#cite_ref-humiliate-atheist_359-0"
+                  - text: ^
+                - generic [ref=f1e5650]:
+                  - generic [ref=f1e5651]:
+                    - link "\"Did Albert Einstein Humiliate an Atheist Professor?\"" [ref=f1e5652] [cursor=pointer]:
+                      - /url: https://www.snopes.com/fact-check/false-einstein-humiliates-professor/
+                    - text: . Snopes. 29 June 2004.
+                    - link "Archived" [ref=f1e5653] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20211104194315/https://www.snopes.com/fact-check/false-einstein-humiliates-professor/
+                    - text: from the original on 4 November 2021
+                    - generic [ref=f1e5654]: . Retrieved 4 May 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Did+Albert+Einstein+Humiliate+an+Atheist+Professor%3F&rft.pub=Snopes&rft.date=2004-06-29&rft_id=https%3A%2F%2Fwww.snopes.com%2Ffact-check%2Ffalse-einstein-humiliates-professor%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5655]:
+                - link "Jump up" [ref=f1e5657] [cursor=pointer]:
+                  - /url: "#cite_ref-360"
+                  - text: ^
+                - generic [ref=f1e5658]:
+                  - generic [ref=f1e5659]:
+                    - link "\"Einsteinium – Element\"" [ref=f1e5660] [cursor=pointer]:
+                      - /url: https://www.rsc.org/periodic-table/element/99/einsteinium
+                    - text: .
+                    - link "Royal Society of Chemistry" [ref=f1e5662] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Royal_Society_of_Chemistry
+                    - text: .
+                    - link "Archived" [ref=f1e5663] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20221216041535/https://www.rsc.org/periodic-table/element/99/einsteinium
+                    - text: from the original on 16 December 2022
+                    - generic [ref=f1e5664]: . Retrieved 16 December 2022
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Royal+Society+of+Chemistry&rft.atitle=Einsteinium+%E2%80%93+Element&rft_id=https%3A%2F%2Fwww.rsc.org%2Fperiodic-table%2Felement%2F99%2Feinsteinium&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5665]:
+                - link "Jump up" [ref=f1e5667] [cursor=pointer]:
+                  - /url: "#cite_ref-361"
+                  - text: ^
+                - generic [ref=f1e5668]:
+                  - generic [ref=f1e5669]:
+                    - link "\"Einstein Papers Project\"" [ref=f1e5670] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20221105001523/https://www.einstein.caltech.edu/index.html
+                    - text: . California Institute of Technology. Archived from
+                    - link "the original" [ref=f1e5671] [cursor=pointer]:
+                      - /url: https://www.einstein.caltech.edu/index.html
+                    - text: on 5 November 2022
+                    - generic [ref=f1e5672]: . Retrieved 5 November 2022
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Einstein+Papers+Project&rft.pub=California+Institute+of+Technology&rft_id=https%3A%2F%2Fwww.einstein.caltech.edu%2Findex.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5673]:
+                - link "Jump up" [ref=f1e5675] [cursor=pointer]:
+                  - /url: "#cite_ref-362"
+                  - text: ^
+                - generic [ref=f1e5676]:
+                  - generic [ref=f1e5677]:
+                    - link "\"Albert Einstein\"" [ref=f1e5678] [cursor=pointer]:
+                      - /url: http://press.princeton.edu/einstein/
+                    - text: . Princeton University Press
+                    - generic [ref=f1e5679]: . Retrieved 5 November 2022
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Albert+Einstein&rft.pub=Princeton+University+Press&rft_id=http%3A%2F%2Fpress.princeton.edu%2Feinstein%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+            - region "Works cited" [ref=f1e5680]:
+              - heading "Works cited" [level=3] [ref=f1e5682]
+              - list [ref=f1e5684]:
+                - listitem [ref=f1e5685]:
+                  - generic [ref=f1e5686]:
+                    - text: "Bell, J. S. (1966). \"On the problem of hidden variables in quantum mechanics\". Reviews of Modern Physics. 38 (3): 447–452."
+                    - link "Bibcode" [ref=f1e5687] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1966RvMP...38..447B" [ref=f1e5688] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1966RvMP...38..447B
+                    - text: .
+                    - link "doi" [ref=f1e5689] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1103/revmodphys.38.447" [ref=f1e5690] [cursor=pointer]:
+                      - /url: https://doi.org/10.1103%2Frevmodphys.38.447
+                    - text: .
+                    - link "OSTI" [ref=f1e5691] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/OSTI_(identifier)
+                    - link "1444158" [ref=f1e5692] [cursor=pointer]:
+                      - /url: https://www.osti.gov/biblio/1444158
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Reviews+of+Modern+Physics&rft.atitle=On+the+problem+of+hidden+variables+in+quantum+mechanics&rft.volume=38&rft.issue=3&rft.pages=447-452&rft.date=1966&rft_id=info%3Adoi%2F10.1103%2Frevmodphys.38.447&rft_id=https%3A%2F%2Fwww.osti.gov%2Fbiblio%2F1444158%23id-name%3DOSTI&rft_id=info%3Abibcode%2F1966RvMP...38..447B&rft.aulast=Bell&rft.aufirst=J.+S.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5693]:
+                  - generic [ref=f1e5694]:
+                    - text: Calaprice, Alice (2000).
+                    - link "The Expanded Quotable Einstein" [ref=f1e5695] [cursor=pointer]:
+                      - /url: https://archive.org/details/expandedquotable00eins/page/n9/mode/2up
+                    - text: . Princeton University Press.
+                    - link "ISBN" [ref=f1e5696] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-691-07021-6" [ref=f1e5697] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-07021-6
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Expanded+Quotable+Einstein&rft.pub=Princeton+University+Press&rft.date=2000&rft.isbn=978-0-691-07021-6&rft.aulast=Calaprice&rft.aufirst=Alice&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fexpandedquotable00eins%2Fpage%2Fn9%2Fmode%2F2up&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5698]:
+                  - generic [ref=f1e5699]:
+                    - text: Calaprice, Alice (2005).
+                    - link "The New Quotable Einstein" [ref=f1e5700] [cursor=pointer]:
+                      - /url: https://archive.org/details/newquotableeinst0000eins/page/n5/mode/2up
+                    - text: . Princeton University Press.
+                    - link "ISBN" [ref=f1e5701] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-691-12075-1" [ref=f1e5702] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-12075-1
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+New+Quotable+Einstein&rft.pub=Princeton+University+Press&rft.date=2005&rft.isbn=978-0-691-12075-1&rft.aulast=Calaprice&rft.aufirst=Alice&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fnewquotableeinst0000eins%2Fpage%2Fn5%2Fmode%2F2up&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5703]:
+                  - generic [ref=f1e5704]:
+                    - text: Calaprice, Alice; Lipscombe, Trevor (2005).
+                    - 'link "Albert Einstein: A Biography" [ref=f1e5705] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=5eWh2O_3OAQC
+                    - text: . Greenwood Publishing Group.
+                    - link "ISBN" [ref=f1e5706] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-313-33080-3" [ref=f1e5707] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-313-33080-3
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Albert+Einstein%3A+A+Biography&rft.pub=Greenwood+Publishing+Group&rft.date=2005&rft.isbn=978-0-313-33080-3&rft.aulast=Calaprice&rft.aufirst=Alice&rft.au=Lipscombe%2C+Trevor&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D5eWh2O_3OAQC&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5708]:
+                  - generic [ref=f1e5709]:
+                    - text: Calaprice, Alice (2010).
+                    - link "The Ultimate Quotable Einstein" [ref=f1e5710] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=G_iziBAPXtEC
+                    - text: . Princeton University Press.
+                    - link "ISBN" [ref=f1e5711] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-4008-3596-6" [ref=f1e5712] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-4008-3596-6
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Ultimate+Quotable+Einstein&rft.pub=Princeton+University+Press&rft.date=2010&rft.isbn=978-1-4008-3596-6&rft.aulast=Calaprice&rft.aufirst=Alice&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DG_iziBAPXtEC&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5713]:
+                  - generic [ref=f1e5714]:
+                    - text: Calaprice, Alice; Kennefick, Daniel; Schulmann, Robert (2015). An Einstein Encyclopedia. Princeton University Press.
+                    - link "Bibcode" [ref=f1e5715] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2016eien.book.....C" [ref=f1e5716] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2016eien.book.....C
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=An+Einstein+Encyclopedia&rft.pub=Princeton+University+Press&rft.date=2015&rft_id=info%3Abibcode%2F2016eien.book.....C&rft.aulast=Calaprice&rft.aufirst=Alice&rft.au=Kennefick%2C+Daniel&rft.au=Schulmann%2C+Robert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5717]:
+                  - generic [ref=f1e5718]:
+                    - link "Chaplin, Charles" [ref=f1e5719] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Charles_Chaplin
+                    - text: "(1964). Charles Chaplin: My Autobiography. New York: Simon and Schuster."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Charles+Chaplin%3A+My+Autobiography&rft.place=New+York&rft.pub=Simon+and+Schuster&rft.date=1964&rft.aulast=Chaplin&rft.aufirst=Charles&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5720]:
+                  - generic [ref=f1e5721]:
+                    - link "Clark, Ronald W." [ref=f1e5722] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Ronald_W._Clark
+                    - text: (1971).
+                    - generic "Free registration required" [ref=f1e5723]:
+                      - 'link "Einstein: The Life and Times" [ref=f1e5724] [cursor=pointer]':
+                        - /url: https://archive.org/details/einstein00rona
+                    - text: ". New York: Avon Books."
+                    - link "ISBN" [ref=f1e5725] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-380-44123-5" [ref=f1e5726] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-380-44123-5
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein%3A+The+Life+and+Times&rft.place=New+York&rft.pub=Avon+Books&rft.date=1971&rft.isbn=978-0-380-44123-5&rft.aulast=Clark&rft.aufirst=Ronald+W.&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Feinstein00rona&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5727]:
+                  - generic [ref=f1e5728]:
+                    - text: Fölsing, Albrecht (1997).
+                    - link "Albert Einstein" [ref=f1e5729] [cursor=pointer]:
+                      - /url: https://archive.org/details/alberteinsteinbi00fols
+                    - text: ". Translated by Osers, Ewald. Abridged by Ewald Osers. New York: Penguin Viking."
+                    - link "ISBN" [ref=f1e5730] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-670-85545-2" [ref=f1e5731] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-670-85545-2
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Albert+Einstein&rft.place=New+York&rft.pub=Penguin+Viking&rft.date=1997&rft.isbn=978-0-670-85545-2&rft.aulast=F%C3%B6lsing&rft.aufirst=Albrecht&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Falberteinsteinbi00fols&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5732]:
+                  - generic [ref=f1e5733]:
+                    - text: Fine, Arthur (2017).
+                    - link "\"The Einstein-Podolsky-Rosen Argument in Quantum Theory\"" [ref=f1e5734] [cursor=pointer]:
+                      - /url: https://plato.stanford.edu/entries/qt-epr/
+                    - text: . Stanford Encyclopedia of Philosophy. Metaphysics Research Lab, Stanford University.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Stanford+Encyclopedia+of+Philosophy&rft.atitle=The+Einstein-Podolsky-Rosen+Argument+in+Quantum+Theory&rft.date=2017&rft.aulast=Fine&rft.aufirst=Arthur&rft_id=https%3A%2F%2Fplato.stanford.edu%2Fentries%2Fqt-epr%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5735]:
+                  - generic [ref=f1e5736]:
+                    - link "Galison, Peter" [ref=f1e5737] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Peter_Galison
+                    - text: "(Winter 2000). \"Einstein's Clocks: The Question of Time\". Critical Inquiry. 26 (2): 355–389."
+                    - link "doi" [ref=f1e5738] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1086/448970" [ref=f1e5739] [cursor=pointer]:
+                      - /url: https://doi.org/10.1086%2F448970
+                    - text: .
+                    - link "JSTOR" [ref=f1e5740] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "1344127" [ref=f1e5741] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/1344127
+                    - text: .
+                    - link "S2CID" [ref=f1e5742] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "144484466" [ref=f1e5743] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:144484466
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Critical+Inquiry&rft.atitle=Einstein%27s+Clocks%3A+The+Question+of+Time&rft.ssn=winter&rft.volume=26&rft.issue=2&rft.pages=355-389&rft.date=2000&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A144484466%23id-name%3DS2CID&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F1344127%23id-name%3DJSTOR&rft_id=info%3Adoi%2F10.1086%2F448970&rft.aulast=Galison&rft.aufirst=Peter&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5744]:
+                  - generic [ref=f1e5745]:
+                    - text: Glick, Thomas F., ed. (1987). The Comparative Reception of Relativity. Kluwer Academic Publishers.
+                    - link "ISBN" [ref=f1e5746] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-90-277-2498-4" [ref=f1e5747] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-90-277-2498-4
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Comparative+Reception+of+Relativity&rft.pub=Kluwer+Academic+Publishers&rft.date=1987&rft.isbn=978-90-277-2498-4&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5748]:
+                  - generic [ref=f1e5749]:
+                    - text: Gordin, Michael D. (2020). Einstein in Bohemia. Princeton University Press.
+                    - link "ISBN" [ref=f1e5750] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-691-17737-3" [ref=f1e5751] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-17737-3
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+in+Bohemia&rft.pub=Princeton+University+Press&rft.date=2020&rft.isbn=978-0-691-17737-3&rft.aulast=Gordin&rft.aufirst=Michael+D.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5752]:
+                  - generic [ref=f1e5753]:
+                    - text: Harrigan, Nicholas;
+                    - link "Spekkens, Robert W." [ref=f1e5754] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Robert_Spekkens
+                    - text: (2010). "Einstein, incompleteness, and the epistemic view of quantum states".
+                    - link "Foundations of Physics" [ref=f1e5756] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Foundations_of_Physics
+                    - text: ". 40 (2): 125."
+                    - link "arXiv" [ref=f1e5757] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5758]:
+                      - link "0706.2661" [ref=f1e5759] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/0706.2661
+                    - text: .
+                    - link "Bibcode" [ref=f1e5760] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "2010FoPh...40..125H" [ref=f1e5761] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/2010FoPh...40..125H
+                    - text: .
+                    - link "doi" [ref=f1e5762] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1007/s10701-009-9347-0" [ref=f1e5763] [cursor=pointer]:
+                      - /url: https://doi.org/10.1007%2Fs10701-009-9347-0
+                    - text: .
+                    - link "S2CID" [ref=f1e5764] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "32755624" [ref=f1e5765] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:32755624
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Foundations+of+Physics&rft.atitle=Einstein%2C+incompleteness%2C+and+the+epistemic+view+of+quantum+states&rft.volume=40&rft.issue=2&rft.pages=125&rft.date=2010&rft_id=info%3Aarxiv%2F0706.2661&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A32755624%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.1007%2Fs10701-009-9347-0&rft_id=info%3Abibcode%2F2010FoPh...40..125H&rft.aulast=Harrigan&rft.aufirst=Nicholas&rft.au=Spekkens%2C+Robert+W.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5766]:
+                  - generic [ref=f1e5767]:
+                    - link "Highfield, Roger" [ref=f1e5768] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Roger_Highfield
+                    - text: ; Carter, Paul (1993).
+                    - generic "Free registration required" [ref=f1e5769]:
+                      - link "The Private Lives of Albert Einstein" [ref=f1e5770] [cursor=pointer]:
+                        - /url: https://archive.org/details/privatelivesofal00high_1
+                    - text: ". London: Faber and Faber."
+                    - link "ISBN" [ref=f1e5771] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-571-17170-5" [ref=f1e5772] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-571-17170-5
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Private+Lives+of+Albert+Einstein&rft.place=London&rft.pub=Faber+and+Faber&rft.date=1993&rft.isbn=978-0-571-17170-5&rft.aulast=Highfield&rft.aufirst=Roger&rft.au=Carter%2C+Paul&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fprivatelivesofal00high_1&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5773]:
+                  - generic [ref=f1e5774]:
+                    - link "Hoffmann, Banesh" [ref=f1e5775] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Banesh_Hoffmann
+                    - text: ;
+                    - link "Dukas, Helen" [ref=f1e5776] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Helen_Dukas
+                    - text: (1972).
+                    - generic "Free registration required" [ref=f1e5777]:
+                      - 'link "Albert Einstein: Creator and Rebel" [ref=f1e5778] [cursor=pointer]':
+                        - /url: https://archive.org/details/alberteinsteincr0000hoff_y3a8
+                    - text: ". New York: Viking Press."
+                    - link "ISBN" [ref=f1e5779] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-670-11181-7" [ref=f1e5780] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-670-11181-7
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Albert+Einstein%3A+Creator+and+Rebel&rft.place=New+York&rft.pub=Viking+Press&rft.date=1972&rft.isbn=978-0-670-11181-7&rft.aulast=Hoffmann&rft.aufirst=Banesh&rft.au=Dukas%2C+Helen&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Falberteinsteincr0000hoff_y3a8&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5781]:
+                  - generic [ref=f1e5782]:
+                    - link "Holton, Gerald" [ref=f1e5783] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Gerald_Holton
+                    - text: (April 1984).
+                    - link "\"The migration of physicists to the United States\"" [ref=f1e5784] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=prgDAAAAMBAJ&pg=PA18
+                    - text: ". Bulletin of the Atomic Scientists. 40 (4). Educational Foundation for Nuclear Science: 18–24."
+                    - link "Bibcode" [ref=f1e5785] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1984BuAtS..40d..18H" [ref=f1e5786] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1984BuAtS..40d..18H
+                    - text: .
+                    - link "doi" [ref=f1e5787] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1080/00963402.1984.11459207" [ref=f1e5788] [cursor=pointer]:
+                      - /url: https://doi.org/10.1080%2F00963402.1984.11459207
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Bulletin+of+the+Atomic+Scientists&rft.atitle=The+migration+of+physicists+to+the+United+States&rft.volume=40&rft.issue=4&rft.pages=18-24&rft.date=1984-04&rft_id=info%3Adoi%2F10.1080%2F00963402.1984.11459207&rft_id=info%3Abibcode%2F1984BuAtS..40d..18H&rft.aulast=Holton&rft.aufirst=Gerald&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DprgDAAAAMBAJ%26pg%3DPA18&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5789]:
+                  - generic [ref=f1e5790]:
+                    - text: "Howard, D. (1990). \"\"Nicht Sein Kann was Nicht Sein Darf,\" or the Prehistory of EPR, 1909–1935: Einstein's Early Worries about the Quantum Mechanics of Composite Systems\". Sixty-Two Years of Uncertainty. NATO ASI Series. Vol. 226. Springer. pp. 61–111."
+                    - link "doi" [ref=f1e5792] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1007/978-1-4684-8771-8_6" [ref=f1e5793] [cursor=pointer]:
+                      - /url: https://doi.org/10.1007%2F978-1-4684-8771-8_6
+                    - text: .
+                    - link "ISBN" [ref=f1e5794] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-4684-8773-2" [ref=f1e5795] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-4684-8773-2
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=%22Nicht+Sein+Kann+was+Nicht+Sein+Darf%2C%22+or+the+Prehistory+of+EPR%2C+1909%E2%80%931935%3A+Einstein%27s+Early+Worries+about+the+Quantum+Mechanics+of+Composite+Systems&rft.btitle=Sixty-Two+Years+of+Uncertainty&rft.series=NATO+ASI+Series&rft.pages=61-111&rft.pub=Springer&rft.date=1990&rft_id=info%3Adoi%2F10.1007%2F978-1-4684-8771-8_6&rft.isbn=978-1-4684-8773-2&rft.aulast=Howard&rft.aufirst=D.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5796]:
+                  - generic [ref=f1e5797]:
+                    - link "Isaacson, Walter" [ref=f1e5798] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Walter_Isaacson
+                    - text: (2007).
+                    - 'link "Einstein: His Life and Universe" [ref=f1e5800] [cursor=pointer]':
+                      - /url: https://en.wikipedia.org/wiki/Einstein:_His_Life_and_Universe
+                    - text: ". New York: Simon & Schuster Paperbacks."
+                    - link "ISBN" [ref=f1e5801] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-7432-6473-0" [ref=f1e5802] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-7432-6473-0
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein%3A+His+Life+and+Universe&rft.place=New+York&rft.pub=Simon+%26+Schuster+Paperbacks&rft.date=2007&rft.isbn=978-0-7432-6473-0&rft.aulast=Isaacson&rft.aufirst=Walter&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5803]:
+                  - generic [ref=f1e5804]:
+                    - text: Jerome, Fred; Taylor, Rodger (2006).
+                    - link "Einstein on Race and Racism" [ref=f1e5805] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=4d79VQdOfFUC&pg=PR10
+                    - text: . Rutgers University Press. p. 10.
+                    - link "ISBN" [ref=f1e5806] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-8135-3952-2" [ref=f1e5807] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-8135-3952-2
+                    - generic [ref=f1e5808]: . Retrieved 18 June 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+on+Race+and+Racism&rft.pages=10&rft.pub=Rutgers+University+Press&rft.date=2006&rft.isbn=978-0-8135-3952-2&rft.aulast=Jerome&rft.aufirst=Fred&rft.au=Taylor%2C+Rodger&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D4d79VQdOfFUC%26pg%3DPR10&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5809]:
+                  - generic [ref=f1e5810]:
+                    - link "Mermin, N. David" [ref=f1e5811] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/N._David_Mermin
+                    - text: (July 1993).
+                    - link "\"Hidden Variables and the Two Theorems of John Bell\"" [ref=f1e5812] [cursor=pointer]:
+                      - /url: http://cqi.inf.usi.ch/qic/Mermin1993.pdf
+                    - text: (PDF).
+                    - link "Reviews of Modern Physics" [ref=f1e5814] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Reviews_of_Modern_Physics
+                    - text: ". 65 (3): 803–15."
+                    - link "arXiv" [ref=f1e5815] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ArXiv_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=f1e5816]:
+                      - link "1802.10119" [ref=f1e5817] [cursor=pointer]:
+                        - /url: https://arxiv.org/abs/1802.10119
+                    - text: .
+                    - link "Bibcode" [ref=f1e5818] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                    - text: ":"
+                    - link "1993RvMP...65..803M" [ref=f1e5819] [cursor=pointer]:
+                      - /url: https://ui.adsabs.harvard.edu/abs/1993RvMP...65..803M
+                    - text: .
+                    - link "doi" [ref=f1e5820] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1103/RevModPhys.65.803" [ref=f1e5821] [cursor=pointer]:
+                      - /url: https://doi.org/10.1103%2FRevModPhys.65.803
+                    - text: .
+                    - link "S2CID" [ref=f1e5822] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "119546199" [ref=f1e5823] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:119546199
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Reviews+of+Modern+Physics&rft.atitle=Hidden+Variables+and+the+Two+Theorems+of+John+Bell&rft.volume=65&rft.issue=3&rft.pages=803-15&rft.date=1993-07&rft_id=info%3Aarxiv%2F1802.10119&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A119546199%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.1103%2FRevModPhys.65.803&rft_id=info%3Abibcode%2F1993RvMP...65..803M&rft.aulast=Mermin&rft.aufirst=N.+David&rft_id=http%3A%2F%2Fcqi.inf.usi.ch%2Fqic%2FMermin1993.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5824]:
+                  - generic [ref=f1e5825]:
+                    - text: Neffe, Jürgen (2007).
+                    - 'link "Einstein: A Biography" [ref=f1e5826] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=B8K6n177ZwcC
+                    - text: . Translated by Frisch, Shelley.
+                    - link "Farrar, Straus and Giroux" [ref=f1e5827] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Farrar,_Straus_and_Giroux
+                    - text: .
+                    - link "ISBN" [ref=f1e5828] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-374-14664-1" [ref=f1e5829] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-374-14664-1
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein%3A+A+Biography&rft.pub=Farrar%2C+Straus+and+Giroux&rft.date=2007&rft.isbn=978-0-374-14664-1&rft.aulast=Neffe&rft.aufirst=J%C3%BCrgen&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DB8K6n177ZwcC&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5830]:
+                  - generic [ref=f1e5831]:
+                    - link "Pais, Abraham" [ref=f1e5832] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Abraham_Pais
+                    - text: (1982).
+                    - 'link "Subtle is the Lord: The Science and the Life of Albert Einstein" [ref=f1e5834] [cursor=pointer]':
+                      - /url: https://en.wikipedia.org/wiki/Subtle_is_the_Lord:_The_Science_and_the_Life_of_Albert_Einstein
+                    - text: . Oxford University Press.
+                    - link "ISBN" [ref=f1e5835] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-19-853907-0" [ref=f1e5836] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-19-853907-0
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Subtle+is+the+Lord%3A+The+Science+and+the+Life+of+Albert+Einstein&rft.pub=Oxford+University+Press&rft.date=1982&rft.isbn=978-0-19-853907-0&rft.aulast=Pais&rft.aufirst=Abraham&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5837]:
+                  - generic [ref=f1e5838]:
+                    - text: Pais, Abraham (1994).
+                    - generic "Free registration required" [ref=f1e5839]:
+                      - link "Einstein Lived Here" [ref=f1e5840] [cursor=pointer]:
+                        - /url: https://archive.org/details/einsteinlivedher00pais
+                    - text: . Oxford University Press.
+                    - link "ISBN" [ref=f1e5841] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-19-280672-7" [ref=f1e5842] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-19-280672-7
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+Lived+Here&rft.pub=Oxford+University+Press&rft.date=1994&rft.isbn=978-0-19-280672-7&rft.aulast=Pais&rft.aufirst=Abraham&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Feinsteinlivedher00pais&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5843]:
+                  - generic [ref=f1e5844]:
+                    - link "Penrose, Roger" [ref=f1e5845] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Roger_Penrose
+                    - text: (2007). The Road to Reality. Vintage Books.
+                    - link "ISBN" [ref=f1e5846] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-679-77631-4" [ref=f1e5847] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-679-77631-4
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Road+to+Reality&rft.pub=Vintage+Books&rft.date=2007&rft.isbn=978-0-679-77631-4&rft.aulast=Penrose&rft.aufirst=Roger&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5848]:
+                  - generic [ref=f1e5849]:
+                    - link "Peres, Asher" [ref=f1e5850] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Asher_Peres
+                    - text: "(2002). Quantum Theory: Concepts and Methods. Kluwer. p. 149."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Quantum+Theory%3A+Concepts+and+Methods&rft.pages=149&rft.pub=Kluwer&rft.date=2002&rft.aulast=Peres&rft.aufirst=Asher&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5851]:
+                  - generic [ref=f1e5852]:
+                    - link "Robeson, Paul" [ref=f1e5853] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Paul_Robeson
+                    - text: (2002). Paul Robeson Speaks. Citadel. p. 333.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Paul+Robeson+Speaks&rft.pages=333&rft.pub=Citadel&rft.date=2002&rft.aulast=Robeson&rft.aufirst=Paul&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5854]:
+                  - generic [ref=f1e5855]:
+                    - link "Rowe, David E." [ref=f1e5856] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/David_E._Rowe
+                    - text: "; Schulmann, Robert, eds. (2007). Einstein on Politics: His Private Thoughts and Public Stands on Nationalism, Zionism, War, Peace, and the Bomb. Princeton University Press."
+                    - link "ISBN" [ref=f1e5857] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-691-12094-2" [ref=f1e5858] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-12094-2
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+on+Politics%3A+His+Private+Thoughts+and+Public+Stands+on+Nationalism%2C+Zionism%2C+War%2C+Peace%2C+and+the+Bomb&rft.pub=Princeton+University+Press&rft.date=2007&rft.isbn=978-0-691-12094-2&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5859]:
+                  - generic [ref=f1e5860]:
+                    - text: Rowe, David E.; Schulmann, Robert, eds. (2013).
+                    - 'link "Einstein on Politics: His Private Thoughts and Public Stands on Nationalism, Zionism, War, Peace, and the Bomb" [ref=f1e5861] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=_X1dAAAAQBAJ
+                    - text: . Princeton University Press.
+                    - link "ISBN" [ref=f1e5862] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-4008-4828-7" [ref=f1e5863] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-4008-4828-7
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+on+Politics%3A+His+Private+Thoughts+and+Public+Stands+on+Nationalism%2C+Zionism%2C+War%2C+Peace%2C+and+the+Bomb&rft.pub=Princeton+University+Press&rft.date=2013&rft.isbn=978-1-4008-4828-7&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D_X1dAAAAQBAJ&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5864]:
+                  - generic [ref=f1e5865]:
+                    - text: "Scheideler, Britta (2002). \"The Scientist as Moral Authority: Albert Einstein between Elitism and Democracy, 1914–1933\". Historical Studies in the Physical and Biological Sciences. 32 (2): 319–346."
+                    - link "doi" [ref=f1e5866] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1525/hsps.2002.32.2.319" [ref=f1e5867] [cursor=pointer]:
+                      - /url: https://doi.org/10.1525%2Fhsps.2002.32.2.319
+                    - text: .
+                    - link "JSTOR" [ref=f1e5868] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "10.1525/hsps.2002.32.2.319" [ref=f1e5869] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/10.1525/hsps.2002.32.2.319
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Historical+Studies+in+the+Physical+and+Biological+Sciences&rft.atitle=The+Scientist+as+Moral+Authority%3A+Albert+Einstein+between+Elitism+and+Democracy%2C+1914%E2%80%931933&rft.volume=32&rft.issue=2&rft.pages=319-346&rft.date=2002&rft_id=info%3Adoi%2F10.1525%2Fhsps.2002.32.2.319&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F10.1525%2Fhsps.2002.32.2.319%23id-name%3DJSTOR&rft.aulast=Scheideler&rft.aufirst=Britta&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5870]:
+                  - generic [ref=f1e5871]:
+                    - text: Stachel, John J. (1996). "Albert Einstein and Mileva Marić". In Pycior, Helena M.; Abir-Am, Pnina; Guttmann, Nancy G. (eds.).
+                    - link "Creative Couples in the Sciences" [ref=f1e5872] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20080307015425/http://philoscience.unibe.ch/lehre/winter99/einstein/Stachel1966.pdf
+                    - text: (PDF). Rutgers University Press.
+                    - link "ISBN" [ref=f1e5873] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-813-52188-6" [ref=f1e5874] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-813-52188-6
+                    - text: . Archived from
+                    - link "the original" [ref=f1e5875] [cursor=pointer]:
+                      - /url: http://philoscience.unibe.ch/lehre/winter99/einstein/Stachel1966.pdf
+                    - text: (PDF) on 7 March 2008
+                    - generic [ref=f1e5876]: . Retrieved 13 May 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Albert+Einstein+and+Mileva+Mari%C4%87&rft.btitle=Creative+Couples+in+the+Sciences&rft.pub=Rutgers+University+Press&rft.date=1996&rft.isbn=978-0-813-52188-6&rft.aulast=Stachel&rft.aufirst=John+J.&rft_id=http%3A%2F%2Fphiloscience.unibe.ch%2Flehre%2Fwinter99%2Feinstein%2FStachel1966.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - listitem [ref=f1e5877]:
+                  - generic [ref=f1e5878]:
+                    - text: Stachel, John J. (2002).
+                    - generic [ref=f1e5879]: Einstein from 'B' to 'Z'
+                    - text: . Einstein Studies. Vol. 9. Birkhäuser.
+                    - link "ISBN" [ref=f1e5880] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-8176-4143-6" [ref=f1e5881] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-8176-4143-6
+                    - text: .
+                    - link "OCLC" [ref=f1e5882] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/OCLC_(identifier)
+                    - link "237532460" [ref=f1e5883] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/oclc/237532460
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+from+%27B%27+to+%27Z%27&rft.series=Einstein+Studies&rft.pub=Birkh%C3%A4user&rft.date=2002&rft_id=info%3Aoclcnum%2F237532460&rft.isbn=978-0-8176-4143-6&rft.aulast=Stachel&rft.aufirst=John+J.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+          - region "Further reading" [ref=f1e5884]:
+            - heading "Further reading" [level=2] [ref=f1e5886]
+            - list [ref=f1e5888]:
+              - listitem [ref=f1e5889]:
+                - generic [ref=f1e5890]:
+                  - link "Brian, Denis" [ref=f1e5891] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Denis_Brian
+                  - text: (1996).
+                  - generic "Free registration required" [ref=f1e5892]:
+                    - 'link "Einstein: A Life" [ref=f1e5893] [cursor=pointer]':
+                      - /url: https://archive.org/details/einstein00deni
+                  - text: ". New York: John Wiley."
+                  - link "ISBN" [ref=f1e5894] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0471114598" [ref=f1e5895] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0471114598
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein%3A+A+Life&rft.place=New+York&rft.pub=John+Wiley&rft.date=1996&rft.isbn=978-0471114598&rft.aulast=Brian&rft.aufirst=Denis&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Feinstein00deni&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5896]:
+                - generic [ref=f1e5897]:
+                  - link "Brian, Denis" [ref=f1e5898] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Denis_Brian
+                  - text: "(2005). The Unexpected Einstein: The Real Man Behind the Icon. New York: John Wiley."
+                  - link "ISBN" [ref=f1e5899] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0471718406" [ref=f1e5900] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0471718406
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Unexpected+Einstein%3A+The+Real+Man+Behind+the+Icon&rft.place=New+York&rft.pub=John+Wiley&rft.date=2005&rft.isbn=978-0471718406&rft.aulast=Brian&rft.aufirst=Denis&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5901]:
+                - generic [ref=f1e5902]:
+                  - text: "Gimbel, Steven (2015). Einstein: His Space and Times. Yale University Press."
+                  - link "ISBN" [ref=f1e5903] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0300196719" [ref=f1e5904] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0300196719
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein%3A+His+Space+and+Times&rft.pub=Yale+University+Press&rft.date=2015&rft.isbn=978-0300196719&rft.aulast=Gimbel&rft.aufirst=Steven&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5905]:
+                - generic [ref=f1e5906]:
+                  - link "Lindemann, Frederick Alexander" [ref=f1e5907] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Frederick_Alexander_Lindemann
+                  - text: (1922).
+                  - generic "s:1922 Encyclopædia Britannica/Einstein, Albert" [ref=f1e5908]:
+                    - link "\"Einstein, Albert\"" [ref=f1e5909] [cursor=pointer]:
+                      - /url: https://en.wikisource.org/wiki/1922_Encyclop%C3%A6dia_Britannica/Einstein,_Albert
+                  - text: . In Chisholm, Hugh (ed.).
+                  - link "Encyclopædia Britannica" [ref=f1e5911] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Encyclopædia_Britannica
+                  - text: "(12th ed.). London & New York: The Encyclopædia Britannica Company."
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Einstein%2C+Albert&rft.btitle=Encyclop%C3%A6dia+Britannica&rft.place=London+%26+New+York&rft.edition=12th&rft.pub=The+Encyclop%C3%A6dia+Britannica+Company&rft.date=1922&rft.aulast=Lindemann&rft.aufirst=Frederick+Alexander&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5912]:
+                - generic [ref=f1e5913]:
+                  - text: "Gimbel, Steven (2012). Einstein's Jewish Science: Physics at the Intersection of Politics and Religion. Johns Hopkins University Press."
+                  - link "ISBN" [ref=f1e5914] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-1421405544" [ref=f1e5915] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1421405544
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein%27s+Jewish+Science%3A+Physics+at+the+Intersection+of+Politics+and+Religion&rft.pub=Johns+Hopkins+University+Press&rft.date=2012&rft.isbn=978-1421405544&rft.aulast=Gimbel&rft.aufirst=Steven&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5916]:
+                - generic [ref=f1e5917]:
+                  - text: Moring, Gary (2004).
+                  - generic "Free registration required" [ref=f1e5918]:
+                    - link "The Complete Idiot's Guide to Understanding Einstein" [ref=f1e5919] [cursor=pointer]:
+                      - /url: https://archive.org/details/completeidiotsgu00mori_0
+                  - text: "(1st ed.). Indianapolis, Indiana: Alpha Books."
+                  - link "ISBN" [ref=f1e5920] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0-02-863180-6" [ref=f1e5921] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-02-863180-6
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Complete+Idiot%27s+Guide+to+Understanding+Einstein&rft.place=Indianapolis%2C+Indiana&rft.edition=1st&rft.pub=Alpha+Books&rft.date=2004&rft.isbn=978-0-02-863180-6&rft.aulast=Moring&rft.aufirst=Gary&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fcompleteidiotsgu00mori_0&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5922]:
+                - generic [ref=f1e5923]:
+                  - link "Oppenheimer, J. Robert" [ref=f1e5924] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/J._Robert_Oppenheimer
+                  - text: "(1971). \"On Albert Einstein\". Science and Synthesis: An International Colloquium Organized by UNESCO on the Tenth Anniversary of the Death of Albert Einstein and Teilhard de Chardin. Lecture delivered at the UNESCO House in Paris on 13 December 1965: 8–12, 208."
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Science+and+Synthesis%3A+An+International+Colloquium+Organized+by+UNESCO+on+the+Tenth+Anniversary+of+the+Death+of+Albert+Einstein+and+Teilhard+de+Chardin&rft.atitle=On+Albert+Einstein&rft.pages=8-12%2C+208&rft.date=1971&rft.aulast=Oppenheimer&rft.aufirst=J.+Robert&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+                - text: "Or:"
+                - generic [ref=f1e5925]:
+                  - link "\"On Albert Einstein by Robert Oppenheimer\"" [ref=f1e5926] [cursor=pointer]:
+                    - /url: http://www.nybooks.com/articles/archives/1966/mar/17/on-albert-einstein/?pagination=false
+                  - text: .
+                  - link "The New York Review of Books" [ref=f1e5928] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/The_New_York_Review_of_Books
+                  - text: . 17 March 1966.
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Review+of+Books&rft.atitle=On+Albert+Einstein+by+Robert+Oppenheimer&rft.date=1966-03-17&rft_id=http%3A%2F%2Fwww.nybooks.com%2Farticles%2Farchives%2F1966%2Fmar%2F17%2Fon-albert-einstein%2F%3Fpagination%3Dfalse&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5929]:
+                - generic [ref=f1e5930]:
+                  - text: Parker, Barry (2000).
+                  - generic "Free registration required" [ref=f1e5931]:
+                    - 'link "Einstein''s Brainchild: Relativity Made Relatively Easy!" [ref=f1e5932] [cursor=pointer]':
+                      - /url: https://archive.org/details/einsteinsbrainch00barr
+                  - text: . Illustrated by Lori Scoffield-Beer. Prometheus Books.
+                  - link "ISBN" [ref=f1e5933] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-1-59102-522-1" [ref=f1e5934] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-59102-522-1
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein%27s+Brainchild%3A+Relativity+Made+Relatively+Easy%21&rft.pub=Prometheus+Books&rft.date=2000&rft.isbn=978-1-59102-522-1&rft.aulast=Parker&rft.aufirst=Barry&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Feinsteinsbrainch00barr&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5935]:
+                - generic [ref=f1e5936]:
+                  - text: "Rogers, Donald W. (2005). Einstein's \"Other\" Theory: The Planck-Bose-Einstein Theory of Heat Capacity. Princeton University Press."
+                  - link "ISBN" [ref=f1e5937] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0-691-11826-0" [ref=f1e5938] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-11826-0
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein%27s+%22Other%22+Theory%3A+The+Planck-Bose-Einstein+Theory+of+Heat+Capacity&rft.pub=Princeton+University+Press&rft.date=2005&rft.isbn=978-0-691-11826-0&rft.aulast=Rogers&rft.aufirst=Donald+W.&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5939]:
+                - generic [ref=f1e5940]:
+                  - link "Schweber, Silvan S." [ref=f1e5941] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Silvan_S._Schweber
+                  - text: (2008).
+                  - generic "Free registration required" [ref=f1e5942]:
+                    - 'link "Einstein and Oppenheimer: The Meaning of Genius" [ref=f1e5943] [cursor=pointer]':
+                      - /url: https://archive.org/details/einsteinoppenhei00schw
+                  - text: . Harvard University Press.
+                  - link "ISBN" [ref=f1e5944] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0-674-02828-9" [ref=f1e5945] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-674-02828-9
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+and+Oppenheimer%3A+The+Meaning+of+Genius&rft.pub=Harvard+University+Press&rft.date=2008&rft.isbn=978-0-674-02828-9&rft.aulast=Schweber&rft.aufirst=Silvan+S.&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Feinsteinoppenhei00schw&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5946]:
+                - generic [ref=f1e5947]:
+                  - text: Stone, A. Douglas (2013).
+                  - generic "Free registration required" [ref=f1e5948]:
+                    - 'link "Einstein and the Quantum: The Quest of the Valiant Swabian" [ref=f1e5949] [cursor=pointer]':
+                      - /url: https://archive.org/details/einsteinquantumq0000ston
+                  - text: . Princeton University Press.
+                  - link "ISBN" [ref=f1e5950] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0-691-13968-5" [ref=f1e5951] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-691-13968-5
+                  - text: .
+                  - link "OCLC" [ref=f1e5952] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/OCLC_(identifier)
+                  - link "925486275" [ref=f1e5953] [cursor=pointer]:
+                    - /url: https://search.worldcat.org/oclc/925486275
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Einstein+and+the+Quantum%3A+The+Quest+of+the+Valiant+Swabian&rft.pub=Princeton+University+Press&rft.date=2013&rft_id=info%3Aoclcnum%2F925486275&rft.isbn=978-0-691-13968-5&rft.aulast=Stone&rft.aufirst=A.+Douglas&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Feinsteinquantumq0000ston&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+              - listitem [ref=f1e5954]:
+                - generic [ref=f1e5955]:
+                  - link "Weinberg, Steven" [ref=f1e5956] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Steven_Weinberg
+                  - text: (2005).
+                  - link "\"Einstein's Mistakes\"" [ref=f1e5957] [cursor=pointer]:
+                    - /url: https://doi.org/10.1063%2F1.2155755
+                  - text: ". Physics Today. 58 (11): 31–35."
+                  - link "Bibcode" [ref=f1e5958] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Bibcode_(identifier)
+                  - text: ":"
+                  - link "2005PhT....58k..31W" [ref=f1e5959] [cursor=pointer]:
+                    - /url: https://ui.adsabs.harvard.edu/abs/2005PhT....58k..31W
+                  - text: .
+                  - link "doi" [ref=f1e5960] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                  - text: ":"
+                  - generic "Freely accessible" [ref=f1e5961]:
+                    - link "10.1063/1.2155755" [ref=f1e5962] [cursor=pointer]:
+                      - /url: https://doi.org/10.1063%2F1.2155755
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Physics+Today&rft.atitle=Einstein%27s+Mistakes&rft.volume=58&rft.issue=11&rft.pages=31-35&rft.date=2005&rft_id=info%3Adoi%2F10.1063%2F1.2155755&rft_id=info%3Abibcode%2F2005PhT....58k..31W&rft.aulast=Weinberg&rft.aufirst=Steven&rft_id=https%3A%2F%2Fdoi.org%2F10.1063%252F1.2155755&rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlbert+Einstein"
+          - region "External links" [ref=f1e5963]:
+            - heading "External links" [level=2] [ref=f1e5965]
+            - navigation "sister projects" [ref=f1e5966]:
+              - generic [ref=f1e5967]:
+                - generic [ref=f1e5968]: Albert Einstein
+                - text: at Wikipedia's
+                - link "sister projects" [ref=f1e5969] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Wikimedia_sister_projects
+              - list [ref=f1e5972]:
+                - listitem [ref=f1e5973]:
+                  - link [ref=f1e5975] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Commons-logo.svg
+                    - img "Wikimedia Commons logo" [ref=f1e5976]
+                  - generic [ref=f1e5977]:
+                    - link "Media" [ref=f1e5978] [cursor=pointer]:
+                      - /url: https://commons.wikimedia.org/wiki/Albert%20Einstein
+                    - text: from Commons
+                - listitem [ref=f1e5979]:
+                  - generic [ref=f1e5982]:
+                    - link "Quotations" [ref=f1e5983] [cursor=pointer]:
+                      - /url: https://en.wikiquote.org/wiki/Albert%20Einstein
+                    - text: from Wikiquote
+                - listitem [ref=f1e5984]:
+                  - link [ref=f1e5986] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Wikisource-logo.svg
+                    - img "Wikisource logo" [ref=f1e5987]
+                  - generic [ref=f1e5988]:
+                    - link "Texts" [ref=f1e5989] [cursor=pointer]:
+                      - /url: https://en.wikisource.org/wiki/Author:Albert%20Einstein
+                    - text: from Wikisource
+            - generic [ref=f1e5991]:
+              - link [ref=f1e5994] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:Wikisource-logo.svg
+                - img "Wikisource logo" [ref=f1e5995]
+              - generic [ref=f1e5996]:
+                - text: German
+                - link "Wikisource" [ref=f1e5997] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikisource
+                - text: "has original works by or about:"
+                - link "Albert Einstein" [ref=f1e6000] [cursor=pointer]:
+                  - /url: https://en.wikisource.org/wiki/de::Albert%20Einstein
+            - generic [ref=f1e6002]:
+              - link [ref=f1e6005] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:Scholia_logo.svg
+                - img "logo" [ref=f1e6006]
+              - generic [ref=f1e6007]:
+                - link "Scholia" [ref=f1e6008] [cursor=pointer]:
+                  - /url: https://www.wikidata.org/wiki/Wikidata:Scholia
+                - text: has an author profile for
+                - link "Albert Einstein" [ref=f1e6011] [cursor=pointer]:
+                  - /url: https://iw.toolforge.org/scholia/author/Q937
+                - text: .
+            - list [ref=f1e6012]:
+              - listitem [ref=f1e6013]:
+                - text: General
+                - list [ref=f1e6014]:
+                  - listitem [ref=f1e6015]:
+                    - link "Official website" [ref=f1e6018] [cursor=pointer]:
+                      - /url: https://alberteinstein.com
+                    - link [ref=f1e6020] [cursor=pointer]:
+                      - /url: https://www.wikidata.org/wiki/Q937#P856
+                      - img "Edit this at Wikidata" [ref=f1e6021]
+                  - listitem [ref=f1e6022]:
+                    - link "Works by Albert Einstein" [ref=f1e6023] [cursor=pointer]:
+                      - /url: https://www.gutenberg.org/ebooks/author/1630
+                    - text: at
+                    - link "Project Gutenberg" [ref=f1e6024] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Project_Gutenberg
+                  - listitem [ref=f1e6025]:
+                    - link "Works by or about Albert Einstein" [ref=f1e6026] [cursor=pointer]:
+                      - /url: https://archive.org/search.php?query=%28%28subject%3A%22Einstein%2C%20Albert%22%20OR%20subject%3A%22Albert%20Einstein%22%20OR%20creator%3A%22Einstein%2C%20Albert%22%20OR%20creator%3A%22Albert%20Einstein%22%20OR%20creator%3A%22Einstein%2C%20A%2E%22%20OR%20title%3A%22Albert%20Einstein%22%20OR%20description%3A%22Einstein%2C%20Albert%22%20OR%20description%3A%22Albert%20Einstein%22%29%20OR%20%28%221879-1955%22%20AND%20Einstein%29%29%20AND%20%28-mediatype:software%29
+                    - text: at the
+                    - link "Internet Archive" [ref=f1e6027] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Internet_Archive
+                  - listitem [ref=f1e6028]:
+                    - link "Works by Albert Einstein" [ref=f1e6029] [cursor=pointer]:
+                      - /url: https://librivox.org/author/1035
+                    - text: at
+                    - link "LibriVox" [ref=f1e6030] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/LibriVox
+                    - text: (public domain audiobooks)
+                  - listitem [ref=f1e6033]:
+                    - link "Albert Einstein" [ref=f1e6034] [cursor=pointer]:
+                      - /url: https://www.nobelprize.org/laureate/26
+                    - text: on Nobelprize.org
+                    - link [ref=f1e6036] [cursor=pointer]:
+                      - /url: https://www.wikidata.org/wiki/Q937#P8024
+                      - img "Edit this at Wikidata" [ref=f1e6037]
+                    - text: including the Nobel Lecture 11 July 1923 Fundamental ideas and problems of the theory of relativity
+              - listitem [ref=f1e6038]:
+                - text: Archival materials collections
+                - list [ref=f1e6039]:
+                  - listitem [ref=f1e6040]:
+                    - link "Albert Einstein Historical Letters, Documents & Papers" [ref=f1e6041] [cursor=pointer]:
+                      - /url: http://www.shapell.org/Collection/Jewish-Figures/Einstein-Albert
+                    - text: from
+                    - link "Shapell Manuscript Foundation" [ref=f1e6042] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Shapell_Manuscript_Foundation
+                  - listitem [ref=f1e6043]:
+                    - link "Albert Einstein" [ref=f1e6044] [cursor=pointer]:
+                      - /url: https://vault.fbi.gov/Albert%20Einstein
+                    - text: "in FBI Records: The Vault"
+                  - listitem [ref=f1e6045]:
+                    - link "The Albert Einstein Archives" [ref=f1e6046] [cursor=pointer]:
+                      - /url: http://www.albert-einstein.org/
+                    - text: at
+                    - link "The Hebrew University of Jerusalem" [ref=f1e6047] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_Hebrew_University_of_Jerusalem
+              - listitem [ref=f1e6048]:
+                - text: Digital collections
+                - list [ref=f1e6049]:
+                  - listitem [ref=f1e6050]:
+                    - link "The Digital Einstein Papers" [ref=f1e6051] [cursor=pointer]:
+                      - /url: http://einsteinpapers.press.princeton.edu/
+                    - text: — An open-access site for The Collected Papers of Albert Einstein, from
+                    - link "Princeton University" [ref=f1e6052] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Princeton_University
+                  - listitem [ref=f1e6053]:
+                    - link "Albert Einstein Digital Collection" [ref=f1e6054] [cursor=pointer]:
+                      - /url: https://digitallibrary.vassar.edu/collections/other-collections?f%5B0%5D=collection%3A5218
+                    - text: from
+                    - link "Vassar College" [ref=f1e6055] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Vassar_College
+                    - text: Digital Collections
+                  - listitem [ref=f1e6056]:
+                    - link "Newspaper clippings about Albert Einstein" [ref=f1e6057] [cursor=pointer]:
+                      - /url: https://purl.org/pressemappe20/folder/pe/004590
+                    - text: in the
+                    - link "20th Century Press Archives" [ref=f1e6058] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/20th_Century_Press_Archives
+                    - text: of the
+                    - link "ZBW" [ref=f1e6059] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/German_National_Library_of_Economics
+                  - listitem [ref=f1e6060]:
+                    - link "Albert – The Digital Repository of the IAS" [ref=f1e6061] [cursor=pointer]:
+                      - /url: https://albert.ias.edu/
+                    - text: ", which contains many digitized original documents and photographs"
+            - navigation "Albert Einstein" [ref=f1e6062]:
+              - table [ref=f1e6063]:
+                - rowgroup [ref=f1e6064]:
+                  - row [ref=f1e6065]:
+                    - columnheader "[hide] v · t · e Albert Einstein" [ref=f1e6066]:
+                      - button "[hide]" [expanded] [ref=f1e6067] [cursor=pointer]
+                      - list [ref=f1e6069]:
+                        - listitem [ref=f1e6070]:
+                          - link "v" [ref=f1e6071] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template:Albert_Einstein
+                          - text: ·
+                        - listitem [ref=f1e6072]:
+                          - link "t" [ref=f1e6073] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template_talk:Albert_Einstein
+                          - text: ·
+                        - listitem [ref=f1e6074]:
+                          - link "e" [ref=f1e6075] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Special:EditPage/Template:Albert_Einstein
+                      - link "Albert Einstein" [ref=f1e6077] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Albert_Einstein
+                  - row [ref=f1e6078]:
+                    - cell [ref=f1e6079]:
+                      - list [ref=f1e6081]:
+                        - listitem [ref=f1e6082]:
+                          - link "Outline" [ref=f1e6083] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Outline_of_Albert_Einstein
+                  - row [ref=f1e6084]:
+                    - rowheader "Physics" [ref=f1e6085]
+                    - cell [ref=f1e6086]:
+                      - list [ref=f1e6088]:
+                        - listitem [ref=f1e6089]:
+                          - link "Theory of relativity" [ref=f1e6090] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Theory_of_relativity
+                          - list [ref=f1e6091]:
+                            - listitem [ref=f1e6092]:
+                              - text: (
+                              - link "Special relativity" [ref=f1e6093] [cursor=pointer]:
+                                - /url: https://en.wikipedia.org/wiki/Special_relativity
+                              - text: ·
+                            - listitem [ref=f1e6094]:
+                              - link "General relativity" [ref=f1e6095] [cursor=pointer]:
+                                - /url: https://en.wikipedia.org/wiki/General_relativity
+                              - text: )
+                          - text: ·
+                        - listitem [ref=f1e6096]:
+                          - link [ref=f1e6097] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Mass–energy_equivalence
+                            - text: Mass–energy equivalence (E=mc
+                            - superscript [ref=f1e6098]: "2"
+                            - text: )
+                          - text: ·
+                        - listitem [ref=f1e6099]:
+                          - link "Brownian motion" [ref=f1e6100] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Brownian_motion
+                          - text: ·
+                        - listitem [ref=f1e6101]:
+                          - link "Photoelectric effect" [ref=f1e6102] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Photoelectric_effect
+                          - text: ·
+                        - listitem [ref=f1e6103]:
+                          - link "Einstein coefficients" [ref=f1e6104] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_coefficients
+                          - text: ·
+                        - listitem [ref=f1e6105]:
+                          - link "Einstein solid" [ref=f1e6106] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_solid
+                          - text: ·
+                        - listitem [ref=f1e6107]:
+                          - link "Equivalence principle" [ref=f1e6108] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Equivalence_principle
+                          - text: ·
+                        - listitem [ref=f1e6109]:
+                          - link "Einstein field equations" [ref=f1e6110] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_field_equations
+                          - text: ·
+                        - listitem [ref=f1e6111]:
+                          - link "Einstein radius" [ref=f1e6112] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_radius
+                          - text: ·
+                        - listitem [ref=f1e6113]:
+                          - link "Einstein relation (kinetic theory)" [ref=f1e6114] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_relation_(kinetic_theory)
+                          - text: ·
+                        - listitem [ref=f1e6115]:
+                          - link "Einstein ring" [ref=f1e6116] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_ring
+                          - text: ·
+                        - listitem [ref=f1e6117]:
+                          - link "Cosmological constant" [ref=f1e6118] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Cosmological_constant
+                          - text: ·
+                        - listitem [ref=f1e6119]:
+                          - link "Bose–Einstein condensate" [ref=f1e6120] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Bose–Einstein_condensate
+                          - text: ·
+                        - listitem [ref=f1e6121]:
+                          - link "Bose–Einstein statistics" [ref=f1e6122] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Bose–Einstein_statistics
+                          - text: ·
+                        - listitem [ref=f1e6123]:
+                          - link "Bose–Einstein correlations" [ref=f1e6124] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Bose–Einstein_correlations
+                          - text: ·
+                        - listitem [ref=f1e6125]:
+                          - link "Einstein–Cartan theory" [ref=f1e6126] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein–Cartan_theory
+                          - text: ·
+                        - listitem [ref=f1e6127]:
+                          - link "Einstein–Infeld–Hoffmann equations" [ref=f1e6128] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein–Infeld–Hoffmann_equations
+                          - text: ·
+                        - listitem [ref=f1e6129]:
+                          - link "Einstein–de Haas effect" [ref=f1e6130] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein–de_Haas_effect
+                          - text: ·
+                        - listitem [ref=f1e6131]:
+                          - link "EPR paradox" [ref=f1e6132] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/EPR_paradox
+                          - text: ·
+                        - listitem [ref=f1e6133]:
+                          - link "Bohr–Einstein debates" [ref=f1e6134] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Bohr–Einstein_debates
+                          - text: ·
+                        - listitem [ref=f1e6135]:
+                          - link "Teleparallelism" [ref=f1e6136] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Teleparallelism
+                          - text: ·
+                        - listitem [ref=f1e6137]:
+                          - link "Thought experiments" [ref=f1e6138] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein's_thought_experiments
+                          - text: ·
+                        - listitem [ref=f1e6139]:
+                          - link "Unsuccessful investigations" [ref=f1e6140] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein's_unsuccessful_investigations
+                          - text: ·
+                        - listitem [ref=f1e6141]:
+                          - link "Wave–particle duality" [ref=f1e6142] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Wave–particle_duality
+                          - text: ·
+                        - listitem [ref=f1e6143]:
+                          - link "Gravitational wave" [ref=f1e6144] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Gravitational_wave
+                          - text: ·
+                        - listitem [ref=f1e6145]:
+                          - link "Tea leaf paradox" [ref=f1e6146] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Tea_leaf_paradox
+                  - row [ref=f1e6147]:
+                    - rowheader "Works" [ref=f1e6148]:
+                      - link "Works" [ref=f1e6149] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_scientific_publications_by_Albert_Einstein
+                    - cell [ref=f1e6150]:
+                      - list [ref=f1e6152]:
+                        - listitem [ref=f1e6153]:
+                          - link "Annus mirabilis papers" [ref=f1e6154] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Annus_mirabilis_papers
+                          - text: (1905) ·
+                        - listitem [ref=f1e6155]:
+                          - text: "\""
+                          - link "Investigations on the Theory of Brownian Movement" [ref=f1e6156] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Über_die_von_der_molekularkinetischen_Theorie_der_Wärme_geforderte_Bewegung_von_in_ruhenden_Flüssigkeiten_suspendierten_Teilchen
+                          - text: "\" (1905) ·"
+                        - listitem [ref=f1e6157]:
+                          - 'link "Relativity: The Special and the General Theory" [ref=f1e6159] [cursor=pointer]':
+                            - /url: https://en.wikipedia.org/wiki/Relativity:_The_Special_and_the_General_Theory
+                          - text: (1916) ·
+                        - listitem [ref=f1e6160]:
+                          - link "The Meaning of Relativity" [ref=f1e6162] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/The_Meaning_of_Relativity
+                          - text: (1922) ·
+                        - listitem [ref=f1e6163]:
+                          - link "The World as I See It" [ref=f1e6165] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/The_World_as_I_See_It_(book)
+                          - text: (1934) ·
+                        - listitem [ref=f1e6166]:
+                          - link "The Evolution of Physics" [ref=f1e6168] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/The_Evolution_of_Physics
+                          - text: (1938) ·
+                        - listitem [ref=f1e6169]:
+                          - text: "\""
+                          - link "Why Socialism?" [ref=f1e6170] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Why_Socialism%3F
+                          - text: "\" (1949) ·"
+                        - listitem [ref=f1e6171]:
+                          - link "Russell–Einstein Manifesto" [ref=f1e6172] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Russell–Einstein_Manifesto
+                          - text: (1955)
+                  - row [ref=f1e6173]:
+                    - rowheader "In popular culture" [ref=f1e6174]:
+                      - link "In popular culture" [ref=f1e6175] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Albert_Einstein_in_popular_culture
+                        - text: In popularculture
+                    - cell [ref=f1e6176]:
+                      - list [ref=f1e6178]:
+                        - listitem [ref=f1e6179]:
+                          - link "Die Grundlagen der Einsteinschen Relativitäts-Theorie" [ref=f1e6181] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Die_Grundlagen_der_Einsteinschen_Relativitäts-Theorie
+                          - text: (1922 documentary) ·
+                        - listitem [ref=f1e6182]:
+                          - link "The Einstein Theory of Relativity" [ref=f1e6184] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/The_Einstein_Theory_of_Relativity
+                          - text: (1923 documentary) ·
+                        - listitem [ref=f1e6185]:
+                          - 'link "Relics: Einstein''s Brain" [ref=f1e6187] [cursor=pointer]':
+                            - /url: https://en.wikipedia.org/wiki/Relics:_Einstein's_Brain
+                          - text: (1994 documentary) ·
+                        - listitem [ref=f1e6188]:
+                          - link "Insignificance" [ref=f1e6190] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Insignificance_(film)
+                          - text: (1985 film) ·
+                        - listitem [ref=f1e6191]:
+                          - link "Young Einstein" [ref=f1e6193] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Young_Einstein
+                          - text: (1988 film) ·
+                        - listitem [ref=f1e6194]:
+                          - link "Picasso at the Lapin Agile" [ref=f1e6196] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Picasso_at_the_Lapin_Agile
+                          - text: (1993 play) ·
+                        - listitem [ref=f1e6197]:
+                          - link "I.Q." [ref=f1e6199] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/I.Q._(film)
+                          - text: (1994 film) ·
+                        - listitem [ref=f1e6200]:
+                          - link "Einstein's Gift" [ref=f1e6202] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein's_Gift
+                          - text: (2003 play) ·
+                        - listitem [ref=f1e6203]:
+                          - link "Einstein and Eddington" [ref=f1e6205] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_and_Eddington
+                          - text: (2008 TV film) ·
+                        - listitem [ref=f1e6206]:
+                          - link "Genius" [ref=f1e6208] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Genius_(American_TV_series)
+                          - text: (2017 series) ·
+                        - listitem [ref=f1e6209]:
+                          - link "Oppenheimer" [ref=f1e6211] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Oppenheimer_(film)
+                          - text: (2023 film)
+                  - row [ref=f1e6212]:
+                    - rowheader "Prizes" [ref=f1e6213]
+                    - cell [ref=f1e6214]:
+                      - list [ref=f1e6216]:
+                        - listitem [ref=f1e6217]:
+                          - link "Albert Einstein Award" [ref=f1e6218] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Albert_Einstein_Award
+                          - text: ·
+                        - listitem [ref=f1e6219]:
+                          - link "Albert Einstein Medal" [ref=f1e6220] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Albert_Einstein_Medal
+                          - text: ·
+                        - listitem [ref=f1e6221]:
+                          - link "Kalinga Prize" [ref=f1e6222] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Kalinga_Prize
+                          - text: ·
+                        - listitem [ref=f1e6223]:
+                          - link "Albert Einstein Peace Prize" [ref=f1e6224] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Albert_Einstein_Peace_Prize
+                          - text: ·
+                        - listitem [ref=f1e6225]:
+                          - link "Albert Einstein World Award of Science" [ref=f1e6226] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Albert_Einstein_World_Award_of_Science
+                          - text: ·
+                        - listitem [ref=f1e6227]:
+                          - link "Einstein Prize for Laser Science" [ref=f1e6228] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_Prize_for_Laser_Science
+                          - text: ·
+                        - listitem [ref=f1e6229]:
+                          - link "Einstein Prize (APS)" [ref=f1e6230] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_Prize_(APS)
+                  - row [ref=f1e6231]:
+                    - rowheader "Books about Einstein" [ref=f1e6232]: Books aboutEinstein
+                    - cell [ref=f1e6233]:
+                      - list [ref=f1e6235]:
+                        - listitem [ref=f1e6236]:
+                          - 'link "Albert Einstein: Creator and Rebel" [ref=f1e6238] [cursor=pointer]':
+                            - /url: https://en.wikipedia.org/wiki/Albert_Einstein:_Creator_and_Rebel
+                          - text: ·
+                        - listitem [ref=f1e6239]:
+                          - link "Einstein and Religion" [ref=f1e6241] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_and_Religion
+                          - text: ·
+                        - listitem [ref=f1e6242]:
+                          - link "Einstein for Beginners" [ref=f1e6244] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_for_Beginners
+                          - text: ·
+                        - listitem [ref=f1e6245]:
+                          - 'link "Einstein: His Life and Universe" [ref=f1e6247] [cursor=pointer]':
+                            - /url: https://en.wikipedia.org/wiki/Einstein:_His_Life_and_Universe
+                          - text: ·
+                        - listitem [ref=f1e6248]:
+                          - link "Einstein in Oxford" [ref=f1e6250] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_in_Oxford
+                          - text: ·
+                        - listitem [ref=f1e6251]:
+                          - link "Einstein on the Run" [ref=f1e6253] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_on_the_Run
+                          - text: ·
+                        - listitem [ref=f1e6254]:
+                          - link "Einstein's Cosmos" [ref=f1e6256] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein's_Cosmos
+                          - text: ·
+                        - listitem [ref=f1e6257]:
+                          - link "I Am Albert Einstein" [ref=f1e6259] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/I_Am_Albert_Einstein
+                          - text: ·
+                        - listitem [ref=f1e6260]:
+                          - link "Introducing Relativity" [ref=f1e6262] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Introducing_Relativity
+                          - text: ·
+                        - listitem [ref=f1e6263]:
+                          - link "Subtle is the Lord" [ref=f1e6265] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Subtle_is_the_Lord
+                  - row [ref=f1e6266]:
+                    - rowheader "Family" [ref=f1e6267]:
+                      - link "Family" [ref=f1e6268] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Einstein_family
+                    - cell [ref=f1e6269]:
+                      - list [ref=f1e6271]:
+                        - listitem [ref=f1e6272]:
+                          - link "Mileva Marić" [ref=f1e6273] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Mileva_Marić
+                          - text: (first wife) ·
+                        - listitem [ref=f1e6274]:
+                          - link "Elsa Einstein" [ref=f1e6275] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Elsa_Einstein
+                          - text: (second wife; cousin) ·
+                        - listitem [ref=f1e6276]:
+                          - link "Lieserl Einstein" [ref=f1e6277] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Lieserl_Einstein
+                          - text: (daughter) ·
+                        - listitem [ref=f1e6278]:
+                          - link "Hans Albert Einstein" [ref=f1e6279] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Hans_Albert_Einstein
+                          - text: (son) ·
+                        - listitem [ref=f1e6280]:
+                          - link "Pauline Koch" [ref=f1e6281] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Pauline_Koch
+                          - text: (mother) ·
+                        - listitem [ref=f1e6282]:
+                          - link "Hermann Einstein" [ref=f1e6283] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Hermann_Einstein
+                          - text: (father) ·
+                        - listitem [ref=f1e6284]:
+                          - link "Maja Einstein" [ref=f1e6285] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Maja_Einstein
+                          - text: (sister) ·
+                        - listitem [ref=f1e6286]:
+                          - link "Eduard Einstein" [ref=f1e6287] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_family#Eduard_"Tete"_Einstein_(Albert's_second_son)
+                          - text: (son) ·
+                        - listitem [ref=f1e6288]:
+                          - link "Robert Einstein" [ref=f1e6289] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Murder_of_the_family_of_Robert_Einstein
+                          - text: (cousin) ·
+                        - listitem [ref=f1e6290]:
+                          - link "Bernhard Caesar Einstein" [ref=f1e6291] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Bernhard_Caesar_Einstein
+                          - text: (grandson) ·
+                        - listitem [ref=f1e6292]:
+                          - link "Evelyn Einstein" [ref=f1e6293] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Evelyn_Einstein
+                          - text: (granddaughter) ·
+                        - listitem [ref=f1e6294]:
+                          - link "Thomas Martin Einstein" [ref=f1e6295] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Thomas_Martin_Einstein
+                          - text: (great-grandson) ·
+                        - listitem [ref=f1e6296]:
+                          - link "Siegbert Einstein" [ref=f1e6297] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Siegbert_Einstein
+                          - text: (distant cousin)
+                  - row [ref=f1e6298]:
+                    - rowheader "Related" [ref=f1e6299]
+                    - cell [ref=f1e6300]:
+                      - list [ref=f1e6302]:
+                        - listitem [ref=f1e6303]:
+                          - link "Awards and honors" [ref=f1e6304] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/List_of_awards_and_honors_received_by_Albert_Einstein
+                          - text: ·
+                        - listitem [ref=f1e6305]:
+                          - link "Brain" [ref=f1e6306] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Brain_of_Albert_Einstein
+                          - text: ·
+                        - listitem [ref=f1e6307]:
+                          - link "House" [ref=f1e6308] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Albert_Einstein_House
+                          - text: ·
+                        - listitem [ref=f1e6309]:
+                          - link "Einsteinhaus" [ref=f1e6310] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einsteinhaus
+                          - text: ·
+                        - listitem [ref=f1e6311]:
+                          - link "Blackboard" [ref=f1e6312] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein's_Blackboard
+                          - text: ·
+                        - listitem [ref=f1e6313]:
+                          - link "Memorial" [ref=f1e6314] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Albert_Einstein_Memorial
+                          - text: ·
+                        - listitem [ref=f1e6315]:
+                          - link "Political views" [ref=f1e6316] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Political_views_of_Albert_Einstein
+                          - text: ·
+                        - listitem [ref=f1e6317]:
+                          - link "Religious views" [ref=f1e6318] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Religious_and_philosophical_views_of_Albert_Einstein
+                          - text: ·
+                        - listitem [ref=f1e6319]:
+                          - link "Things named after" [ref=f1e6320] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/List_of_things_named_after_Albert_Einstein
+                          - list [ref=f1e6321]:
+                            - listitem [ref=f1e6322]:
+                              - text: (
+                              - link "Einsteinium" [ref=f1e6323] [cursor=pointer]:
+                                - /url: https://en.wikipedia.org/wiki/Einsteinium
+                              - text: )
+                          - text: ·
+                        - listitem [ref=f1e6324]:
+                          - link "Bergson debate" [ref=f1e6325] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein–Bergson_debate
+                          - text: ·
+                        - listitem [ref=f1e6326]:
+                          - link "Oppenheimer relationship" [ref=f1e6327] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein–Oppenheimer_relationship
+                          - text: ·
+                        - listitem [ref=f1e6328]:
+                          - link "Archives" [ref=f1e6329] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Albert_Einstein_Archives
+                          - text: ·
+                        - listitem [ref=f1e6330]:
+                          - link "Papers Project" [ref=f1e6331] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_Papers_Project
+                          - text: ·
+                        - listitem [ref=f1e6332]:
+                          - link "Refrigerator" [ref=f1e6333] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Einstein_refrigerator
+                          - text: ·
+                        - listitem [ref=f1e6334]:
+                          - link "Max Talmey" [ref=f1e6335] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Max_Talmey
+                          - text: ·
+                        - listitem [ref=f1e6336]:
+                          - link "Emergency Committee of Atomic Scientists" [ref=f1e6337] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Emergency_Committee_of_Atomic_Scientists
+                          - text: ·
+                        - listitem [ref=f1e6338]:
+                          - link "Little Einsteins" [ref=f1e6339] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Little_Einsteins
+                  - row [ref=f1e6340]:
+                    - cell "Category Category" [ref=f1e6341]:
+                      - list [ref=f1e6343]:
+                        - listitem [ref=f1e6344]:
+                          - generic "Category" [ref=f1e6346]
+                          - link "Category" [ref=f1e6348] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Category:Albert_Einstein
+            - navigation "Links to related articles" [ref=f1e6349]:
+              - table [ref=f1e6350]:
+                - rowgroup [ref=f1e6351]:
+                  - row [ref=f1e6352]:
+                    - columnheader "[show] Links to related articles" [ref=f1e6353]:
+                      - button "[show]" [ref=f1e6354] [cursor=pointer]
+                      - generic [ref=f1e6355]: Links to related articles
+                  - row: "[] · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · [] · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · [] · · · : · · · · · · · · · · [] · · · · · · · · · · · · · · · · · · · · [] · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·"
+            - navigation "Portals" [ref=f1e6356]:
+              - generic [ref=f1e6357]:
+                - link "Portals" [ref=f1e6358] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Contents/Portals
+                - text: ":"
+              - list [ref=f1e6359]:
+                - listitem [ref=f1e6360]:
+                  - link "Biography" [ref=f1e6364] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Biography
+                - listitem [ref=f1e6365]:
+                  - link "Judaism" [ref=f1e6369] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Judaism
+                - listitem [ref=f1e6370]:
+                  - link [ref=f1e6373] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Square_root_of_x.svg
+                    - img "icon" [ref=f1e6374]
+                  - link "Mathematics" [ref=f1e6375] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Mathematics
+                - listitem [ref=f1e6376]:
+                  - link [ref=f1e6379] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus.svg
+                    - img "icon" [ref=f1e6380]
+                  - link "Physics" [ref=f1e6381] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Physics
+                - listitem [ref=f1e6382]:
+                  - link "Astronomy" [ref=f1e6386] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Astronomy
+                - listitem [ref=f1e6387]:
+                  - link [ref=f1e6390] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:He1523a.jpg
+                    - img "icon" [ref=f1e6391]
+                  - link "Stars" [ref=f1e6392] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Stars
+                - listitem [ref=f1e6393]:
+                  - link "Spaceflight" [ref=f1e6397] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Spaceflight
+                - listitem [ref=f1e6398]:
+                  - link "Outer space" [ref=f1e6402] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Outer_space
+                - listitem [ref=f1e6403]:
+                  - link [ref=f1e6406] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:Nuvola_apps_kalzium.svg
+                    - img "icon" [ref=f1e6407]
+                  - link "Science" [ref=f1e6408] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Science
+            - navigation "Authority control databases Edit this at Wikidata" [ref=f1e6409]:
+              - table [ref=f1e6410]:
+                - rowgroup [ref=f1e6411]:
+                  - row [ref=f1e6412]:
+                    - columnheader "[show] Authority control databases Edit this at Wikidata" [ref=f1e6413]:
+                      - button "[show]" [ref=f1e6414] [cursor=pointer]
+                      - generic [ref=f1e6415]:
+                        - link "Authority control databases" [ref=f1e6416] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Help:Authority_control
+                        - link [ref=f1e6418] [cursor=pointer]:
+                          - /url: https://www.wikidata.org/wiki/Q937#identifiers
+                          - img "Edit this at Wikidata" [ref=f1e6419]
+                  - row: · · · () ·
+                  - row: · · · · · · · · · · · · · · · · · · · · · · · ·
+                  - row: · · · · · · ·
+                  - row: · · ·
+                  - row: · · ·
+                  - row: · · · · () · · ·
+        - generic [ref=f1e6421]:
+          - link "Categories" [ref=f1e6422] [cursor=pointer]:
+            - /url: /wiki/Help:Category
+          - text: ":"
+          - list [ref=f1e6423]:
+            - listitem [ref=f1e6424]:
+              - link "Albert Einstein" [ref=f1e6425] [cursor=pointer]:
+                - /url: /wiki/Category:Albert_Einstein
+            - listitem [ref=f1e6426]:
+              - link "1879 births" [ref=f1e6427] [cursor=pointer]:
+                - /url: /wiki/Category:1879_births
+            - listitem [ref=f1e6428]:
+              - link "1955 deaths" [ref=f1e6429] [cursor=pointer]:
+                - /url: /wiki/Category:1955_deaths
+            - listitem [ref=f1e6430]:
+              - link "20th-century American physicists" [ref=f1e6431] [cursor=pointer]:
+                - /url: /wiki/Category:20th-century_American_physicists
+            - listitem [ref=f1e6432]:
+              - link "20th-century German physicists" [ref=f1e6433] [cursor=pointer]:
+                - /url: /wiki/Category:20th-century_German_physicists
+            - listitem [ref=f1e6434]:
+              - link "20th-century American engineers" [ref=f1e6435] [cursor=pointer]:
+                - /url: /wiki/Category:20th-century_American_engineers
+            - listitem [ref=f1e6436]:
+              - link "20th-century American inventors" [ref=f1e6437] [cursor=pointer]:
+                - /url: /wiki/Category:20th-century_American_inventors
+            - listitem [ref=f1e6438]:
+              - link "20th-century Swiss inventors" [ref=f1e6439] [cursor=pointer]:
+                - /url: /wiki/Category:20th-century_Swiss_inventors
+            - listitem [ref=f1e6440]:
+              - link "20th-century American letter writers" [ref=f1e6441] [cursor=pointer]:
+                - /url: /wiki/Category:20th-century_American_letter_writers
+            - listitem [ref=f1e6442]:
+              - link "20th-century American male writers" [ref=f1e6443] [cursor=pointer]:
+                - /url: /wiki/Category:20th-century_American_male_writers
+            - listitem [ref=f1e6444]:
+              - link "20th-century American science writers" [ref=f1e6445] [cursor=pointer]:
+                - /url: /wiki/Category:20th-century_American_science_writers
+            - listitem [ref=f1e6446]:
+              - link "Academic staff of Charles University" [ref=f1e6447] [cursor=pointer]:
+                - /url: /wiki/Category:Academic_staff_of_Charles_University
+            - listitem [ref=f1e6448]:
+              - link "Academic staff of ETH Zurich" [ref=f1e6449] [cursor=pointer]:
+                - /url: /wiki/Category:Academic_staff_of_ETH_Zurich
+            - listitem [ref=f1e6450]:
+              - link "Academic staff of the University of Bern" [ref=f1e6451] [cursor=pointer]:
+                - /url: /wiki/Category:Academic_staff_of_the_University_of_Bern
+            - listitem [ref=f1e6452]:
+              - link "Academic staff of the University of Zurich" [ref=f1e6453] [cursor=pointer]:
+                - /url: /wiki/Category:Academic_staff_of_the_University_of_Zurich
+            - listitem [ref=f1e6454]:
+              - link "Activists for African-American civil rights" [ref=f1e6455] [cursor=pointer]:
+                - /url: /wiki/Category:Activists_for_African-American_civil_rights
+            - listitem [ref=f1e6456]:
+              - link "American civil rights activists" [ref=f1e6457] [cursor=pointer]:
+                - /url: /wiki/Category:American_civil_rights_activists
+            - listitem [ref=f1e6458]:
+              - link "American agnostics" [ref=f1e6459] [cursor=pointer]:
+                - /url: /wiki/Category:American_agnostics
+            - listitem [ref=f1e6460]:
+              - link "American Ashkenazi Jews" [ref=f1e6461] [cursor=pointer]:
+                - /url: /wiki/Category:American_Ashkenazi_Jews
+            - listitem [ref=f1e6462]:
+              - link "American democratic socialists" [ref=f1e6463] [cursor=pointer]:
+                - /url: /wiki/Category:American_democratic_socialists
+            - listitem [ref=f1e6464]:
+              - link "American humanists" [ref=f1e6465] [cursor=pointer]:
+                - /url: /wiki/Category:American_humanists
+            - listitem [ref=f1e6466]:
+              - link "American Nobel laureates" [ref=f1e6467] [cursor=pointer]:
+                - /url: /wiki/Category:American_Nobel_laureates
+            - listitem [ref=f1e6468]:
+              - link "American pacifists" [ref=f1e6469] [cursor=pointer]:
+                - /url: /wiki/Category:American_pacifists
+            - listitem [ref=f1e6470]:
+              - link "American people of German descent" [ref=f1e6471] [cursor=pointer]:
+                - /url: /wiki/Category:American_people_of_German_descent
+            - listitem [ref=f1e6472]:
+              - link "American people of Jewish descent" [ref=f1e6473] [cursor=pointer]:
+                - /url: /wiki/Category:American_people_of_Jewish_descent
+            - listitem [ref=f1e6474]:
+              - link "American philosophers of mathematics" [ref=f1e6475] [cursor=pointer]:
+                - /url: /wiki/Category:American_philosophers_of_mathematics
+            - listitem [ref=f1e6476]:
+              - link "American quantum physicists" [ref=f1e6477] [cursor=pointer]:
+                - /url: /wiki/Category:American_quantum_physicists
+            - listitem [ref=f1e6478]:
+              - link "American relativity theorists" [ref=f1e6479] [cursor=pointer]:
+                - /url: /wiki/Category:American_relativity_theorists
+            - listitem [ref=f1e6480]:
+              - link "American socialists" [ref=f1e6481] [cursor=pointer]:
+                - /url: /wiki/Category:American_socialists
+            - listitem [ref=f1e6482]:
+              - link "American theoretical physicists" [ref=f1e6483] [cursor=pointer]:
+                - /url: /wiki/Category:American_theoretical_physicists
+            - listitem [ref=f1e6484]:
+              - link "Anti-nationalists" [ref=f1e6485] [cursor=pointer]:
+                - /url: /wiki/Category:Anti-nationalists
+            - listitem [ref=f1e6486]:
+              - link "Contributors to the Encyclopædia Britannica" [ref=f1e6487] [cursor=pointer]:
+                - /url: /wiki/Category:Contributors_to_the_Encyclop%C3%A6dia_Britannica
+            - listitem [ref=f1e6488]:
+              - link "Deaths from abdominal aortic aneurysm" [ref=f1e6489] [cursor=pointer]:
+                - /url: /wiki/Category:Deaths_from_abdominal_aortic_aneurysm
+            - listitem [ref=f1e6490]:
+              - link "Denaturalized citizens of Germany" [ref=f1e6491] [cursor=pointer]:
+                - /url: /wiki/Category:Denaturalized_citizens_of_Germany
+            - listitem [ref=f1e6492]:
+              - link "Einstein family" [ref=f1e6493] [cursor=pointer]:
+                - /url: /wiki/Category:Einstein_family
+            - listitem [ref=f1e6494]:
+              - link "ETH Zurich alumni" [ref=f1e6495] [cursor=pointer]:
+                - /url: /wiki/Category:ETH_Zurich_alumni
+            - listitem [ref=f1e6496]:
+              - link "European democratic socialists" [ref=f1e6497] [cursor=pointer]:
+                - /url: /wiki/Category:European_democratic_socialists
+            - listitem [ref=f1e6498]:
+              - link "German agnostics" [ref=f1e6499] [cursor=pointer]:
+                - /url: /wiki/Category:German_agnostics
+            - listitem [ref=f1e6500]:
+              - link "German Ashkenazi Jews" [ref=f1e6501] [cursor=pointer]:
+                - /url: /wiki/Category:German_Ashkenazi_Jews
+            - listitem [ref=f1e6502]:
+              - link "German emigrants to Switzerland" [ref=f1e6503] [cursor=pointer]:
+                - /url: /wiki/Category:German_emigrants_to_Switzerland
+            - listitem [ref=f1e6504]:
+              - link "German humanists" [ref=f1e6505] [cursor=pointer]:
+                - /url: /wiki/Category:German_humanists
+            - listitem [ref=f1e6506]:
+              - link "20th-century German male non-fiction writers" [ref=f1e6507] [cursor=pointer]:
+                - /url: /wiki/Category:20th-century_German_male_non-fiction_writers
+            - listitem [ref=f1e6508]:
+              - link "German Nobel laureates" [ref=f1e6509] [cursor=pointer]:
+                - /url: /wiki/Category:German_Nobel_laureates
+            - listitem [ref=f1e6510]:
+              - link "German people of Jewish descent" [ref=f1e6511] [cursor=pointer]:
+                - /url: /wiki/Category:German_people_of_Jewish_descent
+            - listitem [ref=f1e6512]:
+              - link "German quantum physicists" [ref=f1e6513] [cursor=pointer]:
+                - /url: /wiki/Category:German_quantum_physicists
+            - listitem [ref=f1e6514]:
+              - link "German relativity theorists" [ref=f1e6515] [cursor=pointer]:
+                - /url: /wiki/Category:German_relativity_theorists
+            - listitem [ref=f1e6516]:
+              - link "German civil rights activists" [ref=f1e6517] [cursor=pointer]:
+                - /url: /wiki/Category:German_civil_rights_activists
+            - listitem [ref=f1e6518]:
+              - link "German socialists" [ref=f1e6519] [cursor=pointer]:
+                - /url: /wiki/Category:German_socialists
+            - listitem [ref=f1e6520]:
+              - link "German theoretical physicists" [ref=f1e6521] [cursor=pointer]:
+                - /url: /wiki/Category:German_theoretical_physicists
+            - listitem [ref=f1e6522]:
+              - link "Institute for Advanced Study faculty" [ref=f1e6523] [cursor=pointer]:
+                - /url: /wiki/Category:Institute_for_Advanced_Study_faculty
+            - listitem [ref=f1e6524]:
+              - link "Jewish agnostics" [ref=f1e6525] [cursor=pointer]:
+                - /url: /wiki/Category:Jewish_agnostics
+            - listitem [ref=f1e6526]:
+              - link "Jewish American non-fiction writers" [ref=f1e6527] [cursor=pointer]:
+                - /url: /wiki/Category:Jewish_American_non-fiction_writers
+            - listitem [ref=f1e6528]:
+              - link "Jewish American physicists" [ref=f1e6529] [cursor=pointer]:
+                - /url: /wiki/Category:Jewish_American_physicists
+            - listitem [ref=f1e6530]:
+              - link "Jewish American socialists" [ref=f1e6531] [cursor=pointer]:
+                - /url: /wiki/Category:Jewish_American_socialists
+            - listitem [ref=f1e6532]:
+              - link "Jewish German physicists" [ref=f1e6533] [cursor=pointer]:
+                - /url: /wiki/Category:Jewish_German_physicists
+            - listitem [ref=f1e6534]:
+              - link "Jewish emigrants from Nazi Germany to the United States" [ref=f1e6535] [cursor=pointer]:
+                - /url: /wiki/Category:Jewish_emigrants_from_Nazi_Germany_to_the_United_States
+            - listitem [ref=f1e6536]:
+              - link "Emigrants from Nazi Germany to the United States" [ref=f1e6537] [cursor=pointer]:
+                - /url: /wiki/Category:Emigrants_from_Nazi_Germany_to_the_United_States
+            - listitem [ref=f1e6538]:
+              - link "Jewish Nobel laureates" [ref=f1e6539] [cursor=pointer]:
+                - /url: /wiki/Category:Jewish_Nobel_laureates
+            - listitem [ref=f1e6540]:
+              - link "Max Planck Institute directors" [ref=f1e6541] [cursor=pointer]:
+                - /url: /wiki/Category:Max_Planck_Institute_directors
+            - listitem [ref=f1e6542]:
+              - link "International members of the American Philosophical Society" [ref=f1e6543] [cursor=pointer]:
+                - /url: /wiki/Category:International_members_of_the_American_Philosophical_Society
+            - listitem [ref=f1e6544]:
+              - link "Members of the Royal Netherlands Academy of Arts and Sciences" [ref=f1e6545] [cursor=pointer]:
+                - /url: /wiki/Category:Members_of_the_Royal_Netherlands_Academy_of_Arts_and_Sciences
+            - listitem [ref=f1e6546]:
+              - link "Members of the United States National Academy of Sciences" [ref=f1e6547] [cursor=pointer]:
+                - /url: /wiki/Category:Members_of_the_United_States_National_Academy_of_Sciences
+            - listitem [ref=f1e6548]:
+              - link "Naturalised citizens of Austria" [ref=f1e6549] [cursor=pointer]:
+                - /url: /wiki/Category:Naturalised_citizens_of_Austria
+            - listitem [ref=f1e6550]:
+              - link "Naturalised citizens of Switzerland" [ref=f1e6551] [cursor=pointer]:
+                - /url: /wiki/Category:Naturalised_citizens_of_Switzerland
+            - listitem [ref=f1e6552]:
+              - link "Naturalized citizens of the United States" [ref=f1e6553] [cursor=pointer]:
+                - /url: /wiki/Category:Naturalized_citizens_of_the_United_States
+            - listitem [ref=f1e6554]:
+              - link "Nobel laureates in Physics" [ref=f1e6555] [cursor=pointer]:
+                - /url: /wiki/Category:Nobel_laureates_in_Physics
+            - listitem [ref=f1e6556]:
+              - link "Pantheists" [ref=f1e6557] [cursor=pointer]:
+                - /url: /wiki/Category:Pantheists
+            - listitem [ref=f1e6558]:
+              - link "Patent examiners" [ref=f1e6559] [cursor=pointer]:
+                - /url: /wiki/Category:Patent_examiners
+            - listitem [ref=f1e6560]:
+              - link "People from Ulm" [ref=f1e6561] [cursor=pointer]:
+                - /url: /wiki/Category:People_from_Ulm
+            - listitem [ref=f1e6562]:
+              - link "People who lost German citizenship" [ref=f1e6563] [cursor=pointer]:
+                - /url: /wiki/Category:People_who_lost_German_citizenship
+            - listitem [ref=f1e6564]:
+              - link "Philosophers of mathematics" [ref=f1e6565] [cursor=pointer]:
+                - /url: /wiki/Category:Philosophers_of_mathematics
+            - listitem [ref=f1e6566]:
+              - link "Philosophers of science" [ref=f1e6567] [cursor=pointer]:
+                - /url: /wiki/Category:Philosophers_of_science
+            - listitem [ref=f1e6568]:
+              - link "Recipients of Franklin Medal" [ref=f1e6569] [cursor=pointer]:
+                - /url: /wiki/Category:Recipients_of_Franklin_Medal
+            - listitem [ref=f1e6570]:
+              - link "Scientists from Munich" [ref=f1e6571] [cursor=pointer]:
+                - /url: /wiki/Category:Scientists_from_Munich
+            - listitem [ref=f1e6572]:
+              - link "Stateless people" [ref=f1e6573] [cursor=pointer]:
+                - /url: /wiki/Category:Stateless_people
+            - listitem [ref=f1e6574]:
+              - link "Swiss agnostics" [ref=f1e6575] [cursor=pointer]:
+                - /url: /wiki/Category:Swiss_agnostics
+            - listitem [ref=f1e6576]:
+              - link "Swiss Ashkenazi Jews" [ref=f1e6577] [cursor=pointer]:
+                - /url: /wiki/Category:Swiss_Ashkenazi_Jews
+            - listitem [ref=f1e6578]:
+              - link "Swiss cosmologists" [ref=f1e6579] [cursor=pointer]:
+                - /url: /wiki/Category:Swiss_cosmologists
+            - listitem [ref=f1e6580]:
+              - link "Swiss emigrants to the United States" [ref=f1e6581] [cursor=pointer]:
+                - /url: /wiki/Category:Swiss_emigrants_to_the_United_States
+            - listitem [ref=f1e6582]:
+              - link "Swiss Nobel laureates" [ref=f1e6583] [cursor=pointer]:
+                - /url: /wiki/Category:Swiss_Nobel_laureates
+            - listitem [ref=f1e6584]:
+              - link "Swiss people of German descent" [ref=f1e6585] [cursor=pointer]:
+                - /url: /wiki/Category:Swiss_people_of_German_descent
+            - listitem [ref=f1e6586]:
+              - link "Swiss people of Jewish descent" [ref=f1e6587] [cursor=pointer]:
+                - /url: /wiki/Category:Swiss_people_of_Jewish_descent
+            - listitem [ref=f1e6588]:
+              - link "Swiss physicists" [ref=f1e6589] [cursor=pointer]:
+                - /url: /wiki/Category:Swiss_physicists
+            - listitem [ref=f1e6590]:
+              - link "Swiss socialists" [ref=f1e6591] [cursor=pointer]:
+                - /url: /wiki/Category:Swiss_socialists
+            - listitem [ref=f1e6592]:
+              - link "University of Zurich alumni" [ref=f1e6593] [cursor=pointer]:
+                - /url: /wiki/Category:University_of_Zurich_alumni
+            - listitem [ref=f1e6594]:
+              - link "Winners of the Max Planck Medal" [ref=f1e6595] [cursor=pointer]:
+                - /url: /wiki/Category:Winners_of_the_Max_Planck_Medal
+            - listitem [ref=f1e6596]:
+              - link "Emigrants from Württemberg to the United States" [ref=f1e6597] [cursor=pointer]:
+                - /url: /wiki/Category:Emigrants_from_W%C3%BCrttemberg_to_the_United_States
+            - listitem [ref=f1e6598]:
+              - link "19th-century American Jews" [ref=f1e6599] [cursor=pointer]:
+                - /url: /wiki/Category:19th-century_American_Jews
+            - listitem [ref=f1e6600]:
+              - link "19th-century German Jews" [ref=f1e6601] [cursor=pointer]:
+                - /url: /wiki/Category:19th-century_German_Jews
+            - listitem [ref=f1e6602]:
+              - link "19th-century Swiss Jews" [ref=f1e6603] [cursor=pointer]:
+                - /url: /wiki/Category:19th-century_Swiss_Jews
+            - listitem [ref=f1e6604]:
+              - link "American male non-fiction writers" [ref=f1e6605] [cursor=pointer]:
+                - /url: /wiki/Category:American_male_non-fiction_writers
+    - contentinfo [ref=f1e6607]:
+      - list [ref=f1e6608]:
+        - listitem [ref=f1e6609]: This page was last edited on 3 November 2026, at 19:04 (UTC).
+        - listitem [ref=f1e6610]:
+          - text: Page was rendered with
+          - link "Parsoid" [ref=f1e6611] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/wiki/Special:MyLanguage/Parsoid
+          - text: .
+        - listitem [ref=f1e6612]:
+          - text: Text is available under the
+          - link "Creative Commons Attribution-ShareAlike 4.0 License" [ref=f1e6613] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License
+          - text: ; additional terms may apply. By using this site, you agree to the
+          - link "Terms of Use" [ref=f1e6614] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use
+          - text: and
+          - link "Privacy Policy" [ref=f1e6615] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+          - text: . Wikipedia® is a registered trademark of the
+          - link "Wikimedia Foundation, Inc." [ref=f1e6616] [cursor=pointer]:
+            - /url: https://wikimediafoundation.org/
+          - text: ", a non-profit organization."
+      - list:
+        - listitem [ref=f1e6617]:
+          - link "Privacy policy" [ref=f1e6618] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+        - listitem [ref=f1e6619]:
+          - link "About Wikipedia" [ref=f1e6620] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:About
+        - listitem [ref=f1e6621]:
+          - link "Disclaimers" [ref=f1e6622] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:General_disclaimer
+        - listitem [ref=f1e6623]:
+          - link "Contact Wikipedia" [ref=f1e6624] [cursor=pointer]:
+            - /url: //en.wikipedia.org/wiki/Wikipedia:Contact_us
+        - listitem [ref=f1e6625]:
+          - link "Legal & safety contacts" [ref=f1e6626] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information
+        - listitem [ref=f1e6627]:
+          - link "Code of Conduct" [ref=f1e6628] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct
+        - listitem [ref=f1e6629]:
+          - link "Developers" [ref=f1e6630] [cursor=pointer]:
+            - /url: https://developer.wikimedia.org
+        - listitem [ref=f1e6631]:
+          - link "Statistics" [ref=f1e6632] [cursor=pointer]:
+            - /url: https://stats.wikimedia.org/#/en.wikipedia.org
+        - listitem [ref=f1e6633]:
+          - link "Cookie statement" [ref=f1e6634] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement
+        - listitem [ref=f1e6635]:
+          - link "Mobile view" [ref=f1e6636] [cursor=pointer]:
+            - /url: //en.wikipedia.org/w/index.php?title=Albert_Einstein&mobileaction=toggle_view_mobile
+      - list [ref=f1e6637]:
+        - listitem [ref=f1e6638]:
+          - link [ref=f1e6639] [cursor=pointer]:
+            - /url: https://www.wikimedia.org/
+            - img "Wikimedia Foundation" [ref=f1e6641]
+        - listitem [ref=f1e6642]:
+          - link [ref=f1e6643] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/
+            - img "Powered by MediaWiki" [ref=f1e6645]
+  - generic [ref=f1e6646]:
+    - list
+```
+
+# Test source
+
+```ts
+  1  | import { test } from '@playwright/test';
+  2  | import Timeouts from '../constants/Timeouts.js';
+  3  | import ElementStateHandler from './helpers/elementState.js';
+  4  | 
+  5  | export default class BaseElement {
+  6  |   /**
+  7  |    * @param {import('@playwright/test').Locator} locator
+  8  |    * @param {string} name
+  9  |    */
+  10 |   constructor(locator, name) {
+  11 |     this._locator = locator;
+  12 |     this._name = name;
+  13 |     this._type = 'Element';
+  14 |   }
+  15 | 
+  16 |   get locator() {
+  17 |     return this._locator;
+  18 |   }
+  19 | 
+  20 |   get state() {
+  21 |     return new ElementStateHandler(this.locator, this._name);
+  22 |   }
+  23 | 
+  24 |   /**
+  25 |    * Executes a click action encapsulated within a reporting step.
+  26 |    * @returns {Promise<void>}
+  27 |    */
+  28 |   async click() {
+  29 |     await test.step(`${this._type} '${this._name}' — Click`, async () => {
+> 30 |       await this.locator.click();
+     |                          ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  31 |     });
+  32 |   }
+  33 | 
+  34 |   /**
+  35 |    * Retrieves the inner text of the element encapsulated within a reporting step.
+  36 |    * @returns {Promise<string>}
+  37 |    */
+  38 |   async getText() {
+  39 |     return await test.step(`${this._type} '${this._name}' — Get text`, async () => {
+  40 |       await this.waitForDisplayed();
+  41 |       return await this.locator.innerText();
+  42 |     });
+  43 |   }
+  44 | 
+  45 |   /**
+  46 |    * Moves the mouse cursor over the element encapsulated within a reporting step.
+  47 |    * @returns {Promise<void>}
+  48 |    */
+  49 |   async moveTo() {
+  50 |     await test.step(`${this._type} '${this._name}' — Hover`, async () => {
+  51 |       await this.locator.hover();
+  52 |     });
+  53 |   }
+  54 | 
+  55 |   /**
+  56 |    * Waits for the element to become visible encapsulated within a reporting step.
+  57 |    * @param {number} timeout
+  58 |    * @returns {Promise<void>}
+  59 |    */
+  60 |   async waitForDisplayed(timeout = Timeouts.EXPLICIT_WAIT) {
+  61 |     await test.step(`${this._type} '${this._name}' — Wait for element to be displayed`, async () => {
+  62 |       await this.locator.waitFor({ state: 'visible', timeout });
+  63 |     });
+  64 |   }
+  65 | }
+  66 | 
+```
