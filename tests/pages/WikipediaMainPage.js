@@ -13,6 +13,10 @@ export default class WikipediaMainPage extends BasePage {
   async selectEnglishLanguage() {
     await this.searchLanguage.selectOption('English');
   }
+  
+  async selectSpanishLanguage() {
+    await this.searchLanguage.selectOption('Español');
+  }
 
   async typeSearchRequest(text) {
     await this.searchTextBox.setText(text);

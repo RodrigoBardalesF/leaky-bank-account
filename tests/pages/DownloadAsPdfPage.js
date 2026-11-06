@@ -3,7 +3,7 @@ import { Label, Button } from '#framework/ui/elements/index.js';
 
 export default class DownloadAsPdfPage extends BasePage {
   constructor(browser) {
-    super(new Label(browser.page.getByRole('heading', { name: 'Download as PDF' }), 'Download as PDF page unique element'), 'Download as PDF Page');
+    super(new Label(browser.page.locator('#firstHeading'), 'Download as PDF page unique element'), 'Download as PDF Page');
     this.browser = browser;
     this.page = browser.page;
     this.fileNameLabel =  new Label(browser.page.locator('div.mw-electronpdfservice-selection-label-desc'), 'File name label');
