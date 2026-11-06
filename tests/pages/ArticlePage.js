@@ -10,7 +10,7 @@ export default class ArticlePage extends BasePage {
   }
 
   async clickToolsMenuButton() {
-    await this.page.toolButton.click();
+    await this.toolButton.click();
   }
 
   async clickDownloadAsPdfButton() {
