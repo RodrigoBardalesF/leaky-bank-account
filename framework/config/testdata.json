@@ -1,3 +1,7 @@
 {
-  "downloadFileName": "Albert_Einstein.pdf"
+  "emailName": "aqauser",
+  "emailDomain": "example",
+  "emailExtension": "com",
+  "firstPassword": "ZXCVB12345",
+  "secondPassword": "Aqauser12345"
 }
