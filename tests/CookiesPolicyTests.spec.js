@@ -10,9 +10,11 @@ test('Dismiss cookies banner', async ({ customBrowser: browser }) => {
   await allure.description('Verify that set cookies comply with the policy.');
   await allure.tag('cookies');
 
-  const cookiesForm = new MainPage(browser.page).cookiesForm;
-  await cookiesForm.waitForPageToLoad();
-  expect(await cookiesForm.isPageOpened()).toBe(true);
-  await cookiesForm.clickAcceptCookiesButton();
-  expect(await cookiesForm.isPageOpened()).toBe(false);
+  await test.step('Click on cookies button', async () => {
+    const cookiesForm = new MainPage(browser.page).cookiesForm;
+    await cookiesForm.waitForPageToLoad();
+    expect(await cookiesForm.isPageOpened()).toBe(true);
+    await cookiesForm.clickAcceptCookiesButton();
+    expect(await cookiesForm.isPageOpened()).toBe(false);
+  });
 });

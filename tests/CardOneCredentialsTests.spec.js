@@ -12,7 +12,7 @@ test('Check password policy compliance', async ({ customBrowser: browser }) => {
   await allure.feature('Card 1 - Credentials');
   await allure.story('Password policy');
   await allure.severity('critical');
-  await allure.description('Check that password field accepts proper credentials nased on the requirements');
+  await allure.description('Check that password field accepts proper credentials based on the requirements');
   await allure.tag('password compliance');
 
   const testData = ConfigReader.getTestData();
@@ -57,13 +57,13 @@ test('Check email domain extensions', async ({ customBrowser: browser }) => {
   const signUpForm = mainPage.signUpForm;
   const interestsForm = mainPage.interestsForm;
 
-  await test.step('Fill up data on form', async () => {
+  await test.step('Wait for page indicator text', async () => {
     await signUpForm.waitForPageToLoad();
     expect(await signUpForm.isPageOpened()).toBe(true);
     expect(await signUpForm.getPageIndicatorText()).toBe(firstCardPageIndicatorText);
   });
 
-  await test.step('Fill up data on form', async () => {
+  await test.step('Fill out email data form', async () => {
     for(const emailExtension of emailExtensions) {
       await signUpForm.typePassword(testData.secondPassword);
       await signUpForm.typeEmail(testData.emailName);

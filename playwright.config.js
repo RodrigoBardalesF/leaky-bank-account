@@ -43,7 +43,12 @@ export default defineConfig({
 
   timeout: 90_000,
 
-  reporter: [['list']],
+  reporter: [
+    ['list'],
+    ['allure-playwright', { resultsDir: 'allure-results' }],
+    ['html', { open: 'never' }],
+    ...(isCI ? [['junit', { outputFile: 'results.xml' }]] : [])
+  ],
 
   use: {
     headless: isCI ? true : (process.env.HEADLESS !== 'false'),

@@ -12,10 +12,12 @@ test('Check timer initial value', async ({ customBrowser: browser }) => {
   await allure.severity('critical');
   await allure.description('Verify that the timer works properly.');
   await allure.tag('timer');
-  
-  const mainPage = new MainPage(browser.page);
-  await mainPage.waitForPageToLoad();
-  expect(await mainPage.isPageOpened()).toBe(true);
-  await browser.page.waitForTimeout(timerDisplayTimeout);
-  expect(await mainPage.getTimerText()).toBe(expectedTimerValue);
+
+  await test.step('Expet timer value to start and increase value by the second', async () => {
+    const mainPage = new MainPage(browser.page);
+    await mainPage.waitForPageToLoad();
+    expect(await mainPage.isPageOpened()).toBe(true);
+    await browser.page.waitForTimeout(timerDisplayTimeout);
+    expect(await mainPage.getTimerText()).toBe(expectedTimerValue);
+  });
 });
