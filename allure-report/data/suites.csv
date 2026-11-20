@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Verify that the timer works properly.","1562","Check timer initial value","chromium","2026-11-19","failed","2026-11-19","","SessionTimerTests.spec.js","",""
+"Check that password field accepts proper credentials based on the requirements","11285","Check password policy compliance","chromium","2026-11-19","failed","2026-11-19","","fixedTest.spec.js","",""
+"Verify that set cookies comply with the policy.","2851","Dismiss cookies banner","chromium","2026-11-19","passed","2026-11-19","","fixedTest.spec.js","",""
+"Check that email field accepts proper credentials nased on the requirements","5950","Check email domain extensions","chromium","2026-11-19","passed","2026-11-19","","CardOneCredentialsTests.spec.js","",""
+"Check that password field accepts proper credentials based on the requirements","12613","Check password policy compliance","chromium","2026-11-19","failed","2026-11-19","","CardOneCredentialsTests.spec.js","",""
+"Verify that set cookies comply with the policy.","3236","Dismiss cookies banner","chromium","2026-11-19","failed","2026-11-19","","CookiesPolicyTests.spec.js","",""

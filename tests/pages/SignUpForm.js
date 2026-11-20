@@ -40,6 +40,7 @@ export default class SignUpForm extends BasePage {
   }
 
   async getPageIndicatorText() {
+    console.log('Page indicator FOR PAGE 2/4:', this.pageIndicatorLabel.getText());
     return await this.pageIndicatorLabel.getText();
   }
 }
