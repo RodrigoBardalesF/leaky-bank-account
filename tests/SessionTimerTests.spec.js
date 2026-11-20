@@ -1,4 +1,5 @@
-import { test, expect } from '#framework/ui/fixtures/browser.fixture.js';
+import { expect } from '#framework/ui/fixtures/browser.fixture.js';
+import { test } from './support/screenshot.hook.js'; 
 import MainPage from './pages/MainPage.js';
 import * as allure from 'allure-js-commons';
 

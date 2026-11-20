@@ -7,7 +7,7 @@
 # Test info
 
 - Name: CardOneCredentialsTests.spec.js >> Check password policy compliance
-- Location: tests/CardOneCredentialsTests.spec.js:10:1
+- Location: tests/CardOneCredentialsTests.spec.js:11:1
 
 # Error details
 
@@ -76,85 +76,86 @@ Received: false
 
 ```ts
   1  | // @ts-check
-  2  | import { test, expect } from '#framework/ui/fixtures/browser.fixture.js';
-  3  | import ConfigReader from '#framework/utils/ConfigReader.js';
-  4  | import MainPage from './pages/MainPage.js';
-  5  | import * as allure from 'allure-js-commons';
-  6  | 
-  7  | const firstCardPageIndicatorText = "1 / 4";
-  8  | const secondCardPageIndicatorText = "2 / 4";
-  9  | 
-  10 | test('Check password policy compliance', async ({ customBrowser: browser }) => {
-  11 |   await allure.epic('User Inyerface Registration');
-  12 |   await allure.feature('Card 1 - Credentials');
-  13 |   await allure.story('Password policy');
-  14 |   await allure.severity('critical');
-  15 |   await allure.description('Check that password field accepts proper credentials based on the requirements');
-  16 |   await allure.tag('password compliance');
-  17 | 
-  18 |   const testData = ConfigReader.getTestData();
-  19 | 
-  20 |   const mainPage = new MainPage(browser.page);
-  21 |   const signUpForm = mainPage.signUpForm;
-  22 | 
-  23 |   await test.step('Go to Main Page', async () => {
-  24 |     await signUpForm.waitForPageToLoad();
-  25 |     expect(await signUpForm.isPageOpened()).toBe(true);
-  26 |     expect(await signUpForm.getPageIndicatorText()).toBe(firstCardPageIndicatorText);
-  27 |   });
-  28 | 
-  29 |   await test.step('Fill up data on form', async () => {
-  30 |     await signUpForm.typePassword(testData.firstPassword);
-  31 |     await signUpForm.typeEmail(testData.emailName);
-  32 |     await signUpForm.typeDomain(testData.emailDomain);
-  33 |     await signUpForm.selectDomain(testData.emailExtension);
-  34 |     await signUpForm.acceptTermsConditionsValue();
-  35 |     await signUpForm.clickNextButton();
-  36 |   });
-  37 | 
-  38 |   await test.step('Paging assertion', async () => {
-  39 |     const interestsForm = mainPage.interestsForm;
-> 40 |     expect(await interestsForm.isInterestsTitleDisplayed()).toBe(true);
+  2  | import { expect } from '#framework/ui/fixtures/browser.fixture.js';
+  3  | import { test } from './support/screenshot.hook.js'; 
+  4  | import ConfigReader from '#framework/utils/ConfigReader.js';
+  5  | import MainPage from './pages/MainPage.js';
+  6  | import * as allure from 'allure-js-commons';
+  7  | 
+  8  | const firstCardPageIndicatorText = "1 / 4";
+  9  | const secondCardPageIndicatorText = "2 / 4";
+  10 | 
+  11 | test('Check password policy compliance', async ({ customBrowser: browser }) => {
+  12 |   await allure.epic('User Inyerface Registration');
+  13 |   await allure.feature('Card 1 - Credentials');
+  14 |   await allure.story('Password policy');
+  15 |   await allure.severity('critical');
+  16 |   await allure.description('Check that password field accepts proper credentials based on the requirements');
+  17 |   await allure.tag('password compliance');
+  18 | 
+  19 |   const testData = ConfigReader.getTestData();
+  20 | 
+  21 |   const mainPage = new MainPage(browser.page);
+  22 |   const signUpForm = mainPage.signUpForm;
+  23 | 
+  24 |   await test.step('Go to Main Page', async () => {
+  25 |     await signUpForm.waitForPageToLoad();
+  26 |     expect(await signUpForm.isPageOpened()).toBe(true);
+  27 |     expect(await signUpForm.getPageIndicatorText()).toBe(firstCardPageIndicatorText);
+  28 |   });
+  29 | 
+  30 |   await test.step('Fill up data on form', async () => {
+  31 |     await signUpForm.typePassword(testData.firstPassword);
+  32 |     await signUpForm.typeEmail(testData.emailName);
+  33 |     await signUpForm.typeDomain(testData.emailDomain);
+  34 |     await signUpForm.selectDomain(testData.emailExtension);
+  35 |     await signUpForm.acceptTermsConditionsValue();
+  36 |     await signUpForm.clickNextButton();
+  37 |   });
+  38 | 
+  39 |   await test.step('Paging assertion', async () => {
+  40 |     const interestsForm = mainPage.interestsForm;
+> 41 |     expect(await interestsForm.isInterestsTitleDisplayed()).toBe(true);
      |                                                             ^ Error: expect(received).toBe(expected) // Object.is equality
-  41 |     expect(await interestsForm.getPageIndicatorText()).toBe(secondCardPageIndicatorText);
-  42 |   });
-  43 | });
-  44 | 
-  45 | test('Check email domain extensions', async ({ customBrowser: browser }) => {
-  46 |   await allure.epic('User Inyerface Registration');
-  47 |   await allure.feature('Card 1 - Credentials');
-  48 |   await allure.story('Email domain extension');
-  49 |   await allure.severity('normal');
-  50 |   await allure.description('Check that email field accepts proper credentials nased on the requirements');
-  51 |   await allure.tag('email compliance');
-  52 | 
-  53 |   const emailExtensions = ['.org', '.co.uk', '.net', '.gov', '.de', '.fr', '.nl', '.com', '.be', '.jpg'];
-  54 |   const testData = ConfigReader.getTestData();
-  55 | 
-  56 |   const mainPage = new MainPage(browser.page);
-  57 |   const signUpForm = mainPage.signUpForm;
-  58 |   const interestsForm = mainPage.interestsForm;
-  59 | 
-  60 |   await test.step('Wait for page indicator text', async () => {
-  61 |     await signUpForm.waitForPageToLoad();
-  62 |     expect(await signUpForm.isPageOpened()).toBe(true);
-  63 |     expect(await signUpForm.getPageIndicatorText()).toBe(firstCardPageIndicatorText);
-  64 |   });
-  65 | 
-  66 |   await test.step('Fill out email data form', async () => {
-  67 |     for(const emailExtension of emailExtensions) {
-  68 |       await signUpForm.typePassword(testData.secondPassword);
-  69 |       await signUpForm.typeEmail(testData.emailName);
-  70 |       await signUpForm.typeDomain(testData.emailDomain);
-  71 |       await signUpForm.selectDomain(emailExtension);
-  72 |       await signUpForm.acceptTermsConditionsValue();
-  73 |       await signUpForm.clickNextButton();
-  74 | 
-  75 |       expect(await interestsForm.isInterestsTitleDisplayed()).toBe(true);
-  76 |       expect(await interestsForm.getPageIndicatorText()).toBe(secondCardPageIndicatorText);
-  77 |       await browser.refresh();
-  78 |     }
-  79 |   });
-  80 | });
-  81 | 
+  42 |     expect(await interestsForm.getPageIndicatorText()).toBe(secondCardPageIndicatorText);
+  43 |   });
+  44 | });
+  45 | 
+  46 | test('Check email domain extensions', async ({ customBrowser: browser }) => {
+  47 |   await allure.epic('User Inyerface Registration');
+  48 |   await allure.feature('Card 1 - Credentials');
+  49 |   await allure.story('Email domain extension');
+  50 |   await allure.severity('normal');
+  51 |   await allure.description('Check that email field accepts proper credentials nased on the requirements');
+  52 |   await allure.tag('email compliance');
+  53 | 
+  54 |   const emailExtensions = ['.org', '.co.uk', '.net', '.gov', '.de', '.fr', '.nl', '.com', '.be', '.jpg'];
+  55 |   const testData = ConfigReader.getTestData();
+  56 | 
+  57 |   const mainPage = new MainPage(browser.page);
+  58 |   const signUpForm = mainPage.signUpForm;
+  59 |   const interestsForm = mainPage.interestsForm;
+  60 | 
+  61 |   await test.step('Wait for page indicator text', async () => {
+  62 |     await signUpForm.waitForPageToLoad();
+  63 |     expect(await signUpForm.isPageOpened()).toBe(true);
+  64 |     expect(await signUpForm.getPageIndicatorText()).toBe(firstCardPageIndicatorText);
+  65 |   });
+  66 | 
+  67 |   await test.step('Fill out email data form', async () => {
+  68 |     for(const emailExtension of emailExtensions) {
+  69 |       await signUpForm.typePassword(testData.secondPassword);
+  70 |       await signUpForm.typeEmail(testData.emailName);
+  71 |       await signUpForm.typeDomain(testData.emailDomain);
+  72 |       await signUpForm.selectDomain(emailExtension);
+  73 |       await signUpForm.acceptTermsConditionsValue();
+  74 |       await signUpForm.clickNextButton();
+  75 | 
+  76 |       expect(await interestsForm.isInterestsTitleDisplayed()).toBe(true);
+  77 |       expect(await interestsForm.getPageIndicatorText()).toBe(secondCardPageIndicatorText);
+  78 |       await browser.refresh();
+  79 |     }
+  80 |   });
+  81 | });
+  82 | 
 ```

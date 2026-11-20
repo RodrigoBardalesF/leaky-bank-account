@@ -7,7 +7,7 @@
 # Test info
 
 - Name: CookiesPolicyTests.spec.js >> Dismiss cookies banner
-- Location: tests/CookiesPolicyTests.spec.js:5:1
+- Location: tests/CookiesPolicyTests.spec.js:6:1
 
 # Error details
 
@@ -72,26 +72,27 @@ Received: true
 # Test source
 
 ```ts
-  1  | import { test, expect } from '#framework/ui/fixtures/browser.fixture.js';
-  2  | import MainPage from './pages/MainPage.js';
-  3  | import * as allure from 'allure-js-commons';
-  4  | 
-  5  | test('Dismiss cookies banner', async ({ customBrowser: browser }) => {
-  6  |   await allure.epic('User Inyerface Legal');
-  7  |   await allure.feature('Card 1 - Credentials');
-  8  |   await allure.story('Cookies Policy');
-  9  |   await allure.severity('normal');
-  10 |   await allure.description('Verify that set cookies comply with the policy.');
-  11 |   await allure.tag('cookies');
-  12 | 
-  13 |   await test.step('Click on cookies button', async () => {
-  14 |     const cookiesForm = new MainPage(browser.page).cookiesForm;
-  15 |     await cookiesForm.waitForPageToLoad();
-  16 |     expect(await cookiesForm.isPageOpened()).toBe(true);
-  17 |     await cookiesForm.clickAcceptCookiesButton();
-> 18 |     expect(await cookiesForm.isPageOpened()).toBe(false);
+  1  | import { expect } from '#framework/ui/fixtures/browser.fixture.js';
+  2  | import { test } from './support/screenshot.hook.js'; 
+  3  | import MainPage from './pages/MainPage.js';
+  4  | import * as allure from 'allure-js-commons';
+  5  | 
+  6  | test('Dismiss cookies banner', async ({ customBrowser: browser }) => {
+  7  |   await allure.epic('User Inyerface Legal');
+  8  |   await allure.feature('Card 1 - Credentials');
+  9  |   await allure.story('Cookies Policy');
+  10 |   await allure.severity('normal');
+  11 |   await allure.description('Verify that set cookies comply with the policy.');
+  12 |   await allure.tag('cookies');
+  13 | 
+  14 |   await test.step('Click on cookies button', async () => {
+  15 |     const cookiesForm = new MainPage(browser.page).cookiesForm;
+  16 |     await cookiesForm.waitForPageToLoad();
+  17 |     expect(await cookiesForm.isPageOpened()).toBe(true);
+  18 |     await cookiesForm.clickAcceptCookiesButton();
+> 19 |     expect(await cookiesForm.isPageOpened()).toBe(false);
      |                                              ^ Error: expect(received).toBe(expected) // Object.is equality
-  19 |   });
-  20 | });
-  21 | 
+  20 |   });
+  21 | });
+  22 | 
 ```

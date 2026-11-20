@@ -1,16 +1,15 @@
-import { test as base } from '@playwright/test';
+import { test as base } from '#framework/ui/fixtures/browser.fixture.js';
 import * as allure from 'allure-js-commons';
-import fs from 'fs/promises';
 
 export const test = base.extend({
-  page: async ({ page }, use, testInfo) => {
-    await use(page);
+  customBrowser: async ({ customBrowser }, use, testInfo) => {
+    await use(customBrowser);
 
     if (testInfo.status !== testInfo.expectedStatus) {
-      const screenshot = await page.screenshot();
+      const screenshot = await customBrowser.page.screenshot();
       await allure.attachment('Screenshot', screenshot, 'image/png');
 
-      const html = await page.content();
+      const html = await customBrowser.page.content();
       await allure.attachment('Page Source', html, 'text/html');
     }
   },
