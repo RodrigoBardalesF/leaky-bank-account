@@ -36,25 +36,23 @@ const allProjects = [
 
 export default defineConfig({
   testDir: './tests',
-  fullyParallel: false,
+  fullyParallel: true,
   forbidOnly: isCI,
   retries: isCI ? 2 : 0,
-  workers: 1,
-
-  timeout: 90_000,
+  workers: isCI ? 1 : undefined,
 
   reporter: [
     ['list'],
-    ['allure-playwright', { resultsDir: 'allure-results' }],
     ['html', { open: 'never' }],
     ...(isCI ? [['junit', { outputFile: 'results.xml' }]] : [])
   ],
 
   use: {
     headless: isCI ? true : (process.env.HEADLESS !== 'false'),
-    actionTimeout: 10_000,
+    trace: 'retain-on-failure',
+    screenshot: 'only-on-failure',
 
-    baseURL: process.env.BASE_URL || 'https://userinyerface.com/game.html',
+    baseURL: process.env.BASE_URL || 'https://the-internet.herokuapp.com',
     acceptDownloads: true,
   },
 

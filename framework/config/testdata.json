@@ -1,7 +1,6 @@
 {
-  "emailName": "aqauser",
-  "emailDomain": "example",
-  "emailExtension": "com",
-  "firstPassword": "ZXCVB12345",
-  "secondPassword": "Aqauser12345"
+  "loginSuccessMessage": "Welcome to the Secure Area. When you are done click logout below.",
+  "successfulBasicAuthMessage": "Congratulations! You must have the proper credentials.",
+  "fileForUpload": "",
+  "downloadFileName": ""
 }

@@ -1,6 +1,6 @@
 # a1qa JavaScript Playwright Framework
 
-This repository contains a test automation framework built with **Playwright** and **JavaScript**. It is designed for scalability, stability, and strict test isolation, utilizing a custom **Browser Wrapper**, **Fixture-based** architecture, and a highly rigorous implementation of the **Page Object Model (POM)**.
+This repository contains a test automation framework built with **Playwright** and **JavaScript**. It supports two test runners: **Playwright Test** (fixture-based) and **Cucumber.js** (BDD / Gherkin). It is designed for scalability, stability, and strict test isolation, utilizing a custom **Browser Wrapper** and a highly rigorous implementation of the **Page Object Model (POM)**.
 
 ---
 
@@ -23,7 +23,7 @@ The project strictly separates the reusable technical core (`framework/`) from t
 ```text
 a1qa-js-playwright-framework/
 ├── .vscode/                 # Editor settings for automatic linting on save
-├── framework/               # Core Technical Framework
+├── framework/               # Core Technical Framework (shared by both runners)
 │   ├── config/              # testdata.json (Non-sensitive structural data)
 │   ├── ui/
 │   │   ├── browser/         # Browser.js wrapper (Single state manager)
@@ -32,10 +32,18 @@ a1qa-js-playwright-framework/
 │   │   ├── fixtures/        # Playwright test extensions (browser.fixture.js)
 │   │   └── page/            # BasePage.js
 │   └── utils/               # ConfigReader.js, EnvProvider.js, FileUtils.js, FrameUtils.js
-├── tests/                   # Application-Specific Specs
+├── tests/
+│   ├── features/            # Gherkin .feature files (BDD scenarios)
+│   │   └── login.feature    # Demo: login scenario
+│   ├── steps/               # Cucumber step definitions
+│   │   └── LoginSteps.js    # Demo: login steps
+│   ├── support/             # Cucumber hooks & World
+│   │   ├── hooks.js         # Before/After lifecycle (browser launch, teardown)
+│   │   └── world.js         # Custom World (holds browserWrapper)
 │   ├── pages/               # Page Objects (LoginPage, MainPage, etc.)
-│   └── *.spec.js            # Test Specifications
+│   └── demo.spec.js         # Playwright-runner demo test
 ├── .env.example             # Template for required environment variables
+├── cucumber.js              # Cucumber runner configuration
 ├── eslint.config.js         # ESLint v10 Flat Config rules
 └── playwright.config.js     # Playwright engine and multi-browser configuration
 ```
@@ -57,7 +65,7 @@ TEST_USER=test
 TEST_PASSWORD=test!
 
 BASIC_AUTH_USER=test
-BASIC_AUTH_PASSWORD=test
+BASIC_AUTH_PASSWORD=test!
 ```
 
 If you forget to set this up or miss a variable, the framework's `EnvProvider` will explicitly halt test execution and warn you to check your `.env` file.
@@ -68,12 +76,12 @@ If you forget to set this up or miss a variable, the framework's `EnvProvider` w
 
 This framework mandates a strict, classic approach to the Page Object pattern to ensure maximum stability and zero "flakiness". All contributors must adhere to the following rules:
 
-1. **Selector Isolation:** All interactions with locators and selectors must happen exclusively inside Page classes. Tests (`.spec.js` files) must never contain `page.locator()` or `page.getBy...`.
+1. **Selector Isolation:** All interactions with locators and selectors must happen exclusively inside Page classes. Tests (`.spec.js` files) and step definitions must never contain `page.locator()` or `page.getBy...`.
 2. **Inheritance:** Every application page class must inherit directly from `BasePage`.
 3. **Unique Page Elements:** A unique element (`BaseElement` instance) must be passed to the `super()` constructor of every Page class. This element is used internally by `isPageOpened()` to robustly verify the page state via a fast, non-blocking check.
 4. **Encapsulated Locators:** Locators must never be exposed directly as class properties. They must be wrapped inside custom Element classes (e.g., `this.loginBtn = new Button(...)`).
 5. **Action-Oriented Methods:** Page classes should expose methods that represent user actions (e.g., `typeUsername(name)`, `clickLogin()`).
-6. **No Chaining (No Page Returns):** Page methods must never return an instance of a page (`return this` or `return new NextPage()`). Test flow and navigation are strictly controlled inside the `.spec.js` files.
+6. **No Chaining (No Page Returns):** Page methods must never return an instance of a page (`return this` or `return new NextPage()`). Test flow and navigation are strictly controlled inside the `.spec.js` files or step definitions.
 7. **No Assertions in Pages:** Page methods must never contain test assertions (no `expect(...)` inside Page classes). All assertions belong in the test file.
 8. **Explicit Waits for Text:** If a test needs to verify text, the Page must provide a method that returns the text string. This method must utilize the element wrapper's `getText()` method, which explicitly waits for the element to be visible before reading its value.
 
@@ -193,6 +201,8 @@ const filePath = await browser.downloadAndSave(
 
 ## ⚙️ Test Execution & Linting
 
+### Playwright Runner
+
 **Run all tests in headless mode across all browsers (default for CI):**
 ```bash
 npm run test
@@ -213,21 +223,28 @@ BROWSER=local-headed npm run test
 npx playwright test --ui
 ```
 
+### Cucumber BDD Runner
+
+**Run all BDD scenarios:**
+```bash
+npm run test:bdd
+```
+
+**Run scenarios by tag:**
+```bash
+npx cucumber-js --tags "@demo"
+```
+
+**Run a specific feature file:**
+```bash
+npx cucumber-js tests/features/login.feature
+```
+
+### Linting
+
 **Check code for style and syntax errors:**
 ```bash
 npm run lint
 ```
 
 *(Tip: If using VS Code, formatting and ESLint rules are automatically applied on save).*
-
----
-
-## Unit 4 Practice Task
-
-Requirements: Node.js >= 20.19, Chrome/Chromium.
-
-```bash
-npm ci
-npx playwright install chromium
-npx playwright test
-```

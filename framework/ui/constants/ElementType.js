@@ -1,4 +1,5 @@
 const ElementType = Object.freeze({
+  ELEMENT: 'Element',
   BUTTON: 'Button',
   CHECKBOX: 'Checkbox',
   DROPDOWN: 'Dropdown',

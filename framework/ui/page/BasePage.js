@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import Logger from '#framework/utils/Logger.js';
 import Timeouts from '../constants/Timeouts.js';
 import BaseElement from '../elements/BaseElement.js';
 
@@ -30,7 +30,7 @@ export default class BasePage {
    * @returns {Promise<void>}
    */
   async waitForPageToLoad(timeout = Timeouts.WAIT_PAGE_LOAD) {
-    await test.step(`Page '${this._name}' — Wait to load`, async () => {
+    await Logger.step(`Page '${this._name}' — Wait to load`, async () => {
       await this.uniqueElement.waitForDisplayed(timeout);
     });
   }
@@ -40,7 +40,7 @@ export default class BasePage {
    * @returns {Promise<boolean>}
    */
   async isPageOpened() {
-    return await test.step(`Page '${this._name}' — Check if opened`, async () => {
+    return await Logger.step(`Page '${this._name}' — Check if opened`, async () => {
       return await this.uniqueElement.state.isVisible();
     });
   }
