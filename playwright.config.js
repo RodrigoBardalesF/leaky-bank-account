@@ -25,7 +25,7 @@ const allProjects = [
     name: 'local-headed',
     use: {
       browserName: 'chromium',
-      headless: true,
+      headless: false,
       viewport: null,
       launchOptions: {
         args: ['--start-maximized'],
