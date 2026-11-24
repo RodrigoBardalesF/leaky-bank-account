@@ -13,7 +13,7 @@ Logger.configure(async (title, body) => {
   return await body();
 });
 
-const BASE_URL = process.env.BASE_URL || 'https://the-internet.herokuapp.com';
+const BASE_URL = process.env.BASE_URL || 'https://www.timeanddate.com/';
 const DOWNLOAD_DIR = path.resolve('downloads');
 
 setDefaultTimeout(60 * 1000);
@@ -26,7 +26,7 @@ Before(async function (scenario) {
   const browserName = process.env.BROWSER || 'chromium';
 
   const launchOptions = {
-    headless: process.env.HEADLESS !== 'false' ? false : true,
+    headless: process.env.HEADLESS !== 'false',
     ...(browserName === 'chromium'
       ? { args: ['--start-maximized'] }
       : {}),

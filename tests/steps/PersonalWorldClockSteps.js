@@ -1,12 +1,9 @@
-import { Given, When, Then } from '@cucumber/cucumber';
+import { When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import WorldClockPage from '../pages/WorldClockPage.js';
 
-Given('I navigate to the page {string}', async function (url) {
-    await this.browserWrapper.openUrl(url);
-});
 
-Then('I press the link with name {string}', async function (name) {
+When('I press the link with name {string}', async function (name) {
     const worldClockPage = this.getPage(WorldClockPage);
     await worldClockPage.personalWorldClockButton(name).click();
 });
@@ -31,12 +28,13 @@ When('I click suggestion number {int} in dropdown', async function (number) {
     await worldClockPage.clickSuggestionItem(number);
 });
 
-Then('I press the modal button with text {string}', async function (text) {
+When('I press the modal button with text {string}', async function (text) {
     const worldClockPage = this.getPage(WorldClockPage);
     await worldClockPage.clickModalButton(text);
+    this.cityName = text
 });
 
-When('word {string} is displayed', async function (word) {
+Then('word {string} is displayed', async function (word) {
     const worldClockPage = this.getPage(WorldClockPage);
     expect(await worldClockPage.cityNameLabel(word).state.isDisplayed()).toBeTruthy();
 })

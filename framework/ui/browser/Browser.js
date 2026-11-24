@@ -41,7 +41,7 @@ export default class Browser {
    */
   async openUrl(url) {
     await Logger.step(`Browser — Open URL: "${url}"`, async () => {
-      await this._page.goto(url);
+      await this._page.goto(url, { waitUntil: 'domcontentloaded' });
     });
   }
 
