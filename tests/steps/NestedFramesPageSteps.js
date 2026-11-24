@@ -1,29 +1,18 @@
 import { When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import NestedFramesPage from '../pages/FramePages/NestedFramesPage.js';
-import MainPage from '../pages/MainPage.js';
 
-const mainPage = this.getPage(MainPage);
-
-When('I click on the link to go to the Nested Frames Page', async function (linkName) {
-  await mainPage.typeSearchRequest(linkName);
-  await mainPage.searchClick();
-  await mainPage.waitForPageToLoad(); 
-  expect(await mainPage.isPageOpened()).toBe(true); 
-});
-
-const nestFramesPage = this.getPage(NestedFramesPage);
-
-When('I click on the link to go to the Dinamically Loaded Page', async function () {
+When('I open the page and read the text on the left and right frame', async function () {
+  const nestFramesPage = this.getPage(NestedFramesPage);
   await nestFramesPage.waitForPageToLoad(); 
   expect(await nestFramesPage.isPageOpened()).toBe(true); 
-  const leftFrame = await nestFramesPage.readLeftFrame();
-  expect(await leftFrame).toEqual('LEFT'); 
-  const rightFrame = await nestFramesPage.readRightFrame();
-  expect(await rightFrame).toEqual('RIGHT'); 
+
+  this.leftFrame = await nestFramesPage.readLeftFrame();
+  this.rightFrame = await nestFramesPage.readRightFrame();
 }
 );
 
-Then('I check the download file path', async function () {
-  
+Then('I check the text is shown correctly', async function () {
+  expect(this.leftFrame).toEqual('LEFT'); 
+  expect(this.rightFrame).toEqual('RIGHT'); 
 });

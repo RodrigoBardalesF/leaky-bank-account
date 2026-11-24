@@ -4,7 +4,7 @@ import FrameUtils from '#framework/utils/FrameUtils.js';
 
 export default class NestedFramesPage extends BasePage {
   constructor(browser) {
-    super(new Label(browser.page.locator('body'), 'Frames page unique locator'), 'Nested Frames Page');
+    super(new Label(browser.page.locator('title'), 'Frames page unique locator'), 'Nested Frames Page');
     this.browser = browser;
     this.page = browser.page; 
     this.frameUtils = new FrameUtils(browser.page);
@@ -19,11 +19,19 @@ export default class NestedFramesPage extends BasePage {
     );
   }
 
-  async readLeftFrame(){
-    return await this.leftFrameLabel.locator.innerText();
+  async waitForPageToLoad() {
+    await this.page.waitForLoadState('domcontentloaded');
   }
 
-  async readRightFrame(){
-    return await this.rightFrameLabel.locator.innerText();
+  async isPageOpened() {
+    return await this.page.locator('frameset').count() > 0;
+  }
+
+  async readLeftFrame() {
+    return (await this.leftFrameLabel.getText()).trim();
+  }
+
+  async readRightFrame() {
+    return (await this.rightFrameLabel.getText()).trim();
   }
 }

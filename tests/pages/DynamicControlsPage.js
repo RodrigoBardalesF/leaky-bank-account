@@ -15,7 +15,7 @@ export default class DynamicControlsPage extends BasePage {
   }
 
   async isInputFieldEnabled() {
-    return await this.inputField.isEnabled();
+    return await this.inputField.locator.isEnabled();
   }
 
   async inputTextIntoInputField(text) {

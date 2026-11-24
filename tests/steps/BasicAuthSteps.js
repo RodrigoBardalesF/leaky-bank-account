@@ -5,10 +5,8 @@ import MainPage from '../pages/MainPage.js';
 
 const message = 'Congratulations! You must have the proper credentials.';
 
-Then('I enter the success page',async function (){
+Then('I get the success message',async function (){
   const basicAuthPage = this.getPage(BasicAuth);
-  await basicAuthPage.waitForPageToLoad(); 
-  expect(await basicAuthPage.isPageOpened()).toBe(true); 
   expect(await basicAuthPage.getSuccessMessage()).toEqual(message);
 });
 

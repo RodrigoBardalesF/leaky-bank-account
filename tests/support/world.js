@@ -17,7 +17,7 @@ class CustomWorld extends World {
   getPage(PageClass) {
     const key = PageClass.name;
     if (!this._pages[key]) {
-      this._pages[key] = new PageClass(this.browserWrapper.page);
+      this._pages[key] = new PageClass(this.browserWrapper);
     }
     return this._pages[key];
   }
