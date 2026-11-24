@@ -2,10 +2,12 @@ import BasePage from "#framework/ui/page/BasePage.js";
 import { Button, TextBox, Label } from '#framework/ui/elements/index.js';
 
 export default class DynamicControlsPage extends BasePage {
-  constructor(page) {
-    super(new Label(page.getByText('Dynamic Controls'), 'Dynamic Controls unique element'), 'Dynamic Controls Page');
-    this.enableButton = new Button(page.locator('//*[@onclick="swapInput()"]'), 'Enable button');
-    this.inputField = new TextBox(page.locator('//input[@type="text"]'), 'Input field');
+  constructor(browser) {
+    super(new Label(browser.page.getByRole('heading', { name: 'Dynamic Controls' }), 'Dynamic Controls title'), 'Dynamic Controls Page');
+    this.browser = browser;
+    this.page = browser.page;
+    this.enableButton = new Button(browser.page.getByRole('button', { name: 'Enable' }), 'Enable button');
+    this.inputField = new TextBox(browser.page.locator('#input-example input'), 'Input Field for Text');
   }
 
   async clickEnableButton() {
@@ -13,11 +15,11 @@ export default class DynamicControlsPage extends BasePage {
   }
 
   async isInputFieldEnabled() {
-    return await this.inputField.state.isEnabled();
+    return await this.inputField.isEnabled();
   }
 
   async inputTextIntoInputField(text) {
-    await this.inputField.typeText(text);
+    await this.inputField.setText(text);
   }
 
   async getValueFromInputField() {

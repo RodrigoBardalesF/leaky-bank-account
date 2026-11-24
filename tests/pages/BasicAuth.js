@@ -1,18 +1,17 @@
 import BasePage from '#framework/ui/page/BasePage.js';
 import { Label } from '#framework/ui/elements/index.js';
+import 'dotenv/config'; 
 
-export default class BasicAuth extends BasePage {
-  constructor(page) {
-    super(
-      new Label(
-        page.getByRole('heading', { name: 'Basic Auth' }),
-        'basic auth page unique element'),
-      'Basic Auth Page'
-    );
-    this.successMessage = new Label(page.locator('//*[@id="content"]/div/p'), 'Success message');
+export default class BasicAuthPage extends BasePage {
+  constructor(browser) {
+    super(new Label(browser.page.getByRole('heading', { name: 'Basic Auth' }), 'Basic auth page'), 'Basic Auth Page');
+    this.browser = browser;
+    this.page = browser.page;
+    this.successMessage = new Label(browser.page.locator('.example p'), 'Success message');
+
   }
 
   async getSuccessMessage() {
-    return this.successMessage.getText();
+    return await this.successMessage.getText();
   }
 }
