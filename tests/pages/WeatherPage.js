@@ -1,31 +1,27 @@
 import BasePage from '#framework/ui/page/BasePage.js';
 import { ElementsList, Label, TextBox, Button } from '#framework/ui/elements/index.js';
-import { expect } from '@playwright/test';
 
 export default class WeatherPage extends BasePage {
   constructor(page) {
-    super(new Label(page.getByRole('heading', { name: 'Weather in Any City'}), 'Weather Page unique element'), 'Weather Page');
+    super(new Label(page.getByRole('heading', { name: 'World Temperatures and Weather Around The World'}), 'Weather Page unique element'), 'Weather Page');
     this.page = page;
-    this.searchInput = new TextBox(page.getByRole('searchbox', { name: 'Search for city, state or country…' }), 'Search textbox');
-    this.pageHeaderLabel = new Label(page.locator('h1.headline-banner__title'), 'Page Header');
-    this.searchResultList=new ElementsList(page.locator('ul.asu > li > a'),'Search Results list', Button);
-  }
+    this.searchInput = new TextBox(page.locator('input.tad-input__input'), 'Search textbox');
+    this.searchResultList = new ElementsList(page.locator('div.as ul.asu li a').filter({ hasText: /./ }),'Search Results list', Button); 
 
-  async checkPageTitle(expected) {
-    const headerText = await this.pageHeaderLabel.getText();
-    expect(headerText).toContain(expected);
   }
 
   async waitForDropdownApear(timeout) {
-    await this.page.waitForTimeout(timeout)
+    await this.page.locator('div.as ul.asu li a').first().waitFor({ state: 'visible', timeout: timeout });
   }
 
   async inputText(text){
-    await this.searchInput.setText(text);
+    await this.searchInput.typeText(text);
   }
 
   async clickElementByNumber(number) {
-    await this.searchResultList.getByIndex(number - 1).click();
+    const targetElement = this.page.locator('div.as ul.asu li a').filter({ hasText: /./ }).nth(number - 1);  
+    await targetElement.waitFor({ state: 'visible', timeout: 15000 });   
+    await targetElement.click();
   }
 
 }
